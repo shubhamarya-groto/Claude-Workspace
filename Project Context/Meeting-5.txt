@@ -1,0 +1,209 @@
+Impromptu Google Meet Meeting - July 02
+VIEW RECORDING - 29 mins (No highlights): 
+
+---
+
+0:00 - Brian Oltmanns
+  We reference if we need to. I can't navigate it very effectively. Okay. Let's see. I think for what we're going to talk about today, some of this is stuff that Jeff and I are working through.  But you can kind of see what we're trying to do with some of this stuff, but the UX feedbacks towards the bottom.  Do you want me to present Figma or do you want to present me a document? Say again. Do you want me to present a document or Figma?  You can present Figma. can just kind of go through these. Okay. I'll talk through them a little bit. That way if you have a question about any point of reference, we can look at it really quickly.
+
+0:58 - Harpreet Singh (letsgroto.com)
+  Sure. Okay.
+
+1:02 - Brian Oltmanns
+  So the first thing, like, just in general, I kind of worked backwards, so on the dashboards, I like the to-do list there, like the complete profile list, we'll just need to, the only thing I mentioned was, like, I've used things like this before, but it's mostly been, you know, if I've had to do a series of trainings on video trainings, so I can go through and kind of have a checklist, and then, you know, but we'll, we'll have to determine, like, some of them I'd like to maybe consolidate and figure out which ones are the highest of priority, and, like, certifications, and, you know, basically, I think going forward, having the profile score and the experience score are going to kind of be the standard, and then we'll, we'll group together profile questions, like, do you have a license, do you have, you know, tools, or do you have  Whatever, as profile questions, and that would go to the profile score, and then anything trade-related, experience-related, skills, or licenses, stuff like that would be experience-related, and then all the quizzing, stuff like that.  So, and the experience-related questions are always going to be top priority on the list. But, and then on the top, where you have the profile on the top, where it says, is 45% complete?  Yeah. I was kind of thinking of having, since we're going to add like an experience score, I was thinking of having just like two, you know, two modals up there, you know, one for each one, however it looks good.  Okay. Just so that they can kind of see and have a finger on the pulse of how, you know, how complete their profile is.  Yeah. And then on the, like on the, going back to the complete. Your profile, kind of the checklist thing.  What are your thoughts on having on the far right where it says kind of done or upload or add or whatever, what do you think of if it's missing information, we have like a red exclamation mark or whatever the standard UI would be to get their attention so that they know like this isn't done.
+
+3:25 - Harpreet Singh (letsgroto.com)
+  That is something we can figure out in the UI phase, but yeah, definitely that makes sense.
+
+3:31 - Brian Oltmanns
+  Yeah, because I think that if they have like a, you know, and we'll reduce those down so there's not like, you know, nine or ten of them.  We'll reduce it down to five or less. You know, we'll try to lump a lot of the questions together.  Go ahead. Just because like I think adding a photo and, you know, that can be separate on its own.  And then like we can consolidate the profile questions and then consolidate the certifications, the work history, because that's all.  More of experience related stuff, so, you know, then when they complete it, we can put a green check mark there, and then eventually, you know, somehow it can go away, you know, and something.
+
+4:13 - Harpreet Singh (letsgroto.com)
+  so think of it like on the next login, once they complete it, we'll just show a tick mark, and on the next login, they won't be able to see that.  That's how, you know, we'll handle that. Right, right, okay.
+  ACTION ITEM: Update dashboard per decisions; remove 'AI job matches' and 'What you'll unlock'; add sticky scores; add red-score apply warning; send update to Brian & Jeff - WATCH: https://fathom.video/calls/732873215?timestamp=269.9999
+
+4:26 - Brian Oltmanns
+  I'm just going through the list here really quick. Let's see, I like the overview items at the top. Those are, those look good as far as how they are, as far as profile views.  I'm not really sure what AI job matches is, but job matches can stay.
+
+4:45 - Harpreet Singh (letsgroto.com)
+  Job yeah.
+
+4:46 - Brian Oltmanns
+  Yeah, let's see, I wasn't sure on the what you'll unlock section down there.
+
+4:53 - Harpreet Singh (letsgroto.com)
+  So, I think this is what Jeff was mentioning in our last call, that if we can say Somehow give them a motivation to see what they will be able to do post the completion of their profile.  That will give them extra, you know, motivation for the users. Okay, okay, I need to do something else, know, like things, things like that.  Okay.
+
+5:15 - Brian Oltmanns
+  All right. We'll, we'll talk, we'll talk about that or, or think about that or whatever, but.
+
+5:20 - Harpreet Singh (letsgroto.com)
+  Basically, like, this is what will, this is what will unlock once they complete their profile. That's, that's just a, you know, like a motivation engine.  Okay.
+
+5:29 - Brian Oltmanns
+  I gotcha. So incentivizing.
+
+5:31 - Jeff Keller
+  Are, are you saying then that companies won't see you until you've completed your profile to a certain degree, or should they be able to see you right away?
+
+5:41 - Harpreet Singh (letsgroto.com)
+  See, that is something that we can take a call based on what is possible. But my main concern was if we can somehow show some motivation engine in this section that, you know, just like two, three pointers, even that, okay, if you complete this profile, you will be able to do this, this, this, et cetera, et cetera.
+
+5:59 - Jeff Keller
+  Yeah. Yeah. Yeah. It's a tough call between motivating the user to get through all of their profile stuff and at the same time, if they have enough that's there, you know, from the company side, showing them anyway.  That's going to be a tough call. I don't know that I would prevent something from happening until they completed their profile all the way.  But I feel like if we could somehow show that your odds of getting to the top or whatever are going to be better with everything you do in the profile, the more information in your profile, basically, the better your score.  And that is going to be part of the way that we rank you when we display job seekers to make you.  And, Brian, maybe that's a thought as well, is right now that's... It's all date-based. Maybe that does turn into some sort of combination of, yeah, your profile's 100% complete, and maybe it's a month old, but do you show that in front of the guy who's 20% complete and it's a day old?
+
+7:15 - Brian Oltmanns
+  Yeah, I think I like having, I like the motivation aspect of it, and I think that maybe the best way to do it without preventing them from going through the journey would be to, and Jeff and I talked about it yesterday, you know, if we have the profile scores up at the top, you know, having a determination of, like, what's a really low profile score and having a lot of red, like, hey, this is, this is not good, you need to focus on this, and then, you know, letting them know, I see you've got, like, a finish to get noticed up there, but, like, really having it designed out so that they can see, like, your, your chances of getting a good job with your profile are minimal, because, you know,  You're going to have the user, if I think through the journey of every mindset of a user, you're going to have the ones that just want to get through it as quick as possible and then start seeing what jobs are in there and just start applying to jobs.  And then we already do have some people that have gone through a long process of spending time on the profile.  They've added multiple, if not a dozen or so trade categories, went through the scoring sliders, went through all of it.  And so, you know, making a determination like what's red, like, hey, you need to really do this now. What's yellow?  Like, you're good, but you're not quite where you could be because you're not finishing certain things. And then green, you know, just figuring out where those percentages are, but then also having the ability for them, you know, for the users that just slide through everything quickly, if they go to a job post and they click apply, even having a notification pop up on the screen that says, you know, are you sure?  Because your profile score is red. And your chances of getting a job are minimal, know, just letting them know, like, that you're not utilizing this to your best capabilities.  And that'll kind of provide that nudge, or they can ignore it at their own peril, I guess. But, you know, and I like that just because I feel like it'll free up a little bit more space on the dashboard if we can remove that, what you'll unlock.  And then I also think that this profile score here, if we have these just up here, both of them up here, we can eliminate the redundancy between this, you know, which is almost identical to this.  And then that frees this space up, and if that makes sense. Makes sense. Makes sense.
+
+9:41 - Harpreet Singh (letsgroto.com)
+  Yeah.
+
+9:42 - Brian Oltmanns
+  Are concerned about that thought process through the user journey, or?
+
+9:49 - Harpreet Singh (letsgroto.com)
+  No, I think that's fine. That's fine. It's completely possible. Cool. We can try that. No problem. I think this can be sticky at the top, can get let go of this and just remove this.  That's okay. We can keep that. Okay. Hey, Brian.
+
+10:04 - Jeff Keller
+  You know, once we have the formula figured out for what completeness of a profile really means, I wonder if we can't say, hey, you're 45% complete and you're in the 60th percentile of people on the site.  You can give that, make that, you know, present that in different way, but basically saying, you know, six out of 10, six out of 10 job seekers have done more than you.  So, yeah, yeah. I think having some sort of, you know, some sort of kind of, you know, where are you staying across the board would be, I think that'd be good too.
+
+10:42 - Brian Oltmanns
+  Social proof always, always wins, you know, what, this is what everyone else is doing. Yeah.
+
+10:48 - Jeff Keller
+  You'd like, yeah, your, your profile is 25%. You're, you know, nine out of 10 people on the site have a better, have a, have a more complete profile than you.  So you're, you're losing without saying you're losing. Yeah.
+
+11:01 - Brian Oltmanns
+  The other thing too, Harry, just for future, for future mindset, like we're, we're building out quizzes for users on both sides.  For the job seeker side, the quizzing is going to basically determine if they set skills that they claim that they have.  We're using AI to, to challenge their, their expertise and then provide a grade that will also contribute to that experience score.  So having, having those kind of on the complete your profile checklist, and then also to stimulate virality. One of the things I also want to add to that checklist is like having your, in any past coworkers, work colleagues, basically kind of think of it like a skills endorsement or a work ethic endorsement.  And then what the play is on that is to kind of stimulate virality, meaning like invite, hey, not, you know, not invite your friends, but like have, have your coworkers validate your expertise, but then your, their coworkers are going to get.  Yeah. Hey, GoFind Build, so-and-so has invited you to endorse their skills or whatever it is, but then that might actually get people curious about joining GoFind Build.  then same on the company side, we're going to implement kind of a similar skills validation for the B2B play, whereas if I'm going to hire a crew to do flooring or carpentry or whatever, same kind of expertise questions, same kind of validations from other contractors or whoever they've done work for, and that way we're going to have a simulation of virality play on that too and having those on that checklist, I think.  Because that's probably going to be one of the last things they try to do just because it's going to require a few clicks, right?  They've got to put an email address or whatever and, you know, having that. But it's also a powerful, you know, social proof for people, and that's kind of what we're trying to do with this is...  Add as many layers of validation that we can, you know, with future possible background checks and other things too, so.
+
+13:09 - Harpreet Singh (letsgroto.com)
+  Makes sense. That's clear. That's clear. Yeah.
+
+13:13 - Brian Oltmanns
+  Cool. Cool, cool, cool. On the recommended for you section, I'm not sure where that was again. Is that at the bottom maybe?  I think it's at the bottom. There's like a recommended for you section. This one, yes. There it is, yeah.  I like that concept, but I think that we're too early for that right now. Like, I don't know if we'll have a lot of data, you know, and I like having that there, but I think that we can maybe explore utilizing that to like, kind of in the direction you have it, but like, you know, where can I find courses?
+
+14:00 - Jeff Keller
+  To do this or that.
+
+14:01 - Brian Oltmanns
+  And that's where we could, you know, implement partnerships that I've got a few of them, you know, like the hub and like, you don't know what I'm about to say, but there's places around where there's makerspace areas.  There's, there's Ivy Tech, you know, technical training colleges. So we could maybe reserve that for things like that. And then that, that gives the incentive of those partnerships for them.  So they know that they've got a place on our application and that. So that's kind of what I was, what I was thinking with that.  Um, and then, um, moving on the, at the very top, um, uh, of the dashboard, there was a create button.  I just wasn't sure what the thought process was going to be on the direction for that. I know that like on the company side, it could possibly, yeah, creative posts, assume.  Yeah. Okay. Um, uh, let's see. And then I think now I'm going to be kind of veering back towards the onboarding process.  Um, I like, I like that your profile. Profile is live page. I think that right now, Jeff and I talked about just having the profile scores front and center and, again, implementing the red, the yellow, kind of like you have, but not yet doing the companies can see you or the matches right now because we're worried about the amount of data we're going to have initially.  So I think having the big fat profile scores up there, you know, at this point is going to be a good reality check on how far they've really gone on the profile.  So I like that. And then I think that this really should be, you know, and I saw the UI somewhere else, but maybe this is where, like, I don't know about them browsing the jobs just yet and those three tiles you have there.  I think that they make sense, but I also think that we're giving them a way out of finishing the profile and maybe, and like I said, I saw the UI somewhere else.  Maybe this is where that complete your profile checklist just shows up. So if we go through the happy path of the quick onboard, and we'll figure out that process, and then if we just have one almost there, and we figure out what the minimum is we need to capture, and then from there, this page where there's the checklist, and then they can go to their dashboard if they want to kind of just see what's what, but as long as they have that, they can see like, hey, here's all the things that are left.  Here's your profile scores. If you want to go to your dashboard, that's fine. I'm not opposed to having a, you know, see all jobs button or something like that.  I just know that they're going to click that first, you know, and then it feels like we're kind of guiding them away from the process of finishing their profile.
+
+16:46 - Harpreet Singh (letsgroto.com)
+  Yeah, I think we can definitely do that. We can add, you know, this checklist here as well. That's a good push.  But ideally, the reason behind doing, you know, keeping it minimal was to Give them a quick aha experience of the dashboard as early as possible.  Because if we ask them to take a lot of actions on this page, the probability of drop-off will definitely increase.  So that's the reason I just want to quickly, you know, like the reason is that we quickly want to show this dashboard straight away and not delay it with one more screen and a lot of different CTAs.  Okay. Yeah. Okay. That's fine.
+
+17:26 - Brian Oltmanns
+  That's fine.
+
+17:26 - Jeff Keller
+  Yeah. I think, I feel like I'm okay with having that minimal page, assuming that on the dashboard, it's very obvious, here's what you need to be doing yet.  Like, as long as you get to the dashboard, and every time you come back to that dashboard, it's always telling you right away, here's the stuff you haven't done yet.  Here's the job potential, you know, the, you know, giving them priorities, here's what you need to do. And here's also...  The companies, the jobs, et cetera, right? Yeah.
+
+18:04 - Brian Oltmanns
+  Okay. Yeah, I like the code access. I like that. I think I mentioned that. And then now, if we go to the page to the left, I think that I was trying to think through the bare minimums for this.  I've kind of got a little list on there at the very last Note 11. Okay. The bare minimums, I think, initially are going to be the name, a name, a phone number, just in case we end up doing text notifications.  Call it. We'll obviously have their email and then zip code because we need to know their locations. If they're 18 years old.  And then I think that's really all we need. I mean, the license question is kind of an important question.  So that one I kind of debated on because I think that employers really need to know, like, because there's actually, I don't want to say a lot.  But there's been enough people I've seen that actually don't have a license or transportation, which kind of makes it hard to get a job.  But, you know, who am I to judge, right? But anyway, in the only other one that I think all the questions from the Your Trade section kind of need to be just if they skip them, you know, fine.  But I think that we need to try to get we definitely need to trade categories. Like if they have experience, we have to have those.  But I just I have a hard time trying not to nudge them to do all of the Your Trade questions, but I guess as long as they have a way to ditch, you know, you know, by all means ditch.  But I just feel like if they don't put it, they have to do the trade category like they just have to.  But I'd like to try to figure out a way for them to do the all trade, you know, all the Your Trade questions that you had indicated in that and the long form above.
+  ACTION ITEM: Review Brian's onboarding sheet; send recs to Brian & Jeff - WATCH: https://fathom.video/calls/732873215?timestamp=1187.9999
+
+19:58 - Harpreet Singh (letsgroto.com)
+  Makes sense. Makes sense. Maybe once I analyze the sheet that you have shared, right, maybe I'll analyze the sheet in detail after the call as well and see if there's any recommendation that, but yeah, from a technical perspective, I see that we need to keep it very minimal and all the fields that we have finalized, but yeah, I'll definitely check that sheet in detail as well.
+
+20:20 - Brian Oltmanns
+  Yeah, okay. I think that's all the things that I had noted here. Jeff, did I miss anything or did you have anything that you wanted to add or anything else about the, One point from my side, you mentioned regarding the phone number, right?
+
+20:37 - Harpreet Singh (letsgroto.com)
+  Is it critical as a part of the process because you're even asking email and then asking phone number? Yeah, no, it's not critical.
+
+20:45 - Brian Oltmanns
+  It was just, it was just one of those things that I... Maybe we can push that in later, at later stages?
+
+20:52 - Harpreet Singh (letsgroto.com)
+  Yeah. Yeah, yeah.
+
+20:53 - Brian Oltmanns
+  Yeah, we don't even do text notifications yet, so it was just something I was trying not to
+
+21:00 - Harpreet Singh (letsgroto.com)
+  to let get buried under, but, you know, we can always, whenever we decide to add text notification, we can add a pointer and complete your profile and, okay, you know, add 15 pointers, add 15 points, if you add a phone number and we will text you all the updates there, you will get a faster response on text, something like that.  Yeah, okay.
+
+21:17 - Brian Oltmanns
+  Yeah, and we can also, we can also just implement that in the long form when they, you know, get to the checklist, so.  Correct, correct, correct. Yeah, so, but yeah, so you can ignore that one for now. Yep, yep, yep, yep, yep.
+
+21:32 - Harpreet Singh (letsgroto.com)
+  Cool.
+
+21:34 - Jeff Keller
+  I wanted to, Brian, wanted to talk about one specific widget that we like to take a look at redoing.
+  ACTION ITEM: Design trade categories pill widget (typeahead, popular, mobile); share w/ Brian & Jeff; then Jeff integrate in app - WATCH: https://fathom.video/calls/732873215?timestamp=1308.9999  Scroll to the other way, all the way back to the beginning. Oh, yeah, I did. Right there. Okay, so, on this next slide, there's, it's really two things, right?  It's. It's and it's your trade categories, right? So I'd like you to get a way to figure out how best to do location, but more importantly, because we use this, if we get a good one, I'm going to put it in the app as soon as it's ready.  Trade categories. So we have 151 trade categories, all right? Okay. So was envisioning, and this makes a lot of sense, a type ahead where, you know, you get to three characters, we start showing categories, right?  So I actually went through the whole list of categories yesterday, and if you get to your third character, the most you're going to have is like eight.  So let's say you type the first three characters and then the pills just appear below it in line like what you have right here.  Okay. Okay, and then we select the pills that are relevant. If you can come up with a good, a better, a better.  There's way to do it than we do it now, which you can see when you log in and go to the, if you edit your profile for real, you'll see it.  But I think the vision, this kind of inspired it quite a bit, was we add it, we have a type ahead input box, and then below it, we just in line show all of the pills that match it, and then select the pill.  Go ahead. And even if you wanted to add some generic ones that, maybe some of the bigger ones, Brian, we may find that we have room to say, hey, these six match what you started typing in.  And also, by the way, here's the most popular six. You know, general labor, I'd always put on there. You know, stuff like that, right?  All right. General labor, electrician, plumber, you know, and just leave those on there as well. Because, I don't know, Harry, if you've got an idea what the maximum number of pills you  You want to display is, I know that like on LinkedIn, it's insane how many pills you will get when you do this.  Like it's, it's hundreds, it's a large number, but if we kept it simple, um, with only 151 options, um, I think we could come up with a pretty slick interface that's a lot better what we have now.
+
+24:21 - Brian Oltmanns
+  Yeah, because what we have now is like, you can go, you know, you can start typing and it drops down or it just drops down and you click a bunch of them, but you have to click off and, you know, it's just a little clunky the way it is.  So definitely want to improve how to input, because we're going to also have a huge list of certifications. Um, luckily they can, luckily those can consolidate kind of to like, you know, if I'm a plumber, there's these, if I'm an electrician, there's these and et cetera.  And then there's general ones, but I've seen other interfaces where they do have a very large modal that allows you to either highlight a pill or check a neck.  To the text input. So, but yeah, just whatever your thoughts are, I think that that is something that we think is pretty critical to work really well, especially on mobile too, because I don't really, I see a little bit of a, not an issue, but a little bit of a headache with the type of head on mobile because you got to, you know, your space is limited to view.  So you've got to kind of type something and then a box pops up and you're scrolling down and you're clicking something and you're clicking something.  Then you got to go back up to the top and delete a few letters and then type a few more in, then, you know, you're without losing the ones you have.  So that's the only challenge I see on the, on the mobile a little bit, but that's also not, you know, maybe not, maybe not the other world.  I'm just kind of trying to think out loud, but.
+
+25:45 - Harpreet Singh (letsgroto.com)
+  No problem. We'll see what's the best possible way, but yeah, I get it. I get it. Okay.
+
+25:50 - Brian Oltmanns
+  The only other thing I forgot to mention, the, this, so this, this page right here, I, I, it's been a while since I.
+  ACTION ITEM: Draft marketing site updates w/ job seeker/company toggle; share w/ Brian & Jeff - WATCH: https://fathom.video/calls/732873215?timestamp=1556.9999  Looked at your marketing, the marketing site. So is this, is this, how does the job seeker get to this page right here?  I was thinking about this.
+
+26:07 - Harpreet Singh (letsgroto.com)
+  I was thinking about this. So maybe like I, I, I get some ideas on the marketing site when we resume the work there, but I think this is a very good starting point instead of actually telling them, you know, like find jobs as a random CTA.  So maybe I'll see how we can incorporate a layout like this or a similar layout in our existing marketing design.  maybe as a toggle, you know, has to switch, then we can show this, but yeah, I'll, I'll, I'll think around some ideas for sure.  Okay.
+
+26:37 - Brian Oltmanns
+  Yeah. I kind of like the toggle of like, do you mean like your company or something?
+
+26:41 - Harpreet Singh (letsgroto.com)
+  Correct. Correct. Correct. Correct. Okay. Yeah.
+
+26:44 - Brian Oltmanns
+  Cause that's always been the challenge, like, you know, two-sided network and how do you talk to both?
+
+26:49 - Harpreet Singh (letsgroto.com)
+  How do you talk to both right on the above the fold?
+
+26:53 - Brian Oltmanns
+  Yeah. That makes sense. So, okay. Yeah. I think that was the only other thing I forgot, but. But, yeah, I think that's everything that I've got.
+
+27:06 - Harpreet Singh (letsgroto.com)
+  Nice. Anything that you can think of, Jeff?
+
+27:11 - Jeff Keller
+  No, I think a lot of the other stuff is me and you thinking through detail from the context standpoint as far as what matters the most on a profile and ranking those things better and coming up with that stuff.  But, yeah, that widget I was mentioning, one of the reasons I like that concept, you know, that you put together on that first page was that, you know, we use the pills through the whole profile setup.  So it's more consistent with everything else if we come up with a good interface for that. Yeah.
+
+27:54 - Brian Oltmanns
+  Got it.
+
+27:54 - Harpreet Singh (letsgroto.com)
+  Yeah.
+
+27:55 - Jeff Keller
+  If you come up with that and you're like, hey, I'm going to use this on this page, but also go ahead.  If it on the profile here, here, and here, I'm totally wondering why don't you make a component out of it and we're going to use it everywhere.
+
+28:08 - Brian Oltmanns
+  I'm also kind of wondering if we can have a modal or a text box large enough and even do some of the categories across, you know, on a mobile it'll be compressed, but like, you know, if we have them alphabetized, obviously, you know, like, oh, P is plumbing, right?  And I'll scroll down to P, you know, and if you have a wide enough modal on desktop, especially, I don't think 150 is a lot, you know, if you can go 10 wide, you're talking 15 rows, you know what I mean?  So, something like that, but.
+
+28:39 - Harpreet Singh (letsgroto.com)
+  Yeah, yeah, sure. I'll see some ideas. Yeah. I'll see some, definitely.
+
+28:44 - Jeff Keller
+  Make that a manageable, give it a manageable number from a UI perspective for them. Yeah, yeah, That we can try to figure out how best to leverage.
+
+28:56 - Harpreet Singh (letsgroto.com)
+  Perfect. All right. Great.
+
+29:00 - Brian Oltmanns
+  Sounds good. All right. Well, I appreciate it. I don't think I've got anything else.
+
+29:04 - Jeff Keller
+  All right.
+
+29:07 - Harpreet Singh (letsgroto.com)
+  I'll start working on these edits and send you on the update once done. Great. Cool.
+
+29:12 - Jeff Keller
+  Sounds good. Thank you.
+
+29:14 - Brian Oltmanns
+  Thank you, guys.
+
+29:15 - Harpreet Singh (letsgroto.com)
+  Bye. Thanks.
+
+29:16 - Jeff Keller
+  Bye-bye.

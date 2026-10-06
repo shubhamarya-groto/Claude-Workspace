@@ -31,7 +31,8 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 | `Design/HubSpot/Home/code/gbf-module/` | The custom GFB Hero module (`module.html`, `module.css`). The hero photo URL is a placeholder (`PASTE-THE-FILE-MANAGER-URL-HERE`) |
 | `Project Context/2026-09-11_Brian-Mockup-Brief.md` | Brian's email brief with his three notes on the mockup and the three preview cards |
 | `Project Context/2026-09-15_Meeting-Notes.md` | 15 Sep meeting: marketing site first, CRO page order, FAQs, trade pages, Figma draft deadline |
-| `Project Context/Meeting-1.txt` · `-2.txt` · `-3.txt` | Zoom/Meet transcripts: 27 Apr (intro, scope, engagement model), 14 May (product walkthrough, acquisition, pricing mechanics), 22 Jun (profiles, onboarding, dashboard priorities) |
+| `Project Context/Meeting-1.txt` · `-2.txt` · `-3.txt` · `-5.txt` | Transcripts: 27 Apr (intro, engagement model), 14 May (product walkthrough, acquisition, pricing mechanics), 22 Jun (profiles, onboarding, dashboard priorities), 2 Jul (Brian's dashboard/onboarding review, trade pill widget, action items). **Meeting 4 was not provided** (numbering skips it) |
+| `Project Context/Project-Scope.txt` | Scope of work: 6 phases (audit done), main UX goals |
 | `Project Context/UX-Review-7-1.md` | Brian's review of the dashboard designs (1 Jul), converted from the .docx |
 
 ## Source notes
@@ -44,7 +45,7 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 - **Read me/**: README, next actions, issues log, blockers, FAQ seeds
 - **Mobile Audit.csv and UX Audit.csv** (marketing site conversion, 11 items). The Mobile data is covered by the xlsx; the UX Audit has no other copy.
 - **Read me/** files the Figma docs cite: `02_ISSUES-LOG.md` (I-01…I-22), `03_BLOCKERS_for-Harpreet.md` (questions 1–27), `01_NEXT-ACTIONS`, `04_FAQ-SEEDS_sub-pages.md`
-- Meetings 4 and 5 transcripts (2 more files incoming). The Figma docs cite them for quizzes, text alerts and onboarding minimums
+- Meeting 4 transcript, if it exists (Meeting 5 is dated 2 Jul, 3 is 22 Jun)
 - **Design/HubSpot/For workers/** (Home and For companies are in)
 - **Design/Assets/**
 - Dashboard PDF screenshots are not text-extractable; keep the PDFs as the reference.

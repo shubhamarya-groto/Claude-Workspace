@@ -1,0 +1,88 @@
+Scope of Work
+
+Phase 1 - Product & UX Audit
+- Audit the current website + platform experience across both company and job seeker flows.
+- Identify UX friction, onboarding issues, dashboard optimization opportunities, mobile usability gaps, & blockers.
+- Review competitors you mentioned to identify opportunities and positioning gaps.
+
+Phase 2 - UX Strategy & Information Architecture
+- Map ideal user journeys and happy paths (Aha moments!)
+- Simplify flows and reduce friction for non-technical users
+- Define engagement loops, and dashboard structure before redesigning screens.
+
+Phase 3 - UI/UX Revamp
+- Redesign the platform with a cleaner, more intuitive, and mobile-first experience.
+- Improve tables, cards, posting flows, profile layouts, navigation, and overall usability.
+- Share concepts/mockups collaboratively before finalising directions.
+
+Main UX Goals
+
+*  Reduce clicks 
+*  Simplify onboarding 
+*  Improve mobile UX 
+*  Increase engagement 
+*  Improve dashboard usability 
+*  Make profiles feel more valuable 
+*  Create cleaner, more intuitive flows
+
+
+Phase 1 — Audit & Research          ✅ Done
+
+*  Audit existing website + app 
+*  Identify UX/UI issues 
+*  Analyze onboarding, dashboard, tables, profiles, navigation 
+*  Find friction points, drop-offs, and unnecessary clicks 
+*  Review mobile responsiveness 
+
+
+Phase 2 — UX Strategy
+
+*  Map user journeys for: 
+    *  Job seekers 
+    *  Companies 
+*  Define “happy path” flows 
+*  Improve information architecture 
+*  Prioritize features/actions 
+*  Identify engagement + aha moments 
+*  Create recommendation document with priorities (P0/P1/P2) 
+
+
+Phase 3 — Wireframing
+
+*  Create low-fidelity wireframes 
+*  Redesign: 
+    *  Dashboard 
+    *  Navigation 
+    *  Tables 
+    *  Job cards 
+    *  Profiles 
+    *  Onboarding flows 
+*  Optimize mobile experience separately 
+
+
+Phase 4 — Validation
+
+*  Share quick concepts/mockups 
+*  Validate flows before full UI 
+*  Iterate based on feedback 
+
+
+Phase 5 — UI Design
+
+*  Full visual revamp 
+*  Modern SaaS-style UI 
+*  Improve hierarchy, spacing, colors, typography 
+*  Design responsive web + mobile layouts 
+*  Build reusable design system/components 
+
+
+Phase 6 — Testing & Optimization
+
+*  Prototype testing 
+*  Improve usability + engagement 
+*  Optimize conversions: 
+    *  Profile completion 
+    *  Job applications 
+    *  Candidate unlocks 
+    *  Retention 
+
