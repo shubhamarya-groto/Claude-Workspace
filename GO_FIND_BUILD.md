@@ -2,12 +2,13 @@
 
 Groto project: a trades hiring platform (employers find skilled workers; workers find jobs). This repo holds the project context and audits.
 
-> Status: audits, Brian's review and the Figma plans are in. Brian's brief, scope, Read me/ and HubSpot material are still to come.
+> Status: nearly everything is uploaded. See "Still missing" for the few gaps. Start with `Read me/00_README.md`, then `Audit/Audit list.md`.
 
 ## What's in the repo
 
 | Path | What it is |
 |---|---|
+| `Read me/` | `00_README.md` (the project's own start-here: status, people, links, folder rules) · `01_NEXT-ACTIONS` (19 Sep plan, partly superseded) · `02_ISSUES-LOG.md` (I-01 to I-17) · `03_BLOCKERS_for-Harpreet.md` (9 items) · `04_FAQ-SEEDS_sub-pages.md` |
 | `Audit/Audit list.md` | **Master checklist.** Every audit merged into 4 sections: A marketing site (30), B employer dashboard (42), C other dashboard tabs (50), D Brian's review (28). Tick items when fixed. |
 | `Audit/Desktop-Audit.md`, `Audit/Mobile-Audit.md` | Marketing-site audits, converted to tables (19 + 16 issues) |
 | `Audit/Dashboard-Design-Audit.md` | Employer dashboard audit, Final v2 (39 issues: 15 Critical, 16 Major, 8 Minor) |
@@ -42,13 +43,13 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 
 ## Still missing
 
-- **Read me/**: README, next actions, issues log, blockers, FAQ seeds
-- **Mobile Audit.csv and UX Audit.csv** (marketing site conversion, 11 items). The Mobile data is covered by the xlsx; the UX Audit has no other copy.
-- **Read me/** files the Figma docs cite: `02_ISSUES-LOG.md` (I-01…I-22), `03_BLOCKERS_for-Harpreet.md` (questions 1–27), `01_NEXT-ACTIONS`, `04_FAQ-SEEDS_sub-pages.md`
-- Meeting 4 transcript, if it exists (Meeting 5 is dated 2 Jul, 3 is 22 Jun)
+- **Issues I-18 to I-22** (button hover, Hi Fi B fonts/typos, pricing tiers vs heading, pricing card buttons). Cited across the docs but absent from `Read me/02_ISSUES-LOG.md`, which stops at I-17. The log's own author flags this
+- **Blockers questions 10 to 27.** The Figma plans cite 27 numbered questions; `Read me/03_BLOCKERS_for-Harpreet.md` has only 9 items, in a different numbering
+- **Meeting 4 transcript**, if it exists (3 is 22 Jun, 5 is 2 Jul)
 - **Design/HubSpot/For workers/** (Home and For companies are in)
-- **Design/Assets/**
-- Dashboard PDF screenshots are not text-extractable; keep the PDFs as the reference.
+- **Design/Assets/** (`Testing assets/`, `In Use/`)
+- **Mobile Audit CSV and UX Audit CSV** originals (the Mobile data is in the xlsx; the UX Audit's 11 conversion items exist only inside `Audit/Audit list.md`)
+- The dashboard PDFs' screenshots are not text-extractable; keep the PDFs as the reference
 
 ## Figma at a glance
 
