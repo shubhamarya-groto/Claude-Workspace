@@ -1,5 +1,8 @@
 # GFB Hero · set up in the Design Manager
 
+
+> **Live in HubSpot (6 Oct 2026):** created through the HubSpot connector as **GFB Hero v2**, path `custom/content-mcp/modules/gfb_hero_v2` in the GoFindBuild account (47303551), with every field below and the code from this folder (CSS inlined in the HTML). The hand-built `GFB Hero` (3 fields) can be deleted once v2 is on the page. Claude can update v2 through the connector; edit it there rather than in the Design Manager so the two don't drift.
+
 Module **GFB Hero** (Design Manager, content types Site pages + Landing pages, Local).
 Figma: Home Page `1259:9027` → band `1259:9031`. Copy and colours read from Figma on 6 Oct 2026.
 
