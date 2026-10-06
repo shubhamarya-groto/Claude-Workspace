@@ -24,6 +24,9 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 | `Design/HubSpot/00_ELEVATE-KIT.md` | What the HubSpot Elevate theme ships (6 layouts, 20 modules, 46 sections), how it maps to the Figma kit, and why one theme setting fixes the button contrast everywhere |
 | `Design/HubSpot/For companies/00_PLAN_Redesign-and-Build.md` | Company page build plan: steps 0–5, blockers B1–B3, decisions D1–D5, HubSpot band→Elevate preset map, QA checklist, week plan to Wed 30 Sep |
 | `Design/HubSpot/For companies/01_CURRENT-PAGE_Teardown.md` | Teardown of the live Squarespace /companies page: what to keep, 15 measured defects, copy that survives |
+| `Design/HubSpot/Home/01_R3_HubSpot-Elevate-Mapping.md` | How homepage R3 maps band by band to Elevate presets, with [Theme]/[Editor]/[CSS]/[Module]/[Copy] tags and the theme defaults that change |
+| `Design/HubSpot/Home/02_SITE_Changes-Needed-Home-Page.md` | Live demo fix list H-01 to H-24 (the `H-xx` references in the audit list) |
+| `Design/HubSpot/Home/03_COMPONENT-INVENTORY_Live-Demo.md` | What the live demo is built from (32 modules, 1 custom) and the global-header problem |
 | `Project Context/UX-Review-7-1.md` | Brian's review of the dashboard designs (1 Jul), converted from the .docx |
 
 ## Source notes
@@ -38,7 +41,7 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 - **Mobile Audit.csv and UX Audit.csv** (marketing site conversion, 11 items). The Mobile data is covered by the xlsx; the UX Audit has no other copy.
 - **Read me/** files the Figma docs cite: `02_ISSUES-LOG.md` (I-01…I-22), `03_BLOCKERS_for-Harpreet.md` (questions 1–27), `01_NEXT-ACTIONS`, `04_FAQ-SEEDS_sub-pages.md`
 - `Project Context/2026-09-11_Brian-Mockup-Brief.md` and `2026-09-15_Meeting-Notes.md`
-- **Design/HubSpot/**: Home and For workers folders (For companies is in), including `02_SITE_Changes-Needed-Home-Page.md` (the `H-xx` references in the audit list)
+- **Design/HubSpot/For workers/** (Home and For companies are in)
 - **Design/Assets/**
 - Dashboard PDF screenshots are not text-extractable; keep the PDFs as the reference.
 
