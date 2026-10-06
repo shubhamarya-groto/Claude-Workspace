@@ -46,7 +46,7 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 - **Issues I-18 to I-22** (button hover, Hi Fi B fonts/typos, pricing tiers vs heading, pricing card buttons). Cited across the docs but absent from `Read me/02_ISSUES-LOG.md`, which stops at I-17. The log's own author flags this
 - **Blockers questions 10 to 27.** The Figma plans cite 27 numbered questions; `Read me/03_BLOCKERS_for-Harpreet.md` has only 9 items, in a different numbering
 - **Meeting 4 transcript**, if it exists (3 is 22 Jun, 5 is 2 Jul)
-- **Design/HubSpot/For workers/** (Home and For companies are in)
+- **Design/HubSpot/For workers/** exists but is empty (nothing built there yet; the Job Seeker page is designed in Figma only)
 - **Design/Assets/** (`Testing assets/`, `In Use/`)
 - **Mobile Audit CSV and UX Audit CSV** originals (the Mobile data is in the xlsx; the UX Audit's 11 conversion items exist only inside `Audit/Audit list.md`)
 - The dashboard PDFs' screenshots are not text-extractable; keep the PDFs as the reference
