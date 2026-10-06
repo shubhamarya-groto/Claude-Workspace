@@ -20,7 +20,7 @@ Written 6 Oct 2026, from the existing docs. Status as given: **designs for the G
 | 0.2 | **Theme settings pass, once:** primary button `#F16C0E` with navy `#16243D` label, hover `#F4811F`; H1/H2/H3 to Instrument Sans (H2 = 48px); base colours, card variants, tag colours per the defaults table | `Home/01_R3…` "Elevate defaults that change", `H-09`, `H-10` |
 | 0.3 | Page-level basics: language en-US, real title and meta description, favicon, logo as a proper file with alt text | `H-13`, `H-17`, `A-29` |
 | 0.4 | Files: upload `Design/Assets/Testing assets/hero-welder-1400x799.jpg` to HubSpot Files; replace the 2.8 MB Cloudinary screenshot | `H-12` |
-| 0.5 | Put `Design/HubSpot/Home/code/gbf-module/` into the portal as the **GFB Hero** module; set the photo URL (the `PASTE-THE-FILE-MANAGER-URL-HERE` placeholder); load fonts once, from the theme, not per module | `Home/code/` |
+| 0.5 | Put `Design/HubSpot/Home/code/gfb-hero/` into the portal as the **GFB Hero** module (steps in its `README.md`); pick the photo in the module's image field; load fonts once, from the theme, not per module | `Home/code/` |
 
 ### Step 1 · Shared pieces (build once, every page reuses)
 

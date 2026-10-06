@@ -15,7 +15,7 @@ Layer names in Figma carry the module for each band, in the same `M1 · Custom /
 | # | Band | Node | Size | Built from in HubSpot |
 |---|---|---|---|---|
 | 00 | Top Nav | `1259:9028` | 1440 × 96 | Elevate Site header (DS Top Nav) |
-| 01 | Hero + fork | `1259:9031` | 1440 × 717 | **Custom module GFB Hero** (code in `code/gbf-module/`) |
+| 01 | Hero + fork | `1259:9031` | 1440 × 717 | **Custom module GFB Hero** (code in `code/gfb-hero/`) |
 | 02 | Trust bar | `1259:9048` | 1440 × 92 | Elevate **Card ×3** |
 | – | What you get | `1363:8560` | 1440 × 770 | Elevate section `products-and-services-two-column` |
 | 08 | Testimonials | `1259:9068` | 1440 × 826 | Elevate Testimonial slider (**still sample content**) |

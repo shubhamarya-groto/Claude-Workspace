@@ -17,7 +17,7 @@ Goes with `04_FINAL-DESIGN_Home-Page.md`, which has sizes, copy and band order.
 | # | Band | Node | Group | From the template panel / what to code |
 |---|---|---|---|---|
 | 00 | Top Nav | `1259:9028` | **Template** | Elevate **Site header** (global). Figma: DS Top Nav instance |
-| 01 | Hero + fork | `1259:9031` | **Code** | Custom module **GFB Hero** (already exists, `code/gbf-module/`) |
+| 01 | Hero + fork | `1259:9031` | **Code** | Custom module **GFB Hero** (already exists, `code/gfb-hero/`) |
 | 02 | Trust bar | `1259:9048` | **Template** | Elevate **Card** ×3 (icon + one line), CSS to keep them in one row with the 28px check badge |
 | – | What you get | `1363:8560` | **Code** | Custom module. See note 1 |
 | 08 | Testimonials | `1259:9068` | **Template** | Elevate **TestimonialSlider** (Heading + slider) |

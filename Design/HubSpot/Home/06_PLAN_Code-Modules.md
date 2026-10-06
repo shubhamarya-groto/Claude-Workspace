@@ -76,8 +76,11 @@ Design/HubSpot/code/gofindbuild-child/        ← uploaded as the child theme
         └── module.css
 ```
 
-The current `Home/code/gbf-module/` (note the `gbf` typo) moves into `gfb-hero.module/` and is replaced
-by the version below.
+**Update 6 Oct:** the GFB Hero is being built in the **Design Manager** for now (module `GFB Hero`, folder
+in the portal, content types Site pages + Landing pages). Its paste-in code and field setup are in
+`Home/code/gfb-hero/` (`README.md`, `module.html`, `module.css`). The field list there replaces the
+hero field table below: the two fork cards are two fixed groups, not a repeater, because the Design
+Manager can't give each repeater item its own default copy.
 
 ## Rules both modules follow
 
