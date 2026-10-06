@@ -21,6 +21,7 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 | `Design/Figma/05_REVIEW_Iteration-1.md` | Design review of Home, Job Seeker, Company, About Us (desktop + mobile): STOP / A / B / C findings |
 | `Design/Figma/06_ITERATION-2_Section-swaps.md` | Iteration 2: 21 sections swapped for Elevate kit components, before/after ratings |
 | `Design/Figma/Source files/` | `GoFindBuild-Marketing-Site-All-Pages.html` (Brian's 11 Sep mockup, 3 pages, his approved copy) · `Go Find Build-User Flows.pdf` / `.jam` (FigJam user flow incl. first-time experience, job seeker, company, project owner and trade partner paths) · `GofindBuild Website Redesign.fig` (20 Jun export, outdated; work in the live Figma file) · `gofindbuild-wireframe-plugin.js` (draws the Mission Control dashboard wireframe; predates the design system) |
+| `Design/HubSpot/00_ELEVATE-KIT.md` | What the HubSpot Elevate theme ships (6 layouts, 20 modules, 46 sections), how it maps to the Figma kit, and why one theme setting fixes the button contrast everywhere |
 | `Project Context/UX-Review-7-1.md` | Brian's review of the dashboard designs (1 Jul), converted from the .docx |
 
 ## Source notes
