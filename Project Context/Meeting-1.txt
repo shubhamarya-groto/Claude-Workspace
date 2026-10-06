@@ -1,0 +1,196 @@
+Impromptu Zoom Meeting - April 27
+VIEW RECORDING - 31 mins (No highlights): 
+
+---
+
+0:00 - Harpreet Singh (letsgroto.com)
+  Thank you. Good. What about you?
+
+0:03 - Brian Oltmanns
+  Good. I've got my DevOps guy that should be joining us. So hopefully he pops in on that link there.
+
+0:12 - Harpreet Singh (letsgroto.com)
+  Sure, sure, sure. No problem. Do you want us to wait or do you want to start with a basic introduction?
+
+0:18 - Brian Oltmanns
+  Yeah, you can get started. Maybe just tell me a little bit about what you specialize in and kind of some of the projects you've worked on and some of that stuff.
+
+0:26 - Harpreet Singh (letsgroto.com)
+  100%. So I think I can get started with a basic introduction. I have been in UX industry for past 10 years now and I am a top 3% UX designer globally certified by TopTel.  So the reason why I say this is because it's sort of difficult to crack TopTel because it usually is a great talent of designers and developers globally.  So I was fortunate enough to crack that at one go and post that I've got the opportunity to work with enterprise level clients.  For example, I recently worked with Colgate, Colgate-Palmolive, again a Fortune 500 giant. Where I was the one who was responsible for designing their complete design system from scratch, plus designing their internal AI SaaS web application.  So it's confidential, I cannot disclose much information, but it was like a nine-month-long contract, and I worked with Colgate throughout this project.  I also worked with a lot of YC-backed companies. Recent one was FirstWork, firstwork.com. FirstWork is an AI SaaS workspace enablement platform, and I was the one responsible for developing the complete web application UI, plus website design.  Along with that, I also recently worked with another funded company. They recently secured their Series A. It goes by the name of CAMB AI.  CAMB AI, you can think of it like an enterprise giant player for 11 Labs. So 11 Labs is a voice modulation platform, and they are doing exactly similar, they are providing exactly...  So I was the one designing a complete web application, you know, solving problems, whether it's from onboarding, whether it's, know, activation, and then the website, of course, is a part of the service.  So yeah, like, I think it was a one and a half year long engagement. So yeah, I mean, that's a quick introduction.  And typically, if you ask, like, what is the sort of, you know, niche down services that I provide, I specifically did in UX Strategy, UI Design, Design Systems, Prototyping, Envy Validation, specifically for AI and SaaS products.
+
+2:33 - Brian Oltmanns
+  So that is the core niche that I deal in.
+
+2:36 - Harpreet Singh (letsgroto.com)
+  So yes, that's the introduction.
+
+2:38 - Brian Oltmanns
+  Do you use AI to assist with the design or UX work in your network?
+
+2:44 - Harpreet Singh (letsgroto.com)
+  100%. Recently, see, I primarily use Figma Make because I also use Claude sometimes, Claude Work, but personally, I feel like Figma Make generates better results because it can directly access your design.  Without a proper or exponential need of an MCP server. So this is my personal opinion. Everyone has separate opinions on that.  But I personally prefer FigmaMig because I can directly sort of quickly design my iterations, prototype them, run it through stakeholders or the team internally, and then quick validations can be opted from that.
+
+3:18 - Brian Oltmanns
+  I see. Okay. Do you have... I looked at some of your portfolio on Upwork. I don't think Jeff has access to that.  Could you just briefly show us some of your portfolio work or some of the problems, I guess, you've solved?
+
+3:40 - Harpreet Singh (letsgroto.com)
+  I can't. can't. Just give me one second. So...
+
+3:44 - Brian Oltmanns
+  And I'll tell you kind of what we're looking to do. So we have a web application built. We launched late last fall, construction hiring focus.  So we were in winter here. So we were... We're spending the winter basically trying to optimize some things because no one was hiring in the winter.  And now we're kind of coming into spring and we're wanting to implement some new features that particularly around the vetting of job seekers to provide much more value to the companies and also, you know, also provide, you know, right now we're a SaaS, B2B SaaS as well.  So when we're trying to get a paywall activated for a business, we want to make sure that the profile they're looking at of a job seeker is optimized, you know, is valuable to them.  So we're trying to create the value and add the value into the profiles and then obviously, you know, do an audit and improve on any UX, UI that we already have currently built.  So that's kind of a starting point for us, but we just wanted to kind of engage with somebody now to kind of take a look at our existing platform, offer recommendations, and then work alongside of us with some of these new integrations.  And we're using a lot of a cloud code as well to develop, you know, nowadays. So we'd like to make sure that anything that we implement is optimized for mostly like product-specific, like user interface, you know, optimizations for that type of application.
+
+5:21 - Harpreet Singh (letsgroto.com)
+  So, like, if I have to ask you, like, what exactly, like, is the platform live? Are there any specific users that are typically using it from a day-to-day basis?
+
+5:32 - Brian Oltmanns
+  Like, what is the current stage of the platform? Yeah, so we were essentially a two-sided marketplace. So we're navigating through the cold start problem.  We have, we have company users that use the platform to post jobs and to find other businesses to engage with in construction.  So if I own a general contracting business and I'm looking for flooring companies, know, framing companies, you know, cabinet companies, whatever, you know, they can find them through our, through our database.  And then on the flip side of that, we have job seekers, which we would like to integrate training resources, possibly material resources through vendors, and mostly hiring resources through job postings, through matching of skill sets.  You know, if someone signs up and has experience in flooring, you know, we go through a questionnaire on the profiles, and then we, you know, our software highlights what their experience is, and then we match make them, if you will, to the companies in our database.  So we're kind of creating a loop of matching skill sets to the businesses that would want them in front of them, and then interacting through job postings.  So, but that's kind of what we do in a nutshell.
+
+6:45 - Harpreet Singh (letsgroto.com)
+  And how are you handling the design requirements right now?
+
+6:48 - Brian Oltmanns
+  Like, do you have a Figma design? Are you, how are Yeah, we have a Figma board that we, we've had a previous designer.  He's kind of working, he was working fractionally, so. You know, it was kind of a very slow process and we're just trying to kind of, you know, take a look at what we have and also get some new eyeballs on it, new ideas.  You know, I feel like I haven't had a whole lot of feedback yet just because we're still trying to, you know, get amassed jobs, you know, and get them into the system.  Now that spring has started, we're working on getting more jobs in the system. But yeah, we're trying to just make sure that the profiles are optimized.  You know, if you're going to look at someone's profile and decide whether or not you're going to spend money, we just want to make sure that they are, you know, the best looking profile and the best, you know, way that they can be received by a company.
+
+7:47 - Harpreet Singh (letsgroto.com)
+  So just like just trying to understand it better. So when you say profile, do you mean like a profile of a candidate that the company is going to take a look at?
+
+7:55 - Brian Oltmanns
+  Correct. Yeah, like mainly like a skills profile. Like so, you know. We ask them, do they have a driver's license?  Do they have, you know, certain certifications? Do they have any experience in construction? You know, we do it. We allow them to put a resume, but really what we're building for companies is not really focused on, like, where I went to school.  It's more like, what have I done? What do I want to do? Do I have any training? Do I have any certifications?  You know, and right now, as we start out, we have just over 200 job seekers, and they're mostly all entry-level, you know, people just kind of looking for anything, which makes it a little bit harder for us because, you know, then we have to primarily focus on entry-level jobs.  But, you know, the other flip side of that is that entry-level workers don't have experience. So, if they don't spend the time really going through their profile and putting any information there, it's almost looking at a blank screen of, yeah, I have a driver's license, and then, you know, if they just skip through.  The end, you know, as a business, you're not looking at much, right? So there's a little bit of that to navigate through, but it'll be interesting to get someone else's take on, you know, how this is set up, what businesses are going to see, and how we can make it better.  And which is what we're kind of working towards with using AI for vetting and quizzing, social proof from coworkers to validate their skills, and then doing like some sort of profile score, you know, and then kind of coaching the job seeker along the way, like, hey, you know, your profile is very, very, you know, not optimized to where you're going to have a lot of success in finding a job until you put the time in.  But building in something like that, you know, and then as we start to acquire a little bit more of a mix between entry-level workers and skilled workers, you know, making sure those skilled workers really stand out, you know, is going to be big for, you know, for businesses to be able to  Kind of say, you know, from what they can see, they can see a lot of value in spending money to unlock their profile.
+
+10:07 - Harpreet Singh (letsgroto.com)
+  Makes sense. Makes sense. Makes sense. So maybe what I can do is I can show you some of the products I have designed, right, that will give you some clarity as to the type of style, the type of work that I specifically deliver.  Plus, I also show you one of the recent product that we have designed, again, a B2B AI SaaS product.  I personally believe that that is one of the finest work that I have produced over some time.
+
+10:33 - Brian Oltmanns
+  So, but that's, again, subjective. So maybe I'll show you both the projects so that you can make some judgments accordingly.  Okay.
+  SCREEN SHARING: Harpreet started screen sharing - WATCH: https://fathom.video/calls/652547232?timestamp=642.294571
+
+10:40 - Harpreet Singh (letsgroto.com)
+  Let me share my screen. Let me know if it's visible.
+
+10:47 - Brian Oltmanns
+  Yep.
+
+10:48 - Harpreet Singh (letsgroto.com)
+  Perfect. So this is for Pathways, right? PathwaysX is a hiring platform which has three different user personas. I won't go into.  into the UX problem solving right now, I'll just skim use of some critical screens in the flows. So Pathways is specifically designed for hiring, like AI hiring, as an AI hiring solution.  And again, it has three different personas. One is candidate, second one is a hiring manager, and then third one is like a client or the end client who are sort of managing their profiles, right?  So the primary reason client wanted to design this platform is they have built an internal AI system, which conducts the AI interviews for the candidates.  And it sort of gives inputs as to whether the candidate is a potential fit. And then again, it also has, you know, AI matching capabilities as to what exactly you were referring to, right?  So I'll just show you some of the key screens. So this is, for example, a first time screen. So you can tell and educate the users, okay, this is what you can do, right?  A primary key CTA, this is what you can do, right? And then this is how the interviews are happening.  Again, AI-based interviews. So maybe I'll skip this one. I'll show you some other key screens. This is personality mapping.  Okay. So this is what happens if someone has an upcoming assessment or an interview, right? Your applications, the applications that the user has submitted.  This is for a candidate, by the way, right? So this is the upcoming assessment. They can take this assessment.  They can see the application that is submitted and some recommended jobs, typically for a hiring platform, right? And this is how the assessments also looks like.  Again, assessment is AI-generated. So it's via AI avatars that they have created at the backend. And if these are different states, right, I can just show you clean designs for what we have produced.  This is how upcoming interviews look like. Process was very, it's like a eight to nine long engagement where the process was very, like, I would say, complicated.  Primarily because client was starting from scratch and they had an existing product idea in mind. They were not sure as to how to implement, you know, different structures, different flows mapping were done properly.  So it started with the proper, you know, documentation in the form of PRD, which was then transferred. Let's just say a quick low-fidelity wireframes.  Before that, it was a long UX strategy exercise where competitors were studied, know, different empathy mapping was done for different user personas that we have, you know, user journeys were mapped out.  Again, a very intensive, long process for the strategy part. Then the design phase started with, you know, typical wireframing for different user personas and across different user personas, different flows.  These flows were sort of internally tested out with potential users because client already had some user base and they wanted to validate the thought process before moving to the final stage of design.  So we created, you know, use case or test runs on a platform called Maze. So we hired some users to run these tests or missions.  These are called missions, by the way, for testing. So we run these missions, we get the validation, we did the changes.  And then once the changes were implemented, then we finally moved to the design space because there's literally no point if we are actually going to design phase.  Without sort of getting some validation from the user end, right? That's why it's critical to get that validation in the early wireframe stage, right?  Then we realized some changes here and there, made changes, and then it's like a very detailed platform. I'll show you some of the snippets.  This is how a job looks like, showing 20 jobs, know, this is a job that they can apply on, right?  A quick success model of how it looks like. It's probably a prototype. So testing was done at two stages, I just thought it's critical for you to know.  One was done at the wireframe stage. The second testing was done post UI when the, let's just say, the prototypes were created.  Again, we realized some patterns that we initially put in hypothesis on. And then once the user validated those pointers in the prototyping testing stage, we realized, okay, we need to do some minor changes on the UI.  And that's how the process typically works. You cannot get to the final point just by looking at one single stage of testing.  Again, uh, get some changes, you know, move some elements. This also has a very deep So every element that you see, every design component that you see has been properly mapped and be used from a proper design system.  So, I mean, yeah, it's like a very big platform, I think, having more than 1,000 plus screens. yeah, like, this is much of a project.
+
+15:19 - Brian Oltmanns
+  Like, some of those components are quite similar to what we have.
+
+15:22 - Harpreet Singh (letsgroto.com)
+  Great. That's why I wanted to share this project.
+
+15:24 - Jeff Keller
+  There are a lot of similarities, for sure.
+
+15:28 - Harpreet Singh (letsgroto.com)
+  Correct. So that's why I wanted to first show you this project and then maybe move to the next one.
+
+15:33 - Brian Oltmanns
+  Okay.
+
+15:35 - Harpreet Singh (letsgroto.com)
+  Cool. So the next one is Figma, Conigma, sorry. Think of Conigma, I don't know whether you have used Clay.  So Clay is a platform where you can automate all your, you know, let's just say email automations, know, can search leads, enrich them, find their details, set a proper email automation throughout the whole platform.  Think of it like one level on top of it. I'll just try to find some. Fathom Elements, which is like, okay, this one is good.  Again, I won't get into a lot of intrinsic details of this platform. I'll just show you a quick screens because I really wanted to show this platform because this is one of the projects that we are really proud of.  It's a clean UI following the latest design, you know, patterns that you will see across different platforms. I'll show you some of the key screens.  Inbox, Chat UI, okay. So this is like an inbox, like a typical inbox, right? We have a left side panel, right, for the company details, and you have different accounts that you have linked to, right?  Different messages that you have been interacted with. Again, it has a message plus, you know, plus an email campaign altogether.  So different CRM, so you can think of it like a CRM built on top of an inbox platform. So very complicated product, having a lot of different flows.  So I'm just showing you just because I personally like these sort of designs, clean, minimal, you know, following a proper brand strategy, right?  So this is one of the screens where you are integrated. In a product, let's just say WhatsApp, so what you need to do, this is again following a proper design system.  This is like, I think based on shared CN, shared CN library. So that's why you will see some similarities in the patterns of the components.  So yeah, I think let me see if there's any other screen. Oh yeah, workflow is a good one. So workflow is like an automation building platform.  Think of it like Zapier or N8N, if you have to use Zapier or N8N, where you can sort of customize different input points, customize the output flow points, know, define their parameters, and you can even build it with AI if you have a chat prompt, right?  You can give tasks. So this is, again, like a UI that I really feel is a good one. So that's why I wanted to share this flow as well.  So this is for the workflows.
+
+17:51 - Brian Oltmanns
+  Okay. Yep. What do you typically look for when you look at an existing... Bye. Like, like, when you're looking at, like, an audit or something, like, what are the key components that you look for?
+
+18:08 - Harpreet Singh (letsgroto.com)
+  See, if I'm looking at an existing web application, first, I'll audit it from a heuristic evaluation POV. What I mean by that is, like, how many clicks a user is, you know, performing, or how many clicks a user is sort of clicking in terms of complete, you know, in order to complete the first section that we want.  For example, in onboarding, are we having a lot of different questionnaire to fill it? And even one step further, are you asking him to click on a submit button, or is it, like, a proper flowing form with reduced clicks, right?  So this is, again, one simple example. But I typically do a proper heuristic evaluation of the existing SaaS product to see where the leaks are, like, in terms of activation, in terms of onboarding, in terms of any other key components that we're looking at.  And then prepare a proper, you know, priority-wise Excel sheet, which has proper, you know, recommendations plus the existing flaws.  Or... Or... Improvements based on different priorities, PCO, P1, P2, P3. And then I discussed those strategies with the key stakeholders as to, you know, this is what I think is the highest priority.  Think of it like a quick win. If we can just optimize one small thing and get more conversions, that is a quick win for us.  That is why it will be placed at P0. But if one specific element requires a lot of development effort, so I'll keep it at P2, P3, we can prioritize it later.  So that's how I position this, you know, audit in a very insightful way, considering both design effort, development, effort, product effort, product yeah, that's, that's how I do it.
+
+19:33 - Brian Oltmanns
+  Okay. Jeff, do you have any questions as far as like anything that we're getting ready to work on or anything that he's maybe done or how we can help or?
+
+19:45 - Jeff Keller
+  I would say just kind of as we look through this longer term, have you done anything on mobile apps?
+
+19:55 - Harpreet Singh (letsgroto.com)
+  Yeah, I have.
+
+19:57 - Jeff Keller
+  Can we, can we see an example? Do you have one? Of a application that runs on just a regular web browser, but also as a mobile app, like that would maybe be implemented in React, like React Native or like in Vue 3 or something like that.
+
+20:15 - Harpreet Singh (letsgroto.com)
+  I get it. I might not have that example on top of my mind, like I know how the technology works, but yes, I have worked on a lot of different mobile applications, whether it's a progressive web application, right, something like Amazon or any of the platforms.  Whether it's complete native iOS or an Android application following their, you know, iOS or human guidelines. So I have done a lot of these projects.  It's not like I have specifically expertise in SaaS and AI. I have worked on a lot of these mobile applications.  So yeah, like I do have this valid experience of working with such complexity with projects.
+
+20:47 - Jeff Keller
+  Do you have an example of a responsive app that you can show us? I think it collapses all the way from the browser down to like, you know, pulling up a  Browser on my phone.
+
+21:01 - Harpreet Singh (letsgroto.com)
+  Correct. I get it. So let me show you, I think.
+
+21:04 - Jeff Keller
+  That'd be a good first step anyway.
+
+21:07 - Harpreet Singh (letsgroto.com)
+  100%. Let me show you one example where I sort of worked on a similar marketplace platform and it also had this mobile responsive screen.
+
+21:14 - Jeff Keller
+  So you get an idea as to how the trends are translated. Yeah.
+
+21:18 - Harpreet Singh (letsgroto.com)
+  GC. Okay. So I'll tell you the process, right? First of all, the key parameter or a key thought process while I'm implementing a responsive design of the existing application, is not to just copy-paste all the features into a mobile screen, right?  Because the view width is limited. You have to prioritize as to what is the key primary action that the user is going to perform.  And then, you know, deprioritize some elements either in the sidebar or at the bottom navigation or things like that.  So this is how I quickly start the process.
+
+21:53 - Jeff Keller
+  Maybe I'll show you some screen so you get an idea. Sure.
+  SCREEN SHARING: Harpreet started screen sharing - WATCH: https://fathom.video/calls/652547232?timestamp=1320.436803
+
+22:03 - Harpreet Singh (letsgroto.com)
+  Okay. So this is India's biggest creator hunt portal. Think of it like a freelancing platform, but built for design creators.  This project was done in late 2023, so it's not the latest one, but I still wanted to show you some key screens and flows, right?  So it has a proper, you know, like different projects that are being posted right now. You have a profile, you can see your earnings, customize your profile, right?  So I'll just show you some of the key screens and then take you the mobile responsive versions of those screens.  So this is a project detail screen where the chat is happening. You know, you can see the active conversations, who is the project manager, different project details, proposal that a designer has submitted, right?  Different files that have shared, upcoming meetings, billing regarding the existing project, right? So I'll show you the mobile screens now.  Okay. This one is also a good one. This is like an active profile for a designer, right? You can see their profile details on the left-hand side.  You can see different projects, different services. They're offering reviews, etc. You can also upload a project if you're a designer, of course.  Taking you to mobile responsive screens. Okay. So this is how it translates to, like, the primary objective is not to bombard the user with all the elements up front.  It's just to showcase the priority-based information. For example, new brief received is the highest priority. This is a P1.  So that is why it's kept at the top. Task, not all the tasks are shown up front. Only the key tasks are shown, and then you can view view all at the bottom of it to maybe navigate to the other, you know, different navigation styles.  Then we have active briefs. It's a proper scroll bar after projects, different profile. And profile, since it's not a P1, that is why it's usually placed at the bottom, and all the other information is sort of placed in a hamburger bar with, you know, different priority actions.  Think of it like a navigation mapping of the left side navigation of the web app to a right side navigation of a mobile site.  So pop-ups are properly optimized. So as to how they will show in a mobile device, right? Sometimes it also comes to a conclusion where, you know, not all information can be prioritized on the left side navigation.  That's why we sort of come up with a bottom navigation or a floating bar, which deprioritizes or prioritizes the important flows at the bottom and then deprioritizes the other flows in the sidebar.  So that's an important UX call that we usually take when designing such, you know, mobile responsive screens. So yeah, like I like retrieve a lot of clients ask for these deliverables.  So that is already a part of the process. So I can definitely like work on that approach as well.
+
+24:35 - Jeff Keller
+  Okay, cool. Thanks. Yep.
+
+24:43 - Brian Oltmanns
+  Sounds good. Well, yeah, I don't have a whole lot of the questions. I'll talk to Jeff and then figure out what's your, would you be working on our project?
+
+24:51 - Harpreet Singh (letsgroto.com)
+  Would somebody else be working on it? What's your timeframe look like? First of all, I think I have a quantum question.  Like, when are you? Planning to start because I am in active discussion with one or two clients. So I just want to be honest, like primary project source is typically top top.  And I just wanted to get some clarity as to what is the sort of engagement that we're looking at so I can prioritize my ongoing engagements and, you know, like prioritize my schedule accordingly.  Obviously, if things work out well and then make that decision, like, are you planning to get started next week, next week, next week, this week?
+
+25:24 - Brian Oltmanns
+  What is the priority? I wouldn't think we would be ready to start, you know, maybe two weeks, something like that at the earliest.  And I don't foresee it being a full-time engagement. You know, what I'm looking for is basically just to optimize what we have as a step one, you know, and there's a few key components I can point out that may, you know, may be an issue and may not be based on your expertise.  But that's kind of where I want to start is with the existing platform. So like I said, it wouldn't and it's not it's not really anything that's on a time frame.  A serious time frame. It's just when we get thinking forward, we obviously want to eventually have a mobile application.  We want to integrate some new features, you know, and I want to just make sure that I'm going about it the right way.  Not, you know, integrating things into our existing platform and then finding out later, like, we should have changed this all before we did this.  And that's kind of my point as far as where we're starting. So I would say, you know, you're obviously not going to be retiring on us alone.  So like I said, I think my vision is just like starting out with, you know, taking a look at what we have, making recommendations, which I don't believe should take a ton of time.  We have a fully built application. It's going to be a few things here or there and recommendations. And then and then there could be a disengagement for a while, like as we build these features, we reach back out to you and say, hey, we built these things, you know, and now we need to figure out how to implement them into our.  You know, into our existing workflow, et cetera. Um, and that's kind of what I'm seeing. Um, and that's my non-technical verbiage.
+
+27:08 - Harpreet Singh (letsgroto.com)
+  So makes sense. Makes sense. No, I think that completely makes sense, but I would really appreciate if we can like, uh, like if we can trim down to basically, let's just say 10 hours a week, 20 hours a week, or let's just say 15 hours a week engagement.  So that see, the reason I'm asking is obviously you won't be able to put a number to it. I will be the one who will actually analyze the platform and then give you audit recommendations.  But the reason why I'm like actually thinking in that direction is because I have limited number of hours and I have to like completely provide clarity as to other clients.  This is the number of hours that I can provide, uh, support for, right? A consultation service for. So that is the reason I was thinking in that direction.  Maybe once you, uh, decide to move forward, I can have a look at the existing application, uh, provide you some quick recommendations in the audit format, and then take a call to implement these changes.  This is the priority one, P2, P3, and this is the number. And then we can sort of finalize, okay, let's do it in week one, week two, week three, whatever.
+
+28:11 - Jeff Keller
+  Yeah, I think, Brian, a good way that this may work is that let's say there's a thing we need looked at, right?  And we say, you know what, that's probably about a 20-hour project, right? But let's just say every week is 10 hours, okay?  So, okay, cool, it takes two weeks, whatever, it's fine.
+
+28:29 - Harpreet Singh (letsgroto.com)
+  Great. Okay.
+
+28:29 - Jeff Keller
+  Great. okay, Because if we do it that way, the other thing, too, is I'm also fractional. So, I'm here for 10 hours a week as well.  So, we kind of have that cadence anyway. So, and I've got a number of things to do even just on this project.  So, if it's spaced out a little bit as far as, at least from my perspective, Brian may have a different opinion.  very odd everyone. Yeah. The we'd like say, Y Sor Marital's I don't have an issue myself with a set number of hours.  I think it would be helpful, though, to go, yeah, we need you to do an eval of the app.
+  ACTION ITEM: Align w/ Jeff on engagement model/cadence; update Harpreet this week - WATCH: https://fathom.video/calls/652547232?timestamp=1748.9999
+
+29:10 - Harpreet Singh (letsgroto.com)
+  And then you say, okay, well, that's this many.
+
+29:13 - Jeff Keller
+  And then we would work our calendars from there. Brian, does that make sense? You got a different thought about that?
+
+29:19 - Brian Oltmanns
+  Yeah, I don't think that it's ideal for anybody, you know, when you're working for a short while and then you're disconnecting for a short while and working.  So, you know, we'll just, Jeff and I will discuss, but maybe we just do that first for now. Like, we do a set number of hours per week, you know, you work those hours, you get to a certain place, and then you start, you know, the clock the next week.  And it at least gives you that week over week where you're engaged and we're working towards some type of a goal.  As long as there is a goal and there is work to do, of course, I don't want to just pay for just, you know, whatever, waiting for something.  But, yeah, I think that that could work fine, too, as long as.
+
+30:00 - Harpreet Singh (letsgroto.com)
+  And even, like, even if we don't have any specific, you know, pipeline, pipeline of work in that specific duration, we can even track zero hours.  not like I'm always, like, adding some hours for that effort. But it's always better to have some clarity, at least two, three weeks off rent, so I can manage my, you know, like, work management accordingly.  That's the reason. That's it. Nothing to say.
+
+30:21 - Brian Oltmanns
+  Yeah.
+
+30:23 - Harpreet Singh (letsgroto.com)
+  Okay.
+
+30:25 - Brian Oltmanns
+  All right. Well, we'll talk through what that might look like, and we'll kind of talk through this week on where we're at and where we think we're going to be, so we can try to see what cadence we need to set, and then I'll reach back out, and we'll see what we can get figured out.
+
+30:41 - Harpreet Singh (letsgroto.com)
+  Sure. No worries. All right. Thank you so much, Brian and Jeff. Have a great day. Bye-bye.
+
+30:48 - Jeff Keller
+  Thank you. Thank you.
+
+30:48 - Brian Oltmanns
+  Have a good day.
+
+30:50 - Jeff Keller
+  Bye.

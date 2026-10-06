@@ -1,0 +1,109 @@
+Impromptu Google Meet Meeting - June 22
+VIEW RECORDING - 13 mins (No highlights): 
+
+---
+
+0:00 - Brian Oltmanns
+  The main thing I wanted to just discuss is kind of if you had any thoughts on, you know, I know you could probably put together an audit of all the different things that you're thinking, but my main goals are kind of, I just wanted to see if you would agree with some of them or disagree just so that way in the, you know, moving forward sense of like design and stuff, you know, I wanted to kind of see if we were in some type of alignment on certain things, you know, my two main things, and I don't have a whole lot of data from users yet to understand, you know, enough about what may need change or may not, but, you know, I have had, I have had well over a dozen applications to different companies and not a lot of I don't know.  Engagement on unlocking profiles. And I think that my gut tells me that whenever you get a job seeker user that's not really spending the time to go through the whole process, does not have certain questions that they've answered or whatever, when you're looking at a profile, you're not seeing a whole lot to really entice you.  Or, you know, through the journey, we're not giving them enough incentive or instruction or whatever. But so it's the it's kind of the profiles are my main not concern, but just like what's our, you know, what's our our best, our best thoughts on on what we can do to try to improve those or improve the chances that the job seeker is going to go through.  And we're Jeff and I are kind of working through leveraging AI. I know. to produce quantity of users, but more so to produce more vetted quality users, like building in profile scores that, you know, we can allow AI to kind of make sure that like, you know, because right now we have like a success center that says like, you know, your profile is not complete, but if we had a little bit more expansive approach of like pointing out to them like, hey, your chances of success are quite minimal.  Because you're not willing to take the time to really, you know, do this, but everybody, you know, from a user perspective, just wants to get through everything as quick as possible, you know, answer what they need to answer to get access to the jobs that, and then apply to all the jobs and then kind of walk away and hope for the best.  But, you know, so that's the one thing I wanted to kind of get the thoughts on if you had any.
+
+2:53 - Harpreet Singh (letsgroto.com)
+  That completely makes sense. Now, have you guys tried any experiment? Experimentation? I had two questions, right? Number one, have you guys tried any experimentation in the past, like gamification or, you know, like progress indications?  I don't know, because if I think from a detailed perspective, I would rather, would like to quickly prototype a few ideas, not spend a lot of time, like quickly prototyping using AI, few ideas for creation of profile, right?  Whether it's a step-by-step process with some trust indicators, of course, because what I'm able to understand is that creation and onboarding is one of the critical aspects that you guys would want to focus more on, right?  And second point is last week, you mentioned you are onboarding someone from the marketing department to sort of help you with the website or the whole process, right?  So what's that for and where exactly do you feel that...
+
+4:00 - Brian Oltmanns
+  you know those inputs would be needed so like yeah yeah I mean right now I'm trying to I'm still trying to get through the process with her like she's she's busy of course and she's really she's really good at really good at this so I'm trying to not push her because I'm in a situation where I probably need her more than she needs me so because she's she's pretty well esteemed from everyone I've talked to so but I'm also trying to you know I'm really just as far as I know I'm just waiting here back from her to schedule our next meeting but I would like to have her involved specifically with like the marketing site on looking at what you've already done with those designs but also you know weighing in on like you know messaging overall our email sequences that kind of stuff so right now like I want to kind of I don't know if I need her as much or  For, you know, the user journeys or the design in regard to like the profiles like we discussed, but also the dashboards, you know, I'd like to try to, I was talking to Jeff Friday about trying to understand how we could minimize the clicks and all the process, you know, to post something, you know, if everything is kind of controlled on the dashboard, that would probably be more ideal, you know, instead of having to go to the left menu bar and, you know, clicking on job seekers and clicking on post and then going through the form that way.  But, um, you know, but, um, but yeah, so.
+
+5:41 - Jeff Keller
+  No, that makes sense.
+
+5:43 - Harpreet Singh (letsgroto.com)
+  Uh, so I sent you a detailed IA, which was like an information architecture last week, but what I'm thinking is instead of maybe going through that in detail, I can quickly map in or chime in some ideas, uh, you know, or specifically for the profile on.  Onboarding. Because that would be better. You guys can see visually what's working, what's not working. We could quickly take a call and refine it.  Not spending a lot of time refining the visuals, right? Quickly mapping out some journeys, which you can also visualize by looking at it.  That way it would be better instead of, you know, like thinking and writing and what's working, what's not working.  So you guys can also visualize. So maybe this week I can send you some ideas in that specific direction of, you know, creation and onboarding the, you know, profiles creation, right?  And then we can discuss again, you know, ideas, whatever you think could be improved or do you think we can change that, right?  Because right now, I don't know whether sharing ideas right away would be useful rather than showing it to you quickly over some, you know, like a design direction or something like that.  Right. But that's even fairly quickly. I can just use the cloud for quickly, you know, creating those wireframes, showing it to you and get the opinion.
+
+6:58 - Brian Oltmanns
+  Yeah. Yeah. Those are the two main things I just wanted to kind of discuss. So you had an idea of direction as far as like what my main goals are with the information that I have, you know, right now, the dashboards, you know, user experience in the journey, and then whatever recommendations for onboarding you have, you know, those are, I think, key elements to try to focus on where we can improve that I don't need to go to market.  people for, you know, for sites.
+
+7:32 - Harpreet Singh (letsgroto.com)
+  Of I don't think we need for, specifically for the product side. For marketing, yes, definitely we might need the inputs on the content and the storytelling aspect, but I don't think we need them for, specifically for the product side, right?  So yeah. Yeah.
+
+7:48 - Brian Oltmanns
+  Yep. Jeff, do you have anything to add? mean, I don't, I don't have anything that we need to sit here and talk about long term.  I just wanted to kind of touch base on this for now and then. Get in a positive trajectory, I guess, for this.
+
+8:03 - Jeff Keller
+  Yeah, the separation between GoMarket and product, I think that was important to define to make sure we all know where we're at.  And then, yeah, the biggest product UI stuff probably really is the dashboards and the onboarding. So, I mean, yeah, most of the functionality is pretty well-defined.  It's just a matter of us being able to use it better and get it in front of the users as quickly as we can, right?  That completely makes sense.
+
+8:47 - Harpreet Singh (letsgroto.com)
+  And I think we all would be able to better visualize once we have something in front of us to quickly look at and decide this is working, this is not working, before we even move to the final visual stage.  So, I think that would be the best approach we can. Let me do one thing. Let me pick up the onboarding and the dashboard flow, just the dashboard screen, right?  Internal screens we'll tackle later, but this week let me focus on refining a proper journey across, you know, the onboarding and how the dashboard experience would look like for the first time user and not the returning user.  Just as to, we are aligned on, you know, like what's working, what's not working. Sure.
+
+9:28 - Brian Oltmanns
+  Okay. Yeah, I think that's a good place to start just so we can kind of focus on where we can, while I hope that everything works out with our go-to-market person.  Sure, sure, sure.
+
+9:39 - Harpreet Singh (letsgroto.com)
+  So maybe like whenever you guys have any like confirmation on the website direction, we can sort of re-utilize that and continue on that part.  But in the meantime, let's focus on refining, you know, the dashboard experience a little bit better. Yep.
+
+9:54 - Jeff Keller
+  Yeah, sure.
+
+9:55 - Brian Oltmanns
+  Sounds good to me.
+
+9:57 - Jeff Keller
+  Amazing. Amazing, amazing.
+
+10:00 - Brian Oltmanns
+  Do you have any other questions or anything?
+
+10:04 - Harpreet Singh (letsgroto.com)
+  No, nothing for now. think I'll, I'll, I know the priorities right away. So we'll just start working on that.  Yeah.
+
+10:11 - Jeff Keller
+  If you have any questions about like what we, you know, from a technical standpoint, what we can and can't do or a level of difficulty, like let's say you want to add a new statistic or something to the dashboard or a new indicator of progress, right?  Right. And then we define it as have they completed these following things or whatever. Just ask and I can probably give you a pretty good estimate on all that stuff as far as like, yeah, that's really easy from a tech standpoint or that's going to be a challenge.
+
+10:40 - Harpreet Singh (letsgroto.com)
+  I think the better idea would be let me iterate some ideas first because I don't want to add any functionality, right?  Let me iterate some ideas first and maybe then you can add your thoughts. Okay, this is possible. This might not be possible.  Yeah. Yeah. Yeah. I think that would be better. So maybe we can align after that. Yep.
+
+11:01 - Jeff Keller
+  Cool. Cool.
+
+11:02 - Harpreet Singh (letsgroto.com)
+  Cool. All right. Nice. All right.
+
+11:06 - Brian Oltmanns
+  Sounds good. Well, I appreciate it. Just reach out to us through Slack or anything if you have any questions about anything built up so far that you're wondering why we did something a certain way or otherwise.  Sure.
+
+11:18 - Jeff Keller
+  Yeah. Feel free to ask questions, too. Like, how did this get here and why does this do this? And there are some things we won't have an answer for, but other things like, yeah, this is because of this specific domain thing in construction or whatever, right?
+
+11:33 - Harpreet Singh (letsgroto.com)
+  Hmm. Yeah.
+
+11:34 - Jeff Keller
+  there are some uniquenesses with the construction aspect of it and the target audience as opposed to, like, a LinkedIn.  Yeah.
+
+11:46 - Harpreet Singh (letsgroto.com)
+  Yeah. Yeah. Not that completely makes sense.
+
+11:48 - Jeff Keller
+  Definitely a different user. Exactly. A hundred percent.
+
+11:51 - Harpreet Singh (letsgroto.com)
+  Cool. If I have any questions, which I think I will. So maybe I'll Slack you guys regarding the onboarding or the process journey.  But if I feel that I don't need clarification at that point in stage, maybe we can discuss in the next check-in call and brainstorm on that.
+
+12:08 - Jeff Keller
+  Perfect.
+
+12:10 - Harpreet Singh (letsgroto.com)
+  Perfect. Perfect. Perfect.
+
+12:11 - Jeff Keller
+  All right.
+
+12:13 - Harpreet Singh (letsgroto.com)
+  Cool. All right. Sounds good. I appreciate it.
+
+12:17 - Brian Oltmanns
+  And we'll just talk to you if you have any questions and see what you have along the way.
+
+12:24 - Harpreet Singh (letsgroto.com)
+  Right.
+
+12:25 - Jeff Keller
+  Done. All right. Thank you, guys. All right. Thank you. Thanks. Have a good one. Thank you. Bye. Bye.
