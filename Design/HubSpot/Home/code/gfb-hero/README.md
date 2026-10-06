@@ -3,6 +3,8 @@
 Module **GFB Hero** (Design Manager, content types Site pages + Landing pages, Local).
 Figma: Home Page `1259:9027` → band `1259:9031`. Copy and colours read from Figma on 6 Oct 2026.
 
+`fields.json` in this folder is the same field list as JSON, for the CLI or for creating the module through the HubSpot connector.
+
 Do the steps in this order: **fields first**, then paste the code. The code reads the fields by
 their **HubL variable names**, so those names must match the table exactly.
 
