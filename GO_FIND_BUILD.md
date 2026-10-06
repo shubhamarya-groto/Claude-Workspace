@@ -34,6 +34,7 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 | `Project Context/2026-09-15_Meeting-Notes.md` | 15 Sep meeting: marketing site first, CRO page order, FAQs, trade pages, Figma draft deadline |
 | `Project Context/Meeting-1.txt` · `-2.txt` · `-3.txt` · `-5.txt` | Transcripts: 27 Apr (intro, engagement model), 14 May (product walkthrough, acquisition, pricing mechanics), 22 Jun (profiles, onboarding, dashboard priorities), 2 Jul (Brian's dashboard/onboarding review, trade pill widget, action items). **Meeting 4 was not provided** (numbering skips it) |
 | `Project Context/Project-Scope.txt` | Scope of work: 6 phases (audit done), main UX goals |
+| `Design/Assets/Testing assets/hero-welder-1400x799.jpg` | Brian's welder hero photo (the only real photo so far). `Design/Assets/In Use/` is empty |
 | `Project Context/UX-Review-7-1.md` | Brian's review of the dashboard designs (1 Jul), converted from the .docx |
 
 ## Source notes
@@ -47,7 +48,6 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 - **Blockers questions 10 to 27.** The Figma plans cite 27 numbered questions; `Read me/03_BLOCKERS_for-Harpreet.md` has only 9 items, in a different numbering
 - **Meeting 4 transcript**, if it exists (3 is 22 Jun, 5 is 2 Jul)
 - **Design/HubSpot/For workers/** exists but is empty (nothing built there yet; the Job Seeker page is designed in Figma only)
-- **Design/Assets/** (`Testing assets/`, `In Use/`)
 - **Mobile Audit CSV and UX Audit CSV** originals (the Mobile data is in the xlsx; the UX Audit's 11 conversion items exist only inside `Audit/Audit list.md`)
 - The dashboard PDFs' screenshots are not text-extractable; keep the PDFs as the reference
 
