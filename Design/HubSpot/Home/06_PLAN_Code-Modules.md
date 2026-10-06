@@ -51,7 +51,7 @@ Before building, open those docs pages in a normal browser and confirm the point
 
 | Option | For | Against |
 |---|---|---|
-| **Child theme (chosen)** | One place for both modules, the mobile CSS (build plan step 3) and the theme-settings overrides. Docs: modules built in a child theme aren't affected by the parent. Version-controlled in git | Pages must be created on the child theme **(verify on staging that the child theme lists Elevate's templates and sections)** |
+| **Child theme (chosen)** | One place for both modules, the mobile CSS (build plan step 3) and the theme-settings overrides. Docs: modules built in a child theme aren't affected by the parent. Version-controlled in git | Pages must be created on the child theme **(verify that the child theme lists Elevate's templates and sections)** |
 | Loose modules in Design Manager (today's GFB Hero) | Already works; usable in any theme | Code edited in the browser, no git history; the mobile CSS has to live somewhere else anyway |
 
 If the child-theme check fails, fall back to loose modules in a `GoFindBuild/` Design Manager
