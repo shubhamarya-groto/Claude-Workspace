@@ -195,6 +195,7 @@ Audit sections B and C (employer dashboard, other tabs) are **all open** and wer
 | `Design/HubSpot/Home/01_R3_HubSpot-Elevate-Mapping.md` | R3 bands → presets, with [Theme]/[Editor]/[CSS]/[Module]/[Copy] tags |
 | `Design/HubSpot/Home/02_SITE_Changes-Needed-Home-Page.md` | Live-demo fix list H-01…H-24 |
 | `Design/HubSpot/Home/03_COMPONENT-INVENTORY_Live-Demo.md` | 32 modules, 1 custom, global-header bug |
+| `Design/HubSpot/Home/04_FINAL-DESIGN_Home-Page.md` | **Final homepage design** (Figma node `1259:9027`): bands, node IDs, module mapping, what changed from the plans |
 | `Design/HubSpot/Home/code/` | `gfb-home-test.html` page template; `gbf-module/` GFB Hero module (`module.html`, `module.css`) |
 | `Design/HubSpot/For companies/` | Build plan (steps 0–5, week plan) and teardown of the live `/companies` page |
 | `Design/HubSpot/For workers/` | Empty (exists, nothing built) |
