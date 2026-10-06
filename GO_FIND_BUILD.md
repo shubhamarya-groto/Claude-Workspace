@@ -20,6 +20,7 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 | `Design/Figma/04_CONTEXT_Company-Page.md` | Company page plan (product reality, copy needing a yes, questions 17–27) |
 | `Design/Figma/05_REVIEW_Iteration-1.md` | Design review of Home, Job Seeker, Company, About Us (desktop + mobile): STOP / A / B / C findings |
 | `Design/Figma/06_ITERATION-2_Section-swaps.md` | Iteration 2: 21 sections swapped for Elevate kit components, before/after ratings |
+| `Design/Figma/Source files/` | `GoFindBuild-Marketing-Site-All-Pages.html` (Brian's 11 Sep mockup, 3 pages, his approved copy) · `Go Find Build-User Flows.pdf` / `.jam` (FigJam user flow incl. first-time experience, job seeker, company, project owner and trade partner paths) · `GofindBuild Website Redesign.fig` (20 Jun export, outdated; work in the live Figma file) · `gofindbuild-wireframe-plugin.js` (draws the Mission Control dashboard wireframe; predates the design system) |
 | `Project Context/UX-Review-7-1.md` | Brian's review of the dashboard designs (1 Jul), converted from the .docx |
 
 ## Source notes
@@ -32,7 +33,6 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 - **Read me/**: README, next actions, issues log, blockers, FAQ seeds
 - **Project Context/**: Brian's brief as received, scope, meeting notes
 - **Mobile Audit.csv and UX Audit.csv** (marketing site conversion, 11 items). The Mobile data is covered by the xlsx; the UX Audit has no other copy.
-- **Design/Figma/Source files/**: Brian's mockup HTML (`GoFindBuild-Marketing-Site-All-Pages.html`), FigJam user flows, wireframe plugin, the old .fig export
 - **Read me/** files the Figma docs cite: `02_ISSUES-LOG.md` (I-01…I-22), `03_BLOCKERS_for-Harpreet.md` (questions 1–27), `01_NEXT-ACTIONS`, `04_FAQ-SEEDS_sub-pages.md`
 - `Project Context/2026-09-11_Brian-Mockup-Brief.md` and `2026-09-15_Meeting-Notes.md`
 - **Design/HubSpot/**: Home, For companies, For workers, including `02_SITE_Changes-Needed-Home-Page.md` (the `H-xx` references in the audit list)
