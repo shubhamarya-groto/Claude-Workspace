@@ -5,7 +5,7 @@ Confirmed as the final homepage design on 6 Oct 2026.
 - **Figma:** https://www.figma.com/design/aC59gtTG9nh2hwUraPnCXj/GofindBuild-Website-Redesign?node-id=1259-9027
 - **File:** GofindBuild Website Redesign, key `aC59gtTG9nh2hwUraPnCXj`, frame **Home Page** `1259:9027`, 1440 × 5127, at x 553, y 512
 - **Read from:** Figma node structure only (names, sizes, positions). Colors, fonts and spacing values were not read: the Figma tool limit was hit. Take those from the design system and the existing HubSpot theme notes.
-- **Component vs Figma-designed split:** `05_SECTION-SPLIT_Component-vs-Figma.md` (read 6 Oct; corrects the "What you get" row and build note 2 below, and covers bands 03 and 10).
+- **Code vs Template split:** `05_SECTION-SPLIT_Code-vs-Template.md` (read 6 Oct; "What you get" is Code, not a preset; covers bands 03 and 10).
 - **Rule for this build:** staging only; copy is placeholder until final publishing (`../00_BUILD-PLAN_Staging.md`).
 
 ## Bands
