@@ -34,7 +34,7 @@ header states, step 2's components, and all of step 4.
 
 | # | Blocker | Owner | Why it stops everything |
 |---|---|---|---|
-| B1 | **Which HubSpot portal.** Everything so far is in Shubham's sandbox (1 Meter House, 247469662). GoFindBuild's own portal, with the theme and the domain, does not exist as far as this project knows | Harpreet with Brian | The page cannot go live in a sandbox |
+| B1 | ~~**Which HubSpot portal.**~~ **Resolved 6 Oct 2026:** the build happens in the GoFindBuild account (`47303551`). The earlier sandbox (`247469662`) is not used | – | – |
 | B2 | **The Squarespace to HubSpot move.** The live site is Squarespace. A single new page in HubSpot has nowhere to live until the domain question is answered | Harpreet with Brian and Jeff | Decides whether this page launches alone or with the site |
 | B3 | **Which Figma file.** The Job Seeker page was built in `eulu7…`, every note points at `aC59…` | Shubham, Harpreet | Two files drift into two sources of truth |
 

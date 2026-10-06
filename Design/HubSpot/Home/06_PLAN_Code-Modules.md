@@ -54,7 +54,7 @@ Before building, open those docs pages in a normal browser and confirm the point
 | **Child theme (chosen)** | One place for both modules, the mobile CSS (build plan step 3) and the theme-settings overrides. Docs: modules built in a child theme aren't affected by the parent. Version-controlled in git | Pages must be created on the child theme **(verify on staging that the child theme lists Elevate's templates and sections)** |
 | Loose modules in Design Manager (today's GFB Hero) | Already works; usable in any theme | Code edited in the browser, no git history; the mobile CSS has to live somewhere else anyway |
 
-If the child-theme check fails on staging, fall back to loose modules in a `GoFindBuild/` Design Manager
+If the child-theme check fails, fall back to loose modules in a `GoFindBuild/` Design Manager
 folder. The module code is identical either way; only the upload path changes.
 
 ## Repo layout
@@ -195,13 +195,13 @@ global header partial.
 
 ```
 npm i -g @hubspot/cli              # 8.x
-hs init                             # once, against the staging portal 247469662
+hs init                             # once, against the GoFindBuild account 47303551
 hs cms upload Design/HubSpot/code/gofindbuild-child gofindbuild-child
 hs cms watch  Design/HubSpot/code/gofindbuild-child gofindbuild-child   # while building
 ```
 
-`hs cms upload` and `hs cms watch` push changes live straight away, so this runs against **staging
-only**. To start a module skeleton, `hs cms module create <name> <dest>` asks for the same
+`hs cms upload` and `hs cms watch` push changes live straight away, so upload only modules that no published
+page uses yet, or test changes on a copy of the module first. To start a module skeleton, `hs cms module create <name> <dest>` asks for the same
 `meta.json` settings listed above.
 
 ## What editors can and can't change
@@ -216,15 +216,15 @@ only**. To start a module skeleton, `hs cms module create <name> <dest>` asks fo
 
 ## Build order
 
-1. Child theme skeleton (`theme.json`, empty `child.css`). Upload. **Verify** on staging that pages can
+1. Child theme skeleton (`theme.json`, empty `child.css`). Upload. **Verify** that pages can
    use Elevate's templates and sections from the child theme.
 2. GFB Hero: `fields.json` first, then `module.html` built on the fields, then `module.css` moved to
-   `--hsElevate--` variables with the Figma values as fallbacks. Upload. Place it on staging, replacing the
+   `--hsElevate--` variables with the Figma values as fallbacks. Upload. Place it on the draft Home page, replacing the
    old one, and remove the Cloudinary screenshot (build plan 0.4).
 3. GFB What You Get: same order.
 4. Editor test: as a non-developer, change every field on both modules, add and remove repeater items,
    switch the photo, and confirm nothing breaks.
-5. QA against the staging checklist in `../00_BUILD-PLAN_Staging.md`: one H1 (the hero headline), alt
+5. QA against the pre-publish checklist in `../00_BUILD-PLAN_Staging.md`: one H1 (the hero headline), alt
    text, no dead links, hero image under about 300 KB, 1440 / 1280 / 768 / 393 widths.
 
 ## Open items
