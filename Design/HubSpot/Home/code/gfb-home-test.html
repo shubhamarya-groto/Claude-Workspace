@@ -1,0 +1,240 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: GoFindBuild home (test)
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+    <meta name="description" content="{{ content.meta_description }}">
+    {% if brand_settings.primaryFavicon.src %}
+      <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
+    {% endif %}
+    {{ standard_header_includes }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600&family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap">
+
+    <style>
+      /* Tokens from the Built Bold design system */
+      :root {
+        --gfb-brand: #16243D;          /* foreground/brand, Navy 780 */
+        --gfb-brand-hover: #223453;    /* blue ramp, 12.5:1 with white */
+        --gfb-primary: #F16C0E;        /* primary/default */
+        --gfb-primary-hover: #F4811F;  /* Orange 450, lighter so the navy label stays at 5.9:1 */
+        --gfb-on-primary: #16243D;     /* navy label on orange, 5.1:1 (issue I-01) */
+        --gfb-muted: #525C70;          /* muted/foreground */
+        --gfb-border: #D9D9D9;         /* border/default */
+        --gfb-surface: #F6F7F9;        /* blue ramp, step 0 */
+        --gfb-neutral: #E8EAED;        /* neutral/100 */
+        --gfb-white: #FFFFFF;
+        --gfb-font-display: "Instrument Sans", system-ui, sans-serif;
+        --gfb-font-body: "Inter", system-ui, sans-serif;
+        --gfb-font-logo: "Source Serif 4", Georgia, serif;
+        --gfb-content: 1248px;
+        --gfb-gutter: 24px;
+      }
+
+      .gfb, .gfb *, .gfb *::before, .gfb *::after { box-sizing: border-box; }
+      body.gfb {
+        margin: 0;
+        background: var(--gfb-white);
+        color: var(--gfb-brand);
+        font-family: var(--gfb-font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      :where(.gfb) a { color: inherit; text-decoration: none; }
+      .gfb a:focus-visible { outline: 3px solid var(--gfb-brand); outline-offset: 3px; }
+
+      .gfb-container {
+        width: 100%;
+        max-width: calc(var(--gfb-content) + 2 * var(--gfb-gutter));
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--gfb-gutter);
+        padding-right: var(--gfb-gutter);
+      }
+
+      /* Nav */
+      .gfb-nav__inner { display: flex; align-items: center; gap: 48px; height: 96px; }
+      .gfb-logo { font-family: var(--gfb-font-logo); font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+      .gfb-nav__links { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+      .gfb-nav__links a:hover { text-decoration: underline; text-underline-offset: 6px; }
+      .gfb-nav__actions { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+      .gfb-nav__login { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
+
+      /* Buttons */
+      .gfb-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        height: 48px;
+        padding: 0 8px 0 20px;
+        border-radius: 999px;
+        font-family: var(--gfb-font-body);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        white-space: nowrap;
+        transition: background-color 0.15s ease;
+      }
+      .gfb-btn--compact { height: 44px; padding: 0 20px; }
+      .gfb-btn--primary { background: var(--gfb-primary); color: var(--gfb-on-primary); }
+      .gfb-btn--primary:hover { background: var(--gfb-primary-hover); }
+      .gfb-btn--navy { background: var(--gfb-brand); color: var(--gfb-white); }
+      .gfb-btn--navy:hover { background: var(--gfb-brand-hover); }
+      .gfb-btn__disc {
+        display: inline-grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+        background: rgba(22, 36, 61, 0.12);
+      }
+      .gfb-btn--navy .gfb-btn__disc { background: rgba(255, 255, 255, 0.16); }
+
+      /* Hero: gutter | copy | gap | photo column | gutter. The photo spans the last two, so it runs off the right edge */
+      .gfb-hero {
+        display: grid;
+        grid-template-columns:
+          max(var(--gfb-gutter), calc((100% - var(--gfb-content)) / 2))
+          minmax(0, 14fr) 48px minmax(0, 11fr)
+          max(var(--gfb-gutter), calc((100% - var(--gfb-content)) / 2));
+        min-height: 720px;
+        overflow: hidden;
+      }
+      .gfb-hero__copy { grid-column: 2; grid-row: 1; align-self: center; padding: 72px 0; }
+      .gfb-hero__title {
+        margin: 0 0 24px;
+        font-family: var(--gfb-font-display);
+        font-size: clamp(40px, 3.5vw + 22px, 72px); /* 72 on desktop, about 48 on tablet, 40 on phones */
+        font-weight: 600;
+        line-height: 1.04;
+        letter-spacing: -0.025em;
+        color: var(--gfb-brand);
+      }
+      .gfb-accent { color: var(--gfb-primary); }
+      .gfb-hero__lede { max-width: 520px; margin: 0 0 40px; font-size: 18px; line-height: 1.6; color: var(--gfb-muted); }
+
+      /* The two-sided fork */
+      .gfb-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .gfb-fork__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        background: var(--gfb-white);
+        border: 1px solid var(--gfb-border);
+        border-radius: 16px;
+      }
+      .gfb-fork__title { margin: 0 0 8px; font-family: var(--gfb-font-body); font-size: 16px; font-weight: 600; line-height: 1.4; color: var(--gfb-brand); }
+      .gfb-fork__text { flex: 1; margin: 0 0 24px; font-size: 14px; line-height: 1.5; color: var(--gfb-muted); }
+
+      /* Hero photo: runs off the right edge instead of sitting in its own card (Brian's note 1) */
+      .gfb-hero__photo {
+        grid-column: 4 / -1;
+        grid-row: 1;
+        margin: 48px 0;
+        border-radius: 24px 0 0 24px;
+        background-color: var(--gfb-neutral);
+        background-image: url("PASTE-THE-FILE-MANAGER-URL-HERE");
+        background-size: cover;
+        background-position: 40% 50%;
+      }
+
+      /* Trust bar */
+      .gfb-trust { background: var(--gfb-surface); }
+      .gfb-trust__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 56px;
+        margin: 0 auto;
+        padding: 28px var(--gfb-gutter);
+        list-style: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .gfb-trust__list li { display: inline-flex; align-items: center; gap: 10px; }
+      .gfb-trust__list svg { flex: none; color: var(--gfb-primary); }
+
+      /* Tablet and phone */
+      @media (max-width: 900px) {
+        .gfb-nav__inner { height: 72px; }
+        .gfb-nav__links,
+        .gfb-nav__login { display: none; }
+        .gfb-hero { grid-template-columns: var(--gfb-gutter) minmax(0, 1fr) var(--gfb-gutter); min-height: 0; }
+        .gfb-hero__copy { padding: 48px 0 0; }
+        .gfb-hero__photo { grid-column: 2; grid-row: 2; height: 280px; margin: 40px 0 48px; border-radius: 16px; }
+      }
+      @media (max-width: 600px) {
+        .gfb-fork { grid-template-columns: 1fr; }
+        .gfb-trust__list { flex-direction: column; align-items: flex-start; gap: 12px; }
+      }
+    </style>
+  </head>
+
+  <body class="gfb">
+    <header class="gfb-nav">
+      <div class="gfb-container gfb-nav__inner">
+        <a class="gfb-logo" href="/">GoFindBuild</a>
+        <nav class="gfb-nav__links" aria-label="Main">
+          <a href="#">Companies</a>
+          <a href="#">Job Seekers</a>
+          <a href="#">Pricing</a>
+        </nav>
+        <div class="gfb-nav__actions">
+          <a class="gfb-nav__login" href="#">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Login
+          </a>
+          <a class="gfb-btn gfb-btn--primary gfb-btn--compact" href="#">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gfb-hero" aria-labelledby="gfb-hero-title">
+        <div class="gfb-hero__copy">
+          <h1 class="gfb-hero__title" id="gfb-hero-title">Where construction businesses <span class="gfb-accent">and</span> workers meet</h1>
+          <p class="gfb-hero__lede">We automatically match talented job seekers directly to the construction businesses that need them.</p>
+          <div class="gfb-fork">
+            <div class="gfb-fork__card">
+              <h2 class="gfb-fork__title">I’m hiring</h2>
+              <p class="gfb-fork__text">Post jobs - see matches today free!</p>
+              <a class="gfb-btn gfb-btn--primary" href="#">
+                Hire workers
+                <span class="gfb-btn__disc" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+              </a>
+            </div>
+            <div class="gfb-fork__card">
+              <h2 class="gfb-fork__title">I’m looking for work</h2>
+              <p class="gfb-fork__text">Free forever - find the best paying jobs!</p>
+              <a class="gfb-btn gfb-btn--navy" href="#">
+                Find jobs
+                <span class="gfb-btn__disc" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="gfb-hero__photo" role="img" aria-label="Two welders at work, sparks flying"></div>
+      </section>
+
+      <section class="gfb-trust" aria-label="Why GoFindBuild">
+        <ul class="gfb-trust__list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Direct employer connections</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>No recruiter middlemen</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>150+ trade categories</li>
+        </ul>
+      </section>
+
+      {% dnd_area "dnd_area" label="Main section" %}
+      {% end_dnd_area %}
+    </main>
+
+    {{ standard_footer_includes }}
+  </body>
+</html>

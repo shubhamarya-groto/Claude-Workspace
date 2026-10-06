@@ -1,0 +1,110 @@
+/* GFB Hero. Every rule starts with .gfb so a theme's own styles can't override it */
+.gfb {
+  --gfb-brand: #16243D;          /* foreground/brand, Navy 780 */
+  --gfb-brand-hover: #223453;
+  --gfb-primary: #F16C0E;        /* primary/default */
+  --gfb-primary-hover: #F4811F;  /* lighter, so the navy label stays at 5.9:1 */
+  --gfb-on-primary: #16243D;     /* navy label on orange, 5.1:1 (I-01) */
+  --gfb-muted: #525C70;
+  --gfb-border: #D9D9D9;
+  --gfb-neutral: #E8EAED;
+  --gfb-white: #FFFFFF;
+  --gfb-font-display: "Instrument Sans", system-ui, sans-serif;
+  --gfb-font-body: "Inter", system-ui, sans-serif;
+  --gfb-content: 1248px;
+  --gfb-gutter: 24px;
+  color: var(--gfb-brand);
+  font-family: var(--gfb-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb, .gfb *, .gfb *::before, .gfb *::after { box-sizing: border-box; }
+
+/* Hero: gutter | copy | gap | photo column | gutter. The photo spans the last two */
+.gfb.gfb-hero {
+  display: grid;
+  grid-template-columns:
+    max(var(--gfb-gutter), calc((100% - var(--gfb-content)) / 2))
+    minmax(0, 14fr) 48px minmax(0, 11fr)
+    max(var(--gfb-gutter), calc((100% - var(--gfb-content)) / 2));
+  min-height: 720px;
+  overflow: hidden;
+  background: var(--gfb-white);
+}
+.gfb .gfb-hero__copy { grid-column: 2; grid-row: 1; align-self: center; padding: 72px 0; }
+.gfb .gfb-hero__title {
+  margin: 0 0 24px;
+  font-family: var(--gfb-font-display);
+  font-size: clamp(40px, 3.5vw + 22px, 72px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--gfb-brand);
+}
+.gfb .gfb-accent { color: var(--gfb-primary); }
+.gfb .gfb-hero__lede { max-width: 520px; margin: 0 0 40px; font-size: 18px; line-height: 1.6; color: var(--gfb-muted); }
+
+/* The two-sided fork */
+.gfb .gfb-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.gfb .gfb-fork__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--gfb-white);
+  border: 1px solid var(--gfb-border);
+  border-radius: 16px;
+}
+.gfb .gfb-fork__title { margin: 0 0 8px; font-family: var(--gfb-font-body); font-size: 16px; font-weight: 600; line-height: 1.4; color: var(--gfb-brand); }
+.gfb .gfb-fork__text { flex: 1; margin: 0 0 24px; font-size: 14px; line-height: 1.5; color: var(--gfb-muted); }
+
+/* Buttons */
+.gfb .gfb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 8px 0 20px;
+  border-radius: 999px;
+  font-family: var(--gfb-font-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+.gfb .gfb-btn--primary { background: var(--gfb-primary); color: var(--gfb-on-primary); }
+.gfb .gfb-btn--primary:hover { background: var(--gfb-primary-hover); color: var(--gfb-on-primary); }
+.gfb .gfb-btn--navy { background: var(--gfb-brand); color: var(--gfb-white); }
+.gfb .gfb-btn--navy:hover { background: var(--gfb-brand-hover); color: var(--gfb-white); }
+.gfb .gfb-btn:focus-visible { outline: 3px solid var(--gfb-brand); outline-offset: 3px; }
+.gfb .gfb-btn__disc {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(22, 36, 61, 0.12);
+}
+.gfb .gfb-btn--navy .gfb-btn__disc { background: rgba(255, 255, 255, 0.16); }
+
+/* Photo: runs off the right edge instead of sitting in its own card (Brian's note 1) */
+.gfb .gfb-hero__photo {
+  grid-column: 4 / -1;
+  grid-row: 1;
+  margin: 48px 0;
+  border-radius: 24px 0 0 24px;
+  background-color: var(--gfb-neutral);
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+/* Tablet and phone */
+@media (max-width: 900px) {
+  .gfb.gfb-hero { grid-template-columns: var(--gfb-gutter) minmax(0, 1fr) var(--gfb-gutter); min-height: 0; }
+  .gfb .gfb-hero__copy { padding: 48px 0 0; }
+  .gfb .gfb-hero__photo { grid-column: 2; grid-row: 2; height: 280px; margin: 40px 0 48px; border-radius: 16px; }
+}
+@media (max-width: 600px) {
+  .gfb .gfb-fork { grid-template-columns: 1fr; }
+}

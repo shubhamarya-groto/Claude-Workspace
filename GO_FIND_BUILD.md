@@ -27,6 +27,8 @@ Groto project: a trades hiring platform (employers find skilled workers; workers
 | `Design/HubSpot/Home/01_R3_HubSpot-Elevate-Mapping.md` | How homepage R3 maps band by band to Elevate presets, with [Theme]/[Editor]/[CSS]/[Module]/[Copy] tags and the theme defaults that change |
 | `Design/HubSpot/Home/02_SITE_Changes-Needed-Home-Page.md` | Live demo fix list H-01 to H-24 (the `H-xx` references in the audit list) |
 | `Design/HubSpot/Home/03_COMPONENT-INVENTORY_Live-Demo.md` | What the live demo is built from (32 modules, 1 custom) and the global-header problem |
+| `Design/HubSpot/Home/code/gfb-home-test.html` | HubSpot page template for the homepage test: nav, hero, trust bar, empty drag-and-drop area, design tokens as CSS variables |
+| `Design/HubSpot/Home/code/gbf-module/` | The custom GFB Hero module (`module.html`, `module.css`). The hero photo URL is a placeholder (`PASTE-THE-FILE-MANAGER-URL-HERE`) |
 | `Project Context/UX-Review-7-1.md` | Brian's review of the dashboard designs (1 Jul), converted from the .docx |
 
 ## Source notes
