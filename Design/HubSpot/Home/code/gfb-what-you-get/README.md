@@ -3,6 +3,8 @@
 Second Code module for the Home page (`../../05_SECTION-SPLIT_Code-vs-Template.md`).
 Figma: Home Page `1259:9027` → band `1363:8560`. Styles read from Figma on 7 Oct 2026.
 
+> **Live in HubSpot (7 Oct 2026):** created through the HubSpot connector as **GFB What You Get**, path `custom/content-mcp/modules/gfb_what_you_get` in the GoFindBuild account (47303551). Fields read back and match `fields.json`; CSS is inlined in the HTML. Update it through the connector, not the Design Manager, so the two don't drift.
+
 | File | What |
 |---|---|
 | `fields.json` | Field schema with the Figma copy as defaults |
