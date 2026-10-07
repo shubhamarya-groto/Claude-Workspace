@@ -3,6 +3,8 @@
 Home pricing band. Figma: Home Page `1259:9027` → `1259:9084` (an instance of `Elevate / Section / Pricing / pricing`).
 Read 7 Oct 2026. Classified as Template; built as a custom module on request, styled to the Figma frame.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Pricing**, path `custom/content-mcp/modules/gfb_pricing` (GoFindBuild 47303551). The first attempt with features as a plain repeating text field did not save; features are now a repeating group with one `text` field. Update it through the connector, not the Design Manager.
+
 | File | What |
 |---|---|
 | `fields.json` | Heading + 1 to 4 plans; defaults are the exact Figma copy |
@@ -20,7 +22,7 @@ Read 7 Oct 2026. Classified as Template; built as a custom module on request, st
 | ↳ `tier` | Text | Small label above the price ("Growth", "Enterprise") |
 | ↳ `price` | Text | Large, e.g. "$149/mo", "Custom" |
 | ↳ `featured` | Toggle | Dark card (Elevate card variant 4) |
-| ↳ `features` | Text, repeating 0 to 20 | One line each, orange dot |
+| ↳ `features` | Repeater group, 0 to 20, one `text` field each | One line each, orange dot |
 | ↳ `button_label` | Text | Empty hides the button |
 | ↳ `button_link` | Link | |
 

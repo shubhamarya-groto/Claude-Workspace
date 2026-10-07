@@ -15,7 +15,7 @@
           {% if p.price %}<p class="gfb-prc__price">{{ p.price|escape }}</p>{% endif %}
           {% if p.features %}
             <ul class="gfb-prc__features">
-              {% for f in p.features %}{% if f %}<li>{{ f|escape }}</li>{% endif %}{% endfor %}
+              {% for f in p.features %}{% if f.text %}<li>{{ f.text|escape }}</li>{% endif %}{% endfor %}
             </ul>
           {% endif %}
           {% if p.button_label %}

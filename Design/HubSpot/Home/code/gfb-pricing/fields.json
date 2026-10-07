@@ -39,13 +39,21 @@
    {
     "name": "features",
     "label": "Features",
-    "type": "text",
+    "type": "group",
     "occurrence": {
      "min": 0,
      "max": 20,
-     "default": 4
+     "default": 4,
+     "sorting_label_field": "plans.features.text"
     },
-    "default": "Feature"
+    "children": [
+     {
+      "name": "text",
+      "label": "Feature",
+      "type": "text",
+      "default": "Feature"
+     }
+    ]
    },
    {
     "name": "button_label",
@@ -74,10 +82,18 @@
     "price": "$149/mo",
     "featured": false,
     "features": [
-     "Unlimited job postings",
-     "Verified licenses and certs",
-     "Direct messaging to workers",
-     "Priority support"
+     {
+      "text": "Unlimited job postings"
+     },
+     {
+      "text": "Verified licenses and certs"
+     },
+     {
+      "text": "Direct messaging to workers"
+     },
+     {
+      "text": "Priority support"
+     }
     ],
     "button_label": "Cancel any time",
     "button_link": {
@@ -94,11 +110,21 @@
     "price": "Custom",
     "featured": true,
     "features": [
-     "Unlimited postings and users",
-     "Custom integrations (ATS, HRIS)",
-     "Dedicated account manager",
-     "Advanced reporting",
-     "Cancel any time"
+     {
+      "text": "Unlimited postings and users"
+     },
+     {
+      "text": "Custom integrations (ATS, HRIS)"
+     },
+     {
+      "text": "Dedicated account manager"
+     },
+     {
+      "text": "Advanced reporting"
+     },
+     {
+      "text": "Cancel any time"
+     }
     ],
     "button_label": "Get started",
     "button_link": {
@@ -115,11 +141,21 @@
     "price": "Custom",
     "featured": false,
     "features": [
-     "Unlimited posts",
-     "Verified licenses",
-     "Direct messaging",
-     "Matches in your ZIP",
-     "Cancel any time"
+     {
+      "text": "Unlimited posts"
+     },
+     {
+      "text": "Verified licenses"
+     },
+     {
+      "text": "Direct messaging"
+     },
+     {
+      "text": "Matches in your ZIP"
+     },
+     {
+      "text": "Cancel any time"
+     }
     ],
     "button_label": "Get started",
     "button_link": {
