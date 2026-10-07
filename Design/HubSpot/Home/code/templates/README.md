@@ -35,3 +35,17 @@ Editor: https://app.hubspot.com/pages/47303551/editor/223806550529
 - **Button links:** Hero, Pricing and Final CTA buttons have no links yet.
 - **FAQ answers** 2 and 3 are placeholders; the FAQ search data is on, so fill them before publishing.
 - **About Us** footer link points to `/about-us`; confirm.
+
+## Motion (preview stage, 7 Oct)
+
+`gfb-motion.html` holds the section reveal and page intro, ready to paste into `gfb-home.html` (the comments
+say where each part goes). Not in HubSpot yet.
+
+- **Reveal:** bands below the first screen fade in and rise 24px as they scroll into view (0.6s, ease-out);
+  cards, stats, FAQ rows and trust items follow 80ms apart. The nav, hero and trust bar show at once.
+  Testimonial slides are left alone because they already move.
+- **Intro:** logo + filling orange bar on white. Shows only if the page is still loading after 0.3s, stays at
+  least 0.6s once shown, gone by 1.5s, once per visit.
+- **Off** for "reduce motion", inside the HubSpot editor (`window.GFB_EDITOR`, to be set from `is_in_editor`),
+  and when JavaScript doesn't run: content is never left hidden.
+- `window.GFB_FORCE_INTRO` is for the preview's "Replay intro" button only.

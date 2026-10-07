@@ -1,0 +1,118 @@
+{# GFB motion: section reveal + page intro. Goes in the GFB Home template: the <style> and the first
+   <script> in <head>, the intro markup right after <body>, the second <script> before </body>.
+   Turned off inside the HubSpot editor, for "reduce motion", and when JavaScript doesn't run. #}
+
+<!-- HEAD -->
+<style>
+  /* Reveal: bands below the first screen fade in and rise 24px as they enter view; list items inside
+     a band follow 80ms apart. Only active once the script adds .gfb-motion to <html>. */
+  html.gfb-motion .gfb-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-delay: var(--gfb-delay, 0ms);
+  }
+  html.gfb-motion .gfb-reveal.is-in { opacity: 1; transform: none; }
+  html.gfb-motion .gfb-reveal--now { transition: none; }
+
+  /* Intro: logo + filling orange bar. Hidden unless the page is slow (shown after 300ms, gone by 1.5s) */
+  .gfb-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: #FFFFFF;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+  }
+  .gfb-intro.is-on { opacity: 1; visibility: visible; transition: opacity 0.2s ease; }
+  .gfb-intro__inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .gfb-intro__logo { font-family: "Source Serif 4", Georgia, serif; font-size: 28px; font-weight: 600; color: #16243D; }
+  .gfb-intro__track { width: 140px; height: 4px; overflow: hidden; border-radius: 999px; background: #F3E3D6; }
+  .gfb-intro__bar { width: 100%; height: 100%; border-radius: inherit; background: #F16C0E; transform-origin: left; transform: scaleX(0); }
+  .gfb-intro.is-on .gfb-intro__bar { animation: gfb-intro-fill 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  @keyframes gfb-intro-fill { to { transform: scaleX(1); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.gfb-motion .gfb-reveal { opacity: 1; transform: none; transition: none; }
+    .gfb-intro { display: none; }
+  }
+</style>
+
+<!-- BODY START -->
+<div class="gfb-intro" id="gfb-intro" aria-hidden="true">
+  <div class="gfb-intro__inner">
+    <span class="gfb-intro__logo">GoFindBuild</span>
+    <span class="gfb-intro__track"><span class="gfb-intro__bar"></span></span>
+  </div>
+</div>
+<script>
+  /* Intro: only if the page is still loading after 300ms, at most 1.5s, once per visit */
+  (function () {
+    var intro = document.getElementById('gfb-intro');
+    if (!intro) return;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var seen = false;
+    try { seen = sessionStorage.getItem('gfb-intro-seen') === '1'; } catch (e) {}
+    var force = window.GFB_FORCE_INTRO;            /* preview only: show it regardless of load speed */
+    if (reduce || (seen && !force) || window.GFB_EDITOR) { intro.remove(); return; }
+    var loaded = false, shownAt = 0;
+    function hide() { intro.classList.remove('is-on'); setTimeout(function () { intro.remove(); }, 400); }
+    if (force) { shownAt = Date.now(); intro.classList.add('is-on'); setTimeout(hide, 1300); return; }
+    var showTimer = setTimeout(function () {
+      if (loaded) return;
+      shownAt = Date.now();
+      intro.classList.add('is-on');
+      try { sessionStorage.setItem('gfb-intro-seen', '1'); } catch (e) {}
+      setTimeout(hide, 1200);                       /* never longer than 1.5s from the start */
+    }, 300);
+    window.addEventListener('load', function () {
+      loaded = true;
+      clearTimeout(showTimer);
+      if (!shownAt) { intro.remove(); return; }
+      setTimeout(hide, Math.max(0, 600 - (Date.now() - shownAt)));   /* no flash: at least 0.6s once shown */
+    });
+  })();
+</script>
+
+<!-- BODY END -->
+<script>
+  /* Reveal: first-screen bands show at once; the rest animate in as they scroll into view */
+  (function () {
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || window.GFB_EDITOR || !('IntersectionObserver' in window)) return;
+    var BANDS = '.gfb-page .dnd-section, [data-gfb-band]';
+    var ITEMS = '.gfb-wyg__card, .gfb-prc__card, .gfb-pst__stat, .gfb-faq__row, .gfb-trust__item, .gfb-cta__card';   /* testimonial slides are left alone: they already move */
+    var bands = Array.prototype.slice.call(document.querySelectorAll(BANDS));
+    var fold = window.innerHeight;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    bands.forEach(function (band) {
+      var onFirstScreen = band.getBoundingClientRect().top < fold;
+      var items = band.querySelectorAll(ITEMS);
+      [band].concat(Array.prototype.slice.call(items)).forEach(function (el, i) {
+        el.classList.add('gfb-reveal');
+        if (i > 0) el.style.setProperty('--gfb-delay', Math.min(i - 1, 5) * 80 + 'ms');
+        if (onFirstScreen) { el.classList.add('gfb-reveal--now', 'is-in'); return; }
+        if (i === 0) io.observe(band);
+      });
+      if (!onFirstScreen) {
+        /* items reveal together with their band */
+        var mo = new IntersectionObserver(function (en) {
+          if (!en[0].isIntersecting) return;
+          Array.prototype.forEach.call(items, function (it) { it.classList.add('is-in'); });
+          mo.disconnect();
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+        mo.observe(band);
+      }
+    });
+    document.documentElement.classList.add('gfb-motion');
+  })();
+</script>
