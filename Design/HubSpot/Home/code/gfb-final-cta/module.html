@@ -19,14 +19,14 @@
       {% if module.buttons %}
         <div class="gfb-cta__buttons">
           {% for b in module.buttons %}
-            {% if b.label %}
+            {% if b.button_text %}
               {% set rel = [] %}
               {% if b.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
               {% if b.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
               <a class="gfb-cta__btn gfb-cta__btn--{{ b.style or 'primary' }}" href="{{ (b.link.url.href or '#')|escape_url }}"
                  {% if b.link.open_in_new_tab %}target="_blank"{% endif %}
                  {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>
-                <span class="gfb-cta__btn-label">{{ b.label|escape }}</span>
+                <span class="gfb-cta__btn-label">{{ b.button_text|escape }}</span>
                 <span class="gfb-cta__btn-disc">{{ arrow }}</span>
               </a>
             {% endif %}

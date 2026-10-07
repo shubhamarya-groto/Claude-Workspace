@@ -4,6 +4,8 @@ Home band 10. Figma: Home Page `1259:9027` → `1259:9109` (`M1 · Elevate · Ca
 Read 7 Oct 2026. Exact Figma copy as defaults. Built as code on request; Elevate Card variant 4 plus a
 section background stays the fallback.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Final CTA**, path `custom/content-mcp/modules/gfb_final_cta` (GoFindBuild 47303551). CSS inlined in the HTML. Update it through the connector, not the Design Manager. The button text field is `button_text` because HubSpot reserves `label`.
+
 | File | What |
 |---|---|
 | `fields.json` | Fields with the Figma copy |
@@ -17,7 +19,7 @@ section background stays the fallback.
 |---|---|---|
 | `heading` | Text | "The right connection could change everything." |
 | `subhead` | Text | "Find the people you need. Find the opportunity you deserve." |
-| `buttons` | Repeater, 0 to 3 | `label`, `link`, `style` (Orange primary / Dark). Defaults: **Post a job** (orange), **Find work** (dark). Links are empty: set them in the editor |
+| `buttons` | Repeater, 0 to 3 | `button_text`, `link`, `style` (Orange primary / Dark). Defaults: **Post a job** (orange), **Find work** (dark). Links are empty: set them in the editor |
 | `background_image` | Image | Optional; replaces the built-in gradient |
 | `show_gears` | Toggle | The four faint gear outlines |
 

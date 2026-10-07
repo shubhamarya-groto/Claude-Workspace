@@ -19,12 +19,12 @@
    "min": 0,
    "max": 3,
    "default": 2,
-   "sorting_label_field": "buttons.label"
+   "sorting_label_field": "buttons.button_text"
   },
   "children": [
    {
-    "name": "label",
-    "label": "Label",
+    "name": "button_text",
+    "label": "Button text",
     "type": "text",
     "default": "Button"
    },
@@ -32,9 +32,17 @@
     "name": "link",
     "label": "Link",
     "type": "link",
-    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS"],
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT",
+     "FILE",
+     "EMAIL_ADDRESS"
+    ],
     "default": {
-     "url": { "type": "EXTERNAL", "href": "" },
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
      "open_in_new_tab": false,
      "no_follow": false
     }
@@ -44,19 +52,42 @@
     "label": "Style",
     "type": "choice",
     "display": "select",
-    "choices": [["primary", "Orange (primary)"], ["dark", "Dark"]],
+    "choices": [
+     [
+      "primary",
+      "Orange (primary)"
+     ],
+     [
+      "dark",
+      "Dark"
+     ]
+    ],
     "default": "primary"
    }
   ],
   "default": [
    {
-    "label": "Post a job",
-    "link": { "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false },
+    "button_text": "Post a job",
+    "link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
     "style": "primary"
    },
    {
-    "label": "Find work",
-    "link": { "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false },
+    "button_text": "Find work",
+    "link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
     "style": "dark"
    }
   ]
