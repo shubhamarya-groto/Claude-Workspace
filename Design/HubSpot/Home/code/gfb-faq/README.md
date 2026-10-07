@@ -4,6 +4,8 @@ Home band FAQ. Figma: Home Page `1259:9027` → `1259:9108` (an Elevate `faq-v2`
 Exact Figma copy as defaults. Built as code on request, like Pricing and Problem + Stats; Elevate `faq-v2`
 stays the fallback.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB FAQ**, path `custom/content-mcp/modules/gfb_faq` (GoFindBuild 47303551). CSS inlined in the HTML. Update it through the connector, not the Design Manager.
+
 | File | What |
 |---|---|
 | `fields.json` | Fields with the Figma copy |
