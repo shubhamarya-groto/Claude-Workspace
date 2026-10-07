@@ -20,6 +20,7 @@ Figma: Home Page `1259:9027` → band `1363:8560`. Styles read from Figma on 7 O
 | `columns` | Repeater group, 1 to 2, default 2 | One card per audience |
 | ↳ `title` | Text | For Companies / For Job Seekers |
 | ↳ `accent` | Choice: `orange`, `blue` | Glow, icon badge and image tint. Companies orange, Job Seekers blue |
+| ↳ `tone_image` | Toggle, off | **Fade and tint the image.** Off: the image shows exactly as uploaded (use the final Figma images). On: faded to 10% (orange) / 7% (blue), faded out towards the top and tinted with the accent (for an ordinary photo). Added 7 Oct |
 | ↳ `image` | Image | Faint illustration behind the lower card. Figma uses a construction skyline (Companies) and worker silhouettes (Job Seekers); upload those to Files |
 | ↳ `features` | Repeater group, 1 to 4, default 3 | |
 | ↳↳ `icon` | Choice | timer, user-check, messages-square, pin, file-check, radar, briefcase, map-pin, shield-check, clock |

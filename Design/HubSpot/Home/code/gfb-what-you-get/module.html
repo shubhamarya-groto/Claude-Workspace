@@ -22,7 +22,7 @@
       {% for col in module.columns %}
         <article class="gfb-wyg__card gfb-wyg__card--{{ col.accent or 'orange' }}">
           {% if col.image.src %}
-            <div class="gfb-wyg__bg" aria-hidden="true">
+            <div class="gfb-wyg__bg{% if col.tone_image %} gfb-wyg__bg--toned{% endif %}" aria-hidden="true">
               <img src="{{ col.image.src|escape_url }}" alt="" loading="lazy">
             </div>
           {% endif %}

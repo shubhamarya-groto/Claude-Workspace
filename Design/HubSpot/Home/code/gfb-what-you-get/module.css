@@ -60,16 +60,14 @@
   --bg-opacity: 0.07;
 }
 
-/* Faint illustration across the lower card, tinted with the accent */
+/* Image behind the lower card. By default it shows exactly as uploaded (the Figma images are
+   already faded). "Fade and tint" (--toned) fades it, fades it out towards the top and tints it
+   with the accent, for an ordinary photo. */
 .gfb-wyg .gfb-wyg__bg {
   position: absolute;
   inset: auto 0 0 0;
   height: 80%;
-  background: var(--accent);
-  opacity: var(--bg-opacity);
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 55%);
-          mask-image: linear-gradient(to bottom, transparent, #000 55%);
 }
 .gfb-wyg .gfb-wyg__bg img {
   display: block;
@@ -77,8 +75,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
-  mix-blend-mode: luminosity;
 }
+.gfb-wyg .gfb-wyg__bg--toned {
+  background: var(--accent);
+  opacity: var(--bg-opacity);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 55%);
+          mask-image: linear-gradient(to bottom, transparent, #000 55%);
+}
+.gfb-wyg .gfb-wyg__bg--toned img { mix-blend-mode: luminosity; }
 .gfb-wyg .gfb-wyg__head, .gfb-wyg .gfb-wyg__features { position: relative; }
 
 /* Header with rule */

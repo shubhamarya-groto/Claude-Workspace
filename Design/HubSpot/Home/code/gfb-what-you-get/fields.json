@@ -43,13 +43,21 @@
     "name": "image",
     "label": "Background image",
     "type": "image",
-    "help_text": "Shown faintly behind the bottom of the card, tinted with the accent colour.",
+    "help_text": "Shown behind the bottom of the card. Upload the final image from Figma as it is, or turn on 'Fade and tint' for a plain photo.",
     "resizable": false,
     "default": {
      "src": "",
      "alt": "",
      "loading": "lazy"
     }
+   },
+   {
+    "name": "tone_image",
+    "label": "Fade and tint the image",
+    "type": "boolean",
+    "display": "toggle",
+    "help_text": "Off: the image shows exactly as uploaded (use for the final Figma images). On: the image is faded, faded out towards the top and tinted with the accent colour (use for an ordinary photo).",
+    "default": false
    },
    {
     "name": "features",
@@ -152,7 +160,8 @@
       "title": "Message them directly",
       "description": "Contact goes straight to the worker, no agency in the middle."
      }
-    ]
+    ],
+    "tone_image": false
    },
    {
     "title": "For Job Seekers",
@@ -178,7 +187,8 @@
       "title": "Let employers come to you",
       "description": "Build one profile, control your privacy, get discovered."
      }
-    ]
+    ],
+    "tone_image": false
    }
   ]
  }
