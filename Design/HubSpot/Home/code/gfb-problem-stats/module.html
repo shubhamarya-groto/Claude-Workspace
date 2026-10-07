@@ -1,0 +1,29 @@
+{# GFB Problem + stats. Two-tone problem statement, a label and 1–4 stats. Every word is a field: see fields.json #}
+{% set gear = '<svg viewBox="-55 -55 110 110" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/></svg>' %}
+
+<section class="gfb-pst{% if module.background_image.src %} gfb-pst--photo{% endif %}"
+  {% if module.background_image.src %}style="--pst-bg: url('{{ module.background_image.src|escape_url }}')"{% endif %}>
+  {% if module.show_gears %}
+    <span class="gfb-pst__gear gfb-pst__gear--right">{{ gear }}</span>
+    <span class="gfb-pst__gear gfb-pst__gear--left">{{ gear }}</span>
+  {% endif %}
+
+  <div class="gfb-pst__inner">
+    <h2 class="gfb-pst__statement">
+      {% if module.line_one %}<span class="gfb-pst__line">{{ module.line_one|escape }}</span>{% endif %}
+      {% if module.line_two %}<span class="gfb-pst__line gfb-pst__line--accent">{{ module.line_two|escape }}</span>{% endif %}
+    </h2>
+
+    <div class="gfb-pst__evidence">
+      {% if module.overline %}<p class="gfb-pst__overline">{{ module.overline|escape }}</p>{% endif %}
+      <ul class="gfb-pst__stats">
+        {% for s in module.stats %}
+          <li class="gfb-pst__stat">
+            <span class="gfb-pst__number">{{ s.number|escape }}</span>
+            {% if s.caption %}<span class="gfb-pst__caption">{{ s.caption|escape }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
