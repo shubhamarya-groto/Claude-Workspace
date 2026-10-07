@@ -1,0 +1,57 @@
+{# GFB Footer. Logo + copyright on the left; links and round social buttons on the right.
+   Every word and link is a field: see fields.json. Icons are Lucide (stroke), drawn inline. #}
+{% set icons = {
+  "instagram": '<rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>',
+  "linkedin": '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
+  "facebook": '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+  "x": '<path d="M4 4l16 16"/><path d="M20 4L4 20"/>',
+  "youtube": '<path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/>',
+  "tiktok": '<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>'
+} %}
+{% set names = {"instagram": "Instagram", "linkedin": "LinkedIn", "facebook": "Facebook", "x": "X", "youtube": "YouTube", "tiktok": "TikTok"} %}
+
+{% if not module.logo_image.src %}{{ require_css("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&display=swap") }}{% endif %}
+
+<footer class="gfb-ftr">
+  <div class="gfb-ftr__inner">
+    <div class="gfb-ftr__brand">
+      <a class="gfb-ftr__logo" href="{{ (module.brand_link.url.href or '/')|escape_url }}">
+        {% if module.logo_image.src %}
+          <img src="{{ module.logo_image.src|escape_url }}" alt="{{ module.logo_image.alt|escape }}"
+               {% if module.logo_image.width %}width="{{ module.logo_image.width }}"{% endif %}
+               {% if module.logo_image.height %}height="{{ module.logo_image.height }}"{% endif %} loading="lazy">
+        {% else %}{{ module.brand_text|escape }}{% endif %}
+      </a>
+      {% if module.copyright %}<p class="gfb-ftr__copy">{{ module.copyright|escape }}</p>{% endif %}
+    </div>
+
+    <div class="gfb-ftr__actions">
+      {% if module.legal_links %}
+        <nav class="gfb-ftr__links" aria-label="Footer">
+          {% for l in module.legal_links %}
+            {% if l.link_text %}
+              {% set rel = [] %}
+              {% if l.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
+              {% if l.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
+              <a href="{{ (l.link.url.href or '#')|escape_url }}"{% if l.link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>{{ l.link_text|escape }}</a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+      {% endif %}
+
+      {% if module.socials %}
+        <ul class="gfb-ftr__socials">
+          {% for s in module.socials %}
+            {% if s.profile_url.href %}
+              <li><a class="gfb-ftr__social" href="{{ s.profile_url.href|escape_url }}" target="_blank" rel="noopener"
+                     aria-label="GoFindBuild on {{ names[s.network] or s.network }}">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ icons[s.network] }}</svg>
+              </a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</footer>
