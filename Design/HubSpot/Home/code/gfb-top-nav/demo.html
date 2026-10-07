@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GFB Top Nav · demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Serif+4:wght@600&display=swap">
+<style>
+body{margin:0;background:#fff}
+.demo-note{font:13px/1.5 Inter,system-ui,sans-serif;color:#525C70;background:#FFF7F0;border-bottom:1px solid #F5D9C3;padding:10px 16px;text-align:center}
+/* GFB Top nav · Figma 1259:9028 (Home Page 1259:9027), DS "Top Nav" component
+   96 tall, 24 / 96 padding. Left: logo (Source Serif 4 SemiBold 22), 40 gap, text buttons Inter Medium 16
+   #111111. Right, 28 apart: Login with a 20px user icon, and a 48px orange pill "Get Started" (white label).
+   Below 1024px the links, Login and button move into a drawer under the bar, opened by a Menu button. */
+.gfb-nav {
+  --nav-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --nav-ink: #111111;
+  --nav-line: #E6E8EB;
+  --nav-font-logo: "Source Serif 4", Georgia, serif;
+  --nav-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  position: relative;
+  z-index: 50;
+  background: #FFFFFF;
+  color: var(--nav-ink);
+  font-family: var(--nav-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-nav--sticky { position: sticky; top: 0; box-shadow: 0 1px 0 var(--nav-line); }
+.gfb-nav, .gfb-nav *, .gfb-nav *::before, .gfb-nav *::after { box-sizing: border-box; }
+
+.gfb-nav .gfb-nav__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1440px;
+  min-height: 96px;
+  margin: 0 auto;
+  padding: 24px 96px;
+}
+.gfb-nav .gfb-nav__left { display: flex; align-items: center; gap: 40px; min-width: 0; }
+.gfb-nav .gfb-nav__logo {
+  font-family: var(--nav-font-logo);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--nav-brand);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.gfb-nav .gfb-nav__logo img { display: block; height: 33px; width: auto; }
+
+/* Text buttons: 48 tall, 40 apart */
+.gfb-nav .gfb-nav__links { display: flex; align-items: center; gap: 40px; }
+.gfb-nav .gfb-nav__link,
+.gfb-nav .gfb-nav__login {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--nav-ink);
+  text-decoration: none;
+  white-space: nowrap;
+  text-underline-offset: 6px;
+}
+.gfb-nav .gfb-nav__link:hover,
+.gfb-nav .gfb-nav__link[aria-current="page"],
+.gfb-nav .gfb-nav__login:hover { text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: #F16C0E; }
+.gfb-nav .gfb-nav__login { gap: 4px; }
+.gfb-nav .gfb-nav__login svg { margin: 0 10px 0 5px; }   /* Figma: icon frame 5 + 20 + 10, then 4 */
+
+.gfb-nav .gfb-nav__right { display: flex; align-items: center; gap: 28px; }
+
+/* Primary pill: 48 tall, 4 inset + 16 label sides, white label (7 Oct; ~3:1, I-01) */
+.gfb-nav .gfb-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 4px 20px;
+  border-radius: 999px;
+  background: var(--hsElevate--button--primary__backgroundColor, #F16C0E);
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+.gfb-nav .gfb-nav__cta:hover,
+.gfb-nav .gfb-nav__cta:focus-visible { background: #EA580C; color: #FFFFFF; }
+.gfb-nav a:focus-visible,
+.gfb-nav .gfb-nav__toggle:focus-visible { outline: 3px solid var(--nav-brand); outline-offset: 3px; border-radius: 6px; }
+.gfb-nav .gfb-nav__cta:focus-visible { border-radius: 999px; }
+
+/* Drawer (tablet and phone only) */
+.gfb-nav .gfb-nav__menu { display: none; }
+.gfb-nav .gfb-nav__toggle {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #D9D9D9;
+  border-radius: 999px;
+  color: var(--nav-ink);
+  cursor: pointer;
+  list-style: none;
+}
+.gfb-nav .gfb-nav__toggle::-webkit-details-marker { display: none; }
+.gfb-nav .gfb-nav__icon-close,
+.gfb-nav .gfb-nav__menu[open] .gfb-nav__icon-open { display: none; }
+.gfb-nav .gfb-nav__menu[open] .gfb-nav__icon-close { display: block; }
+.gfb-nav .gfb-nav__drawer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 24px 24px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--nav-line);
+  box-shadow: 0 16px 32px rgba(22, 36, 61, 0.08);
+}
+.gfb-nav .gfb-nav__drawer-links { display: flex; flex-direction: column; }
+.gfb-nav .gfb-nav__drawer-link {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  border-bottom: 1px solid var(--nav-line);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--nav-ink);
+  text-decoration: none;
+}
+.gfb-nav .gfb-nav__drawer-link[aria-current="page"] { color: #BB5B09; }
+.gfb-nav .gfb-nav__cta--drawer { width: 100%; margin-top: 8px; }
+
+@media (max-width: 1023px) {
+  .gfb-nav .gfb-nav__bar { min-height: 80px; padding: 16px 24px; }
+  .gfb-nav .gfb-nav__links,
+  .gfb-nav .gfb-nav__right > .gfb-nav__login { display: none; }
+  .gfb-nav .gfb-nav__right { gap: 16px; }
+  .gfb-nav .gfb-nav__menu { display: block; }
+}
+@media (max-width: 767px) {
+  .gfb-nav .gfb-nav__right > .gfb-nav__cta { display: none; }
+  .gfb-nav .gfb-nav__bar { min-height: 72px; padding: 12px 16px; }
+  .gfb-nav .gfb-nav__drawer { padding: 8px 16px 24px; }
+}
+</style></head><body>
+<p class="demo-note">GFB Top Nav demo. Narrow the window below 1024px to see the Menu button and drawer.</p>
+<header class="gfb-nav">
+  <div class="gfb-nav__bar">
+    <div class="gfb-nav__left">
+      <a class="gfb-nav__logo" href="/">GoFindBuild</a>
+      <nav class="gfb-nav__links" aria-label="Main"><a class="gfb-nav__link" href="/companies">Companies</a><a class="gfb-nav__link" href="/job-seekers">Job Seekers</a><a class="gfb-nav__link" href="/about-us">About Us</a></nav>
+    </div>
+    <div class="gfb-nav__right">
+      <a class="gfb-nav__login" href="https://app.gofindbuild.com/"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Login</span></a>
+      <a class="gfb-nav__cta" href="https://app.gofindbuild.com/signup">Get Started</a>
+      <details class="gfb-nav__menu">
+        <summary class="gfb-nav__toggle" aria-label="Menu">
+          <svg class="gfb-nav__icon-open" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="gfb-nav__icon-close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </summary>
+        <div class="gfb-nav__drawer">
+          <nav class="gfb-nav__drawer-links" aria-label="Main"><a class="gfb-nav__drawer-link" href="/companies">Companies</a><a class="gfb-nav__drawer-link" href="/job-seekers">Job Seekers</a><a class="gfb-nav__drawer-link" href="/about-us">About Us</a></nav>
+          <a class="gfb-nav__login gfb-nav__login--drawer" href="https://app.gofindbuild.com/"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Login</span></a>
+          <a class="gfb-nav__cta gfb-nav__cta--drawer" href="https://app.gofindbuild.com/signup">Get Started</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+</body></html>

@@ -1,0 +1,164 @@
+[
+ {
+  "name": "brand_text",
+  "label": "Logo text",
+  "type": "text",
+  "help_text": "Shown when no logo image is set.",
+  "default": "GoFindBuild"
+ },
+ {
+  "name": "logo_image",
+  "label": "Logo image",
+  "type": "image",
+  "help_text": "Optional. Replaces the logo text.",
+  "resizable": true,
+  "default": {
+   "src": "",
+   "alt": "GoFindBuild",
+   "loading": "eager"
+  }
+ },
+ {
+  "name": "brand_link",
+  "label": "Logo link",
+  "type": "link",
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT"
+  ],
+  "default": {
+   "url": {
+    "type": "EXTERNAL",
+    "href": "/"
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  }
+ },
+ {
+  "name": "nav_links",
+  "label": "Menu links",
+  "type": "group",
+  "occurrence": {
+   "min": 0,
+   "max": 6,
+   "default": 3,
+   "sorting_label_field": "nav_links.link_text"
+  },
+  "children": [
+   {
+    "name": "link_text",
+    "label": "Link text",
+    "type": "text",
+    "default": "Link"
+   },
+   {
+    "name": "link",
+    "label": "Link",
+    "type": "link",
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT"
+    ],
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ],
+  "default": [
+   {
+    "link_text": "Companies",
+    "link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "/companies"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "link_text": "Job Seekers",
+    "link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "/job-seekers"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "link_text": "About Us",
+    "link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": "/about-us"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ]
+ },
+ {
+  "name": "login_text",
+  "label": "Login text",
+  "type": "text",
+  "help_text": "Leave empty to hide Login.",
+  "default": "Login"
+ },
+ {
+  "name": "login_link",
+  "label": "Login link",
+  "type": "link",
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT"
+  ],
+  "default": {
+   "url": {
+    "type": "EXTERNAL",
+    "href": "https://app.gofindbuild.com/"
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  }
+ },
+ {
+  "name": "cta_text",
+  "label": "Button text",
+  "type": "text",
+  "help_text": "Leave empty to hide the button.",
+  "default": "Get Started"
+ },
+ {
+  "name": "cta_link",
+  "label": "Button link",
+  "type": "link",
+  "supported_types": [
+   "EXTERNAL",
+   "CONTENT"
+  ],
+  "default": {
+   "url": {
+    "type": "EXTERNAL",
+    "href": "https://app.gofindbuild.com/signup"
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  }
+ },
+ {
+  "name": "sticky",
+  "label": "Stick to the top when scrolling",
+  "type": "boolean",
+  "display": "toggle",
+  "default": false
+ }
+]
