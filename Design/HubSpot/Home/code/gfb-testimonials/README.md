@@ -2,6 +2,8 @@
 
 Home band 08. Figma: Home Page `1259:9027` → `1259:9068`. Read 7 Oct 2026.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Testimonials**, path `custom/content-mcp/modules/gfb_testimonials` (GoFindBuild 47303551). Fields read back and match `fields.json`. CSS and the swipe script are inlined in the HTML (`require_css`, `require_js`). Update it through the connector, not the Design Manager.
+
 Classified as **Template** in `../../05_SECTION-SPLIT_Code-vs-Template.md` (Elevate TestimonialSlider).
 Built as a custom module on request, so its look follows the GoFindBuild design instead of Elevate's
 slider styling. The Elevate slider remains the fallback.
@@ -21,7 +23,7 @@ slider styling. The Elevate slider remains the fallback.
 | `heading` | Text | "What our members say" |
 | `slides` | Repeater, 1 to 10 | One per testimonial; arrows and dashes hide when there is only one |
 | ↳ `quote` | Text | |
-| ↳ `name` | Text | |
+| ↳ `person_name` | Text | (`name` is reserved by HubSpot) |
 | ↳ `role` | Text | Role or trade |
 | ↳ `photo` | Image | Large photo, 322 × 300. Leave empty for a quote-only slide |
 | ↳ `avatar` | Image | 80px round headshot; a person icon if empty |

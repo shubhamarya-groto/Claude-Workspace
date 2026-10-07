@@ -47,7 +47,7 @@
                   <span class="gfb-tst__avatar gfb-tst__avatar--empty" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></span>
                 {% endif %}
                 <span class="gfb-tst__who">
-                  <span class="gfb-tst__name">{{ s.name|escape }}</span>
+                  <span class="gfb-tst__name">{{ s.person_name|escape }}</span>
                   {% if s.role %}<span class="gfb-tst__role">{{ s.role|escape }}</span>{% endif %}
                 </span>
               </figcaption>

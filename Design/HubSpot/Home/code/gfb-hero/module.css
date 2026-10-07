@@ -16,6 +16,7 @@
   --gfb-content: 1248px;
   --gfb-gutter: 24px;
   --gfb-tab: 54px;                       /* height of the photo's folder-tab step */
+  --gfb-photo-radius: 16px;              /* corner radius of the photo, matches the fork cards */
   color: var(--gfb-brand);
   font-family: var(--gfb-font-body);
   -webkit-font-smoothing: antialiased;
@@ -114,6 +115,27 @@
   object-fit: cover;
   background: #E8EAED;
   clip-path: polygon(0 0, 45.5% 0, calc(45.5% + 25px) var(--gfb-tab), 100% var(--gfb-tab), 100% 100%, 0 100%);
+}
+/* Rounded corners on all six corners of the folder-tab shape (browsers with CSS shape();
+   older ones keep the square-cornered polygon above). The slanted edge runs 25px across and
+   --gfb-tab down; 0.42 / 0.91 are its direction, so the curves sit on the slant. */
+@supports (clip-path: shape(from 0 0, line to 1px 0, close)) {
+  .gfb .gfb-hero__photo {
+    --r: var(--gfb-photo-radius);
+    clip-path: shape(from 0 var(--r),
+      curve to var(--r) 0 with 0 0,
+      line to calc(45.5% - var(--r)) 0,
+      curve to calc(45.5% + var(--r) * 0.42) calc(var(--r) * 0.91) with 45.5% 0,
+      line to calc(45.5% + 25px - var(--r) * 0.42) calc(var(--gfb-tab) - var(--r) * 0.91),
+      curve to calc(45.5% + 25px + var(--r)) var(--gfb-tab) with calc(45.5% + 25px) var(--gfb-tab),
+      line to calc(100% - var(--r)) var(--gfb-tab),
+      curve to 100% calc(var(--gfb-tab) + var(--r)) with 100% var(--gfb-tab),
+      line to 100% calc(100% - var(--r)),
+      curve to calc(100% - var(--r)) 100% with 100% 100%,
+      line to var(--r) 100%,
+      curve to 0 calc(100% - var(--r)) with 0 100%,
+      close);
+  }
 }
 .gfb .gfb-hero__photo--center { object-position: 50% 50%; }
 .gfb .gfb-hero__photo--left   { object-position: 0 50%; }

@@ -13,7 +13,7 @@
    "min": 1,
    "max": 10,
    "default": 5,
-   "sorting_label_field": "slides.name"
+   "sorting_label_field": "slides.person_name"
   },
   "children": [
    {
@@ -24,7 +24,7 @@
     "default": "Add a testimonial quote here."
    },
    {
-    "name": "name",
+    "name": "person_name",
     "label": "Name",
     "type": "text",
     "default": "Customer name"
@@ -83,7 +83,6 @@
   "default": [
    {
     "quote": "Add a testimonial quote #1 here. Keep it concise and impactful to enhance credibility with your business",
-    "name": "Customer name one",
     "role": "Customer role one",
     "photo": {
      "src": "",
@@ -103,11 +102,11 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "person_name": "Customer name one"
    },
    {
     "quote": "Add a testimonial quote #2 here. Keep it concise and impactful to enhance credibility with your business",
-    "name": "Customer name two",
     "role": "Customer role two",
     "photo": {
      "src": "",
@@ -127,11 +126,11 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "person_name": "Customer name two"
    },
    {
     "quote": "Add a testimonial quote #3 here. Keep it concise and impactful to enhance credibility with your business",
-    "name": "Customer name three",
     "role": "Customer role three",
     "photo": {
      "src": "",
@@ -151,11 +150,11 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "person_name": "Customer name three"
    },
    {
     "quote": "Add a testimonial quote #4 here. Keep it concise and impactful to enhance credibility with your business",
-    "name": "Customer name four",
     "role": "Customer role four",
     "photo": {
      "src": "",
@@ -175,11 +174,11 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "person_name": "Customer name four"
    },
    {
     "quote": "Add a testimonial quote #5 here. Keep it concise and impactful to enhance credibility with your business",
-    "name": "Customer name five",
     "role": "Customer role five",
     "photo": {
      "src": "",
@@ -199,7 +198,8 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "person_name": "Customer name five"
    }
   ]
  }

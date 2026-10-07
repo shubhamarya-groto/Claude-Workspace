@@ -82,6 +82,7 @@ full-width section. Every field above shows in the left panel when you click the
   it. Size (68px on desktop, smaller on phones) is set here.
 - **Button label colour:** Figma draws white on orange; the plan is a navy label (I-01, contrast). The
   code follows whatever the theme sets.
+- **Photo corners (7 Oct):** all six corners of the folder-tab shape are rounded at 16px (`--gfb-photo-radius` in `module.css`), matching the fork cards. Uses CSS `shape()`; browsers without it show square corners. Pushed to GFB Hero v2 in HubSpot.
 - **Changed from the old hard-coded module:** the orange highlight is now "and workers meet", as in Figma
   (was only "and"); card titles are 18px (were 16); the photo has Figma's folder-tab shape (was a
   rounded rectangle); the photo is a real image with alt text, not a CSS background; no Google Fonts link.
