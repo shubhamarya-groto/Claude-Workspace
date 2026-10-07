@@ -1,0 +1,30 @@
+{# GFB Pricing. Heading + 1–4 plan cards. Every word and link is a field: see fields.json.
+   All cards in a row share the tallest card's height; buttons line up along the bottom. #}
+<section class="gfb-prc">
+  <div class="gfb-prc__inner">
+    {% if module.heading %}<h2 class="gfb-prc__heading">{{ module.heading|escape }}</h2>{% endif %}
+
+    <div class="gfb-prc__cards">
+      {% for p in module.plans %}
+        {% set href = p.button_link.url.href %}
+        {% set rel = [] %}
+        {% if p.button_link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
+        {% if p.button_link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
+        <article class="gfb-prc__card{% if p.featured %} gfb-prc__card--featured{% endif %}">
+          {% if p.tier %}<h3 class="gfb-prc__tier">{{ p.tier|escape }}</h3>{% endif %}
+          {% if p.price %}<p class="gfb-prc__price">{{ p.price|escape }}</p>{% endif %}
+          {% if p.features %}
+            <ul class="gfb-prc__features">
+              {% for f in p.features %}{% if f %}<li>{{ f|escape }}</li>{% endif %}{% endfor %}
+            </ul>
+          {% endif %}
+          {% if p.button_label %}
+            <a class="gfb-prc__btn" href="{{ (href or '#')|escape_url }}"
+               {% if p.button_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>{{ p.button_label|escape }}</a>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

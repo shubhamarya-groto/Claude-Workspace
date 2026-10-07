@@ -1,0 +1,124 @@
+/* GFB Pricing · Figma 1259:9084 (Home Page 1259:9027)
+   Equal heights: the cards sit in one grid row, so every card stretches to the tallest
+   card's height. Inside each card the button is pushed to the bottom (margin-top: auto),
+   so buttons line up across the row however many features each plan lists. */
+.gfb-prc {
+  --prc-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --prc-muted: #525C70;
+  --prc-tier: #BB5B09;              /* Figma #F16C0E is 3.2:1 at 13px; orange/500 passes AA */
+  --prc-dot: #F16C0E;
+  --prc-line: #D9DBDE;
+  --prc-surface: #F8F9FA;
+  --prc-dark: var(--hsElevate--card--variant4__backgroundColor, #16243D);
+  --prc-dark-text: #D9DEE5;
+  --prc-dark-accent: #FFBA6B;
+  --prc-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
+  --prc-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  background: var(--prc-surface);
+  color: var(--prc-brand);
+  font-family: var(--prc-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-prc, .gfb-prc *, .gfb-prc *::before, .gfb-prc *::after { box-sizing: border-box; }
+
+/* 1200 container, 96px top and bottom, 32px under the heading */
+.gfb-prc .gfb-prc__inner { max-width: 1248px; margin: 0 auto; padding: 96px 24px; }
+.gfb-prc .gfb-prc__heading {
+  margin: 0 0 32px;
+  text-align: center;
+  text-wrap: balance;
+  font-family: var(--prc-font-display);
+  font-size: clamp(32px, 2.2vw + 16px, 48px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--prc-brand);
+}
+
+/* One row of equal columns (1 to 4 plans), 24 apart; stretch = same height for all */
+.gfb-prc .gfb-prc__cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 24px;
+}
+
+/* Card: 28 padding, 14 gap, radius 20 */
+.gfb-prc .gfb-prc__card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: #FFFFFF;
+  border: 1px solid var(--prc-line);
+  border-radius: 20px;
+}
+.gfb-prc .gfb-prc__tier { margin: 0; font-size: 13px; font-weight: 500; line-height: 1.5; color: var(--prc-tier); }
+.gfb-prc .gfb-prc__price {
+  margin: 0;
+  font-family: var(--prc-font-display);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--prc-brand);
+}
+.gfb-prc .gfb-prc__features { display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.gfb-prc .gfb-prc__features li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--prc-muted);
+}
+.gfb-prc .gfb-prc__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--prc-dot);
+}
+
+/* Button: full width, pill, pinned to the bottom of the card */
+.gfb-prc .gfb-prc__btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  background: var(--hsElevate--button--primary__backgroundColor, #F16C0E);
+  color: var(--hsElevate--button--primary__textColor, #16243D);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+.gfb-prc .gfb-prc__btn:hover,
+.gfb-prc .gfb-prc__btn:focus-visible {
+  background: var(--hsElevate--button--primary__hover--backgroundColor, #F4811F);
+  color: var(--hsElevate--button--primary__hover--textColor, #16243D);
+}
+.gfb-prc .gfb-prc__btn:focus-visible { outline: 3px solid var(--prc-brand); outline-offset: 3px; }
+
+/* Featured plan: dark card (Elevate card variant 4) */
+.gfb-prc .gfb-prc__card--featured { background: var(--prc-dark); border-color: var(--prc-dark); }
+.gfb-prc .gfb-prc__card--featured .gfb-prc__tier { color: var(--prc-dark-accent); }
+.gfb-prc .gfb-prc__card--featured .gfb-prc__price { color: #FFFFFF; }
+.gfb-prc .gfb-prc__card--featured .gfb-prc__features li { color: var(--prc-dark-text); }
+.gfb-prc .gfb-prc__card--featured .gfb-prc__features li::before { background: var(--prc-dark-accent); }
+.gfb-prc .gfb-prc__card--featured .gfb-prc__btn:focus-visible { outline-color: #FFFFFF; }
+
+/* Tablet and phone: one column; each card hugs its own content */
+@media (max-width: 900px) {
+  .gfb-prc .gfb-prc__inner { padding-top: 64px; padding-bottom: 64px; }
+  .gfb-prc .gfb-prc__cards { grid-auto-flow: row; grid-auto-columns: auto; max-width: 480px; margin: 0 auto; }
+  .gfb-prc .gfb-prc__btn { margin-top: 8px; }
+}

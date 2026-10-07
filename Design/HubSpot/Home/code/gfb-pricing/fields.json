@@ -1,0 +1,136 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "Simple pricing"
+ },
+ {
+  "name": "plans",
+  "label": "Plans",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 4,
+   "default": 3,
+   "sorting_label_field": "plans.tier"
+  },
+  "children": [
+   {
+    "name": "tier",
+    "label": "Plan name",
+    "type": "text",
+    "default": "Plan"
+   },
+   {
+    "name": "price",
+    "label": "Price",
+    "type": "text",
+    "help_text": "Shown large, e.g. $149/mo or Custom.",
+    "default": "$0/mo"
+   },
+   {
+    "name": "featured",
+    "label": "Featured (dark card)",
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+   },
+   {
+    "name": "features",
+    "label": "Features",
+    "type": "text",
+    "occurrence": {
+     "min": 0,
+     "max": 20,
+     "default": 4
+    },
+    "default": "Feature"
+   },
+   {
+    "name": "button_label",
+    "label": "Button text",
+    "type": "text",
+    "help_text": "Leave empty to hide the button.",
+    "default": "Get started"
+   },
+   {
+    "name": "button_link",
+    "label": "Button link",
+    "type": "link",
+    "default": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ],
+  "default": [
+   {
+    "tier": "Growth",
+    "price": "$149/mo",
+    "featured": false,
+    "features": [
+     "Unlimited job postings",
+     "Verified licenses and certs",
+     "Direct messaging to workers",
+     "Priority support"
+    ],
+    "button_label": "Cancel any time",
+    "button_link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "tier": "Enterprise",
+    "price": "Custom",
+    "featured": true,
+    "features": [
+     "Unlimited postings and users",
+     "Custom integrations (ATS, HRIS)",
+     "Dedicated account manager",
+     "Advanced reporting",
+     "Cancel any time"
+    ],
+    "button_label": "Get started",
+    "button_link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "tier": "Enterprise",
+    "price": "Custom",
+    "featured": false,
+    "features": [
+     "Unlimited posts",
+     "Verified licenses",
+     "Direct messaging",
+     "Matches in your ZIP",
+     "Cancel any time"
+    ],
+    "button_label": "Get started",
+    "button_link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ]
+ }
+]

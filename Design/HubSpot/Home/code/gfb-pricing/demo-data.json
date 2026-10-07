@@ -1,0 +1,64 @@
+[
+ {
+  "tier": "Growth",
+  "price": "$149/mo",
+  "featured": false,
+  "features": [
+   "Unlimited job postings",
+   "Verified licenses and certs",
+   "Direct messaging to workers",
+   "Priority support"
+  ],
+  "button_label": "Cancel any time",
+  "button_link": {
+   "url": {
+    "href": "",
+    "type": "EXTERNAL"
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  }
+ },
+ {
+  "tier": "Enterprise",
+  "price": "Custom",
+  "featured": true,
+  "features": [
+   "Unlimited postings and users",
+   "Custom integrations (ATS, HRIS)",
+   "Dedicated account manager",
+   "Advanced reporting",
+   "Cancel any time"
+  ],
+  "button_label": "Get started",
+  "button_link": {
+   "url": {
+    "href": "",
+    "type": "EXTERNAL"
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  }
+ },
+ {
+  "tier": "Enterprise",
+  "price": "Custom",
+  "featured": false,
+  "features": [
+   "Unlimited posts",
+   "Verified licenses",
+   "Direct messaging",
+   "Matches in your ZIP",
+   "Cancel any time"
+  ],
+  "button_label": "Get started",
+  "button_link": {
+   "url": {
+    "href": "",
+    "type": "EXTERNAL"
+   },
+   "open_in_new_tab": false,
+   "no_follow": false
+  }
+ }
+]
