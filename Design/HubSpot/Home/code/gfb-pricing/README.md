@@ -37,7 +37,8 @@ Band `#F8F9FA`, 96px padding, 1200 container, heading Instrument Sans SemiBold 4
 Cards 384 wide, 24 apart, radius 20, padding 28, gap 14, white with `#D9DBDE` 1px border; featured
 `#16243D`. Tier Inter Medium 13; price Instrument Sans SemiBold 48; features Inter 14 / 1.5
 `#525C70` (featured `#D9DEE5`), 6px dot `#F16C0E` (featured `#FFBA6B`). Button full width, pill,
-46px, `#F16C0E`, label Inter Medium 13 `#16243D`.
+46px, `#F16C0E`, label Inter Medium 13. Figma's label is navy `#16243D`; changed to **white** on 7 Oct
+(team decision; about 3:1 contrast, I-01). Hover `#EA580C`.
 
 ## Notes for the copy pass (not changed here)
 

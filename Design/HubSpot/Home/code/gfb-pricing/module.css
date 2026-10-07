@@ -93,7 +93,7 @@
   padding: 13px 26px;
   border-radius: 999px;
   background: var(--hsElevate--button--primary__backgroundColor, #F16C0E);
-  color: var(--hsElevate--button--primary__textColor, #16243D);
+  color: #FFFFFF;                        /* white label on orange (decided 7 Oct; ~3:1 contrast, see I-01) */
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
@@ -103,8 +103,8 @@
 }
 .gfb-prc .gfb-prc__btn:hover,
 .gfb-prc .gfb-prc__btn:focus-visible {
-  background: var(--hsElevate--button--primary__hover--backgroundColor, #F4811F);
-  color: var(--hsElevate--button--primary__hover--textColor, #16243D);
+  background: #EA580C;                   /* darker orange on hover keeps the white label readable */
+  color: #FFFFFF;
 }
 .gfb-prc .gfb-prc__btn:focus-visible { outline: 3px solid var(--prc-brand); outline-offset: 3px; }
 

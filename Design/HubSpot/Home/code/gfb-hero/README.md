@@ -75,13 +75,9 @@ full-width section. Every field above shows in the left panel when you click the
 
 ## Things to know
 
-- **The primary (orange) button follows the theme.** It reads Elevate's primary button settings, so until
-  the theme-settings pass is done (build plan 0.2) it shows Elevate's stock colour, not orange. That's
-  expected; the pass fixes it here and on every other button at once.
+- **Primary (orange) button: white label (7 Oct).** Background still follows the theme's primary button colour; the label is fixed white and hover goes to the darker `#EA580C`. White on `#F16C0E` is about 3:1, below the 4.5:1 AA minimum for this text size (I-01); decided by the team on 7 Oct.
 - **Headline font** comes from the theme's H1 font, so it shows Instrument Sans once the theme pass sets
   it. Size (68px on desktop, smaller on phones) is set here.
-- **Button label colour:** Figma draws white on orange; the plan is a navy label (I-01, contrast). The
-  code follows whatever the theme sets.
 - **Photo corners (7 Oct):** all six corners of the folder-tab shape are rounded at 16px (`--gfb-photo-radius` in `module.css`), matching the fork cards. Uses CSS `shape()`; browsers without it show square corners. Pushed to GFB Hero v2 in HubSpot.
 - **Changed from the old hard-coded module:** the orange highlight is now "and workers meet", as in Figma
   (was only "and"); card titles are 18px (were 16); the photo has Figma's folder-tab shape (was a

@@ -84,12 +84,12 @@
 }
 .gfb .gfb-btn--primary {
   background: var(--hsElevate--button--primary__backgroundColor, #F16C0E);
-  color: var(--hsElevate--button--primary__textColor, #16243D);
+  color: #FFFFFF;                        /* white label on orange (decided 7 Oct; ~3:1 contrast, see I-01) */
 }
 .gfb .gfb-btn--primary:hover,
 .gfb .gfb-btn--primary:focus-visible {
-  background: var(--hsElevate--button--primary__hover--backgroundColor, #F4811F);
-  color: var(--hsElevate--button--primary__hover--textColor, #16243D);
+  background: #EA580C;                   /* darker orange on hover keeps the white label readable */
+  color: #FFFFFF;
 }
 .gfb .gfb-btn--dark { background: var(--gfb-dark); color: var(--gfb-white); }
 .gfb .gfb-btn--dark:hover,
