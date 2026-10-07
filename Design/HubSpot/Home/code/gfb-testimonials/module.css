@@ -1,0 +1,135 @@
+/* GFB Testimonials · Figma 1259:9068 (Home Page 1259:9027), restyled to GoFindBuild.
+   Figma still carries Elevate's stock styling (Inter, #09152B, #F6B26B links); here type
+   and colour read Elevate's theme settings, with GoFindBuild values as fallbacks.
+   #F6B26B on white is about 1.9:1, so links and arrows use orange/500 #BB5B09 (4.5:1+). */
+.gfb-tst {
+  --tst-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --tst-muted: #525C70;
+  --tst-link: #BB5B09;
+  --tst-active: #F16C0E;
+  --tst-rest: #D3DAE4;
+  --tst-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
+  --tst-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  background: #FFFFFF;
+  color: var(--tst-brand);
+  font-family: var(--tst-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-tst, .gfb-tst *, .gfb-tst *::before, .gfb-tst *::after { box-sizing: border-box; }
+
+.gfb-tst .gfb-tst__inner { max-width: 1440px; margin: 0 auto; padding: 96px 0; }
+.gfb-tst .gfb-tst__heading {
+  margin: 0 24px 32px;
+  text-align: center;
+  font-family: var(--tst-font-display);
+  font-size: clamp(32px, 2.2vw + 16px, 48px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--tst-brand);
+}
+
+/* Stage: arrows at the band edges, track in the middle */
+.gfb-tst .gfb-tst__stage { position: relative; display: grid; grid-template-columns: 72px minmax(0, 1fr) 72px; align-items: center; }
+.gfb-tst .gfb-tst__track {
+  grid-column: 2;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  outline: none;
+}
+.gfb-tst .gfb-tst__track::-webkit-scrollbar { display: none; }
+.gfb-tst .gfb-tst__track:focus-visible { box-shadow: 0 0 0 3px var(--tst-active); border-radius: 16px; }
+@media (prefers-reduced-motion: reduce) { .gfb-tst .gfb-tst__track { scroll-behavior: auto; } }
+
+/* Slide: photo 322 × 300, 71 gap, text 678 (Figma) */
+.gfb-tst .gfb-tst__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: grid;
+  grid-template-columns: 322px minmax(0, 678px);
+  justify-content: center;
+  align-items: start;
+  gap: 72px;
+  margin: 0;
+  padding: 72px 24px;
+}
+.gfb-tst .gfb-tst__slide--no-photo { grid-template-columns: minmax(0, 760px); }
+.gfb-tst .gfb-tst__photo { display: block; width: 322px; height: 300px; object-fit: cover; border-radius: 8px; background: #E8EAED; }
+
+.gfb-tst .gfb-tst__quote { margin: 0 0 40px; }
+.gfb-tst .gfb-tst__quote p { margin: 0; font-size: clamp(22px, 1vw + 16px, 32px); font-weight: 500; line-height: 1.5; color: var(--tst-brand); }
+
+.gfb-tst .gfb-tst__person { display: flex; align-items: center; gap: 32px; }
+.gfb-tst .gfb-tst__avatar { flex: none; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+.gfb-tst .gfb-tst__avatar--empty {
+  display: grid;
+  place-items: center;
+  background: #FDEDDF;
+  color: var(--tst-link);
+}
+.gfb-tst .gfb-tst__who { display: flex; flex-direction: column; gap: 8px; }
+.gfb-tst .gfb-tst__name { font-size: 24px; line-height: 1.2; color: var(--tst-brand); }
+.gfb-tst .gfb-tst__role { font-size: 16px; line-height: 1.5; color: var(--tst-muted); }
+
+.gfb-tst .gfb-tst__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--tst-link);
+  text-decoration: none;
+}
+.gfb-tst .gfb-tst__link:hover { text-decoration: underline; }
+
+/* Arrows */
+.gfb-tst .gfb-tst__arrow {
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--tst-link);
+  cursor: pointer;
+}
+.gfb-tst .gfb-tst__arrow:hover { background: #FDEDDF; }
+.gfb-tst .gfb-tst__arrow:focus-visible { outline: 3px solid var(--tst-active); outline-offset: 2px; }
+.gfb-tst .gfb-tst__arrow[disabled] { opacity: 0.3; cursor: default; background: transparent; }
+
+/* Dashes: 40 × 3, 8 apart; the active one orange */
+.gfb-tst .gfb-tst__dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
+.gfb-tst .gfb-tst__dot {
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: linear-gradient(var(--tst-rest), var(--tst-rest)) center / 100% 3px no-repeat;
+  cursor: pointer;
+}
+.gfb-tst .gfb-tst__dot[aria-selected="true"] { background-image: linear-gradient(var(--tst-active), var(--tst-active)); }
+.gfb-tst .gfb-tst__dot:focus-visible { outline: 2px solid var(--tst-active); outline-offset: 2px; }
+
+/* Tablet: photo above the text */
+@media (max-width: 1023px) {
+  .gfb-tst .gfb-tst__slide { grid-template-columns: minmax(0, 678px); gap: 32px; padding: 48px 24px; }
+  .gfb-tst .gfb-tst__photo { width: 100%; height: 300px; }
+}
+/* Phone: swipe instead of arrows */
+@media (max-width: 767px) {
+  .gfb-tst .gfb-tst__inner { padding: 64px 0; }
+  .gfb-tst .gfb-tst__stage { grid-template-columns: 0 minmax(0, 1fr) 0; }
+  .gfb-tst .gfb-tst__arrow { display: none; }
+  .gfb-tst .gfb-tst__slide { padding: 32px 24px; }
+  .gfb-tst .gfb-tst__photo { height: 220px; }
+  .gfb-tst .gfb-tst__person { gap: 16px; }
+  .gfb-tst .gfb-tst__avatar { width: 56px; height: 56px; }
+  .gfb-tst .gfb-tst__name { font-size: 20px; }
+}

@@ -20,7 +20,7 @@ Goes with `04_FINAL-DESIGN_Home-Page.md`, which has sizes, copy and band order.
 | 01 | Hero + fork | `1259:9031` | **Code** | Custom module **GFB Hero** (already exists, `code/gfb-hero/`) |
 | 02 | Trust bar | `1259:9048` | **Template** | Elevate **Card** ×3 (icon + one line), CSS to keep them in one row with the 28px check badge |
 | – | What you get | `1363:8560` | **Code** | Custom module. See note 1 |
-| 08 | Testimonials | `1259:9068` | **Template** | Elevate **TestimonialSlider** (Heading + slider) |
+| 08 | Testimonials | `1259:9068` | **Template → Code (7 Oct)** | Built as custom module **GFB Testimonials** (`code/gfb-testimonials/`) on request; Elevate TestimonialSlider is the fallback |
 | – | Pricing | `1259:9084` | **Template** | Elevate section **`pricing`**. Figma: real instance; changes are text, band fill, one hidden element |
 | 03 | Problem + stats | `1355:8192` | **Template** | Elevate section **`metrics`**. See note 2 |
 | – | FAQ | `1259:9108` | **Template** | Elevate section **`faq-v2`**. Figma: real instance; text changes only |

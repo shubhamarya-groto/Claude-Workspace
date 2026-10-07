@@ -1,0 +1,206 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "What our members say"
+ },
+ {
+  "name": "slides",
+  "label": "Testimonials",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 10,
+   "default": 5,
+   "sorting_label_field": "slides.name"
+  },
+  "children": [
+   {
+    "name": "quote",
+    "label": "Quote",
+    "type": "text",
+    "allow_new_line": true,
+    "default": "Add a testimonial quote here."
+   },
+   {
+    "name": "name",
+    "label": "Name",
+    "type": "text",
+    "default": "Customer name"
+   },
+   {
+    "name": "role",
+    "label": "Role or trade",
+    "type": "text",
+    "default": "Customer role"
+   },
+   {
+    "name": "photo",
+    "label": "Photo",
+    "type": "image",
+    "help_text": "Large photo on the left. Leave empty for a quote-only slide.",
+    "resizable": false,
+    "default": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    }
+   },
+   {
+    "name": "avatar",
+    "label": "Avatar",
+    "type": "image",
+    "help_text": "Small round headshot. If empty, a person icon is shown.",
+    "resizable": false,
+    "default": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    }
+   },
+   {
+    "name": "link_label",
+    "label": "Link text",
+    "type": "text",
+    "help_text": "Leave empty to hide the link.",
+    "default": "Read case study"
+   },
+   {
+    "name": "link",
+    "label": "Link",
+    "type": "link",
+    "default": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ],
+  "default": [
+   {
+    "quote": "Add a testimonial quote #1 here. Keep it concise and impactful to enhance credibility with your business",
+    "name": "Customer name one",
+    "role": "Customer role one",
+    "photo": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "avatar": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "link_label": "Read case study",
+    "link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "quote": "Add a testimonial quote #2 here. Keep it concise and impactful to enhance credibility with your business",
+    "name": "Customer name two",
+    "role": "Customer role two",
+    "photo": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "avatar": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "link_label": "Read case study",
+    "link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "quote": "Add a testimonial quote #3 here. Keep it concise and impactful to enhance credibility with your business",
+    "name": "Customer name three",
+    "role": "Customer role three",
+    "photo": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "avatar": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "link_label": "Read case study",
+    "link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "quote": "Add a testimonial quote #4 here. Keep it concise and impactful to enhance credibility with your business",
+    "name": "Customer name four",
+    "role": "Customer role four",
+    "photo": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "avatar": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "link_label": "Read case study",
+    "link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "quote": "Add a testimonial quote #5 here. Keep it concise and impactful to enhance credibility with your business",
+    "name": "Customer name five",
+    "role": "Customer role five",
+    "photo": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "avatar": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "link_label": "Read case study",
+    "link": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ]
+ }
+]

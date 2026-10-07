@@ -1,0 +1,66 @@
+{# GFB Testimonials. Heading + a slider of 1–10 testimonials. Every word, image and link is a field: see fields.json #}
+{% set slides = module.slides %}
+{% set many = slides|length > 1 %}
+
+<section class="gfb-tst" aria-roledescription="carousel" aria-label="{{ module.heading|escape_attr or 'Testimonials' }}">
+  <div class="gfb-tst__inner">
+    {% if module.heading %}<h2 class="gfb-tst__heading">{{ module.heading|escape }}</h2>{% endif %}
+
+    <div class="gfb-tst__stage">
+      {% if many %}
+        <button class="gfb-tst__arrow gfb-tst__arrow--prev" type="button" aria-label="Previous testimonial" data-gfb-tst-prev>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+      {% endif %}
+
+      <div class="gfb-tst__track" data-gfb-tst-track tabindex="0">
+        {% for s in slides %}
+          {% set href = s.link.url.href %}
+          {% set rel = [] %}
+          {% if s.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
+          {% if s.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
+          <figure class="gfb-tst__slide{% if not s.photo.src %} gfb-tst__slide--no-photo{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slides|length }}">
+            {% if s.photo.src %}
+              <img class="gfb-tst__photo" src="{{ s.photo.src|escape_url }}" alt="{{ s.photo.alt|escape_attr }}" loading="lazy"
+                   {% if s.photo.width %}width="{{ s.photo.width|escape_attr }}"{% endif %} {% if s.photo.height %}height="{{ s.photo.height|escape_attr }}"{% endif %}>
+            {% endif %}
+            <div class="gfb-tst__body">
+              <blockquote class="gfb-tst__quote"><p>{{ s.quote|escape }}</p></blockquote>
+              <figcaption class="gfb-tst__person">
+                {% if s.avatar.src %}
+                  <img class="gfb-tst__avatar" src="{{ s.avatar.src|escape_url }}" alt="" loading="lazy" width="80" height="80">
+                {% else %}
+                  <span class="gfb-tst__avatar gfb-tst__avatar--empty" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></span>
+                {% endif %}
+                <span class="gfb-tst__who">
+                  <span class="gfb-tst__name">{{ s.name|escape }}</span>
+                  {% if s.role %}<span class="gfb-tst__role">{{ s.role|escape }}</span>{% endif %}
+                </span>
+              </figcaption>
+              {% if s.link_label and href %}
+                <a class="gfb-tst__link" href="{{ href|escape_url }}" {% if s.link.open_in_new_tab %}target="_blank"{% endif %} {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>
+                  {{ s.link_label|escape }}
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              {% endif %}
+            </div>
+          </figure>
+        {% endfor %}
+      </div>
+
+      {% if many %}
+        <button class="gfb-tst__arrow gfb-tst__arrow--next" type="button" aria-label="Next testimonial" data-gfb-tst-next>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      {% endif %}
+    </div>
+
+    {% if many %}
+      <div class="gfb-tst__dots" role="tablist" aria-label="Choose a testimonial">
+        {% for s in slides %}
+          <button class="gfb-tst__dot" type="button" role="tab" aria-label="Testimonial {{ loop.index }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-gfb-tst-dot="{{ loop.index0 }}"></button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
