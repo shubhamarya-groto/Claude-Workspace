@@ -1,0 +1,83 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "The right connection could change everything."
+ },
+ {
+  "name": "subhead",
+  "label": "Subhead",
+  "type": "text",
+  "default": "Find the people you need. Find the opportunity you deserve."
+ },
+ {
+  "name": "buttons",
+  "label": "Buttons",
+  "type": "group",
+  "occurrence": {
+   "min": 0,
+   "max": 3,
+   "default": 2,
+   "sorting_label_field": "buttons.label"
+  },
+  "children": [
+   {
+    "name": "label",
+    "label": "Label",
+    "type": "text",
+    "default": "Button"
+   },
+   {
+    "name": "link",
+    "label": "Link",
+    "type": "link",
+    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS"],
+    "default": {
+     "url": { "type": "EXTERNAL", "href": "" },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "name": "style",
+    "label": "Style",
+    "type": "choice",
+    "display": "select",
+    "choices": [["primary", "Orange (primary)"], ["dark", "Dark"]],
+    "default": "primary"
+   }
+  ],
+  "default": [
+   {
+    "label": "Post a job",
+    "link": { "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false },
+    "style": "primary"
+   },
+   {
+    "label": "Find work",
+    "link": { "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false },
+    "style": "dark"
+   }
+  ]
+ },
+ {
+  "name": "background_image",
+  "label": "Background image",
+  "type": "image",
+  "help_text": "Optional. Replaces the built-in soft gradient. Use the Figma band background for an exact match.",
+  "resizable": false,
+  "default": {
+   "src": "",
+   "alt": "",
+   "loading": "lazy"
+  }
+ },
+ {
+  "name": "show_gears",
+  "label": "Show gear decorations",
+  "type": "boolean",
+  "display": "toggle",
+  "default": true
+ }
+]
