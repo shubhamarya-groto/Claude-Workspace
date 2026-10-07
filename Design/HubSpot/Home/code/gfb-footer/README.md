@@ -4,6 +4,8 @@ Home band 11. Figma: Home Page `1259:9027` → `1259:9149` (`11 · Footer + brow
 trade columns in the final design). Read 7 Oct 2026. Exact Figma copy as defaults. Built as code on request;
 the Elevate global footer (Logo, Rich text, Menu, Social follow) stays the fallback.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Footer**, path `custom/content-mcp/modules/gfb_footer` (GoFindBuild 47303551). CSS inlined in the HTML. Update it through the connector, not the Design Manager.
+
 | File | What |
 |---|---|
 | `fields.json` | Fields with the Figma copy and GoFindBuild links |
