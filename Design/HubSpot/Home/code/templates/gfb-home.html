@@ -1,0 +1,64 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: GFB Home
+-->
+<!doctype html>
+<html lang="{{ html_lang or 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ content.html_title }}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}">{% endif %}
+    {% if brand_settings.primaryFavicon.src %}<link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}">{% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap">
+    {{ standard_header_includes }}
+    <style>
+      /* GFB Home canvas: one open drag-and-drop area, every band full width with no padding.
+         Each GFB module sets its own background, width and spacing (from Figma). */
+      html { -webkit-text-size-adjust: 100%; }
+      body { margin: 0; background: #FFFFFF; color: #16243D; font-family: "Inter", system-ui, sans-serif; }
+      img { max-width: 100%; height: auto; }
+      .gfb-page .row-fluid { width: 100%; }
+      .gfb-page .row-fluid::after { content: ""; display: table; clear: both; }
+      .gfb-page .span12 { width: 100%; }
+      .gfb-page .dnd-section { padding: 0; }
+      .gfb-page .dnd-section > .row-fluid { max-width: none; margin: 0; }
+      .gfb-page .dnd-column { padding: 0; }
+      .gfb-page .widget-type-custom_widget, .gfb-page .hs_cos_wrapper_type_module { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <main class="gfb-page" id="main-content">
+      {% dnd_area "main" label="Home page" %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_hero_v2" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_what_you_get" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_testimonials" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_pricing" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_problem_stats" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_faq" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_final_cta" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+        {% dnd_section full_width=true, padding={"top": 0, "bottom": 0, "left": 0, "right": 0} %}
+          {% dnd_module path="/custom/content-mcp/modules/gfb_footer" %}{% end_dnd_module %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </main>
+    {{ standard_footer_includes }}
+  </body>
+</html>
