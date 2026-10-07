@@ -36,10 +36,12 @@ Editor: https://app.hubspot.com/pages/47303551/editor/223806550529
 - **FAQ answers** 2 and 3 are placeholders; the FAQ search data is on, so fill them before publishing.
 - **About Us** footer link points to `/about-us`; confirm.
 
-## Motion (preview stage, 7 Oct)
+## Motion (live in the template, 7 Oct)
 
-`gfb-motion.html` holds the section reveal and page intro, ready to paste into `gfb-home.html` (the comments
-say where each part goes). Not in HubSpot yet.
+`gfb-motion.html` holds the section reveal and page intro; the same code is in `gfb-home.html`, updated in
+HubSpot through the connector (template id `223800719733`). The template's starting layout now also includes
+the Top Nav and Trust bar, so new pages built on it match the staging page. Inside the editor
+`is_in_editor` sets `window.GFB_EDITOR`, which turns both effects off.
 
 - **Reveal:** bands below the first screen fade in and rise 24px as they scroll into view (0.6s, ease-out);
   cards, stats, FAQ rows and trust items follow 80ms apart. The nav, hero and trust bar show at once.
