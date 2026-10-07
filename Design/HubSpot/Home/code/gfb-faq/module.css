@@ -1,0 +1,81 @@
+/* GFB FAQ · Figma 1259:9108 (Home Page 1259:9027), Elevate faq-v2 look
+   Each row: question, 12, answer, 12, 1px rule, then 20 before the next question.
+   A closed row is question, 12, rule. The +/– sign is drawn in CSS from the open state. */
+.gfb-faq {
+  --faq-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --faq-muted: #525C70;
+  --faq-line: #D9DBDE;
+  --faq-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
+  --faq-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  background: #FFFFFF;
+  color: var(--faq-brand);
+  font-family: var(--faq-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-faq, .gfb-faq *, .gfb-faq *::before, .gfb-faq *::after { box-sizing: border-box; }
+
+/* 1200 container, 96 top and bottom, 32 under the heading */
+.gfb-faq .gfb-faq__inner { max-width: 1248px; margin: 0 auto; padding: 96px 24px; }
+.gfb-faq .gfb-faq__heading {
+  max-width: 900px;
+  margin: 0 0 32px;
+  text-wrap: balance;
+  font-family: var(--faq-font-display);
+  font-size: clamp(32px, 2.2vw + 16px, 48px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--faq-brand);
+}
+
+.gfb-faq .gfb-faq__row { margin: 0 0 20px; padding: 0 0 12px; border-bottom: 1px solid var(--faq-line); }
+.gfb-faq .gfb-faq__row:last-child { margin-bottom: 0; }
+
+/* Question line: text, 16 gap, sign */
+.gfb-faq .gfb-faq__question {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+}
+.gfb-faq .gfb-faq__question::-webkit-details-marker { display: none; }
+.gfb-faq .gfb-faq__q {
+  flex: 1;
+  min-width: 0;
+  margin: 3px 0 0;
+  font-family: var(--faq-font-body);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--faq-brand);
+}
+.gfb-faq .gfb-faq__icon::before {
+  content: "+";
+  display: block;
+  width: 17px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: var(--faq-muted);
+}
+.gfb-faq .gfb-faq__row[open] .gfb-faq__icon::before { content: "–"; }
+.gfb-faq .gfb-faq__question:hover .gfb-faq__q { color: #BB5B09; }
+.gfb-faq .gfb-faq__question:focus-visible { outline: 3px solid var(--faq-brand); outline-offset: 4px; border-radius: 4px; }
+
+/* Answer: Inter 16 / 1.6, muted. Rich text, so links and lists are styled too */
+.gfb-faq .gfb-faq__answer { max-width: 72ch; margin-top: 12px; font-size: 16px; line-height: 1.6; color: var(--faq-muted); }
+.gfb-faq .gfb-faq__answer > :first-child { margin-top: 0; }
+.gfb-faq .gfb-faq__answer > :last-child { margin-bottom: 0; }
+.gfb-faq .gfb-faq__answer p { margin: 0 0 12px; }
+.gfb-faq .gfb-faq__answer ul, .gfb-faq .gfb-faq__answer ol { margin: 0 0 12px; padding-left: 20px; }
+.gfb-faq .gfb-faq__answer a { color: #BB5B09; text-decoration: underline; text-underline-offset: 2px; }
+
+@media (max-width: 767px) {
+  .gfb-faq .gfb-faq__inner { padding-top: 64px; padding-bottom: 64px; }
+  .gfb-faq .gfb-faq__q { font-size: 17px; }
+}
