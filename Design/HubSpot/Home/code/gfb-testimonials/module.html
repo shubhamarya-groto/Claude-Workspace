@@ -1,19 +1,33 @@
-{# GFB Testimonials. Heading + a slider of 1–10 testimonials. Every word, image and link is a field: see fields.json #}
+{# GFB Testimonials. Heading + a slider of 1–10 testimonials. Every word, image and link is a field: see fields.json.
+   The slider works with HTML and CSS alone: one hidden radio button per slide; the arrows and dashes are labels
+   for those radios. module.js only adds swipe on touch screens. #}
 {% set slides = module.slides %}
-{% set many = slides|length > 1 %}
+{% set count = slides|length %}
+{% set many = count > 1 %}
+{% set uid = "gfb-tst-" ~ (name or "x")|replace(" ", "-")|replace(".", "-") %}
 
 <section class="gfb-tst" aria-roledescription="carousel" aria-label="{{ module.heading|escape_attr or 'Testimonials' }}">
+  {% if many %}
+    {% for s in slides %}
+      <input class="gfb-tst__radio" type="radio" name="{{ uid }}" id="{{ uid }}-{{ loop.index }}" aria-label="Show testimonial {{ loop.index }} of {{ count }}" {% if loop.first %}checked{% endif %}>
+    {% endfor %}
+  {% endif %}
+
   <div class="gfb-tst__inner">
     {% if module.heading %}<h2 class="gfb-tst__heading">{{ module.heading|escape }}</h2>{% endif %}
 
     <div class="gfb-tst__stage">
       {% if many %}
-        <button class="gfb-tst__arrow gfb-tst__arrow--prev" type="button" aria-label="Previous testimonial" data-gfb-tst-prev>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        </button>
+        <div class="gfb-tst__nav gfb-tst__nav--prev">
+          {% for s in slides %}
+            {% if loop.first %}<span class="gfb-tst__arrow is-off" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span>
+            {% else %}<label class="gfb-tst__arrow" for="{{ uid }}-{{ loop.index - 1 }}" title="Previous testimonial"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></label>{% endif %}
+          {% endfor %}
+        </div>
       {% endif %}
 
-      <div class="gfb-tst__track" data-gfb-tst-track tabindex="0">
+      <div class="gfb-tst__viewport">
+      <div class="gfb-tst__track" data-gfb-tst-track>
         {% for s in slides %}
           {% set href = s.link.url.href %}
           {% set rel = [] %}
@@ -47,18 +61,22 @@
           </figure>
         {% endfor %}
       </div>
+      </div>
 
       {% if many %}
-        <button class="gfb-tst__arrow gfb-tst__arrow--next" type="button" aria-label="Next testimonial" data-gfb-tst-next>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-        </button>
+        <div class="gfb-tst__nav gfb-tst__nav--next">
+          {% for s in slides %}
+            {% if loop.last %}<span class="gfb-tst__arrow is-off" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
+            {% else %}<label class="gfb-tst__arrow" for="{{ uid }}-{{ loop.index + 1 }}" title="Next testimonial"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></label>{% endif %}
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
 
     {% if many %}
-      <div class="gfb-tst__dots" role="tablist" aria-label="Choose a testimonial">
+      <div class="gfb-tst__dots" aria-hidden="true">
         {% for s in slides %}
-          <button class="gfb-tst__dot" type="button" role="tab" aria-label="Testimonial {{ loop.index }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-gfb-tst-dot="{{ loop.index0 }}"></button>
+          <label class="gfb-tst__dot" for="{{ uid }}-{{ loop.index }}" title="Testimonial {{ loop.index }}"></label>
         {% endfor %}
       </div>
     {% endif %}
