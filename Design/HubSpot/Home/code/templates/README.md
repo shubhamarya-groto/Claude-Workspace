@@ -17,7 +17,9 @@ Editor: https://app.hubspot.com/pages/47303551/editor/223806550529
 
 | # | Band | Module |
 |---|---|---|
+| 0 | Top nav | `gfb_top_nav` (added 7 Oct) |
 | 1 | Hero + fork | `gfb_hero_v2` |
+| 1b | Trust bar | `gfb_trust_bar` (added 7 Oct) |
 | 2 | What you get | `gfb_what_you_get` |
 | 3 | Testimonials | `gfb_testimonials` |
 | 4 | Pricing | `gfb_pricing` |
@@ -28,8 +30,6 @@ Editor: https://app.hubspot.com/pages/47303551/editor/223806550529
 
 ## Not on the page yet
 
-- **Top nav** (Elevate site header in Figma): this template has no header. Add one to the template later.
-- **Trust bar** (band 02): not built.
 - **Hero photo:** empty (grey). Upload `Design/Assets/Testing assets/hero-welder-1400x799.jpg` to Files and
   pick it in the Hero's Photo field. Same for What You Get images and testimonial photos.
 - **Button links:** Hero, Pricing and Final CTA buttons have no links yet.

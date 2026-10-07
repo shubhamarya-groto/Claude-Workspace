@@ -3,6 +3,8 @@
 Home band 00. Figma: Home Page `1259:9027` → `1259:9028` (DS `Top Nav` instance). Read 7 Oct 2026.
 Exact Figma copy as defaults. Built as code on request; the Elevate Site header stays the fallback.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Top Nav**, path `custom/content-mcp/modules/gfb_top_nav` (GoFindBuild 47303551), and placed on GFB Home (staging). CSS inlined in the HTML. Update it through the connector, not the Design Manager.
+
 | File | What |
 |---|---|
 | `fields.json` | Fields with the Figma copy and GoFindBuild links |
