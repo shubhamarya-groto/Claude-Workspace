@@ -44,8 +44,10 @@ say where each part goes). Not in HubSpot yet.
 - **Reveal:** bands below the first screen fade in and rise 24px as they scroll into view (0.6s, ease-out);
   cards, stats, FAQ rows and trust items follow 80ms apart. The nav, hero and trust bar show at once.
   Testimonial slides are left alone because they already move.
-- **Intro:** logo + filling orange bar on white. Shows only if the page is still loading after 0.3s, stays at
-  least 0.6s once shown, gone by 1.5s, once per visit.
+- **Intro:** a gear beside the GoFindBuild logo, on white. The gear turns while its orange outline draws round
+  it (1s); when the outline closes the gear fills orange (0.2s) and the page shows. Uses the same gear as
+  Problem + Stats and Final CTA. Shows only if the page is still loading after 0.3s, once shown it always
+  finishes the fill (about 1.25s), once per visit.
 - **Off** for "reduce motion", inside the HubSpot editor (`window.GFB_EDITOR`, to be set from `is_in_editor`),
   and when JavaScript doesn't run: content is never left hidden.
 - `window.GFB_FORCE_INTRO` is for the preview's "Replay intro" button only.

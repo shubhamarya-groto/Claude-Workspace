@@ -15,7 +15,7 @@
   html.gfb-motion .gfb-reveal.is-in { opacity: 1; transform: none; }
   html.gfb-motion .gfb-reveal--now { transition: none; }
 
-  /* Intro: logo + filling orange bar. Hidden unless the page is slow (shown after 300ms, gone by 1.5s) */
+  /* Intro: turning gear + logo. Hidden unless the page is slow (shown after 300ms, gone by 1.5s) */
   .gfb-intro {
     position: fixed;
     inset: 0;
@@ -28,12 +28,19 @@
     transition: opacity 0.35s ease, visibility 0s linear 0.35s;
   }
   .gfb-intro.is-on { opacity: 1; visibility: visible; transition: opacity 0.2s ease; }
-  .gfb-intro__inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-  .gfb-intro__logo { font-family: "Source Serif 4", Georgia, serif; font-size: 28px; font-weight: 600; color: #16243D; }
-  .gfb-intro__track { width: 140px; height: 4px; overflow: hidden; border-radius: 999px; background: #F3E3D6; }
-  .gfb-intro__bar { width: 100%; height: 100%; border-radius: inherit; background: #F16C0E; transform-origin: left; transform: scaleX(0); }
-  .gfb-intro.is-on .gfb-intro__bar { animation: gfb-intro-fill 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-  @keyframes gfb-intro-fill { to { transform: scaleX(1); } }
+  /* Gear loader beside the logo: the gear turns while its orange outline draws round it; when the
+     outline closes the gear fills orange and the intro fades away (1.2s in all). */
+  .gfb-intro__inner { display: flex; align-items: center; gap: 14px; }
+  .gfb-intro__logo { font-family: "Source Serif 4", Georgia, serif; font-size: 30px; font-weight: 600; line-height: 1; color: #16243D; }
+  .gfb-intro__gear { display: block; width: 44px; height: 44px; overflow: visible; }
+  .gfb-intro__gear path { fill-rule: evenodd; stroke-width: 5; stroke-linejoin: round; }   /* 5 units = 2px at 44px */
+  .gfb-intro__track { fill: none; stroke: #F3E3D6; }
+  .gfb-intro__draw { fill: #F16C0E; fill-opacity: 0; stroke: #F16C0E; stroke-dasharray: 100; stroke-dashoffset: 100; }
+  .gfb-intro.is-on .gfb-intro__gear { animation: gfb-gear-turn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  .gfb-intro.is-on .gfb-intro__draw { animation: gfb-gear-draw 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, gfb-gear-fill 0.2s ease-out 1s forwards; }
+  @keyframes gfb-gear-turn { from { transform: rotate(-90deg); } to { transform: rotate(90deg); } }
+  @keyframes gfb-gear-draw { to { stroke-dashoffset: 0; } }
+  @keyframes gfb-gear-fill { to { fill-opacity: 1; } }
 
   @media (prefers-reduced-motion: reduce) {
     html.gfb-motion .gfb-reveal { opacity: 1; transform: none; transition: none; }
@@ -44,8 +51,11 @@
 <!-- BODY START -->
 <div class="gfb-intro" id="gfb-intro" aria-hidden="true">
   <div class="gfb-intro__inner">
+    <svg class="gfb-intro__gear" viewBox="-55 -55 110 110" focusable="false">
+      <path class="gfb-intro__track" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/>
+      <path class="gfb-intro__draw" pathLength="100" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/>
+    </svg>
     <span class="gfb-intro__logo">GoFindBuild</span>
-    <span class="gfb-intro__track"><span class="gfb-intro__bar"></span></span>
   </div>
 </div>
 <script>
@@ -60,19 +70,19 @@
     if (reduce || (seen && !force) || window.GFB_EDITOR) { intro.remove(); return; }
     var loaded = false, shownAt = 0;
     function hide() { intro.classList.remove('is-on'); setTimeout(function () { intro.remove(); }, 400); }
-    if (force) { shownAt = Date.now(); intro.classList.add('is-on'); setTimeout(hide, 1300); return; }
+    if (force) { shownAt = Date.now(); intro.classList.add('is-on'); setTimeout(hide, 1400); return; }
     var showTimer = setTimeout(function () {
       if (loaded) return;
       shownAt = Date.now();
       intro.classList.add('is-on');
       try { sessionStorage.setItem('gfb-intro-seen', '1'); } catch (e) {}
-      setTimeout(hide, 1200);                       /* never longer than 1.5s from the start */
+      setTimeout(hide, 1250);                       /* gear fills by 1.2s; gone by about 1.6s from the start */
     }, 300);
     window.addEventListener('load', function () {
       loaded = true;
       clearTimeout(showTimer);
       if (!shownAt) { intro.remove(); return; }
-      setTimeout(hide, Math.max(0, 600 - (Date.now() - shownAt)));   /* no flash: at least 0.6s once shown */
+      setTimeout(hide, Math.max(0, 1250 - (Date.now() - shownAt)));   /* let the gear finish filling before the page shows */
     });
   })();
 </script>
