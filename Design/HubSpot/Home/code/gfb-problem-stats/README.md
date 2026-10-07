@@ -2,6 +2,8 @@
 
 Home band 03. Figma: Home Page `1259:9027` → `1355:8192`. Read 7 Oct 2026. Exact Figma copy as defaults.
 
+> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Problem Stats**, path `custom/content-mcp/modules/gfb_problem_stats` (GoFindBuild 47303551). CSS inlined in the HTML. Update it through the connector, not the Design Manager.
+
 | File | What |
 |---|---|
 | `fields.json` | Fields with the Figma copy |
