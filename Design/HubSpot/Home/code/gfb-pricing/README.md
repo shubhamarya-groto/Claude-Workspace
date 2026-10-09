@@ -4,9 +4,9 @@ Home pricing band. Figma component `1231:129`. **Redesigned 9 Oct 2026 from a su
 (note moved under the button, no grey box; sizes on the file's type tokens) ("Start free. Pay only when you connect."),
 replacing the earlier Figma `1259:9084` layout (three plain plan cards). Copy below is from the screenshot.
 
-> **HubSpot:** the live module `custom/content-mcp/modules/gfb_pricing` still has the 7 Oct design until it is
-> updated through the connector. Its fields change (see below), so the staging page's Pricing module needs its
-> content set again after the update.
+> **Live in HubSpot (9 Oct 2026):** module `custom/content-mcp/modules/gfb_pricing` updated through the connector to this
+> design (GoFindBuild 47303551), and the GFB Home (staging) page's Pricing module (`main-module-4`) set to the new
+> content. Update it through the connector, not the Design Manager.
 
 | File | What |
 |---|---|

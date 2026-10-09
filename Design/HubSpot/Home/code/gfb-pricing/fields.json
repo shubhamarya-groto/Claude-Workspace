@@ -163,9 +163,9 @@
    },
    {
     "name": "note",
-    "label": "Note box",
+    "label": "Note",
     "type": "text",
-    "help_text": "Optional grey box above the button.",
+    "help_text": "Optional small line under the button.",
     "default": ""
    },
    {
