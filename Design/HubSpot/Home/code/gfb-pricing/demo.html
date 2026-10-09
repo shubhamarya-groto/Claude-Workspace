@@ -2,22 +2,24 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GFB Pricing · demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
 <style>
 body{margin:0;background:#fff}
 .demo-note{font:13px/1.5 Inter,system-ui,sans-serif;color:#525C70;background:#FFF7F0;border-bottom:1px solid #F5D9C3;padding:10px 16px;text-align:center}
-/* GFB Pricing · Figma 1259:9084 (Home Page 1259:9027)
-   Equal heights: the cards sit in one grid row, so every card stretches to the tallest
-   card's height. Inside each card the button is pushed to the bottom (margin-top: auto),
-   so buttons line up across the row however many features each plan lists. */
+/* GFB Pricing · redesigned 9 Oct 2026 from the supplied screenshot (replaces the Figma 1259:9084 layout)
+   Centred heading, intro and an orange line, then plan cards in one row. Cards stretch to the tallest
+   card; the note box and button sit at the bottom of every card, so they line up across the row.
+   Card styles: highlight (orange border, green ticks), light (grey border, orange ticks), dark (navy). */
 .gfb-prc {
   --prc-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
   --prc-muted: #525C70;
-  --prc-tier: #BB5B09;              /* Figma #F16C0E is 3.2:1 at 13px; orange/500 passes AA */
-  --prc-dot: #F16C0E;
-  --prc-line: #D9DBDE;
+  --prc-line: #E3E5E8;
   --prc-surface: #F8F9FA;
-  --prc-dark: var(--hsElevate--card--variant4__backgroundColor, #16243D);
+  --prc-orange: #F16C0E;
+  --prc-orange-text: #BB5B09;          /* small orange labels on white: 4.9:1 */
+  --prc-accent-line: #E0580B;          /* the orange intro line: 3.6:1 at 18px semibold */
+  --prc-green: #2F9E6B;
+  --prc-dark: #16243D;
   --prc-dark-text: #D9DEE5;
   --prc-dark-accent: #FFBA6B;
   --prc-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
@@ -28,133 +30,169 @@ body{margin:0;background:#fff}
   -webkit-font-smoothing: antialiased;
 }
 .gfb-prc, .gfb-prc *, .gfb-prc *::before, .gfb-prc *::after { box-sizing: border-box; }
+.gfb-prc .gfb-prc__inner { max-width: 1104px; margin: 0 auto; padding: 96px 24px; }
 
-/* 1200 container, 96px top and bottom, 32px under the heading */
-.gfb-prc .gfb-prc__inner { max-width: 1248px; margin: 0 auto; padding: 96px 24px; }
+/* Heading block */
+.gfb-prc .gfb-prc__head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
 .gfb-prc .gfb-prc__heading {
-  margin: 0 0 32px;
-  text-align: center;
+  margin: 0 0 16px;
   text-wrap: balance;
   font-family: var(--prc-font-display);
-  font-size: clamp(32px, 2.2vw + 16px, 48px);
-  font-weight: 600;
+  font-size: clamp(32px, 2.4vw + 16px, 48px);
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.5px;
   color: var(--prc-brand);
 }
+.gfb-prc .gfb-prc__intro { margin: 0 auto; max-width: 620px; text-wrap: balance; white-space: pre-line; font-size: 17px; line-height: 1.55; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__accent { margin: 6px 0 0; font-size: 17px; font-weight: 600; line-height: 1.55; color: var(--prc-accent-line); }
 
-/* One row of equal columns (1 to 4 plans), 24 apart; stretch = same height for all */
+/* Cards: one row, equal height */
 .gfb-prc .gfb-prc__cards {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(0, 1fr);
   align-items: stretch;
-  gap: 24px;
+  gap: 20px;
 }
-
-/* Card: 28 padding, 14 gap, radius 20 */
 .gfb-prc .gfb-prc__card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 28px;
+  gap: 18px;
+  padding: 28px 24px 24px;
   background: #FFFFFF;
   border: 1px solid var(--prc-line);
-  border-radius: 20px;
-}
-.gfb-prc .gfb-prc__tier { margin: 0; font-size: 13px; font-weight: 500; line-height: 1.5; color: var(--prc-tier); }
-.gfb-prc .gfb-prc__price {
-  margin: 0;
-  font-family: var(--prc-font-display);
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
+  border-radius: 16px;
   color: var(--prc-brand);
 }
-.gfb-prc .gfb-prc__features { display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; list-style: none; }
-.gfb-prc .gfb-prc__features li {
-  position: relative;
-  padding-left: 16px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--prc-muted);
-}
-.gfb-prc .gfb-prc__features li::before {
-  content: "";
+.gfb-prc .gfb-prc__card--highlight { border: 1.5px solid var(--prc-orange); }
+.gfb-prc .gfb-prc__card--dark { background: var(--prc-dark); border-color: var(--prc-dark); color: #FFFFFF; }
+
+/* Badge on the top edge */
+.gfb-prc .gfb-prc__badge {
   position: absolute;
-  left: 0;
-  top: 8px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--prc-dot);
+  top: -12px;
+  right: 18px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--prc-dark-accent);
+  color: var(--prc-dark);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-/* Button: full width, pill, pinned to the bottom of the card */
+/* Top block: label, name, price, description, then a rule */
+.gfb-prc .gfb-prc__top { display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px; border-bottom: 1px solid var(--prc-line); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__top { border-bottom-color: rgba(255, 255, 255, 0.14); }
+.gfb-prc .gfb-prc__tier { margin: 0 0 4px; font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prc-orange-text); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__tier { color: var(--prc-dark-accent); }
+.gfb-prc .gfb-prc__name { margin: 0; font-family: var(--prc-font-body); font-size: 21px; font-weight: 700; line-height: 1.25; color: inherit; }
+.gfb-prc .gfb-prc__price {
+  margin: 4px 0 0;
+  font-family: var(--prc-font-display);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: inherit;
+}
+.gfb-prc .gfb-prc__suffix { font-family: var(--prc-font-body); font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__suffix { color: var(--prc-dark-text); }
+.gfb-prc .gfb-prc__desc { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__desc { color: var(--prc-dark-text); }
+
+/* Rate table */
+.gfb-prc .gfb-prc__rates-label { margin: 0 0 8px; font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__rate-list { margin: 0; padding: 0; list-style: none; }
+.gfb-prc .gfb-prc__rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--prc-line);
+}
+.gfb-prc .gfb-prc__rate:first-child { padding-top: 0; }
+.gfb-prc .gfb-prc__rate-text { display: flex; flex-direction: column; min-width: 0; }
+.gfb-prc .gfb-prc__rate-name { font-size: 14px; font-weight: 700; line-height: 1.35; }
+.gfb-prc .gfb-prc__rate-detail { overflow: hidden; font-size: 12px; line-height: 1.4; color: var(--prc-muted); white-space: nowrap; text-overflow: ellipsis; }
+.gfb-prc .gfb-prc__rate-price { flex: none; font-size: 18px; font-weight: 700; line-height: 1; white-space: nowrap; }
+.gfb-prc .gfb-prc__rate-unit { margin-left: 2px; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; color: var(--prc-muted); }
+
+/* Features with ticks; tick colour follows the card style */
+.gfb-prc .gfb-prc__features { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.gfb-prc .gfb-prc__features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45; color: var(--prc-brand); }
+.gfb-prc .gfb-prc__features strong { font-weight: 700; }
+.gfb-prc .gfb-prc__tick { display: grid; flex: none; margin-top: 1px; color: var(--prc-orange); }
+.gfb-prc .gfb-prc__card--highlight .gfb-prc__tick { color: var(--prc-green); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__features li { color: #FFFFFF; }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__tick { color: var(--prc-dark-accent); }
+
+/* Note + button pinned to the bottom */
+.gfb-prc .gfb-prc__foot { display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 8px; }
+.gfb-prc .gfb-prc__note { margin: 0; padding: 9px 12px; border-radius: 8px; background: #F1F3F5; font-size: 13px; line-height: 1.4; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__note { background: rgba(255, 255, 255, 0.08); color: var(--prc-dark-text); }
+
 .gfb-prc .gfb-prc__btn {
-  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 13px 26px;
+  min-height: 48px;
+  padding: 12px 24px;
   border-radius: 999px;
-  background: var(--hsElevate--button--primary__backgroundColor, #F16C0E);
-  color: #FFFFFF;                        /* white label on orange (decided 7 Oct; ~3:1 contrast, see I-01) */
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
-.gfb-prc .gfb-prc__btn:hover,
-.gfb-prc .gfb-prc__btn:focus-visible {
-  background: #EA580C;                   /* darker orange on hover keeps the white label readable */
-  color: #FFFFFF;
-}
+.gfb-prc .gfb-prc__btn--primary { background: var(--hsElevate--button--primary__backgroundColor, #F16C0E); color: #FFFFFF; }   /* white label (7 Oct; ~3:1, I-01) */
+.gfb-prc .gfb-prc__btn--primary:hover,
+.gfb-prc .gfb-prc__btn--primary:focus-visible { background: #EA580C; color: #FFFFFF; }
+.gfb-prc .gfb-prc__btn--outline { background: #FFFFFF; color: var(--prc-brand); box-shadow: inset 0 0 0 1.5px var(--prc-brand); }
+.gfb-prc .gfb-prc__btn--outline:hover,
+.gfb-prc .gfb-prc__btn--outline:focus-visible { background: var(--prc-brand); color: #FFFFFF; }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__btn--outline { background: transparent; color: #FFFFFF; box-shadow: inset 0 0 0 1.5px #FFFFFF; }
 .gfb-prc .gfb-prc__btn:focus-visible { outline: 3px solid var(--prc-brand); outline-offset: 3px; }
-
-/* Featured plan: dark card (Elevate card variant 4) */
-.gfb-prc .gfb-prc__card--featured { background: var(--prc-dark); border-color: var(--prc-dark); }
-.gfb-prc .gfb-prc__card--featured .gfb-prc__tier { color: var(--prc-dark-accent); }
-.gfb-prc .gfb-prc__card--featured .gfb-prc__price { color: #FFFFFF; }
-.gfb-prc .gfb-prc__card--featured .gfb-prc__features li { color: var(--prc-dark-text); }
-.gfb-prc .gfb-prc__card--featured .gfb-prc__features li::before { background: var(--prc-dark-accent); }
-.gfb-prc .gfb-prc__card--featured .gfb-prc__btn:focus-visible { outline-color: #FFFFFF; }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__btn:focus-visible { outline-color: #FFFFFF; }
 
 /* Tablet and phone: one column; each card hugs its own content */
 @media (max-width: 900px) {
   .gfb-prc .gfb-prc__inner { padding-top: 64px; padding-bottom: 64px; }
-  .gfb-prc .gfb-prc__cards { grid-auto-flow: row; grid-auto-columns: auto; max-width: 480px; margin: 0 auto; }
-  .gfb-prc .gfb-prc__btn { margin-top: 8px; }
+  .gfb-prc .gfb-prc__cards { grid-auto-flow: row; grid-auto-columns: auto; gap: 28px; max-width: 480px; margin: 0 auto; }
 }
-
 </style></head><body>
-<div class="demo-note">Demo of the <b>GFB Pricing</b> HubSpot module with the exact copy from Figma (frame 1259:9084). All cards share the tallest card's height; buttons line up at the bottom.</div>
+<p class="demo-note">GFB Pricing demo, redesigned 9 Oct from the supplied screenshot. Copy is from the screenshot.</p>
 <section class="gfb-prc">
   <div class="gfb-prc__inner">
-    <h2 class="gfb-prc__heading">Simple pricing</h2>
+    <header class="gfb-prc__head">
+      <h2 class="gfb-prc__heading">Start free. Pay only when you connect.</h2>
+      <p class="gfb-prc__intro">Every company starts with a free trial. Then you only pay per successful worker connection, or go Pro for unlimited connections at one monthly price.</p>
+      <p class="gfb-prc__accent">Workers can enjoy access to our hiring network for free.</p>
+    </header>
     <div class="gfb-prc__cards">
-        <article class="gfb-prc__card">
-          <h3 class="gfb-prc__tier">Growth</h3>
-          <p class="gfb-prc__price">$149/mo</p>
-          <ul class="gfb-prc__features"><li>Unlimited job postings</li><li>Verified licenses and certs</li><li>Direct messaging to workers</li><li>Priority support</li></ul>
-          <a class="gfb-prc__btn" href="#">Cancel any time</a>
-        </article>
-        <article class="gfb-prc__card gfb-prc__card--featured">
-          <h3 class="gfb-prc__tier">Enterprise</h3>
-          <p class="gfb-prc__price">Custom</p>
-          <ul class="gfb-prc__features"><li>Unlimited postings and users</li><li>Custom integrations (ATS, HRIS)</li><li>Dedicated account manager</li><li>Advanced reporting</li><li>Cancel any time</li></ul>
-          <a class="gfb-prc__btn" href="#">Get started</a>
-        </article>
-        <article class="gfb-prc__card">
-          <h3 class="gfb-prc__tier">Enterprise</h3>
-          <p class="gfb-prc__price">Custom</p>
-          <ul class="gfb-prc__features"><li>Unlimited posts</li><li>Verified licenses</li><li>Direct messaging</li><li>Matches in your ZIP</li><li>Cancel any time</li></ul>
-          <a class="gfb-prc__btn" href="#">Get started</a>
-        </article>
+      <article class="gfb-prc__card gfb-prc__card--highlight">
+        <div class="gfb-prc__top"><p class="gfb-prc__tier">Included with every account</p><h3 class="gfb-prc__name">Introductory Offer</h3><p class="gfb-prc__price">Free</p><p class="gfb-prc__desc">Try GoFindBuild at no cost. Every company starts here.</p></div>
+        <ul class="gfb-prc__features"><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>3 free</strong> worker connections</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>5 free</strong> job invitations</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>1</strong> active job post</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> network access</span></li></ul>
+        <div class="gfb-prc__foot"><p class="gfb-prc__note">No credit card required</p><a class="gfb-prc__btn gfb-prc__btn--primary" href="#">Start free trial</a></div>
+      </article>
+      <article class="gfb-prc__card gfb-prc__card--light">
+        <div class="gfb-prc__top"><p class="gfb-prc__tier">Starter · Pay as you go</p><h3 class="gfb-prc__name">Starter</h3><p class="gfb-prc__price">$0 <span class="gfb-prc__suffix">/ month</span></p><p class="gfb-prc__desc">For flexible hiring. You only pay when you successfully connect with a worker.</p></div>
+        <div class="gfb-prc__rates"><p class="gfb-prc__rates-label">Price per worker connection</p><ul class="gfb-prc__rate-list"><li class="gfb-prc__rate"><span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">Entry-level</span><span class="gfb-prc__rate-detail">General labor, apprentices...</span></span><span class="gfb-prc__rate-price">$49<span class="gfb-prc__rate-unit">/EA</span></span></li><li class="gfb-prc__rate"><span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">Skilled</span><span class="gfb-prc__rate-detail">Carpentry, framing, masonry...</span></span><span class="gfb-prc__rate-price">$149<span class="gfb-prc__rate-unit">/EA</span></span></li><li class="gfb-prc__rate"><span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">Specialty</span><span class="gfb-prc__rate-detail">HVAC, plumbing, electrical...</span></span><span class="gfb-prc__rate-price">$349<span class="gfb-prc__rate-unit">/EA</span></span></li></ul></div>
+        <ul class="gfb-prc__features"><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Unlimited matches and job invitations</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>1 active job post</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Unlimited network access</span></li></ul>
+        <div class="gfb-prc__foot"><p class="gfb-prc__note">No subscription. Starts automatically after your trial.</p><a class="gfb-prc__btn gfb-prc__btn--outline" href="#">Continue with Starter</a></div>
+      </article>
+      <article class="gfb-prc__card gfb-prc__card--dark">
+        <span class="gfb-prc__badge">Best value</span>
+        <div class="gfb-prc__top"><p class="gfb-prc__tier">Pro · Unlimited hiring</p><h3 class="gfb-prc__name">Pro</h3><p class="gfb-prc__price">$249 <span class="gfb-prc__suffix">/ month</span></p><p class="gfb-prc__desc">For companies hiring regularly. Connect with as many workers as you need.</p></div>
+        <ul class="gfb-prc__features"><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> worker connections, all trades</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> matches and job invitations</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> active job posts</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Priority</strong> access to new matches</span></li></ul>
+        <div class="gfb-prc__foot"><p class="gfb-prc__note">Predictable monthly pricing. Cancel anytime.</p><a class="gfb-prc__btn gfb-prc__btn--primary" href="#">Go Pro</a></div>
+      </article>
     </div>
   </div>
 </section>

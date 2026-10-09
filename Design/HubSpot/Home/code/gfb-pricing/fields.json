@@ -3,7 +3,21 @@
   "name": "heading",
   "label": "Heading",
   "type": "text",
-  "default": "Simple pricing"
+  "default": "Start free. Pay only when you connect."
+ },
+ {
+  "name": "intro",
+  "label": "Intro",
+  "type": "text",
+  "allow_new_line": true,
+  "default": "Every company starts with a free trial. Then you only pay per successful worker connection, or go Pro for unlimited connections at one monthly price."
+ },
+ {
+  "name": "accent_line",
+  "label": "Orange line",
+  "type": "text",
+  "help_text": "Optional. Shown in orange under the intro.",
+  "default": "Workers can enjoy access to our hiring network for free."
  },
  {
   "name": "plans",
@@ -13,11 +27,45 @@
    "min": 1,
    "max": 4,
    "default": 3,
-   "sorting_label_field": "plans.tier"
+   "sorting_label_field": "plans.plan_name"
   },
   "children": [
    {
+    "name": "card_style",
+    "label": "Card style",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "highlight",
+      "Highlighted (orange border, green ticks)"
+     ],
+     [
+      "light",
+      "Light (grey border, orange ticks)"
+     ],
+     [
+      "dark",
+      "Dark (navy)"
+     ]
+    ],
+    "default": "light"
+   },
+   {
+    "name": "badge",
+    "label": "Badge",
+    "type": "text",
+    "help_text": "Optional pill on the top edge, e.g. Best value.",
+    "default": ""
+   },
+   {
     "name": "tier",
+    "label": "Small label",
+    "type": "text",
+    "default": "Plan label"
+   },
+   {
+    "name": "plan_name",
     "label": "Plan name",
     "type": "text",
     "default": "Plan"
@@ -26,15 +74,65 @@
     "name": "price",
     "label": "Price",
     "type": "text",
-    "help_text": "Shown large, e.g. $149/mo or Custom.",
-    "default": "$0/mo"
+    "default": "$0"
    },
    {
-    "name": "featured",
-    "label": "Featured (dark card)",
-    "type": "boolean",
-    "display": "toggle",
-    "default": false
+    "name": "price_suffix",
+    "label": "After the price",
+    "type": "text",
+    "help_text": "e.g. / month. Leave empty for none.",
+    "default": ""
+   },
+   {
+    "name": "description",
+    "label": "Description",
+    "type": "text",
+    "default": "Who this plan is for."
+   },
+   {
+    "name": "rates_label",
+    "label": "Rate table label",
+    "type": "text",
+    "help_text": "Shown above the rate rows. Leave empty if there are none.",
+    "default": ""
+   },
+   {
+    "name": "rates",
+    "label": "Rate rows",
+    "type": "group",
+    "occurrence": {
+     "min": 0,
+     "max": 6,
+     "default": 0,
+     "sorting_label_field": "plans.rates.rate_name"
+    },
+    "children": [
+     {
+      "name": "rate_name",
+      "label": "Name",
+      "type": "text",
+      "default": "Tier"
+     },
+     {
+      "name": "rate_detail",
+      "label": "Detail",
+      "type": "text",
+      "default": "Trades in this tier"
+     },
+     {
+      "name": "rate_price",
+      "label": "Price",
+      "type": "text",
+      "default": "$0"
+     },
+     {
+      "name": "rate_unit",
+      "label": "Unit",
+      "type": "text",
+      "default": "/EA"
+     }
+    ],
+    "default": []
    },
    {
     "name": "features",
@@ -42,18 +140,33 @@
     "type": "group",
     "occurrence": {
      "min": 0,
-     "max": 20,
-     "default": 4,
+     "max": 10,
+     "default": 3,
      "sorting_label_field": "plans.features.text"
     },
     "children": [
      {
+      "name": "highlight",
+      "label": "Bold part",
+      "type": "text",
+      "help_text": "Optional. Shown in bold before the rest.",
+      "default": ""
+     },
+     {
       "name": "text",
-      "label": "Feature",
+      "label": "Rest of the line",
       "type": "text",
       "default": "Feature"
      }
-    ]
+    ],
+    "default": []
+   },
+   {
+    "name": "note",
+    "label": "Note box",
+    "type": "text",
+    "help_text": "Optional grey box above the button.",
+    "default": ""
    },
    {
     "name": "button_label",
@@ -66,106 +179,172 @@
     "name": "button_link",
     "label": "Button link",
     "type": "link",
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT"
+    ],
     "default": {
      "url": {
-      "href": "",
-      "type": "EXTERNAL"
+      "type": "EXTERNAL",
+      "href": ""
      },
      "open_in_new_tab": false,
      "no_follow": false
     }
+   },
+   {
+    "name": "button_style",
+    "label": "Button style",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "primary",
+      "Orange"
+     ],
+     [
+      "outline",
+      "Outline"
+     ]
+    ],
+    "default": "primary"
    }
   ],
   "default": [
    {
-    "tier": "Growth",
-    "price": "$149/mo",
-    "featured": false,
+    "card_style": "highlight",
+    "badge": "",
+    "tier": "Included with every account",
+    "plan_name": "Introductory Offer",
+    "price": "Free",
+    "price_suffix": "",
+    "description": "Try GoFindBuild at no cost. Every company starts here.",
+    "rates_label": "",
+    "rates": [],
     "features": [
      {
-      "text": "Unlimited job postings"
+      "highlight": "3 free",
+      "text": "worker connections"
      },
      {
-      "text": "Verified licenses and certs"
+      "highlight": "5 free",
+      "text": "job invitations"
      },
      {
-      "text": "Direct messaging to workers"
+      "highlight": "1",
+      "text": "active job post"
      },
      {
-      "text": "Priority support"
+      "highlight": "Unlimited",
+      "text": "network access"
      }
     ],
-    "button_label": "Cancel any time",
+    "note": "No credit card required",
+    "button_label": "Start free trial",
     "button_link": {
      "url": {
-      "href": "",
-      "type": "EXTERNAL"
+      "type": "EXTERNAL",
+      "href": ""
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "button_style": "primary"
    },
    {
-    "tier": "Enterprise",
-    "price": "Custom",
-    "featured": true,
-    "features": [
+    "card_style": "light",
+    "badge": "",
+    "tier": "Starter · Pay as you go",
+    "plan_name": "Starter",
+    "price": "$0",
+    "price_suffix": "/ month",
+    "description": "For flexible hiring. You only pay when you successfully connect with a worker.",
+    "rates_label": "Price per worker connection",
+    "rates": [
      {
-      "text": "Unlimited postings and users"
+      "rate_name": "Entry-level",
+      "rate_detail": "General labor, apprentices...",
+      "rate_price": "$49",
+      "rate_unit": "/EA"
      },
      {
-      "text": "Custom integrations (ATS, HRIS)"
+      "rate_name": "Skilled",
+      "rate_detail": "Carpentry, framing, masonry...",
+      "rate_price": "$149",
+      "rate_unit": "/EA"
      },
      {
-      "text": "Dedicated account manager"
-     },
-     {
-      "text": "Advanced reporting"
-     },
-     {
-      "text": "Cancel any time"
+      "rate_name": "Specialty",
+      "rate_detail": "HVAC, plumbing, electrical...",
+      "rate_price": "$349",
+      "rate_unit": "/EA"
      }
     ],
-    "button_label": "Get started",
+    "features": [
+     {
+      "highlight": "",
+      "text": "Unlimited matches and job invitations"
+     },
+     {
+      "highlight": "",
+      "text": "1 active job post"
+     },
+     {
+      "highlight": "",
+      "text": "Unlimited network access"
+     }
+    ],
+    "note": "No subscription. Starts automatically after your trial.",
+    "button_label": "Continue with Starter",
     "button_link": {
      "url": {
-      "href": "",
-      "type": "EXTERNAL"
+      "type": "EXTERNAL",
+      "href": ""
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "button_style": "outline"
    },
    {
-    "tier": "Enterprise",
-    "price": "Custom",
-    "featured": false,
+    "card_style": "dark",
+    "badge": "Best value",
+    "tier": "Pro · Unlimited hiring",
+    "plan_name": "Pro",
+    "price": "$249",
+    "price_suffix": "/ month",
+    "description": "For companies hiring regularly. Connect with as many workers as you need.",
+    "rates_label": "",
+    "rates": [],
     "features": [
      {
-      "text": "Unlimited posts"
+      "highlight": "Unlimited",
+      "text": "worker connections, all trades"
      },
      {
-      "text": "Verified licenses"
+      "highlight": "Unlimited",
+      "text": "matches and job invitations"
      },
      {
-      "text": "Direct messaging"
+      "highlight": "Unlimited",
+      "text": "active job posts"
      },
      {
-      "text": "Matches in your ZIP"
-     },
-     {
-      "text": "Cancel any time"
+      "highlight": "Priority",
+      "text": "access to new matches"
      }
     ],
-    "button_label": "Get started",
+    "note": "Predictable monthly pricing. Cancel anytime.",
+    "button_label": "Go Pro",
     "button_link": {
      "url": {
-      "href": "",
-      "type": "EXTERNAL"
+      "type": "EXTERNAL",
+      "href": ""
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "button_style": "primary"
    }
   ]
  }

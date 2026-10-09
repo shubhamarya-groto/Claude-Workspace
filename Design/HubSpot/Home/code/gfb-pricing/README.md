@@ -1,9 +1,11 @@
 # GFB Pricing
 
-Home pricing band. Figma: Home Page `1259:9027` → `1259:9084` (an instance of `Elevate / Section / Pricing / pricing`).
-Read 7 Oct 2026. Classified as Template; built as a custom module on request, styled to the Figma frame.
+Home pricing band. **Redesigned 9 Oct 2026 from a supplied screenshot** ("Start free. Pay only when you connect."),
+replacing the earlier Figma `1259:9084` layout (three plain plan cards). Copy below is from the screenshot.
 
-> **Live in HubSpot (7 Oct 2026):** created through the connector as **GFB Pricing**, path `custom/content-mcp/modules/gfb_pricing` (GoFindBuild 47303551). The first attempt with features as a plain repeating text field did not save; features are now a repeating group with one `text` field. Update it through the connector, not the Design Manager.
+> **HubSpot:** the live module `custom/content-mcp/modules/gfb_pricing` still has the 7 Oct design until it is
+> updated through the connector. Its fields change (see below), so the staging page's Pricing module needs its
+> content set again after the update.
 
 | File | What |
 |---|---|
@@ -17,37 +19,35 @@ Read 7 Oct 2026. Classified as Template; built as a custom module on request, st
 
 | Field | Type | Notes |
 |---|---|---|
-| `heading` | Text | "Simple pricing" |
-| `plans` | Repeater, 1 to 4 | One card per plan |
-| ↳ `tier` | Text | Small label above the price ("Growth", "Enterprise") |
-| ↳ `price` | Text | Large, e.g. "$149/mo", "Custom" |
-| ↳ `featured` | Toggle | Dark card (Elevate card variant 4) |
-| ↳ `features` | Repeater group, 0 to 20, one `text` field each | One line each, orange dot |
-| ↳ `button_label` | Text | Empty hides the button |
-| ↳ `button_link` | Link | |
+| `heading` | Text | "Start free. Pay only when you connect." |
+| `intro` | Text (multi-line) | The paragraph under the heading |
+| `accent_line` | Text | Orange line: "Workers can enjoy access to our hiring network for free." Empty hides it |
+| `plans` | Repeater, 1 to 4 | One card each; all cards share the tallest card's height |
+| ↳ `card_style` | Choice | `highlight` (orange border, green ticks), `light` (grey border, orange ticks), `dark` (navy, peach ticks) |
+| ↳ `badge` | Text | Optional pill on the top edge ("Best value") |
+| ↳ `tier` | Text | Small caps label ("Included with every account") |
+| ↳ `plan_name` | Text | "Introductory Offer", "Starter", "Pro" |
+| ↳ `price` / `price_suffix` | Text | "$249" + "/ month" |
+| ↳ `description` | Text | One or two lines under the price |
+| ↳ `rates_label` + `rates` | Text + repeater 0 to 6 | Rate table (`rate_name`, `rate_detail`, `rate_price`, `rate_unit`). Starter only by default |
+| ↳ `features` | Repeater 0 to 10 | `highlight` (bold part, optional) + `text` |
+| ↳ `note` | Text | Optional grey box above the button |
+| ↳ `button_label` / `button_link` / `button_style` | Text / Link / Choice | Orange or outline. Links are empty: set them in the editor |
 
-## Equal heights
+## Defaults (from the screenshot)
 
-All cards in a row are one grid row with `align-items: stretch`, so every card takes the tallest
-card's height. The button has `margin-top: auto`, so it sits at the bottom of each card and the
-buttons line up even when one plan lists fewer features. On phones (≤900px) the cards stack and
-each one hugs its own content.
+| Card | Style | Price | Button |
+|---|---|---|---|
+| Included with every account · **Introductory Offer** | highlight | Free | Start free trial (orange) |
+| Starter · Pay as you go · **Starter** | light | $0 / month + rates $49 / $149 / $349 per connection | Continue with Starter (outline) |
+| Pro · Unlimited hiring · **Pro** (badge Best value) | dark | $249 / month | Go Pro (orange) |
 
-## From Figma
+## Notes
 
-Band `#F8F9FA`, 96px padding, 1200 container, heading Instrument Sans SemiBold 48 / 1.1, 32px gap.
-Cards 384 wide, 24 apart, radius 20, padding 28, gap 14, white with `#D9DBDE` 1px border; featured
-`#16243D`. Tier Inter Medium 13; price Instrument Sans SemiBold 48; features Inter 14 / 1.5
-`#525C70` (featured `#D9DEE5`), 6px dot `#F16C0E` (featured `#FFBA6B`). Button full width, pill,
-46px, `#F16C0E`, label Inter Medium 13. Figma's label is navy `#16243D`; changed to **white** on 7 Oct
-(team decision; about 3:1 contrast, I-01). Hover `#EA580C`.
-
-## Notes for the copy pass (not changed here)
-
-- **Growth card's button says "Cancel any time"** in Figma; the other two say "Get started". Looks like
-  the feature line was pasted into the button.
-- **Two cards are both "Enterprise / Custom"** with different feature lists. Pricing model is still open (I-12).
-- The Growth card's last feature ("Priority support") sits lower in Figma because its row is 56px tall;
-  treated as a spacing slip, so all lines here use the same 14px gap.
-- Tier label on white cards uses `#BB5B09` instead of Figma's `#F16C0E`: orange text at 13px is 3.2:1,
-  below the 4.5:1 minimum.
+- Colours use the site's tokens (navy `#16243D`, orange `#F16C0E`), not the slightly different navy and orange in
+  the screenshot, so the band matches the rest of the page. Small orange labels use `#BB5B09` and the orange intro
+  line `#E0580B` for contrast; white button labels on orange stay as decided 7 Oct (I-01).
+- Rate details end in "..." as in the screenshot; longer text is also cut with an ellipsis on one line.
+- Equal heights: grid rows stretch; the note and button sit at the bottom (`margin-top: auto`), so buttons line up.
+  On tablets and phones the cards stack and hug their content.
+- Prices and plan rules are copy; they still go through the pricing decision (I-12) before launch.

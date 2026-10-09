@@ -1,64 +1,137 @@
 [
  {
-  "tier": "Growth",
-  "price": "$149/mo",
-  "featured": false,
+  "card_style": "highlight",
+  "badge": "",
+  "tier": "Included with every account",
+  "plan_name": "Introductory Offer",
+  "price": "Free",
+  "price_suffix": "",
+  "description": "Try GoFindBuild at no cost. Every company starts here.",
+  "rates_label": "",
+  "rates": [],
   "features": [
-   "Unlimited job postings",
-   "Verified licenses and certs",
-   "Direct messaging to workers",
-   "Priority support"
+   {
+    "highlight": "3 free",
+    "text": "worker connections"
+   },
+   {
+    "highlight": "5 free",
+    "text": "job invitations"
+   },
+   {
+    "highlight": "1",
+    "text": "active job post"
+   },
+   {
+    "highlight": "Unlimited",
+    "text": "network access"
+   }
   ],
-  "button_label": "Cancel any time",
+  "note": "No credit card required",
+  "button_label": "Start free trial",
   "button_link": {
    "url": {
-    "href": "",
-    "type": "EXTERNAL"
+    "type": "EXTERNAL",
+    "href": ""
    },
    "open_in_new_tab": false,
    "no_follow": false
-  }
+  },
+  "button_style": "primary"
  },
  {
-  "tier": "Enterprise",
-  "price": "Custom",
-  "featured": true,
-  "features": [
-   "Unlimited postings and users",
-   "Custom integrations (ATS, HRIS)",
-   "Dedicated account manager",
-   "Advanced reporting",
-   "Cancel any time"
+  "card_style": "light",
+  "badge": "",
+  "tier": "Starter · Pay as you go",
+  "plan_name": "Starter",
+  "price": "$0",
+  "price_suffix": "/ month",
+  "description": "For flexible hiring. You only pay when you successfully connect with a worker.",
+  "rates_label": "Price per worker connection",
+  "rates": [
+   {
+    "rate_name": "Entry-level",
+    "rate_detail": "General labor, apprentices...",
+    "rate_price": "$49",
+    "rate_unit": "/EA"
+   },
+   {
+    "rate_name": "Skilled",
+    "rate_detail": "Carpentry, framing, masonry...",
+    "rate_price": "$149",
+    "rate_unit": "/EA"
+   },
+   {
+    "rate_name": "Specialty",
+    "rate_detail": "HVAC, plumbing, electrical...",
+    "rate_price": "$349",
+    "rate_unit": "/EA"
+   }
   ],
-  "button_label": "Get started",
+  "features": [
+   {
+    "highlight": "",
+    "text": "Unlimited matches and job invitations"
+   },
+   {
+    "highlight": "",
+    "text": "1 active job post"
+   },
+   {
+    "highlight": "",
+    "text": "Unlimited network access"
+   }
+  ],
+  "note": "No subscription. Starts automatically after your trial.",
+  "button_label": "Continue with Starter",
   "button_link": {
    "url": {
-    "href": "",
-    "type": "EXTERNAL"
+    "type": "EXTERNAL",
+    "href": ""
    },
    "open_in_new_tab": false,
    "no_follow": false
-  }
+  },
+  "button_style": "outline"
  },
  {
-  "tier": "Enterprise",
-  "price": "Custom",
-  "featured": false,
+  "card_style": "dark",
+  "badge": "Best value",
+  "tier": "Pro · Unlimited hiring",
+  "plan_name": "Pro",
+  "price": "$249",
+  "price_suffix": "/ month",
+  "description": "For companies hiring regularly. Connect with as many workers as you need.",
+  "rates_label": "",
+  "rates": [],
   "features": [
-   "Unlimited posts",
-   "Verified licenses",
-   "Direct messaging",
-   "Matches in your ZIP",
-   "Cancel any time"
+   {
+    "highlight": "Unlimited",
+    "text": "worker connections, all trades"
+   },
+   {
+    "highlight": "Unlimited",
+    "text": "matches and job invitations"
+   },
+   {
+    "highlight": "Unlimited",
+    "text": "active job posts"
+   },
+   {
+    "highlight": "Priority",
+    "text": "access to new matches"
+   }
   ],
-  "button_label": "Get started",
+  "note": "Predictable monthly pricing. Cancel anytime.",
+  "button_label": "Go Pro",
   "button_link": {
    "url": {
-    "href": "",
-    "type": "EXTERNAL"
+    "type": "EXTERNAL",
+    "href": ""
    },
    "open_in_new_tab": false,
    "no_follow": false
-  }
+  },
+  "button_style": "primary"
  }
 ]

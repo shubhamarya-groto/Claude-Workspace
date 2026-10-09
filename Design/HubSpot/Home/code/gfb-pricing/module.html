@@ -1,28 +1,64 @@
-{# GFB Pricing. Heading + 1–4 plan cards. Every word and link is a field: see fields.json.
-   All cards in a row share the tallest card's height; buttons line up along the bottom. #}
+{# GFB Pricing. Heading, intro, orange line, then 1–4 plan cards. Each card: optional badge, small label,
+   plan name, price, description, optional rate table, features with ticks, optional note box, button.
+   All cards in a row share the tallest card's height; notes and buttons line up along the bottom. #}
+{% set tick = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>' %}
 <section class="gfb-prc">
   <div class="gfb-prc__inner">
-    {% if module.heading %}<h2 class="gfb-prc__heading">{{ module.heading|escape }}</h2>{% endif %}
+    {% if module.heading or module.intro or module.accent_line %}
+      <header class="gfb-prc__head">
+        {% if module.heading %}<h2 class="gfb-prc__heading">{{ module.heading|escape }}</h2>{% endif %}
+        {% if module.intro %}<p class="gfb-prc__intro">{{ module.intro|escape }}</p>{% endif %}
+        {% if module.accent_line %}<p class="gfb-prc__accent">{{ module.accent_line|escape }}</p>{% endif %}
+      </header>
+    {% endif %}
 
     <div class="gfb-prc__cards">
       {% for p in module.plans %}
-        {% set href = p.button_link.url.href %}
         {% set rel = [] %}
         {% if p.button_link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
         {% if p.button_link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
-        <article class="gfb-prc__card{% if p.featured %} gfb-prc__card--featured{% endif %}">
-          {% if p.tier %}<h3 class="gfb-prc__tier">{{ p.tier|escape }}</h3>{% endif %}
-          {% if p.price %}<p class="gfb-prc__price">{{ p.price|escape }}</p>{% endif %}
+        <article class="gfb-prc__card gfb-prc__card--{{ p.card_style or 'light' }}">
+          {% if p.badge %}<span class="gfb-prc__badge">{{ p.badge|escape }}</span>{% endif %}
+
+          <div class="gfb-prc__top">
+            {% if p.tier %}<p class="gfb-prc__tier">{{ p.tier|escape }}</p>{% endif %}
+            {% if p.plan_name %}<h3 class="gfb-prc__name">{{ p.plan_name|escape }}</h3>{% endif %}
+            {% if p.price %}<p class="gfb-prc__price">{{ p.price|escape }}{% if p.price_suffix %} <span class="gfb-prc__suffix">{{ p.price_suffix|escape }}</span>{% endif %}</p>{% endif %}
+            {% if p.description %}<p class="gfb-prc__desc">{{ p.description|escape }}</p>{% endif %}
+          </div>
+
+          {% if p.rates %}
+            <div class="gfb-prc__rates">
+              {% if p.rates_label %}<p class="gfb-prc__rates-label">{{ p.rates_label|escape }}</p>{% endif %}
+              <ul class="gfb-prc__rate-list">
+                {% for r in p.rates %}
+                  <li class="gfb-prc__rate">
+                    <span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">{{ r.rate_name|escape }}</span>{% if r.rate_detail %}<span class="gfb-prc__rate-detail">{{ r.rate_detail|escape }}</span>{% endif %}</span>
+                    <span class="gfb-prc__rate-price">{{ r.rate_price|escape }}{% if r.rate_unit %}<span class="gfb-prc__rate-unit">{{ r.rate_unit|escape }}</span>{% endif %}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
           {% if p.features %}
             <ul class="gfb-prc__features">
-              {% for f in p.features %}{% if f.text %}<li>{{ f.text|escape }}</li>{% endif %}{% endfor %}
+              {% for f in p.features %}
+                {% if f.highlight or f.text %}
+                  <li><span class="gfb-prc__tick">{{ tick }}</span><span>{% if f.highlight %}<strong>{{ f.highlight|escape }}</strong> {% endif %}{{ f.text|escape }}</span></li>
+                {% endif %}
+              {% endfor %}
             </ul>
           {% endif %}
-          {% if p.button_label %}
-            <a class="gfb-prc__btn" href="{{ (href or '#')|escape_url }}"
-               {% if p.button_link.open_in_new_tab %}target="_blank"{% endif %}
-               {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>{{ p.button_label|escape }}</a>
-          {% endif %}
+
+          <div class="gfb-prc__foot">
+            {% if p.note %}<p class="gfb-prc__note">{{ p.note|escape }}</p>{% endif %}
+            {% if p.button_label %}
+              <a class="gfb-prc__btn gfb-prc__btn--{{ p.button_style or 'primary' }}" href="{{ (p.button_link.url.href or '#')|escape_url }}"
+                 {% if p.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>{{ p.button_label|escape }}</a>
+            {% endif %}
+          </div>
         </article>
       {% endfor %}
     </div>
