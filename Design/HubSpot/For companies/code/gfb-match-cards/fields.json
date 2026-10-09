@@ -20,11 +20,11 @@
    "min": 0,
    "max": 4,
    "default": 2,
-   "sorting_label_field": "cards.name"
+   "sorting_label_field": "cards.worker"
   },
   "children": [
    {
-    "name": "name",
+    "name": "worker",
     "label": "Name and trade",
     "type": "text",
     "default": "Marcus Bell · Journeyman Electrician"
@@ -74,7 +74,6 @@
   ],
   "default": [
    {
-    "name": "Marcus Bell · Journeyman Electrician",
     "meta": "Seeking full-time · 5.8 mi",
     "score": "92%",
     "trade": "Electrical",
@@ -86,10 +85,10 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "worker": "Marcus Bell · Journeyman Electrician"
    },
    {
-    "name": "Ray Alvarez · General Laborer",
     "meta": "Seeking full-time · 3.2 mi",
     "score": "74%",
     "trade": "General Labor",
@@ -101,7 +100,8 @@
      },
      "open_in_new_tab": false,
      "no_follow": false
-    }
+    },
+    "worker": "Ray Alvarez · General Laborer"
    }
   ]
  },

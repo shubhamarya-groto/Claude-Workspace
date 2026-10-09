@@ -22,7 +22,7 @@ It is a picture, not a working search: the illustration has one description for 
 |---|---|---|
 | `eyebrow` | Text | How matching works |
 | `heading` | Textarea | Search your trade. / See who's ready to work. |
-| `body` | Text | Enter the trade you need and your ZIP code. Matched workers show their skills, experience level and distance up front, so you're reviewing people, not resumes. |
+| `intro` | Text | Enter the trade you need and your ZIP code. Matched workers show their skills, experience level and distance up front, so you're reviewing people, not resumes. |
 | `visual_label` | Text | Example: a search for Journeyman Electrician near 46204 Indianapolis finds 4 matching workers, including a private profile with a 96% profile score. |
 | `trade_label` | Text | Trade |
 | `trade` | Text | Journeyman Electrician |

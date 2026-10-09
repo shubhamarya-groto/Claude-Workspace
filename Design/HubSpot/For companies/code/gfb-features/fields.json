@@ -12,7 +12,7 @@
   "default": "Automatically get matched to the skills you need"
  },
  {
-  "name": "body",
+  "name": "intro",
   "label": "Body",
   "type": "text",
   "default": "Tell us what you need and the matches come to you."

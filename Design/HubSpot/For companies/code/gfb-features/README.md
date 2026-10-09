@@ -22,6 +22,6 @@ One column of features on phones.
 |---|---|---|
 | `eyebrow` | Text | For companies |
 | `heading` | Text | Automatically get matched to the skills you need |
-| `body` | Text | Tell us what you need and the matches come to you. |
+| `intro` | Text | Tell us what you need and the matches come to you. |
 | `items` | Repeater, 1 to 8 (`icon`, `title`, `description`) |  |
 | `background` | Choice: White / Light grey | white |

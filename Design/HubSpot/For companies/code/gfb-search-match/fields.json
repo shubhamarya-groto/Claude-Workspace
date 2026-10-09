@@ -13,7 +13,7 @@
   "default": "Search your trade.\nSee who's ready to work."
  },
  {
-  "name": "body",
+  "name": "intro",
   "label": "Body",
   "type": "text",
   "default": "Enter the trade you need and your ZIP code. Matched workers show their skills, experience level and distance up front, so you're reviewing people, not resumes."

@@ -6,7 +6,7 @@
     <div class="gfb-sm__copy">
       {% if module.eyebrow %}<p class="gfb-sm__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
       {% if module.heading %}<h2 class="gfb-sm__heading">{{ module.heading|escape|replace("\n", "<br>") }}</h2>{% endif %}
-      {% if module.body %}<p class="gfb-sm__body">{{ module.body|escape }}</p>{% endif %}
+      {% if module.intro %}<p class="gfb-sm__body">{{ module.intro|escape }}</p>{% endif %}
     </div>
 
     <div class="gfb-sm__visual" role="img" aria-label="{{ module.visual_label|escape_attr }}">

@@ -6,7 +6,7 @@
   "default": "Look first, reach out when you're ready"
  },
  {
-  "name": "body",
+  "name": "intro",
   "label": "Body",
   "type": "text",
   "default": "Browsing costs nothing. You pay only when you want to talk."

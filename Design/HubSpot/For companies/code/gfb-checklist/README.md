@@ -21,6 +21,6 @@ Stacks to one column below 1024px.
 | Field | Type | Default |
 |---|---|---|
 | `heading` | Text | Look first, reach out when you're ready |
-| `body` | Text | Browsing costs nothing. You pay only when you want to talk. |
+| `intro` | Text | Browsing costs nothing. You pay only when you want to talk. |
 | `items` | Repeater, 1 to 8 (`icon`, `item_text`) |  |
 | `background` | Choice: White / Light grey | white |
