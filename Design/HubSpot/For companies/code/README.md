@@ -42,7 +42,11 @@ Pushed through the connector to GoFindBuild (47303551). Update them through the 
 HubSpot reserves some field names (`name`, `body`, …), so Match Cards uses `worker` and the others `intro`.
 Search Match also failed to save with a `textarea` heading, so its heading is two text fields.
 
-**Not done yet:** a page on the template (staging draft, as for Home), and the hero photo in the Hero's Photo field.
+**Staging page:** **GFB Companies (staging)**, slug `/companies-staging`, page id `223986607632`, **unpublished draft**.
+Editor: https://app.hubspot.com/pages/47303551/editor/223986607632
+Title "Hire skilled trades workers directly | GoFindBuild" and a meta description are set.
+
+**Not done yet:** the hero photo (Hero → Photo field; the page shows no photo until it's set).
 
 ## Still open
 
