@@ -1,0 +1,84 @@
+[
+ {
+  "name": "line_one",
+  "label": "Problem statement",
+  "type": "text",
+  "allow_new_line": true,
+  "help_text": "Shown dark. Press Enter for a line break.",
+  "default": "The workers are out there.\nThe opportunities are out there."
+ },
+ {
+  "name": "line_two",
+  "label": "Problem statement (orange line)",
+  "type": "text",
+  "default": "The connection between them is broken."
+ },
+ {
+  "name": "overline",
+  "label": "Stats label",
+  "type": "text",
+  "default": "What’s at stake"
+ },
+ {
+  "name": "stats",
+  "label": "Stats",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 4,
+   "default": 4,
+   "sorting_label_field": "stats.number"
+  },
+  "children": [
+   {
+    "name": "number",
+    "label": "Number",
+    "type": "text",
+    "default": "0%"
+   },
+   {
+    "name": "caption",
+    "label": "Caption",
+    "type": "text",
+    "default": "What this number means"
+   }
+  ],
+  "default": [
+   {
+    "number": "88%",
+    "caption": "Construction firms reporting jobs are as hard—or harder—to fill than a year ago"
+   },
+   {
+    "number": "$58k+",
+    "caption": "Skilled trades median salary, with top roles earning $100,000+"
+   },
+   {
+    "number": "723,000",
+    "caption": "Worker hires needed each year to support industry growth and replace workers leaving the workforce"
+   },
+   {
+    "number": "90%",
+    "caption": "Percentage of skilled workers satisfied with their careers, citing meaningful work, compensation and flexibility"
+   }
+  ]
+ },
+ {
+  "name": "background_image",
+  "label": "Background image",
+  "type": "image",
+  "help_text": "Optional. Replaces the built-in soft gradient. Use the Figma background (image 231).",
+  "resizable": false,
+  "default": {
+   "src": "",
+   "alt": "",
+   "loading": "lazy"
+  }
+ },
+ {
+  "name": "show_gears",
+  "label": "Show gear decorations",
+  "type": "boolean",
+  "display": "toggle",
+  "default": true
+ }
+]

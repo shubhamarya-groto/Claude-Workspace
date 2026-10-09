@@ -1,0 +1,159 @@
+/* GFB Hero · Figma 1259:9031 (Home Page 1259:9027)
+   Colours, fonts and the primary button read Elevate's theme settings (--hsElevate--…),
+   so the theme-settings pass changes this module too. The value after each comma is the
+   Figma value, used only if the theme doesn't set that variable.
+   No font links here: fonts load once, from the theme. Every rule starts with .gfb. */
+.gfb {
+  --gfb-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --gfb-accent: #F16C0E;                 /* orange/500, the headline highlight */
+  --gfb-muted: #525C70;
+  --gfb-border: var(--hsElevate--card--variant1__borderColor, #D9D9D9);
+  --gfb-dark: #0A1612;                   /* "Find jobs" button fill */
+  --gfb-dark-hover: #1E2A26;
+  --gfb-white: #FFFFFF;
+  --gfb-font-display: var(--hsElevate--h1__font, "Instrument Sans"), system-ui, sans-serif;
+  --gfb-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  --gfb-content: 1248px;
+  --gfb-gutter: 24px;
+  --gfb-tab: 54px;                       /* height of the photo's folder-tab step */
+  --gfb-photo-radius: 16px;              /* corner radius of the photo, matches the fork cards */
+  color: var(--gfb-brand);
+  font-family: var(--gfb-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb, .gfb *, .gfb *::before, .gfb *::after { box-sizing: border-box; }
+
+/* Layout: gutter | copy 672 | gap 48 | photo 528 | gutter, centred on a 1248 content width */
+.gfb.gfb-hero {
+  display: grid;
+  grid-template-columns:
+    max(var(--gfb-gutter), calc((100% - var(--gfb-content)) / 2))
+    minmax(0, 14fr) 48px minmax(0, 11fr)
+    max(var(--gfb-gutter), calc((100% - var(--gfb-content)) / 2));
+  align-items: center;
+  min-height: 717px;
+  overflow: hidden;
+  background: var(--gfb-white);
+}
+
+/* Copy column */
+.gfb .gfb-hero__copy { grid-column: 2; grid-row: 1; padding: 96px 0; }
+.gfb .gfb-hero__title {
+  margin: 0 0 32px;
+  font-family: var(--gfb-font-display);
+  font-size: clamp(40px, 3.5vw + 18px, 68px);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: var(--gfb-brand);
+}
+.gfb .gfb-accent { color: var(--gfb-accent); }
+.gfb .gfb-hero__lede { margin: 0 0 32px; font-size: 18px; line-height: 1.6; color: var(--gfb-muted); }
+
+/* The two-sided fork: two 328 cards, 16 apart */
+.gfb .gfb-fork { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.gfb .gfb-fork__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  background: var(--gfb-white);
+  border: 1px solid var(--gfb-border);
+  border-radius: 16px;
+}
+.gfb .gfb-fork__title { margin: 0; font-family: var(--gfb-font-body); font-size: 18px; font-weight: 600; line-height: 1.4; color: var(--gfb-brand); }
+.gfb .gfb-fork__text { margin: 0; font-size: 14px; line-height: 1.5; color: var(--gfb-muted); }
+
+/* Buttons: pill, label + arrow disc. "primary" follows Elevate's primary button settings */
+.gfb .gfb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 8px 0 20px;
+  border: 0;
+  border-radius: 999px;
+  font-family: var(--gfb-font-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.gfb .gfb-btn--primary {
+  background: var(--hsElevate--button--primary__backgroundColor, #F16C0E);
+  color: #FFFFFF;                        /* white label on orange (decided 7 Oct; ~3:1 contrast, see I-01) */
+}
+.gfb .gfb-btn--primary:hover,
+.gfb .gfb-btn--primary:focus-visible {
+  background: #EA580C;                   /* darker orange on hover keeps the white label readable */
+  color: #FFFFFF;
+}
+.gfb .gfb-btn--dark { background: var(--gfb-dark); color: var(--gfb-white); }
+.gfb .gfb-btn--dark:hover,
+.gfb .gfb-btn--dark:focus-visible { background: var(--gfb-dark-hover); color: var(--gfb-white); }
+.gfb .gfb-btn:focus-visible { outline: 3px solid var(--gfb-brand); outline-offset: 3px; }
+.gfb .gfb-btn__disc {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Photo: Figma's boolean shape is a 559 × 557 rectangle with a folder tab. The left 45.5%
+   is full height; after a slanted step, the right side starts 54px lower. It runs 31px past
+   the content edge. Any photo an editor picks gets the same shape. */
+.gfb .gfb-hero__visual { grid-column: 4; grid-row: 1; width: calc(100% + 31px); }
+.gfb .gfb-hero__photo {
+  display: block;
+  width: 100%;
+  height: 557px;
+  object-fit: cover;
+  background: #E8EAED;
+  clip-path: polygon(0 0, 45.5% 0, calc(45.5% + 25px) var(--gfb-tab), 100% var(--gfb-tab), 100% 100%, 0 100%);
+}
+/* Rounded corners on all six corners of the folder-tab shape (browsers with CSS shape();
+   older ones keep the square-cornered polygon above). The slanted edge runs 25px across and
+   --gfb-tab down; 0.42 / 0.91 are its direction, so the curves sit on the slant. */
+@supports (clip-path: shape(from 0 0, line to 1px 0, close)) {
+  .gfb .gfb-hero__photo {
+    --r: var(--gfb-photo-radius);
+    clip-path: shape(from 0 var(--r),
+      curve to var(--r) 0 with 0 0,
+      line to calc(45.5% - var(--r)) 0,
+      curve to calc(45.5% + var(--r) * 0.42) calc(var(--r) * 0.91) with 45.5% 0,
+      line to calc(45.5% + 25px - var(--r) * 0.42) calc(var(--gfb-tab) - var(--r) * 0.91),
+      curve to calc(45.5% + 25px + var(--r)) var(--gfb-tab) with calc(45.5% + 25px) var(--gfb-tab),
+      line to calc(100% - var(--r)) var(--gfb-tab),
+      curve to 100% calc(var(--gfb-tab) + var(--r)) with 100% var(--gfb-tab),
+      line to 100% calc(100% - var(--r)),
+      curve to calc(100% - var(--r)) 100% with 100% 100%,
+      line to var(--r) 100%,
+      curve to 0 calc(100% - var(--r)) with 0 100%,
+      close);
+  }
+}
+.gfb .gfb-hero__photo--center { object-position: 50% 50%; }
+.gfb .gfb-hero__photo--left   { object-position: 0 50%; }
+.gfb .gfb-hero__photo--right  { object-position: 100% 50%; }
+.gfb .gfb-hero__photo--top    { object-position: 50% 0; }
+
+/* Tablet: photo moves under the copy */
+@media (max-width: 1023px) {
+  .gfb.gfb-hero { grid-template-columns: var(--gfb-gutter) minmax(0, 1fr) var(--gfb-gutter); min-height: 0; }
+  .gfb .gfb-hero__copy { padding: 48px 0 0; }
+  .gfb .gfb-hero__visual { grid-column: 2; grid-row: 2; width: 100%; margin: 40px 0 48px; }
+  .gfb .gfb-hero__photo { height: 400px; }
+}
+
+/* Phone: Elevate's breakpoint. Cards stack, buttons full width */
+@media (max-width: 767px) {
+  .gfb { --gfb-tab: 32px; }
+  .gfb .gfb-fork { grid-template-columns: 1fr; }
+  .gfb .gfb-btn { width: 100%; justify-content: space-between; }
+  .gfb .gfb-hero__photo { height: 280px; }
+}

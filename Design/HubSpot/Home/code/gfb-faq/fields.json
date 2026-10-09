@@ -1,0 +1,73 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "Frequently asked questions"
+ },
+ {
+  "name": "items",
+  "label": "Questions",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 20,
+   "default": 3,
+   "sorting_label_field": "items.question"
+  },
+  "children": [
+   {
+    "name": "question",
+    "label": "Question",
+    "type": "text",
+    "default": "Write the question here"
+   },
+   {
+    "name": "answer",
+    "label": "Answer",
+    "type": "richtext",
+    "default": "<p>Write the answer here. Keep it short.</p>"
+   },
+   {
+    "name": "open",
+    "label": "Open when the page loads",
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+   }
+  ],
+  "default": [
+   {
+    "question": "What does it cost to hire through GoFindBuild?",
+    "answer": "<p>The answer sits under the question and stays short.</p>",
+    "open": true
+   },
+   {
+    "question": "How is this different from a staffing agency or a job board?",
+    "answer": "<p>Write the answer here. Keep it short.</p>",
+    "open": false
+   },
+   {
+    "question": "Is GoFindBuild free for workers?",
+    "answer": "<p>Write the answer here. Keep it short.</p>",
+    "open": false
+   }
+  ]
+ },
+ {
+  "name": "one_at_a_time",
+  "label": "Only one answer open at a time",
+  "type": "boolean",
+  "display": "toggle",
+  "help_text": "Opening a question closes the one that was open.",
+  "default": true
+ },
+ {
+  "name": "faq_schema",
+  "label": "Add FAQ data for search engines",
+  "type": "boolean",
+  "display": "toggle",
+  "help_text": "Adds FAQPage structured data (JSON-LD). Turn off if another FAQ on the same page already adds it.",
+  "default": true
+ }
+]

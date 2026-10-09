@@ -1,0 +1,55 @@
+{# GFB Hero. Every word, link and image comes from a field: see README.md for the field list #}
+
+{# Headline: escape it, then wrap the highlighted words in the orange accent #}
+{% set headline = module.headline|escape %}
+{% set highlight = module.highlight|escape %}
+{% if highlight and highlight in headline %}
+  {% set headline = headline|replace(highlight, '<span class="gfb-accent">' ~ highlight ~ '</span>') %}
+{% endif %}
+
+<section class="gfb gfb-hero">
+  <div class="gfb-hero__copy">
+    <h1 class="gfb-hero__title">{{ headline }}</h1>
+    {% if module.subhead %}
+      <p class="gfb-hero__lede">{{ module.subhead|escape }}</p>
+    {% endif %}
+
+    <div class="gfb-fork">
+      {% for card in [module.card_one, module.card_two] %}
+        {% if card.title or card.button_label %}
+          {% set href = card.button_link.url.href %}
+          {% if card.button_link.url.type == "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" ~ href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if card.button_link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
+          {% if card.button_link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
+          <div class="gfb-fork__card">
+            {% if card.title %}<h2 class="gfb-fork__title">{{ card.title|escape }}</h2>{% endif %}
+            {% if card.text %}<p class="gfb-fork__text">{{ card.text|escape }}</p>{% endif %}
+            {% if card.button_label %}
+              <a class="gfb-btn gfb-btn--{{ card.button_style or 'primary' }}"
+                 href="{{ href|escape_url }}"
+                 {% if card.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>
+                {{ card.button_label|escape }}
+                <span class="gfb-btn__disc" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if module.photo.src %}
+    <div class="gfb-hero__visual">
+      <img class="gfb-hero__photo gfb-hero__photo--{{ module.photo_position or 'center' }}"
+           src="{{ module.photo.src|escape_url }}"
+           alt="{{ module.photo.alt|escape_attr }}"
+           {% if module.photo.width %}width="{{ module.photo.width|escape_attr }}"{% endif %}
+           {% if module.photo.height %}height="{{ module.photo.height|escape_attr }}"{% endif %}
+           loading="eager" fetchpriority="high">
+    </div>
+  {% endif %}
+</section>

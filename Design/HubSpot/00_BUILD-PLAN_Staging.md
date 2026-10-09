@@ -1,10 +1,10 @@
-# HubSpot build plan · staging
+# HubSpot build plan
 
 Written 6 Oct 2026, from the existing docs. Status as given: **designs for the GoFindBuild pages are done; the HubSpot build starts now.** No new meetings or context.
 
 ## Ground rules
 
-1. **Build on staging** (the HubSpot test portal, 1 Meter House `247469662`). Nothing goes to the live domain until final publishing.
+1. **Build in the GoFindBuild HubSpot account** (`47303551`, "GoFindBuild"). This is the working account. Pages stay unpublished drafts until final publishing. The earlier sandbox (`247469662`) is not used for the build.
 2. **Copy is placeholder until final publishing.** Use the copy in the Figma pages and the plans as it stands. Do not stop to change wording, verify claims ("verified", "same-day", "messaging") or resolve `[Copy]` notes. Log wording questions in one list and settle them at the publish pass.
 3. **Structure, tokens, accessibility and links are not copy.** Those still get done now: button contrast, fonts, heading levels, alt text, page titles, dead links, image weight.
 4. **Whole-section assembly only**, as in Iteration 2: Elevate presets and kit components, no one-off edits inside a band.
@@ -20,7 +20,7 @@ Written 6 Oct 2026, from the existing docs. Status as given: **designs for the G
 | 0.2 | **Theme settings pass, once:** primary button `#F16C0E` with navy `#16243D` label, hover `#F4811F`; H1/H2/H3 to Instrument Sans (H2 = 48px); base colours, card variants, tag colours per the defaults table | `Home/01_R3…` "Elevate defaults that change", `H-09`, `H-10` |
 | 0.3 | Page-level basics: language en-US, real title and meta description, favicon, logo as a proper file with alt text | `H-13`, `H-17`, `A-29` |
 | 0.4 | Files: upload `Design/Assets/Testing assets/hero-welder-1400x799.jpg` to HubSpot Files; replace the 2.8 MB Cloudinary screenshot | `H-12` |
-| 0.5 | Put `Design/HubSpot/Home/code/gbf-module/` into the portal as the **GFB Hero** module; set the photo URL (the `PASTE-THE-FILE-MANAGER-URL-HERE` placeholder); load fonts once, from the theme, not per module | `Home/code/` |
+| 0.5 | Put `Design/HubSpot/Home/code/gfb-hero/` into the portal as the **GFB Hero** module (steps in its `README.md`); pick the photo in the module's image field; load fonts once, from the theme, not per module | `Home/code/` |
 
 ### Step 1 · Shared pieces (build once, every page reuses)
 
@@ -52,7 +52,7 @@ The Elevate kit has **no mobile sections** (Iteration 2 finding). Build mobile i
 
 Pricing/comparison band → browse by trade → problem band → phone frames below the fold. Never cut the jobs/workers band; it is the only thing that shows the product.
 
-## Staging QA checklist
+## Pre-publish QA checklist
 
 - [ ] One H1 per page, it is the headline; stat blocks are not H2s (`H-24`)
 - [ ] Every button and every header line at 4.5:1 or better

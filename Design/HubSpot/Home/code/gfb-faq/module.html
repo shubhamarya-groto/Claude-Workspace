@@ -1,0 +1,30 @@
+{# GFB FAQ. Heading + accordion of questions. Built on <details>/<summary>: opens and closes
+   with no JavaScript, works with the keyboard and screen readers. Every word is a field. #}
+<section class="gfb-faq">
+  <div class="gfb-faq__inner">
+    {% if module.heading %}<h2 class="gfb-faq__heading">{{ module.heading|escape }}</h2>{% endif %}
+
+    <div class="gfb-faq__list">
+      {% for item in module.items %}
+        {% if item.question %}
+          <details class="gfb-faq__row"{% if module.one_at_a_time %} name="gfb-faq-{{ name|replace(' ', '-')|escape }}"{% endif %}{% if item.open %} open{% endif %}>
+            <summary class="gfb-faq__question"><h3 class="gfb-faq__q">{{ item.question|escape }}</h3><span class="gfb-faq__icon" aria-hidden="true"></span></summary>
+            {% if item.answer %}<div class="gfb-faq__answer">{{ item.answer }}</div>{% endif %}
+          </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if module.faq_schema %}
+  {% set faq = [] %}
+  {% for item in module.items %}
+    {% if item.question and item.answer %}
+      {% do faq.append({"@type": "Question", "name": item.question, "acceptedAnswer": {"@type": "Answer", "text": item.answer|striptags|trim}}) %}
+    {% endif %}
+  {% endfor %}
+  {% if faq %}
+    <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq}|tojson }}</script>
+  {% endif %}
+{% endif %}

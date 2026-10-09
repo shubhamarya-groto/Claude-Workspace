@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GFB Problem + Stats · demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600&family=Inter:wght@400;500&display=swap">
+<style>
+body{margin:0;background:#fff}
+.demo-note{font:13px/1.5 Inter,system-ui,sans-serif;color:#525C70;background:#FFF7F0;border-bottom:1px solid #F5D9C3;padding:10px 16px;text-align:center}
+/* GFB Problem + stats · Figma 1355:8192 (Home Page 1259:9027)
+   Light band: a soft gradient (peach bottom-left, blue top-right) stands in for Figma's background
+   photo (image 231); an editor can set the real image in the Background image field. */
+.gfb-pst {
+  --pst-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --pst-text: rgba(0, 0, 0, 0.64);
+  --pst-accent: #F97316;
+  --pst-bar: #F16C0E;
+  --pst-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
+  --pst-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--pst-brand);
+  font-family: var(--pst-font-body);
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(60% 80% at 0% 100%, rgba(255, 150, 110, 0.55), transparent 70%),
+    radial-gradient(45% 70% at 100% 0%, rgba(110, 185, 255, 0.75), transparent 70%),
+    radial-gradient(40% 60% at 100% 100%, rgba(225, 205, 255, 0.55), transparent 70%),
+    radial-gradient(50% 60% at 30% 20%, rgba(255, 235, 215, 0.6), transparent 70%),
+    #FFFAF6;
+}
+.gfb-pst--photo { background: var(--pst-bg) center / cover no-repeat, #FFFAF6; }
+.gfb-pst, .gfb-pst *, .gfb-pst *::before, .gfb-pst *::after { box-sizing: border-box; }
+
+/* Gear decorations, faint (Figma: 10% opacity), behind the text */
+.gfb-pst .gfb-pst__gear { position: absolute; z-index: -1; color: #A9B1BF; opacity: 0.12; pointer-events: none; }
+.gfb-pst .gfb-pst__gear svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+.gfb-pst .gfb-pst__gear--right { top: 68px; right: 52px; width: 220px; height: 220px; transform: rotate(18deg); }
+.gfb-pst .gfb-pst__gear--left { top: 306px; left: 144px; width: 112px; height: 112px; transform: rotate(-180deg); }
+
+/* 128 top, 112 bottom, 96 sides; 64 between statement and stats */
+.gfb-pst .gfb-pst__inner { display: flex; flex-direction: column; gap: 64px; max-width: 1440px; margin: 0 auto; padding: 128px 96px 112px; }
+
+/* Two-tone statement, Instrument Sans SemiBold 48 / 1.1 */
+.gfb-pst .gfb-pst__statement {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  text-align: center;
+  text-wrap: balance;
+  font-family: var(--pst-font-display);
+  font-size: clamp(30px, 2.4vw + 14px, 48px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.gfb-pst .gfb-pst__line { white-space: pre-line; color: var(--pst-text); }
+.gfb-pst .gfb-pst__line--accent { color: var(--pst-accent); }
+
+/* Evidence: label, then the stats row (1200 wide, 48 gap) */
+.gfb-pst .gfb-pst__evidence { display: flex; flex-direction: column; gap: 32px; width: 100%; max-width: 1200px; margin: 0 auto; }
+.gfb-pst .gfb-pst__overline { margin: 0; text-align: center; font-size: 12px; font-weight: 500; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pst-brand); }
+.gfb-pst .gfb-pst__stats {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gfb-pst .gfb-pst__stat { display: flex; flex-direction: column; gap: 12px; }
+.gfb-pst .gfb-pst__stat::before { content: ""; width: 40px; height: 4px; border-radius: 2px; background: var(--pst-bar); }
+.gfb-pst .gfb-pst__number {
+  font-family: var(--pst-font-display);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--pst-brand);
+}
+.gfb-pst .gfb-pst__caption { font-size: 14px; line-height: 1.5; color: var(--pst-text); }
+
+/* Tablet: stats 2 × 2. Phone: one column, smaller numbers, gears hidden */
+@media (max-width: 1023px) {
+  .gfb-pst .gfb-pst__inner { padding: 96px 48px; }
+  .gfb-pst .gfb-pst__stats { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+}
+@media (max-width: 767px) {
+  .gfb-pst .gfb-pst__inner { padding: 64px 24px; gap: 48px; }
+  .gfb-pst .gfb-pst__stats { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .gfb-pst .gfb-pst__number { font-size: 40px; }
+  .gfb-pst .gfb-pst__gear { display: none; }
+}
+
+</style></head><body>
+<div class="demo-note">Demo of the <b>GFB Problem + Stats</b> HubSpot module with the exact copy from Figma (frame 1355:8192). The background is a CSS gradient standing in for Figma's background photo; the gears are redrawn.</div>
+<section class="gfb-pst">
+  <span class="gfb-pst__gear gfb-pst__gear--right"><svg viewBox="-55 -55 110 110" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/></svg></span>
+  <span class="gfb-pst__gear gfb-pst__gear--left"><svg viewBox="-55 -55 110 110" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/></svg></span>
+  <div class="gfb-pst__inner">
+    <h2 class="gfb-pst__statement">
+      <span class="gfb-pst__line">The workers are out there.
+The opportunities are out there.</span>
+      <span class="gfb-pst__line gfb-pst__line--accent">The connection between them is broken.</span>
+    </h2>
+    <div class="gfb-pst__evidence">
+      <p class="gfb-pst__overline">What’s at stake</p>
+      <ul class="gfb-pst__stats"><li class="gfb-pst__stat"><span class="gfb-pst__number">88%</span><span class="gfb-pst__caption">Construction firms reporting jobs are as hard—or harder—to fill than a year ago</span></li><li class="gfb-pst__stat"><span class="gfb-pst__number">$58k+</span><span class="gfb-pst__caption">Skilled trades median salary, with top roles earning $100,000+</span></li><li class="gfb-pst__stat"><span class="gfb-pst__number">723,000</span><span class="gfb-pst__caption">Worker hires needed each year to support industry growth and replace workers leaving the workforce</span></li><li class="gfb-pst__stat"><span class="gfb-pst__number">90%</span><span class="gfb-pst__caption">Percentage of skilled workers satisfied with their careers, citing meaningful work, compensation and flexibility</span></li></ul>
+    </div>
+  </div>
+</section>
+</body></html>

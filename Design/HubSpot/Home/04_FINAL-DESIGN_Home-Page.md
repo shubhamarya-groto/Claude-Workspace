@@ -5,7 +5,8 @@ Confirmed as the final homepage design on 6 Oct 2026.
 - **Figma:** https://www.figma.com/design/aC59gtTG9nh2hwUraPnCXj/GofindBuild-Website-Redesign?node-id=1259-9027
 - **File:** GofindBuild Website Redesign, key `aC59gtTG9nh2hwUraPnCXj`, frame **Home Page** `1259:9027`, 1440 × 5127, at x 553, y 512
 - **Read from:** Figma node structure only (names, sizes, positions). Colors, fonts and spacing values were not read: the Figma tool limit was hit. Take those from the design system and the existing HubSpot theme notes.
-- **Rule for this build:** staging only; copy is placeholder until final publishing (`../00_BUILD-PLAN_Staging.md`).
+- **Code vs Template split:** `05_SECTION-SPLIT_Code-vs-Template.md` (read 6 Oct; "What you get" is Code, not a preset; covers bands 03 and 10).
+- **Rule for this build:** build in the GoFindBuild account (`47303551`), pages as drafts; copy is placeholder until final publishing (`../00_BUILD-PLAN_Staging.md`).
 
 ## Bands
 
@@ -14,7 +15,7 @@ Layer names in Figma carry the module for each band, in the same `M1 · Custom /
 | # | Band | Node | Size | Built from in HubSpot |
 |---|---|---|---|---|
 | 00 | Top Nav | `1259:9028` | 1440 × 96 | Elevate Site header (DS Top Nav) |
-| 01 | Hero + fork | `1259:9031` | 1440 × 717 | **Custom module GFB Hero** (code in `code/gbf-module/`) |
+| 01 | Hero + fork | `1259:9031` | 1440 × 717 | **Custom module GFB Hero** (code in `code/gfb-hero/`) |
 | 02 | Trust bar | `1259:9048` | 1440 × 92 | Elevate **Card ×3** |
 | – | What you get | `1363:8560` | 1440 × 770 | Elevate section `products-and-services-two-column` |
 | 08 | Testimonials | `1259:9068` | 1440 × 826 | Elevate Testimonial slider (**still sample content**) |

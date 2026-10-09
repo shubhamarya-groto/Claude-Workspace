@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GFB Trust Bar · demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Serif+4:wght@600&display=swap">
+<style>
+body{margin:0;background:#fff}
+.demo-note{font:13px/1.5 Inter,system-ui,sans-serif;color:#525C70;background:#FFF7F0;border-bottom:1px solid #F5D9C3;padding:10px 16px;text-align:center}
+/* GFB Trust bar · Figma 1259:9048 (Home Page 1259:9027)
+   White band right under the hero: 0 top, 64 bottom, 96 sides. Items 32 apart; each is a 28px
+   check badge (orange/300 at 20%, radius 6, check #B86117), 10 gap, Inter Medium 15 / 1.5 navy. */
+.gfb-trust {
+  --trust-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --trust-badge: rgba(255, 186, 107, 0.2);
+  --trust-check: #B86117;
+  background: #FFFFFF;
+  color: var(--trust-brand);
+  font-family: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-trust, .gfb-trust *, .gfb-trust *::before, .gfb-trust *::after { box-sizing: border-box; }
+.gfb-trust .gfb-trust__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 96px 64px;
+  list-style: none;
+}
+.gfb-trust--center .gfb-trust__list { justify-content: center; }
+.gfb-trust .gfb-trust__item { display: flex; align-items: center; gap: 10px; margin: 0; }
+.gfb-trust .gfb-trust__badge {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--trust-badge);
+}
+.gfb-trust .gfb-trust__badge svg { display: block; fill: var(--trust-check); }
+.gfb-trust .gfb-trust__text { font-size: 15px; font-weight: 500; line-height: 1.5; color: var(--trust-brand); }
+
+/* Tablet: match the hero's 24 gutter. Phone: one item per line */
+@media (max-width: 1023px) {
+  .gfb-trust .gfb-trust__list { padding: 0 24px 48px; }
+}
+@media (max-width: 767px) {
+  .gfb-trust .gfb-trust__list { flex-direction: column; gap: 12px; }
+}
+</style></head><body>
+<p class="demo-note">GFB Trust bar demo. Exact Figma copy. In the page it sits right under the hero (no top padding).</p>
+<section class="gfb-trust gfb-trust--left" aria-label="Why GoFindBuild">
+  <ul class="gfb-trust__list"><li class="gfb-trust__item"><span class="gfb-trust__badge" aria-hidden="true"><svg viewBox="0 0 10 7.73" width="10" height="8" focusable="false"><path d="M3.33 7.73 0 4.4l1.06-1.07 2.27 2.27L8.94 0 10 1.06z"/></svg></span><span class="gfb-trust__text">Direct employer connections</span></li><li class="gfb-trust__item"><span class="gfb-trust__badge" aria-hidden="true"><svg viewBox="0 0 10 7.73" width="10" height="8" focusable="false"><path d="M3.33 7.73 0 4.4l1.06-1.07 2.27 2.27L8.94 0 10 1.06z"/></svg></span><span class="gfb-trust__text">No recruiter middlemen</span></li><li class="gfb-trust__item"><span class="gfb-trust__badge" aria-hidden="true"><svg viewBox="0 0 10 7.73" width="10" height="8" focusable="false"><path d="M3.33 7.73 0 4.4l1.06-1.07 2.27 2.27L8.94 0 10 1.06z"/></svg></span><span class="gfb-trust__text">150+ trade categories</span></li></ul>
+</section>
+</body></html>

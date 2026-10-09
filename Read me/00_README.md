@@ -57,7 +57,8 @@ up in data-heavy dashboards.
 
 - **Figma:** GofindBuild Website Redesign,
   https://www.figma.com/design/aC59gtTG9nh2hwUraPnCXj/GofindBuild-Website-Redesign
-- **Live demo (test portal):** https://247469662.hs-sites-na2.com/demo
+- **Old demo (sandbox, not used for the build):** https://247469662.hs-sites-na2.com/demo
+- **Working HubSpot account:** GoFindBuild, `47303551`
 - **Current public site:** gofindbuild.com (Squarespace, being replaced)
 - **HubSpot theme reference:** Elevate, source at github.com/HubSpot/cms-elevate-theme-public
 

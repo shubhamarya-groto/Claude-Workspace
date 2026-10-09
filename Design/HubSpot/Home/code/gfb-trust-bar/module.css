@@ -1,0 +1,43 @@
+/* GFB Trust bar · Figma 1259:9048 (Home Page 1259:9027)
+   White band right under the hero: 0 top, 64 bottom, 96 sides. Items 32 apart; each is a 28px
+   check badge (orange/300 at 20%, radius 6, check #B86117), 10 gap, Inter Medium 15 / 1.5 navy. */
+.gfb-trust {
+  --trust-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --trust-badge: rgba(255, 186, 107, 0.2);
+  --trust-check: #B86117;
+  background: #FFFFFF;
+  color: var(--trust-brand);
+  font-family: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-trust, .gfb-trust *, .gfb-trust *::before, .gfb-trust *::after { box-sizing: border-box; }
+.gfb-trust .gfb-trust__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 96px 64px;
+  list-style: none;
+}
+.gfb-trust--center .gfb-trust__list { justify-content: center; }
+.gfb-trust .gfb-trust__item { display: flex; align-items: center; gap: 10px; margin: 0; }
+.gfb-trust .gfb-trust__badge {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--trust-badge);
+}
+.gfb-trust .gfb-trust__badge svg { display: block; fill: var(--trust-check); }
+.gfb-trust .gfb-trust__text { font-size: 15px; font-weight: 500; line-height: 1.5; color: var(--trust-brand); }
+
+/* Tablet: match the hero's 24 gutter. Phone: one item per line */
+@media (max-width: 1023px) {
+  .gfb-trust .gfb-trust__list { padding: 0 24px 48px; }
+}
+@media (max-width: 767px) {
+  .gfb-trust .gfb-trust__list { flex-direction: column; gap: 12px; }
+}

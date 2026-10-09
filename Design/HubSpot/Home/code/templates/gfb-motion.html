@@ -1,0 +1,128 @@
+{# GFB motion: section reveal + page intro. Goes in the GFB Home template: the <style> and the first
+   <script> in <head>, the intro markup right after <body>, the second <script> before </body>.
+   Turned off inside the HubSpot editor, for "reduce motion", and when JavaScript doesn't run. #}
+
+<!-- HEAD -->
+<style>
+  /* Reveal: bands below the first screen fade in and rise 24px as they enter view; list items inside
+     a band follow 80ms apart. Only active once the script adds .gfb-motion to <html>. */
+  html.gfb-motion .gfb-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-delay: var(--gfb-delay, 0ms);
+  }
+  html.gfb-motion .gfb-reveal.is-in { opacity: 1; transform: none; }
+  html.gfb-motion .gfb-reveal--now { transition: none; }
+
+  /* Intro: turning gear + logo. Hidden unless the page is slow (shown after 300ms, gone by 1.5s) */
+  .gfb-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: #FFFFFF;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+  }
+  .gfb-intro.is-on { opacity: 1; visibility: visible; transition: opacity 0.2s ease; }
+  /* Gear loader beside the logo: the gear turns while its orange outline draws round it; when the
+     outline closes the gear fills orange and the intro fades away (1.2s in all). */
+  .gfb-intro__inner { display: flex; align-items: center; gap: 14px; }
+  .gfb-intro__logo { font-family: "Source Serif 4", Georgia, serif; font-size: 30px; font-weight: 600; line-height: 1; color: #16243D; }
+  .gfb-intro__gear { display: block; width: 44px; height: 44px; overflow: visible; }
+  .gfb-intro__gear path { fill-rule: evenodd; stroke-width: 5; stroke-linejoin: round; }   /* 5 units = 2px at 44px */
+  .gfb-intro__track { fill: none; stroke: #F3E3D6; }
+  .gfb-intro__draw { fill: #F16C0E; fill-opacity: 0; stroke: #F16C0E; stroke-dasharray: 100; stroke-dashoffset: 100; }
+  .gfb-intro.is-on .gfb-intro__gear { animation: gfb-gear-turn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  .gfb-intro.is-on .gfb-intro__draw { animation: gfb-gear-draw 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, gfb-gear-fill 0.2s ease-out 1s forwards; }
+  @keyframes gfb-gear-turn { from { transform: rotate(-90deg); } to { transform: rotate(90deg); } }
+  @keyframes gfb-gear-draw { to { stroke-dashoffset: 0; } }
+  @keyframes gfb-gear-fill { to { fill-opacity: 1; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.gfb-motion .gfb-reveal { opacity: 1; transform: none; transition: none; }
+    .gfb-intro { display: none; }
+  }
+</style>
+
+<!-- BODY START -->
+<div class="gfb-intro" id="gfb-intro" aria-hidden="true">
+  <div class="gfb-intro__inner">
+    <svg class="gfb-intro__gear" viewBox="-55 -55 110 110" focusable="false">
+      <path class="gfb-intro__track" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/>
+      <path class="gfb-intro__draw" pathLength="100" d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M17 0 A17 17 0 1 0 -17 0 A17 17 0 1 0 17 0 Z"/>
+    </svg>
+    <span class="gfb-intro__logo">GoFindBuild</span>
+  </div>
+</div>
+<script>
+  /* Intro: only if the page is still loading after 300ms, at most 1.5s, once per visit */
+  (function () {
+    var intro = document.getElementById('gfb-intro');
+    if (!intro) return;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var seen = false;
+    try { seen = sessionStorage.getItem('gfb-intro-seen') === '1'; } catch (e) {}
+    var force = window.GFB_FORCE_INTRO;            /* preview only: show it regardless of load speed */
+    if (reduce || (seen && !force) || window.GFB_EDITOR) { intro.remove(); return; }
+    var loaded = false, shownAt = 0;
+    function hide() { intro.classList.remove('is-on'); setTimeout(function () { intro.remove(); }, 400); }
+    if (force) { shownAt = Date.now(); intro.classList.add('is-on'); setTimeout(hide, 1400); return; }
+    var showTimer = setTimeout(function () {
+      if (loaded) return;
+      shownAt = Date.now();
+      intro.classList.add('is-on');
+      try { sessionStorage.setItem('gfb-intro-seen', '1'); } catch (e) {}
+      setTimeout(hide, 1250);                       /* gear fills by 1.2s; gone by about 1.6s from the start */
+    }, 300);
+    window.addEventListener('load', function () {
+      loaded = true;
+      clearTimeout(showTimer);
+      if (!shownAt) { intro.remove(); return; }
+      setTimeout(hide, Math.max(0, 1250 - (Date.now() - shownAt)));   /* let the gear finish filling before the page shows */
+    });
+  })();
+</script>
+
+<!-- BODY END -->
+<script>
+  /* Reveal: first-screen bands show at once; the rest animate in as they scroll into view */
+  (function () {
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || window.GFB_EDITOR || !('IntersectionObserver' in window)) return;
+    var BANDS = '.gfb-page .dnd-section, [data-gfb-band]';
+    var ITEMS = '.gfb-wyg__card, .gfb-prc__card, .gfb-pst__stat, .gfb-faq__row, .gfb-trust__item, .gfb-cta__card';   /* testimonial slides are left alone: they already move */
+    var bands = Array.prototype.slice.call(document.querySelectorAll(BANDS));
+    var fold = window.innerHeight;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    bands.forEach(function (band) {
+      var onFirstScreen = band.getBoundingClientRect().top < fold;
+      var items = band.querySelectorAll(ITEMS);
+      [band].concat(Array.prototype.slice.call(items)).forEach(function (el, i) {
+        el.classList.add('gfb-reveal');
+        if (i > 0) el.style.setProperty('--gfb-delay', Math.min(i - 1, 5) * 80 + 'ms');
+        if (onFirstScreen) { el.classList.add('gfb-reveal--now', 'is-in'); return; }
+        if (i === 0) io.observe(band);
+      });
+      if (!onFirstScreen) {
+        /* items reveal together with their band */
+        var mo = new IntersectionObserver(function (en) {
+          if (!en[0].isIntersecting) return;
+          Array.prototype.forEach.call(items, function (it) { it.classList.add('is-in'); });
+          mo.disconnect();
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+        mo.observe(band);
+      }
+    });
+    document.documentElement.classList.add('gfb-motion');
+  })();
+</script>

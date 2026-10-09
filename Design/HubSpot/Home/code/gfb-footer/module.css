@@ -1,0 +1,79 @@
+/* GFB Footer · Figma 1259:9149 (Home Page 1259:9027)
+   White band, 1px top rule, 96 padding all round, 1248 content. Brand block on the left,
+   links + 40px round social buttons on the right, both sitting on the bottom line. */
+.gfb-ftr {
+  --ftr-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --ftr-muted: #525C70;
+  --ftr-line: #D9D9D9;
+  --ftr-icon: #111111;
+  --ftr-font-logo: "Source Serif 4", Georgia, serif;
+  --ftr-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  background: #FFFFFF;
+  border-top: 1px solid var(--ftr-line);
+  color: var(--ftr-brand);
+  font-family: var(--ftr-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-ftr, .gfb-ftr *, .gfb-ftr *::before, .gfb-ftr *::after { box-sizing: border-box; }
+
+.gfb-ftr .gfb-ftr__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 96px;
+}
+
+/* Brand: logo, 16, copyright */
+.gfb-ftr .gfb-ftr__brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; min-width: 0; }
+.gfb-ftr .gfb-ftr__logo {
+  font-family: var(--ftr-font-logo);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ftr-brand);
+  text-decoration: none;
+}
+.gfb-ftr .gfb-ftr__logo img { display: block; height: 33px; width: auto; }
+.gfb-ftr .gfb-ftr__copy { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ftr-muted); }
+
+/* Actions: links, 20, socials; vertically centred on each other */
+.gfb-ftr .gfb-ftr__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.gfb-ftr .gfb-ftr__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.gfb-ftr .gfb-ftr__links a {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ftr-brand);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+.gfb-ftr .gfb-ftr__links a:hover,
+.gfb-ftr .gfb-ftr__links a:focus-visible { text-decoration: underline; color: #BB5B09; }
+
+/* Social buttons: 40 circle, white, 1px #D9D9D9 ring, 24 icon, 20 apart */
+.gfb-ftr .gfb-ftr__socials { display: flex; gap: 20px; margin: 0; padding: 0; list-style: none; }
+.gfb-ftr .gfb-ftr__social {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--ftr-line);
+  border-radius: 20px;
+  background: #FFFFFF;
+  color: var(--ftr-icon);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.gfb-ftr .gfb-ftr__social:hover { border-color: var(--ftr-brand); background: #F8F9FA; }
+.gfb-ftr a:focus-visible { outline: 3px solid var(--ftr-brand); outline-offset: 3px; border-radius: 4px; }
+.gfb-ftr .gfb-ftr__social:focus-visible { border-radius: 20px; }
+
+/* Tablet and phone: stack, left aligned */
+@media (max-width: 1023px) {
+  .gfb-ftr .gfb-ftr__inner { flex-direction: column; align-items: flex-start; gap: 32px; padding: 64px 32px; }
+}
+@media (max-width: 767px) {
+  .gfb-ftr .gfb-ftr__inner { padding: 48px 16px; }
+  .gfb-ftr .gfb-ftr__actions { flex-direction: column; align-items: flex-start; gap: 24px; }
+}

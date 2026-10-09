@@ -1,0 +1,195 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "Better opportunities. Better workers. One construction network."
+ },
+ {
+  "name": "columns",
+  "label": "Columns",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 2,
+   "default": 2,
+   "sorting_label_field": "columns.title"
+  },
+  "children": [
+   {
+    "name": "title",
+    "label": "Column title",
+    "type": "text",
+    "default": "For Companies"
+   },
+   {
+    "name": "accent",
+    "label": "Accent colour",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "orange",
+      "Orange"
+     ],
+     [
+      "blue",
+      "Blue"
+     ]
+    ],
+    "default": "orange"
+   },
+   {
+    "name": "image",
+    "label": "Background image",
+    "type": "image",
+    "help_text": "Shown behind the bottom of the card. Upload the final image from Figma as it is, or turn on 'Fade and tint' for a plain photo.",
+    "resizable": false,
+    "default": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    }
+   },
+   {
+    "name": "tone_image",
+    "label": "Fade and tint the image",
+    "type": "boolean",
+    "display": "toggle",
+    "help_text": "Off: the image shows exactly as uploaded (use for the final Figma images). On: the image is faded, faded out towards the top and tinted with the accent colour (use for an ordinary photo).",
+    "default": false
+   },
+   {
+    "name": "features",
+    "label": "Features",
+    "type": "group",
+    "occurrence": {
+     "min": 1,
+     "max": 4,
+     "default": 3,
+     "sorting_label_field": "columns.features.title"
+    },
+    "children": [
+     {
+      "name": "icon",
+      "label": "Icon",
+      "type": "choice",
+      "display": "select",
+      "choices": [
+       [
+        "timer",
+        "Timer"
+       ],
+       [
+        "user-check",
+        "User check"
+       ],
+       [
+        "messages-square",
+        "Messages"
+       ],
+       [
+        "pin",
+        "Pin"
+       ],
+       [
+        "file-check",
+        "File check"
+       ],
+       [
+        "radar",
+        "Radar"
+       ],
+       [
+        "briefcase",
+        "Briefcase"
+       ],
+       [
+        "map-pin",
+        "Map pin"
+       ],
+       [
+        "shield-check",
+        "Shield check"
+       ],
+       [
+        "clock",
+        "Clock"
+       ]
+      ],
+      "default": "timer"
+     },
+     {
+      "name": "title",
+      "label": "Title",
+      "type": "text",
+      "default": "Feature title"
+     },
+     {
+      "name": "description",
+      "label": "Description",
+      "type": "text",
+      "default": "One line about this feature."
+     }
+    ],
+    "default": []
+   }
+  ],
+  "default": [
+   {
+    "title": "For Companies",
+    "accent": "orange",
+    "image": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "features": [
+     {
+      "icon": "timer",
+      "title": "Post a job in 90 seconds",
+      "description": "Identify trades, location, pay range and start date."
+     },
+     {
+      "icon": "user-check",
+      "title": "Review matched workers, not resumes",
+      "description": "Skills, experience and certifications on every profile."
+     },
+     {
+      "icon": "messages-square",
+      "title": "Message them directly",
+      "description": "Contact goes straight to the worker, no agency in the middle."
+     }
+    ],
+    "tone_image": false
+   },
+   {
+    "title": "For Job Seekers",
+    "accent": "blue",
+    "image": {
+     "src": "",
+     "alt": "",
+     "loading": "lazy"
+    },
+    "features": [
+     {
+      "icon": "pin",
+      "title": "Pick your trades and your location",
+      "description": "Choose from 150+ trades, get instant match notifications."
+     },
+     {
+      "icon": "file-check",
+      "title": "See job details before you apply",
+      "description": "Every post shows a pay range and a distance."
+     },
+     {
+      "icon": "radar",
+      "title": "Let employers come to you",
+      "description": "Build one profile, control your privacy, get discovered."
+     }
+    ],
+    "tone_image": false
+   }
+  ]
+ }
+]
