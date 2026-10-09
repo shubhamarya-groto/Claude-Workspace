@@ -277,3 +277,17 @@ to 4.36:1 (I-18).
 - `gofindbuild-wireframe-plugin.js`: a Figma plugin script (paste into `code.js`, run from
   Plugins > Development) that draws the Mission Control dashboard wireframe on the Wireframe page.
   It predates the design system and uses its own hex colours: a layout skeleton, not a colour source.
+
+## 9 Oct 2026 · Pricing component redesigned (client screenshot)
+
+- **Component** `Elevate / Section / Pricing / pricing` (`1231:129`, page *HubSpot Elevate sections*) rebuilt to the
+  client's screenshot: heading "Start free. Pay only when you connect.", intro, orange line, and three cards
+  (Introductory Offer · Free; Starter · $0/month with a $49 / $149 / $349 rate table; Pro · $249/month, dark, Best value
+  badge). Equal-height cards (Starter hugs, the others fill), note box + button pinned to the bottom. New layers are
+  bound to the file's tokens (Typography, Color Tokens, Color Mode, spacing, radius). Height 657 → 1073.
+- **Instances:** the Marketing Website Home Page copy (`1259:9084`) was fixed at 657 high; set to hug. It keeps its
+  `#F8F9FA` band fill. The Iteration 2 (`1241:3327`) and Presentation (`1259:5386`) copies grew automatically.
+- **Nearby frames:** each Home Page is a vertical auto-layout stack, so the bands below Pricing moved down on their own.
+  The three *Mobile Home Page* frames under them (`1259:9277`, `1260:3259`, `1259:5579`) were moved down 416 px to keep
+  their original gaps. No section needed resizing.
+- Code counterpart: `Design/HubSpot/Home/code/gfb-pricing/` (same content, 9 Oct).
