@@ -46,7 +46,11 @@ Search Match also failed to save with a `textarea` heading, so its heading is tw
 Editor: https://app.hubspot.com/pages/47303551/editor/223986607632
 Title "Hire skilled trades workers directly | GoFindBuild" and a meta description are set.
 
-**Not done yet:** the hero photo (Hero → Photo field; the page shows no photo until it's set).
+**Hero photo (set 9 Oct):** the Figma photo (`1363:8546`, two men in hard hats with plans), rendered from Figma
+and cropped to the photo: `Design/Assets/Testing assets/hero-companies-figma-537x536.jpg`. The connector can't
+upload to HubSpot Files, so the Photo field points at the file's raw GitHub URL, pinned to commit `8489296`.
+**Before publishing:** upload the original photo to HubSpot Files and pick it in the Photo field instead. It is
+only 537 px wide (Figma's render), so it is soft on high-density screens, and a GitHub URL is not a production host.
 
 ## Still open
 
