@@ -1,5 +1,5 @@
 {# GFB Pricing. Heading, intro, orange line, then 1–4 plan cards. Each card: optional badge, small label,
-   plan name, price, description, optional rate table, features with ticks, optional note box, button.
+   plan name, price, description, optional rate table, features with ticks, button, optional note under it.
    All cards in a row share the tallest card's height; notes and buttons line up along the bottom. #}
 {% set tick = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>' %}
 <section class="gfb-prc">
@@ -52,12 +52,12 @@
           {% endif %}
 
           <div class="gfb-prc__foot">
-            {% if p.note %}<p class="gfb-prc__note">{{ p.note|escape }}</p>{% endif %}
             {% if p.button_label %}
               <a class="gfb-prc__btn gfb-prc__btn--{{ p.button_style or 'primary' }}" href="{{ (p.button_link.url.href or '#')|escape_url }}"
                  {% if p.button_link.open_in_new_tab %}target="_blank"{% endif %}
                  {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>{{ p.button_label|escape }}</a>
             {% endif %}
+            {% if p.note %}<p class="gfb-prc__note">{{ p.note|escape }}</p>{% endif %}
           </div>
         </article>
       {% endfor %}

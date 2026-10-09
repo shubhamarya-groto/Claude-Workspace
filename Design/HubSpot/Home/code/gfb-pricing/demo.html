@@ -6,9 +6,9 @@
 <style>
 body{margin:0;background:#fff}
 .demo-note{font:13px/1.5 Inter,system-ui,sans-serif;color:#525C70;background:#FFF7F0;border-bottom:1px solid #F5D9C3;padding:10px 16px;text-align:center}
-/* GFB Pricing · redesigned 9 Oct 2026 from the supplied screenshot (replaces the Figma 1259:9084 layout)
+/* GFB Pricing · Figma component 1231:129 (redesigned 9 Oct 2026 from the client screenshot, then edited in Figma)
    Centred heading, intro and an orange line, then plan cards in one row. Cards stretch to the tallest
-   card; the note box and button sit at the bottom of every card, so they line up across the row.
+   card; the button and the note under it sit at the bottom of every card, so they line up across the row.
    Card styles: highlight (orange border, green ticks), light (grey border, orange ticks), dark (navy). */
 .gfb-prc {
   --prc-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
@@ -33,7 +33,7 @@ body{margin:0;background:#fff}
 .gfb-prc .gfb-prc__inner { max-width: 1104px; margin: 0 auto; padding: 96px 24px; }
 
 /* Heading block */
-.gfb-prc .gfb-prc__head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
+.gfb-prc .gfb-prc__head { max-width: 900px; margin: 0 auto 40px; text-align: center; }
 .gfb-prc .gfb-prc__heading {
   margin: 0 0 16px;
   text-wrap: balance;
@@ -44,8 +44,8 @@ body{margin:0;background:#fff}
   letter-spacing: -0.5px;
   color: var(--prc-brand);
 }
-.gfb-prc .gfb-prc__intro { margin: 0 auto; max-width: 620px; text-wrap: balance; white-space: pre-line; font-size: 17px; line-height: 1.55; color: var(--prc-muted); }
-.gfb-prc .gfb-prc__accent { margin: 6px 0 0; font-size: 17px; font-weight: 600; line-height: 1.55; color: var(--prc-accent-line); }
+.gfb-prc .gfb-prc__intro { margin: 0 auto; max-width: 680px; white-space: pre-line; font-size: 18px; line-height: 1.55; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__accent { margin: 6px 0 0; font-size: 18px; font-weight: 600; line-height: 1.55; color: var(--prc-accent-line); }
 
 /* Cards: one row, equal height */
 .gfb-prc .gfb-prc__cards {
@@ -88,13 +88,13 @@ body{margin:0;background:#fff}
 /* Top block: label, name, price, description, then a rule */
 .gfb-prc .gfb-prc__top { display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px; border-bottom: 1px solid var(--prc-line); }
 .gfb-prc .gfb-prc__card--dark .gfb-prc__top { border-bottom-color: rgba(255, 255, 255, 0.14); }
-.gfb-prc .gfb-prc__tier { margin: 0 0 4px; font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prc-orange-text); }
+.gfb-prc .gfb-prc__tier { margin: 0; font-size: 12px; font-weight: 700; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prc-orange-text); }
 .gfb-prc .gfb-prc__card--dark .gfb-prc__tier { color: var(--prc-dark-accent); }
-.gfb-prc .gfb-prc__name { margin: 0; font-family: var(--prc-font-body); font-size: 21px; font-weight: 700; line-height: 1.25; color: inherit; }
+.gfb-prc .gfb-prc__name { margin: 0; font-family: var(--prc-font-body); font-size: 24px; font-weight: 700; line-height: 1.25; color: inherit; }
 .gfb-prc .gfb-prc__price {
   margin: 4px 0 0;
   font-family: var(--prc-font-display);
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -1px;
@@ -102,11 +102,11 @@ body{margin:0;background:#fff}
 }
 .gfb-prc .gfb-prc__suffix { font-family: var(--prc-font-body); font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--prc-muted); }
 .gfb-prc .gfb-prc__card--dark .gfb-prc__suffix { color: var(--prc-dark-text); }
-.gfb-prc .gfb-prc__desc { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__desc { margin: 0; font-size: 14px; line-height: 1.5; color: var(--prc-muted); }
 .gfb-prc .gfb-prc__card--dark .gfb-prc__desc { color: var(--prc-dark-text); }
 
 /* Rate table */
-.gfb-prc .gfb-prc__rates-label { margin: 0 0 8px; font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__rates-label { margin: 0 0 8px; font-size: 12px; font-weight: 700; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prc-muted); }
 .gfb-prc .gfb-prc__rate-list { margin: 0; padding: 0; list-style: none; }
 .gfb-prc .gfb-prc__rate {
   display: flex;
@@ -132,10 +132,11 @@ body{margin:0;background:#fff}
 .gfb-prc .gfb-prc__card--dark .gfb-prc__features li { color: #FFFFFF; }
 .gfb-prc .gfb-prc__card--dark .gfb-prc__tick { color: var(--prc-dark-accent); }
 
-/* Note + button pinned to the bottom */
-.gfb-prc .gfb-prc__foot { display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 8px; }
-.gfb-prc .gfb-prc__note { margin: 0; padding: 9px 12px; border-radius: 8px; background: #F1F3F5; font-size: 13px; line-height: 1.4; color: var(--prc-muted); }
-.gfb-prc .gfb-prc__card--dark .gfb-prc__note { background: rgba(255, 255, 255, 0.08); color: var(--prc-dark-text); }
+/* Button + note pinned to the bottom. The note is plain centred text under the button, in a two-line
+   slot (36px), so buttons stay level whether a note runs one line or two (Figma, 9 Oct). */
+.gfb-prc .gfb-prc__foot { display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 18px; }
+.gfb-prc .gfb-prc__note { min-height: calc(13px * 1.4 * 2); margin: 0; font-size: 13px; line-height: 1.4; text-align: center; color: var(--prc-muted); }
+.gfb-prc .gfb-prc__card--dark .gfb-prc__note { color: var(--prc-dark-text); }
 
 .gfb-prc .gfb-prc__btn {
   display: flex;
@@ -179,19 +180,19 @@ body{margin:0;background:#fff}
       <article class="gfb-prc__card gfb-prc__card--highlight">
         <div class="gfb-prc__top"><p class="gfb-prc__tier">Included with every account</p><h3 class="gfb-prc__name">Introductory Offer</h3><p class="gfb-prc__price">Free</p><p class="gfb-prc__desc">Try GoFindBuild at no cost. Every company starts here.</p></div>
         <ul class="gfb-prc__features"><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>3 free</strong> worker connections</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>5 free</strong> job invitations</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>1</strong> active job post</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> network access</span></li></ul>
-        <div class="gfb-prc__foot"><p class="gfb-prc__note">No credit card required</p><a class="gfb-prc__btn gfb-prc__btn--primary" href="#">Start free trial</a></div>
+        <div class="gfb-prc__foot"><a class="gfb-prc__btn gfb-prc__btn--primary" href="#">Start free trial</a><p class="gfb-prc__note">No credit card required</p></div>
       </article>
       <article class="gfb-prc__card gfb-prc__card--light">
         <div class="gfb-prc__top"><p class="gfb-prc__tier">Starter · Pay as you go</p><h3 class="gfb-prc__name">Starter</h3><p class="gfb-prc__price">$0 <span class="gfb-prc__suffix">/ month</span></p><p class="gfb-prc__desc">For flexible hiring. You only pay when you successfully connect with a worker.</p></div>
         <div class="gfb-prc__rates"><p class="gfb-prc__rates-label">Price per worker connection</p><ul class="gfb-prc__rate-list"><li class="gfb-prc__rate"><span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">Entry-level</span><span class="gfb-prc__rate-detail">General labor, apprentices...</span></span><span class="gfb-prc__rate-price">$49<span class="gfb-prc__rate-unit">/EA</span></span></li><li class="gfb-prc__rate"><span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">Skilled</span><span class="gfb-prc__rate-detail">Carpentry, framing, masonry...</span></span><span class="gfb-prc__rate-price">$149<span class="gfb-prc__rate-unit">/EA</span></span></li><li class="gfb-prc__rate"><span class="gfb-prc__rate-text"><span class="gfb-prc__rate-name">Specialty</span><span class="gfb-prc__rate-detail">HVAC, plumbing, electrical...</span></span><span class="gfb-prc__rate-price">$349<span class="gfb-prc__rate-unit">/EA</span></span></li></ul></div>
         <ul class="gfb-prc__features"><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Unlimited matches and job invitations</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>1 active job post</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Unlimited network access</span></li></ul>
-        <div class="gfb-prc__foot"><p class="gfb-prc__note">No subscription. Starts automatically after your trial.</p><a class="gfb-prc__btn gfb-prc__btn--outline" href="#">Continue with Starter</a></div>
+        <div class="gfb-prc__foot"><a class="gfb-prc__btn gfb-prc__btn--outline" href="#">Continue with Starter</a><p class="gfb-prc__note">No subscription. Starts automatically after your trial.</p></div>
       </article>
       <article class="gfb-prc__card gfb-prc__card--dark">
         <span class="gfb-prc__badge">Best value</span>
         <div class="gfb-prc__top"><p class="gfb-prc__tier">Pro · Unlimited hiring</p><h3 class="gfb-prc__name">Pro</h3><p class="gfb-prc__price">$249 <span class="gfb-prc__suffix">/ month</span></p><p class="gfb-prc__desc">For companies hiring regularly. Connect with as many workers as you need.</p></div>
         <ul class="gfb-prc__features"><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> worker connections, all trades</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> matches and job invitations</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Unlimited</strong> active job posts</span></li><li><span class="gfb-prc__tick"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Priority</strong> access to new matches</span></li></ul>
-        <div class="gfb-prc__foot"><p class="gfb-prc__note">Predictable monthly pricing. Cancel anytime.</p><a class="gfb-prc__btn gfb-prc__btn--primary" href="#">Go Pro</a></div>
+        <div class="gfb-prc__foot"><a class="gfb-prc__btn gfb-prc__btn--primary" href="#">Go Pro</a><p class="gfb-prc__note">Predictable monthly pricing. Cancel anytime.</p></div>
       </article>
     </div>
   </div>

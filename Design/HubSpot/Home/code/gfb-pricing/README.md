@@ -1,6 +1,7 @@
 # GFB Pricing
 
-Home pricing band. **Redesigned 9 Oct 2026 from a supplied screenshot** ("Start free. Pay only when you connect."),
+Home pricing band. Figma component `1231:129`. **Redesigned 9 Oct 2026 from a supplied screenshot**, then edited in Figma
+(note moved under the button, no grey box; sizes on the file's type tokens) ("Start free. Pay only when you connect."),
 replacing the earlier Figma `1259:9084` layout (three plain plan cards). Copy below is from the screenshot.
 
 > **HubSpot:** the live module `custom/content-mcp/modules/gfb_pricing` still has the 7 Oct design until it is
@@ -31,7 +32,7 @@ replacing the earlier Figma `1259:9084` layout (three plain plan cards). Copy be
 | ↳ `description` | Text | One or two lines under the price |
 | ↳ `rates_label` + `rates` | Text + repeater 0 to 6 | Rate table (`rate_name`, `rate_detail`, `rate_price`, `rate_unit`). Starter only by default |
 | ↳ `features` | Repeater 0 to 10 | `highlight` (bold part, optional) + `text` |
-| ↳ `note` | Text | Optional grey box above the button |
+| ↳ `note` | Text | Optional small centred line **under** the button (two-line slot, so buttons stay level) |
 | ↳ `button_label` / `button_link` / `button_style` | Text / Link / Choice | Orange or outline. Links are empty: set them in the editor |
 
 ## Defaults (from the screenshot)
@@ -48,6 +49,6 @@ replacing the earlier Figma `1259:9084` layout (three plain plan cards). Copy be
   the screenshot, so the band matches the rest of the page. Small orange labels use `#BB5B09` and the orange intro
   line `#E0580B` for contrast; white button labels on orange stay as decided 7 Oct (I-01).
 - Rate details end in "..." as in the screenshot; longer text is also cut with an ellipsis on one line.
-- Equal heights: grid rows stretch; the note and button sit at the bottom (`margin-top: auto`), so buttons line up.
+- Equal heights: grid rows stretch; the button and the note under it sit at the bottom (`margin-top: auto`), so buttons line up.
   On tablets and phones the cards stack and hug their content.
 - Prices and plan rules are copy; they still go through the pricing decision (I-12) before launch.
