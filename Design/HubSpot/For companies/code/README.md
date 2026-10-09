@@ -29,16 +29,20 @@ Orange buttons keep the Home modules' white label (decided 7 Oct, I-01).
 
 Don't edit the template or the preview by hand: change `page.json` or a module, then rebuild.
 
-## To get it into HubSpot
+## In HubSpot (9 Oct 2026)
 
-Nothing here has been pushed to the portal yet.
+Pushed through the connector to GoFindBuild (47303551). Update them through the connector, not the Design Manager.
 
-1. Push the **GFB Hero v2** and **GFB FAQ** changes through the connector (they're shared with Home; the new
-   fields default to off/white, so the Home page doesn't change).
-2. Create the four new modules through the connector, at `custom/content-mcp/modules/gfb_match_cards`,
-   `gfb_checklist`, `gfb_search_match`, `gfb_features` (CSS inlined in the HTML, as for the Home modules).
-3. Create the template from `templates/gfb-companies.html`, then a page on it (slug `/companies`).
-4. Upload the hero photo in the Hero's Photo field.
+| What | Where |
+|---|---|
+| Template **GFB Companies** | `custom/content-mcp/pages/gfb-companies.html`, template id `223986369108` |
+| GFB Hero v2, GFB FAQ | Updated with the new fields (Home unchanged: they default off / white) |
+| GFB Match Cards, GFB Checklist, GFB Search Match, GFB Features | Created at `custom/content-mcp/modules/gfb_match_cards`, `gfb_checklist`, `gfb_search_match`, `gfb_features` |
+
+HubSpot reserves some field names (`name`, `body`, …), so Match Cards uses `worker` and the others `intro`.
+Search Match also failed to save with a `textarea` heading, so its heading is two text fields.
+
+**Not done yet:** a page on the template (staging draft, as for Home), and the hero photo in the Hero's Photo field.
 
 ## Still open
 

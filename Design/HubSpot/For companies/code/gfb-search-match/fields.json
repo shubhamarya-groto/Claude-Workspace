@@ -7,10 +7,15 @@
  },
  {
   "name": "heading",
-  "label": "Heading",
-  "type": "textarea",
-  "help_text": "Line breaks are kept.",
-  "default": "Search your trade.\nSee who's ready to work."
+  "label": "Heading, first line",
+  "type": "text",
+  "default": "Search your trade."
+ },
+ {
+  "name": "heading_two",
+  "label": "Heading, second line",
+  "type": "text",
+  "default": "See who's ready to work."
  },
  {
   "name": "intro",
@@ -62,7 +67,7 @@
   "default": "Private Profile"
  },
  {
-  "name": "private",
+  "name": "show_lock",
   "label": "Card: show lock",
   "type": "boolean",
   "display": "toggle",
@@ -137,7 +142,7 @@
     "default": "orange"
    },
    {
-    "name": "level",
+    "name": "bars",
     "label": "Level bars",
     "type": "choice",
     "display": "select",
@@ -172,14 +177,14 @@
    {
     "skill": "Electrical",
     "tone": "orange",
-    "level": "3",
-    "level_text": "Journeyman"
+    "level_text": "Journeyman",
+    "bars": "3"
    },
    {
     "skill": "Low voltage",
     "tone": "blue",
-    "level": "2",
-    "level_text": "Skilled"
+    "level_text": "Skilled",
+    "bars": "2"
    }
   ]
  },

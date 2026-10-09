@@ -5,7 +5,7 @@
   <div class="gfb-sm__inner">
     <div class="gfb-sm__copy">
       {% if module.eyebrow %}<p class="gfb-sm__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
-      {% if module.heading %}<h2 class="gfb-sm__heading">{{ module.heading|escape|replace("\n", "<br>") }}</h2>{% endif %}
+      {% if module.heading %}<h2 class="gfb-sm__heading">{{ module.heading|escape }}{% if module.heading_two %}<br>{{ module.heading_two|escape }}{% endif %}</h2>{% endif %}
       {% if module.intro %}<p class="gfb-sm__body">{{ module.intro|escape }}</p>{% endif %}
     </div>
 
@@ -34,7 +34,7 @@
         <div class="gfb-sm__head">
           <span class="gfb-sm__avatar"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
           <div class="gfb-sm__who">
-            <p class="gfb-sm__title">{{ module.profile_title|escape }}{% if module.private %} <svg class="gfb-sm__lock" viewBox="0 0 24 24" width="12" height="12" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="4" y="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{% endif %}</p>
+            <p class="gfb-sm__title">{{ module.profile_title|escape }}{% if module.show_lock %} <svg class="gfb-sm__lock" viewBox="0 0 24 24" width="12" height="12" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="4" y="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{% endif %}</p>
             {% if module.profile_role %}<p class="gfb-sm__role">{{ module.profile_role|escape }}</p>{% endif %}
           </div>
           {% if module.score %}<p class="gfb-sm__score"><span class="gfb-sm__score-value">{{ module.score|escape }}</span><span class="gfb-sm__score-label">{{ module.score_label|escape }}</span></p>{% endif %}
@@ -48,7 +48,7 @@
               {% if s.skill %}
                 <div class="gfb-sm__skill">
                   <span class="gfb-sm__chip gfb-sm__chip--{{ s.tone or 'orange' }}">{{ s.skill|escape }}</span>
-                  <span class="gfb-sm__level">{% for n in [1, 2, 3, 4] %}<span{% if n <= s.level|int %} class="is-on"{% endif %}></span>{% endfor %}</span>
+                  <span class="gfb-sm__level">{% for n in [1, 2, 3, 4] %}<span{% if n <= s.bars|int %} class="is-on"{% endif %}></span>{% endfor %}</span>
                   {% if s.level_text %}<span class="gfb-sm__chip">{{ s.level_text|escape }}</span>{% endif %}
                 </div>
               {% endif %}
