@@ -65,6 +65,27 @@
 .gfb .gfb-fork__title { margin: 0; font-family: var(--gfb-font-body); font-size: 18px; font-weight: 600; line-height: 1.4; color: var(--gfb-brand); }
 .gfb .gfb-fork__text { margin: 0; font-size: 14px; line-height: 1.5; color: var(--gfb-muted); }
 
+/* Checks beside the cards (Company page): Trust bar's badge, 28 apart */
+.gfb .gfb-checks { display: flex; flex-direction: column; justify-content: center; gap: 28px; margin: 0; padding: 0 0 0 8px; list-style: none; }
+.gfb .gfb-checks__item { display: flex; align-items: center; gap: 10px; font-size: 14px; line-height: 1.5; color: var(--gfb-muted); }
+.gfb .gfb-checks__badge { display: grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 6px; background: rgba(255, 186, 107, 0.2); }
+.gfb .gfb-checks__badge svg { display: block; fill: #B86117; }
+
+/* Orange glow behind the copy and photo (Company page) */
+.gfb.gfb-hero--glow { position: relative; }
+.gfb.gfb-hero--glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(38% 50% at 50% 100%, rgba(241, 108, 14, 0.30), transparent 70%),
+    radial-gradient(28% 42% at 42% 62%, rgba(255, 196, 120, 0.24), transparent 70%);
+  pointer-events: none;
+}
+.gfb.gfb-hero--glow .gfb-hero__copy,
+.gfb.gfb-hero--glow .gfb-hero__visual { position: relative; }
+.gfb.gfb-hero--glow .gfb-hero__visual { filter: drop-shadow(0 0 40px rgba(241, 108, 14, 0.35)); }
+
 /* Buttons: pill, label + arrow disc. "primary" follows Elevate's primary button settings */
 .gfb .gfb-btn {
   display: inline-flex;
@@ -154,6 +175,7 @@
 @media (max-width: 767px) {
   .gfb { --gfb-tab: 32px; }
   .gfb .gfb-fork { grid-template-columns: 1fr; }
+  .gfb .gfb-checks { padding: 8px 0 0; gap: 16px; }
   .gfb .gfb-btn { width: 100%; justify-content: space-between; }
   .gfb .gfb-hero__photo { height: 280px; }
 }

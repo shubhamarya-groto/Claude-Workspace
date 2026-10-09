@@ -1,0 +1,137 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "See who's available before you post"
+ },
+ {
+  "name": "subhead",
+  "label": "Subhead",
+  "type": "text",
+  "default": "Every profile shows trades, experience and how far away they are."
+ },
+ {
+  "name": "cards",
+  "label": "Cards",
+  "type": "group",
+  "help_text": "Example workers, shown as a company sees them. Static: they don't update from the app.",
+  "occurrence": {
+   "min": 0,
+   "max": 4,
+   "default": 2,
+   "sorting_label_field": "cards.name"
+  },
+  "children": [
+   {
+    "name": "name",
+    "label": "Name and trade",
+    "type": "text",
+    "default": "Marcus Bell · Journeyman Electrician"
+   },
+   {
+    "name": "meta",
+    "label": "Line under the name",
+    "type": "text",
+    "default": "Seeking full-time · 5.8 mi"
+   },
+   {
+    "name": "score",
+    "label": "Profile score",
+    "type": "text",
+    "help_text": "Shown in green, top right. Leave empty to hide.",
+    "default": "92%"
+   },
+   {
+    "name": "trade",
+    "label": "Trade chip",
+    "type": "text",
+    "default": "Electrical"
+   },
+   {
+    "name": "button_text",
+    "label": "Button text",
+    "type": "text",
+    "default": "Send job"
+   },
+   {
+    "name": "button_link",
+    "label": "Button link",
+    "type": "link",
+    "supported_types": [
+     "EXTERNAL",
+     "CONTENT"
+    ],
+    "default": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ],
+  "default": [
+   {
+    "name": "Marcus Bell · Journeyman Electrician",
+    "meta": "Seeking full-time · 5.8 mi",
+    "score": "92%",
+    "trade": "Electrical",
+    "button_text": "Send job",
+    "button_link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "name": "Ray Alvarez · General Laborer",
+    "meta": "Seeking full-time · 3.2 mi",
+    "score": "74%",
+    "trade": "General Labor",
+    "button_text": "Send job",
+    "button_link": {
+     "url": {
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   }
+  ]
+ },
+ {
+  "name": "score_label",
+  "label": "Score label",
+  "type": "text",
+  "default": "Profile score"
+ },
+ {
+  "name": "note",
+  "label": "Note under the cards",
+  "type": "text",
+  "default": "Get instant notifications of new matches and applicants"
+ },
+ {
+  "name": "background",
+  "label": "Background",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "grey",
+    "Light grey"
+   ],
+   [
+    "white",
+    "White"
+   ]
+  ],
+  "default": "grey"
+ }
+]

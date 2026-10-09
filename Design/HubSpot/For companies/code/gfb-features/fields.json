@@ -1,0 +1,135 @@
+[
+ {
+  "name": "eyebrow",
+  "label": "Eyebrow",
+  "type": "text",
+  "default": "For companies"
+ },
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "Automatically get matched to the skills you need"
+ },
+ {
+  "name": "body",
+  "label": "Body",
+  "type": "text",
+  "default": "Tell us what you need and the matches come to you."
+ },
+ {
+  "name": "items",
+  "label": "Features",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 8,
+   "default": 6,
+   "sorting_label_field": "items.title"
+  },
+  "children": [
+   {
+    "name": "icon",
+    "label": "Icon",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "megaphone",
+      "Megaphone"
+     ],
+     [
+      "user-check",
+      "Person with check"
+     ],
+     [
+      "send",
+      "Send"
+     ],
+     [
+      "chart",
+      "Chart"
+     ],
+     [
+      "dollar",
+      "Dollar"
+     ],
+     [
+      "circle-check",
+      "Circle check"
+     ],
+     [
+      "timer",
+      "Timer"
+     ],
+     [
+      "map-pin",
+      "Map pin"
+     ]
+    ],
+    "default": "circle-check"
+   },
+   {
+    "name": "title",
+    "label": "Title",
+    "type": "text",
+    "default": "Feature title"
+   },
+   {
+    "name": "description",
+    "label": "One line",
+    "type": "text",
+    "default": "One line of supporting detail."
+   }
+  ],
+  "default": [
+   {
+    "icon": "megaphone",
+    "title": "Post a job in 90 seconds",
+    "description": "One line of supporting detail."
+   },
+   {
+    "icon": "user-check",
+    "title": "Review matched workers, not resumes",
+    "description": "One line of supporting detail."
+   },
+   {
+    "icon": "send",
+    "title": "Message them directly",
+    "description": "One line of supporting detail."
+   },
+   {
+    "icon": "chart",
+    "title": "88% say jobs are harder to fill",
+    "description": "One line of supporting detail."
+   },
+   {
+    "icon": "dollar",
+    "title": "No agency markup on anyone's hours",
+    "description": "One line of supporting detail."
+   },
+   {
+    "icon": "circle-check",
+    "title": "Posting is always free",
+    "description": "One line of supporting detail."
+   }
+  ]
+ },
+ {
+  "name": "background",
+  "label": "Background",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "white",
+    "White"
+   ],
+   [
+    "grey",
+    "Light grey"
+   ]
+  ],
+  "default": "white"
+ }
+]

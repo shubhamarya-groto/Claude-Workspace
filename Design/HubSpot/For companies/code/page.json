@@ -1,0 +1,42 @@
+{
+  "_about": "Company page: the modules in Figma order, with the field values that differ from each module's defaults. build_page.py turns this into templates/gfb-companies.html and preview/gfb-companies-preview.html.",
+  "label": "GFB Companies",
+  "dnd_label": "Company page",
+  "request_path": "/companies",
+  "modules": [
+    { "module": "gfb_top_nav" },
+    { "module": "gfb_hero_v2", "fields": {
+      "headline": "Build your workforce. Not your recruiting bill.",
+      "highlight": "Not your recruiting bill.",
+      "subhead": "Connect directly with local skilled-trades talent, build an always-on pipeline, and hire when you’re ready.",
+      "card_one": { "title": "I’m hiring", "text": "Post jobs - see matches today free!", "button_label": "Hire workers",
+                    "button_link": { "url": { "type": "EXTERNAL", "href": "https://app.gofindbuild.com/signup" }, "open_in_new_tab": false, "no_follow": false },
+                    "button_style": "primary" },
+      "card_two": { "title": "", "text": "", "button_label": "",
+                    "button_link": { "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false },
+                    "button_style": "dark" },
+      "checks": [ { "check_text": "Posting is free" }, { "check_text": "No placement fee" }, { "check_text": "You talk to the worker, not an agency" } ],
+      "glow": true
+    } },
+    { "module": "gfb_match_cards" },
+    { "module": "gfb_checklist" },
+    { "module": "gfb_search_match" },
+    { "module": "gfb_features" },
+    { "module": "gfb_faq", "fields": {
+      "items": [
+        { "question": "What does it cost to hire through GoFindBuild?", "answer": "<p>The answer sits under the question and stays short.</p>", "open": true },
+        { "question": "How is this different from a staffing agency or a job board?", "answer": "<p>Write the answer here. Keep it short.</p>", "open": false },
+        { "question": "How quickly will I start seeing applicants?", "answer": "<p>Write the answer here. Keep it short.</p>", "open": false }
+      ],
+      "faq_schema": false,
+      "background": "grey"
+    } },
+    { "module": "gfb_final_cta", "fields": {
+      "heading": "Post your first jobs free.",
+      "subhead": "90 seconds to post. Matches the same day.",
+      "buttons": [ { "button_text": "Post a job", "style": "primary",
+                     "link": { "url": { "type": "EXTERNAL", "href": "https://app.gofindbuild.com/signup" }, "open_in_new_tab": false, "no_follow": false } } ]
+    } },
+    { "module": "gfb_footer" }
+  ]
+}

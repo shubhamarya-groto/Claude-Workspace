@@ -1,0 +1,234 @@
+[
+ {
+  "name": "eyebrow",
+  "label": "Eyebrow",
+  "type": "text",
+  "default": "How matching works"
+ },
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "textarea",
+  "help_text": "Line breaks are kept.",
+  "default": "Search your trade.\nSee who's ready to work."
+ },
+ {
+  "name": "body",
+  "label": "Body",
+  "type": "text",
+  "default": "Enter the trade you need and your ZIP code. Matched workers show their skills, experience level and distance up front, so you're reviewing people, not resumes."
+ },
+ {
+  "name": "visual_label",
+  "label": "Description of the illustration",
+  "type": "text",
+  "default": "Example: a search for Journeyman Electrician near 46204 Indianapolis finds 4 matching workers, including a private profile with a 96% profile score.",
+  "help_text": "Read out by screen readers in place of the illustration. Update it when you change the example."
+ },
+ {
+  "name": "trade_label",
+  "label": "Search: trade label",
+  "type": "text",
+  "default": "Trade"
+ },
+ {
+  "name": "trade",
+  "label": "Search: trade",
+  "type": "text",
+  "default": "Journeyman Electrician"
+ },
+ {
+  "name": "near_label",
+  "label": "Search: location label",
+  "type": "text",
+  "default": "Near"
+ },
+ {
+  "name": "near",
+  "label": "Search: location",
+  "type": "text",
+  "default": "46204 · Indianapolis"
+ },
+ {
+  "name": "match_text",
+  "label": "Match pill",
+  "type": "text",
+  "default": "4 workers match your trade near 46204"
+ },
+ {
+  "name": "profile_title",
+  "label": "Card: title",
+  "type": "text",
+  "default": "Private Profile"
+ },
+ {
+  "name": "private",
+  "label": "Card: show lock",
+  "type": "boolean",
+  "display": "toggle",
+  "default": true
+ },
+ {
+  "name": "profile_role",
+  "label": "Card: role",
+  "type": "text",
+  "default": "Journeyman"
+ },
+ {
+  "name": "score",
+  "label": "Card: profile score",
+  "type": "text",
+  "default": "96%"
+ },
+ {
+  "name": "score_label",
+  "label": "Card: score label",
+  "type": "text",
+  "default": "Profile score"
+ },
+ {
+  "name": "skills_label",
+  "label": "Card: skills heading",
+  "type": "text",
+  "default": "Looking for"
+ },
+ {
+  "name": "level_label",
+  "label": "Card: level heading",
+  "type": "text",
+  "default": "Experience"
+ },
+ {
+  "name": "skills",
+  "label": "Card: skills",
+  "type": "group",
+  "occurrence": {
+   "min": 0,
+   "max": 4,
+   "default": 2,
+   "sorting_label_field": "skills.skill"
+  },
+  "children": [
+   {
+    "name": "skill",
+    "label": "Skill",
+    "type": "text",
+    "default": "Electrical"
+   },
+   {
+    "name": "tone",
+    "label": "Chip colour",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "orange",
+      "Orange"
+     ],
+     [
+      "blue",
+      "Blue"
+     ],
+     [
+      "grey",
+      "Grey"
+     ]
+    ],
+    "default": "orange"
+   },
+   {
+    "name": "level",
+    "label": "Level bars",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "1",
+      "1 of 4"
+     ],
+     [
+      "2",
+      "2 of 4"
+     ],
+     [
+      "3",
+      "3 of 4"
+     ],
+     [
+      "4",
+      "4 of 4"
+     ]
+    ],
+    "default": "3"
+   },
+   {
+    "name": "level_text",
+    "label": "Level",
+    "type": "text",
+    "default": "Journeyman"
+   }
+  ],
+  "default": [
+   {
+    "skill": "Electrical",
+    "tone": "orange",
+    "level": "3",
+    "level_text": "Journeyman"
+   },
+   {
+    "skill": "Low voltage",
+    "tone": "blue",
+    "level": "2",
+    "level_text": "Skilled"
+   }
+  ]
+ },
+ {
+  "name": "location",
+  "label": "Card: location",
+  "type": "text",
+  "default": "Indianapolis, IN"
+ },
+ {
+  "name": "distance",
+  "label": "Card: distance",
+  "type": "text",
+  "default": "4.1 mi from 46204",
+  "help_text": "Shown in orange after the location."
+ },
+ {
+  "name": "seeking",
+  "label": "Card: seeking",
+  "type": "text",
+  "default": "Seeking Full-time"
+ },
+ {
+  "name": "primary_text",
+  "label": "Card: dark button",
+  "type": "text",
+  "default": "Send job"
+ },
+ {
+  "name": "secondary_text",
+  "label": "Card: outline button",
+  "type": "text",
+  "default": "View profile"
+ },
+ {
+  "name": "background",
+  "label": "Background",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "grey",
+    "Light grey"
+   ],
+   [
+    "white",
+    "White"
+   ]
+  ],
+  "default": "grey"
+ }
+]

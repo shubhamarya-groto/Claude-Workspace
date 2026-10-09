@@ -1,0 +1,113 @@
+[
+ {
+  "name": "heading",
+  "label": "Heading",
+  "type": "text",
+  "default": "Look first, reach out when you're ready"
+ },
+ {
+  "name": "body",
+  "label": "Body",
+  "type": "text",
+  "default": "Browsing costs nothing. You pay only when you want to talk."
+ },
+ {
+  "name": "items",
+  "label": "Points",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 8,
+   "default": 5,
+   "sorting_label_field": "items.item_text"
+  },
+  "children": [
+   {
+    "name": "icon",
+    "label": "Icon",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "search",
+      "Search"
+     ],
+     [
+      "eye-off",
+      "Hidden"
+     ],
+     [
+      "send",
+      "Send"
+     ],
+     [
+      "banknote",
+      "Money"
+     ],
+     [
+      "lock",
+      "Lock"
+     ],
+     [
+      "check",
+      "Check"
+     ],
+     [
+      "clock",
+      "Clock"
+     ],
+     [
+      "map-pin",
+      "Map pin"
+     ]
+    ],
+    "default": "check"
+   },
+   {
+    "name": "item_text",
+    "label": "Text",
+    "type": "text",
+    "default": "A short point"
+   }
+  ],
+  "default": [
+   {
+    "icon": "search",
+    "item_text": "Trades, experience and area are free to browse"
+   },
+   {
+    "icon": "eye-off",
+    "item_text": "Workers are not told that you looked"
+   },
+   {
+    "icon": "send",
+    "item_text": "Contact details unlock when you are ready"
+   },
+   {
+    "icon": "banknote",
+    "item_text": "Send a job straight from a profile"
+   },
+   {
+    "icon": "lock",
+    "item_text": "No placement fee, ever"
+   }
+  ]
+ },
+ {
+  "name": "background",
+  "label": "Background",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "white",
+    "White"
+   ],
+   [
+    "grey",
+    "Light grey"
+   ]
+  ],
+  "default": "white"
+ }
+]

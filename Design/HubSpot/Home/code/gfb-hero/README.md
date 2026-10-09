@@ -41,6 +41,8 @@ Then set the default.
 | 5e | Choice | Button style | `button_style` | Options below, default **Dark** |
 | 6 | Image | Photo | `photo` | `hero-welder-1400x799.jpg` from Files, alt text `Two welders at work, sparks flying` |
 | 7 | Choice | Photo focus | `photo_position` | Options below, default **Center** |
+| 8 | **Group, repeater** 0 to 4 | Checks beside the cards | `checks` | Empty. One Text field inside, `check_text`. Added 9 Oct for the Company page |
+| 9 | Boolean (toggle) | Orange glow | `glow` | Off. Added 9 Oct for the Company page |
 
 **Groups:** add the Group field first, then add the five fields **inside** it. Don't turn on
 "Repeater" for these groups: there are exactly two cards, each with its own copy.
@@ -74,6 +76,11 @@ Page editor → **Add** → **Modules** → search `GFB Hero` → drag to the to
 full-width section. Every field above shows in the left panel when you click the hero.
 
 ## Things to know
+
+- **Company page variant (9 Oct).** Clear card two's title and button label to hide it, add three `checks`
+  and turn on `glow`. The checks use the Trust bar's badge and sit beside the remaining card (below it on
+  phones). Both fields default to empty/off, so the Home page is unchanged. **GFB Hero v2 in HubSpot doesn't
+  have these two fields yet:** push this folder through the connector before building the Company page.
 
 - **Primary (orange) button: white label (7 Oct).** Background still follows the theme's primary button colour; the label is fixed white and hover goes to the darker `#EA580C`. White on `#F16C0E` is about 3:1, below the 4.5:1 AA minimum for this text size (I-01); decided by the team on 7 Oct.
 - **Headline font** comes from the theme's H1 font, so it shows Instrument Sans once the theme pass sets

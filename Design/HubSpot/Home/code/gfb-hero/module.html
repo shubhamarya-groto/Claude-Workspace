@@ -7,7 +7,7 @@
   {% set headline = headline|replace(highlight, '<span class="gfb-accent">' ~ highlight ~ '</span>') %}
 {% endif %}
 
-<section class="gfb gfb-hero">
+<section class="gfb gfb-hero{% if module.glow %} gfb-hero--glow{% endif %}">
   <div class="gfb-hero__copy">
     <h1 class="gfb-hero__title">{{ headline }}</h1>
     {% if module.subhead %}
@@ -39,6 +39,13 @@
           </div>
         {% endif %}
       {% endfor %}
+      {% if module.checks %}
+        <ul class="gfb-checks">
+          {% for c in module.checks %}
+            {% if c.check_text %}<li class="gfb-checks__item"><span class="gfb-checks__badge" aria-hidden="true"><svg viewBox="0 0 10 7.73" width="10" height="8" focusable="false"><path d="M3.33 7.73 0 4.4l1.06-1.07 2.27 2.27L8.94 0 10 1.06z"/></svg></span>{{ c.check_text|escape }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   </div>
 

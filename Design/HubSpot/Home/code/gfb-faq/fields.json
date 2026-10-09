@@ -69,5 +69,23 @@
   "display": "toggle",
   "help_text": "Adds FAQPage structured data (JSON-LD). Turn off if another FAQ on the same page already adds it.",
   "default": true
+ },
+ {
+  "name": "background",
+  "label": "Background",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "white",
+    "White"
+   ],
+   [
+    "grey",
+    "Light grey"
+   ]
+  ],
+  "help_text": "Light grey separates the FAQ from a white band above it.",
+  "default": "white"
  }
 ]

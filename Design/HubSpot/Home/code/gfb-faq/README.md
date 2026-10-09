@@ -21,6 +21,7 @@ stays the fallback.
 | `items` | Repeater, 1 to 20 | `question` (text), `answer` (rich text), `open` (toggle: open on page load) |
 | `one_at_a_time` | Toggle, on | Opening a question closes the open one (the `name` attribute on `<details>`) |
 | `faq_schema` | Toggle, on | Adds FAQPage structured data from the questions and answers (answers as plain text) |
+| `background` | Choice, White | White or Light grey `#F8F9FA`. Added 9 Oct: the Company page FAQ sits on grey |
 
 ## From Figma
 

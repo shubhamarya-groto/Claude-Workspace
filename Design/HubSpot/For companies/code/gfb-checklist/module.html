@@ -1,0 +1,33 @@
+{# GFB Checklist. Heading and short body on the left, a ruled list of 1–8 points with icon badges on the right.
+   Every word and icon is a field: see fields.json. Icons are Lucide (stroke), drawn inline. #}
+{% set icons = {
+  "search": '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  "eye-off": '<path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="2" x2="22" y1="2" y2="22"/>',
+  "send": '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+  "banknote": '<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
+  "lock": '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  "check": '<path d="M20 6 9 17l-5-5"/>',
+  "clock": '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  "map-pin": '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>'
+} %}
+
+<section class="gfb-chk gfb-chk--{{ module.background or 'white' }}">
+  <div class="gfb-chk__inner">
+    <div class="gfb-chk__intro">
+      {% if module.heading %}<h2 class="gfb-chk__heading">{{ module.heading|escape }}</h2>{% endif %}
+      {% if module.body %}<p class="gfb-chk__body">{{ module.body|escape }}</p>{% endif %}
+    </div>
+    {% if module.items %}
+      <ul class="gfb-chk__list">
+        {% for i in module.items %}
+          {% if i.item_text %}
+            <li class="gfb-chk__item">
+              <span class="gfb-chk__badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ icons[i.icon] or icons["check"] }}</svg></span>
+              <span>{{ i.item_text|escape }}</span>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</section>

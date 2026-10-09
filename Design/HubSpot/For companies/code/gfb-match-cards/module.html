@@ -1,0 +1,42 @@
+{# GFB Match cards. Heading, subhead, 1–4 static Job Match Cards and a note. Every word is a field: see fields.json.
+   The cards are examples of what a company sees, not live data. #}
+{% set building = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>' %}
+{% set arrow = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>' %}
+
+<section class="gfb-mc gfb-mc--{{ module.background or 'grey' }}">
+  <div class="gfb-mc__inner">
+    {% if module.heading %}<h2 class="gfb-mc__heading">{{ module.heading|escape }}</h2>{% endif %}
+    {% if module.subhead %}<p class="gfb-mc__subhead">{{ module.subhead|escape }}</p>{% endif %}
+
+    {% if module.cards %}
+      <div class="gfb-mc__grid">
+        {% for c in module.cards %}
+          {% if c.name %}
+            <article class="gfb-mc__card">
+              <span class="gfb-mc__icon" aria-hidden="true">{{ building }}</span>
+              <div class="gfb-mc__who">
+                <h3 class="gfb-mc__name">{{ c.name|escape }}</h3>
+                {% if c.meta %}<p class="gfb-mc__meta">{{ c.meta|escape }}</p>{% endif %}
+              </div>
+              {% if c.score %}<p class="gfb-mc__score"><span class="gfb-mc__score-value">{{ c.score|escape }}</span><span class="gfb-mc__score-label">{{ module.score_label|escape }}</span></p>{% endif %}
+              <div class="gfb-mc__foot">
+                {% if c.trade %}<span class="gfb-mc__chip">{{ c.trade|escape }}</span>{% endif %}
+                {% if c.button_text %}
+                  {% set rel = [] %}
+                  {% if c.button_link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
+                  {% if c.button_link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
+                  <a class="gfb-mc__btn" href="{{ (c.button_link.url.href or '#')|escape_url }}"{% if c.button_link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>
+                    {{ c.button_text|escape }}<span class="gfb-mc__sr"> to {{ c.name|escape }}</span>
+                    <span class="gfb-mc__disc">{{ arrow }}</span>
+                  </a>
+                {% endif %}
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if module.note %}<p class="gfb-mc__note">{{ module.note|escape }}</p>{% endif %}
+  </div>
+</section>

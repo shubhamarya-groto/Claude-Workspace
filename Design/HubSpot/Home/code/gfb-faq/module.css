@@ -12,6 +12,7 @@
   font-family: var(--faq-font-body);
   -webkit-font-smoothing: antialiased;
 }
+.gfb-faq--grey { background: #F8F9FA; }
 .gfb-faq, .gfb-faq *, .gfb-faq *::before, .gfb-faq *::after { box-sizing: border-box; }
 
 /* 1200 container, 96 top and bottom, 32 under the heading */

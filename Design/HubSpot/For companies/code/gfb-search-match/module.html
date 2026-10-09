@@ -1,0 +1,71 @@
+{# GFB Search → worker match. Copy on the left; on the right a static illustration: search bar, match pill,
+   and a Private worker card. It is a picture, not a working search: screen readers get one description
+   (visual_label) and the parts are hidden from them. Every word is a field: see fields.json. #}
+<section class="gfb-sm gfb-sm--{{ module.background or 'grey' }}">
+  <div class="gfb-sm__inner">
+    <div class="gfb-sm__copy">
+      {% if module.eyebrow %}<p class="gfb-sm__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
+      {% if module.heading %}<h2 class="gfb-sm__heading">{{ module.heading|escape|replace("\n", "<br>") }}</h2>{% endif %}
+      {% if module.body %}<p class="gfb-sm__body">{{ module.body|escape }}</p>{% endif %}
+    </div>
+
+    <div class="gfb-sm__visual" role="img" aria-label="{{ module.visual_label|escape_attr }}">
+      <div class="gfb-sm__search" aria-hidden="true">
+        <div class="gfb-sm__seg gfb-sm__seg--trade">
+          <span class="gfb-sm__label">{{ module.trade_label|escape }}</span>
+          <span class="gfb-sm__chip gfb-sm__chip--orange">{{ module.trade|escape }}</span>
+        </div>
+        <span class="gfb-sm__divider"></span>
+        <div class="gfb-sm__seg">
+          <span class="gfb-sm__label">{{ module.near_label|escape }}</span>
+          <span class="gfb-sm__value">{{ module.near|escape }}</span>
+        </div>
+        <span class="gfb-sm__go"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+      </div>
+
+      <div class="gfb-sm__connector" aria-hidden="true">
+        <span class="gfb-sm__line"></span>
+        {% if module.match_text %}<span class="gfb-sm__pill"><span class="gfb-sm__dot"></span>{{ module.match_text|escape }}</span>{% endif %}
+        <span class="gfb-sm__line"></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m1 1 5 5 5-5"/></svg>
+      </div>
+
+      <div class="gfb-sm__card" aria-hidden="true">
+        <div class="gfb-sm__head">
+          <span class="gfb-sm__avatar"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <div class="gfb-sm__who">
+            <p class="gfb-sm__title">{{ module.profile_title|escape }}{% if module.private %} <svg class="gfb-sm__lock" viewBox="0 0 24 24" width="12" height="12" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="4" y="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{% endif %}</p>
+            {% if module.profile_role %}<p class="gfb-sm__role">{{ module.profile_role|escape }}</p>{% endif %}
+          </div>
+          {% if module.score %}<p class="gfb-sm__score"><span class="gfb-sm__score-value">{{ module.score|escape }}</span><span class="gfb-sm__score-label">{{ module.score_label|escape }}</span></p>{% endif %}
+          <svg class="gfb-sm__heart" viewBox="0 0 24 24" width="18" height="18" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </div>
+
+        {% if module.skills %}
+          <div class="gfb-sm__skills">
+            <div class="gfb-sm__skills-head"><span>{{ module.skills_label|escape }}</span><span>{{ module.level_label|escape }}</span></div>
+            {% for s in module.skills %}
+              {% if s.skill %}
+                <div class="gfb-sm__skill">
+                  <span class="gfb-sm__chip gfb-sm__chip--{{ s.tone or 'orange' }}">{{ s.skill|escape }}</span>
+                  <span class="gfb-sm__level">{% for n in [1, 2, 3, 4] %}<span{% if n <= s.level|int %} class="is-on"{% endif %}></span>{% endfor %}</span>
+                  {% if s.level_text %}<span class="gfb-sm__chip">{{ s.level_text|escape }}</span>{% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <ul class="gfb-sm__facts">
+          {% if module.location %}<li><svg viewBox="0 0 24 24" width="14" height="14" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>{{ module.location|escape }}{% if module.distance %} · <strong>{{ module.distance|escape }}</strong>{% endif %}</li>{% endif %}
+          {% if module.seeking %}<li><svg viewBox="0 0 24 24" width="14" height="14" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>{{ module.seeking|escape }}</li>{% endif %}
+        </ul>
+
+        <div class="gfb-sm__actions">
+          {% if module.primary_text %}<span class="gfb-sm__btn gfb-sm__btn--dark">{{ module.primary_text|escape }}</span>{% endif %}
+          {% if module.secondary_text %}<span class="gfb-sm__btn gfb-sm__btn--outline">{{ module.secondary_text|escape }}</span>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

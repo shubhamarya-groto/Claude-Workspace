@@ -1,0 +1,35 @@
+{# GFB Features. Eyebrow, heading and body on the left; a two-column grid of 1–8 features on the right,
+   each an icon badge, a title and one line. Every word and icon is a field: see fields.json. #}
+{% set icons = {
+  "megaphone": '<path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+  "user-check": '<path d="m16 11 2 2 4-4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',
+  "send": '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+  "chart": '<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+  "dollar": '<line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+  "circle-check": '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+  "timer": '<line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/>',
+  "map-pin": '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>'
+} %}
+
+<section class="gfb-ftrs gfb-ftrs--{{ module.background or 'white' }}">
+  <div class="gfb-ftrs__inner">
+    <div class="gfb-ftrs__intro">
+      {% if module.eyebrow %}<p class="gfb-ftrs__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
+      {% if module.heading %}<h2 class="gfb-ftrs__heading">{{ module.heading|escape }}</h2>{% endif %}
+      {% if module.body %}<p class="gfb-ftrs__body">{{ module.body|escape }}</p>{% endif %}
+    </div>
+    {% if module.items %}
+      <ul class="gfb-ftrs__grid">
+        {% for f in module.items %}
+          {% if f.title %}
+            <li class="gfb-ftrs__item">
+              <span class="gfb-ftrs__badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ icons[f.icon] or icons["circle-check"] }}</svg></span>
+              <h3 class="gfb-ftrs__title">{{ f.title|escape }}</h3>
+              {% if f.description %}<p class="gfb-ftrs__text">{{ f.description|escape }}</p>{% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,49 @@
+/* GFB Checklist · Figma 1355:7459 (Company · Hi-Fi 1259:8932), in place of Elevate products-and-services-list
+   1200 container: heading + body (5 of 12 columns), ruled list (7 of 12). Rows: 28 icon badge
+   (What You Get's Companies badge: #FDEDDF, orange icon), 16 gap, Inter 14; 1px rule under each row. */
+.gfb-chk {
+  --chk-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --chk-muted: #525C70;
+  --chk-line: #E8EAED;
+  --chk-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
+  --chk-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  color: var(--chk-brand);
+  font-family: var(--chk-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-chk--white { background: #FFFFFF; }
+.gfb-chk--grey { background: #F8F9FA; }
+.gfb-chk, .gfb-chk *, .gfb-chk *::before, .gfb-chk *::after { box-sizing: border-box; }
+
+.gfb-chk .gfb-chk__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 48px;
+  align-items: start;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 112px 24px;
+}
+.gfb-chk .gfb-chk__heading {
+  margin: 0;
+  text-wrap: balance;
+  font-family: var(--chk-font-display);
+  font-size: clamp(32px, 1.6vw + 18px, 44px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  color: var(--chk-brand);
+}
+.gfb-chk .gfb-chk__body { margin: 16px 0 0; font-size: 14px; line-height: 1.6; color: var(--chk-muted); }
+
+.gfb-chk .gfb-chk__list { margin: 0; padding: 0; list-style: none; }
+.gfb-chk .gfb-chk__item { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--chk-line); font-size: 14px; line-height: 1.5; }
+.gfb-chk .gfb-chk__item:first-child { padding-top: 0; }
+.gfb-chk .gfb-chk__badge { display: grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 8px; background: #FDEDDF; color: #F16C0E; }
+
+@media (max-width: 1023px) {
+  .gfb-chk .gfb-chk__inner { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 80px 24px; }
+}
+@media (max-width: 767px) {
+  .gfb-chk .gfb-chk__inner { padding: 64px 16px; }
+}

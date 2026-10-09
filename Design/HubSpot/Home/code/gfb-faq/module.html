@@ -1,6 +1,6 @@
 {# GFB FAQ. Heading + accordion of questions. Built on <details>/<summary>: opens and closes
    with no JavaScript, works with the keyboard and screen readers. Every word is a field. #}
-<section class="gfb-faq">
+<section class="gfb-faq{% if module.background == 'grey' %} gfb-faq--grey{% endif %}">
   <div class="gfb-faq__inner">
     {% if module.heading %}<h2 class="gfb-faq__heading">{{ module.heading|escape }}</h2>{% endif %}
 
