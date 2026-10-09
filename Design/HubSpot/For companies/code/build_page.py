@@ -17,7 +17,7 @@ import jinja2
 HERE = Path(__file__).resolve().parent
 HUBSPOT = HERE.parent.parent                      # Design/HubSpot
 HOME = HUBSPOT / "Home" / "code"
-PHOTO = HUBSPOT.parent / "Assets" / "Testing assets" / "hero-welder-1400x799.jpg"
+PHOTO = HUBSPOT.parent / "Assets" / "Testing assets" / "hero-companies-figma-537x536.jpg"   # Figma 1363:8546
 PORTAL_PATH = "/custom/content-mcp/modules/"
 
 # HubSpot module name -> source folder in this repo
@@ -93,7 +93,7 @@ def build_preview(page, photo_src):
         module = field_defaults(json.loads((src / "fields.json").read_text()))
         module.update(m.get("fields", {}))
         if m["module"] == "gfb_hero_v2":
-            module["photo"] = dict(module.get("photo") or {}, src=photo_src, width=1400, height=799)
+            module["photo"] = dict(module.get("photo") or {}, src=photo_src, width=537, height=536)
         tpl = env.from_string((src / "module.html").read_text())
         body.append(tpl.render(module=module, name=f"module_{i}", request={"path": page["request_path"]}))
         style = (src / "module.css").read_text()
