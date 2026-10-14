@@ -54,3 +54,17 @@ To use it on every page, put it in the page template's header (global) rather th
 ## Logo (14 Oct 2026)
 
 The logo comes from code, so every page gets it without setting a field: the Logo image field if set, else the portal's brand logo (`brand_settings.primaryLogo`, Settings > Branding), else the brand-kit file `FullLogoColored-01.png` in HubSpot Files. Change the brand logo in Settings and every page follows. The text logo is the last fallback.
+
+## Staging and live addresses (14 Oct)
+
+The module code holds one list, **SITE ADDRESSES** (`gfb_pages`, top of `module.html`), pairing each page's live
+address with its staging copy: `/` → `/home-staging`, `/companies` → `/companies-staging`, `/job-seekers` →
+`/job-seekers-staging`, `/about-us` → `/about-us-staging`. The link fields keep the **live** addresses.
+
+- On a staging page (the address being viewed is in the staging column), links to those pages go to the staging
+  copies, so reviewers stay on staging.
+- On any other page, the live site included, links stay as typed. **Nothing needs changing at launch**: publish
+  the pages at their live addresses and the links follow.
+- The nav link for the page being viewed gets the orange underline (`aria-current="page"`), on staging and live.
+- Add a row when a new page gets a staging copy (Login / Sign up later). GFB Top Nav and GFB Footer each carry the
+  list: change both.

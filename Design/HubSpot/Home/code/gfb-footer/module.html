@@ -1,5 +1,20 @@
 {# GFB Footer. Logo + copyright on the left; links and round social buttons on the right.
    Every word and link is a field: see fields.json. Icons are Lucide (stroke), drawn inline. #}
+{# SITE ADDRESSES: the one place that maps each page's live address to its staging address.
+   On a staging page (its address is in the right-hand column) every nav link to a page in this list
+   goes to the staging copy; on any other page (the live site) the links stay as typed in the fields.
+   So nothing needs changing at launch. Add a row here when a new page gets a staging copy
+   (Login / Sign up later). The same list is in GFB Top Nav: keep the two in step. #}
+{% set gfb_pages = [
+  ["/",            "/home-staging"],
+  ["/companies",   "/companies-staging"],
+  ["/job-seekers", "/job-seekers-staging"],
+  ["/about-us",    "/about-us-staging"]
+] %}
+{% set gfb_here = (request.path or "")|lower %}
+{% set gfb_flag = [] %}
+{% for p in gfb_pages %}{% if gfb_here == p[1] %}{% do gfb_flag.append(1) %}{% endif %}{% endfor %}
+{% set gfb_staging = gfb_flag|length > 0 %}
 {% set icons = {
   "instagram": '<rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>',
   "linkedin": '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
@@ -19,7 +34,8 @@
 <footer class="gfb-ftr">
   <div class="gfb-ftr__inner">
     <div class="gfb-ftr__brand">
-      <a class="gfb-ftr__logo" href="{{ (module.brand_link.url.href or '/')|escape_url }}">
+      {% set logo_live = module.brand_link.url.href or '/' %}{% set logo_out = [logo_live] %}{% if gfb_staging %}{% for p in gfb_pages %}{% if logo_live == p[0] %}{% do logo_out.append(p[1]) %}{% endif %}{% endfor %}{% endif %}
+      <a class="gfb-ftr__logo" href="{{ (logo_out|last)|escape_url }}">
         {% if logo_src %}
           <img src="{{ logo_src|escape_url }}" alt="{{ logo_alt|escape_attr }}"
                {% if module.logo_image.width %}width="{{ module.logo_image.width }}"{% endif %}
@@ -37,7 +53,7 @@
               {% set rel = [] %}
               {% if l.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
               {% if l.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
-              <a href="{{ (l.link.url.href or '#')|escape_url }}"{% if l.link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>{{ l.link_text|escape }}</a>
+              {% set live = l.link.url.href or '#' %}{% set out = [live] %}{% if gfb_staging %}{% for p in gfb_pages %}{% if live == p[0] %}{% do out.append(p[1]) %}{% endif %}{% endfor %}{% endif %}<a href="{{ (out|last)|escape_url }}"{% if l.link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>{{ l.link_text|escape }}</a>
             {% endif %}
           {% endfor %}
         </nav>

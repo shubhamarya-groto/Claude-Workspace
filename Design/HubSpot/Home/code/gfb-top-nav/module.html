@@ -1,7 +1,24 @@
 {# GFB Top nav. Logo, menu links, Login and a primary button. On tablets and phones the links move
    into a drawer opened by a Menu button (<details>, no JavaScript). Every word and link is a field. #}
+{# SITE ADDRESSES: the one place that maps each page's live address to its staging address.
+   On a staging page (its address is in the right-hand column) every nav link to a page in this list
+   goes to the staging copy; on any other page (the live site) the links stay as typed in the fields.
+   So nothing needs changing at launch. Add a row here when a new page gets a staging copy
+   (Login / Sign up later). The same list is in GFB Footer: keep the two in step. #}
+{% set gfb_pages = [
+  ["/",            "/home-staging"],
+  ["/companies",   "/companies-staging"],
+  ["/job-seekers", "/job-seekers-staging"],
+  ["/about-us",    "/about-us-staging"]
+] %}
+{% set gfb_here = (request.path or "")|lower %}
+{% set gfb_flag = [] %}
+{% for p in gfb_pages %}{% if gfb_here == p[1] %}{% do gfb_flag.append(1) %}{% endif %}{% endfor %}
+{% set gfb_staging = gfb_flag|length > 0 %}
 {% set user_icon = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' %}
-{% macro gfb_link(l, cls) %}{% set rel = [] %}{% if l.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}{% if l.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}{% set href = l.link.url.href or '#' %}<a class="{{ cls }}" href="{{ href|escape_url }}"{% if request.path and request.path != '/' and request.path in href %} aria-current="page"{% endif %}{% if l.link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>{{ l.link_text|escape }}</a>{% endmacro %}
+{# Resolves a link: on staging, live page addresses become their staging copies (see SITE ADDRESSES).
+   The link is marked as the current page (orange underline) when it points at the page being viewed. #}
+{% macro gfb_link(l, cls, pages, staging, here) %}{% set live = l.link.url.href or '#' %}{% set out = [live] %}{% if staging %}{% for p in pages %}{% if live == p[0] %}{% do out.append(p[1]) %}{% endif %}{% endfor %}{% endif %}{% set href = out|last %}{% set rel = [] %}{% if l.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}{% if l.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}<a class="{{ cls }}" href="{{ href|escape_url }}"{% if here and href != '#' and (here == href|lower or here == live|lower) %} aria-current="page"{% endif %}{% if l.link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>{{ l.link_text|escape }}</a>{% endmacro %}
 {# Logo: the Logo image field if set, else the portal's brand logo (Settings > Branding),
    else the GoFindBuild brand-kit file. The text logo shows only if all three are empty. #}
 {% set logo_src = module.logo_image.src or brand_settings.primaryLogo.src or 'https://47303551.fs1.hubspotusercontent-na1.net/hubfs/47303551/FullLogoColored-01.png' %}
@@ -11,12 +28,13 @@
 <header class="gfb-nav{% if module.sticky %} gfb-nav--sticky{% endif %}">
   <div class="gfb-nav__bar">
     <div class="gfb-nav__left">
-      <a class="gfb-nav__logo" href="{{ (module.brand_link.url.href or '/')|escape_url }}">
+      {% set logo_live = module.brand_link.url.href or '/' %}{% set logo_out = [logo_live] %}{% if gfb_staging %}{% for p in gfb_pages %}{% if logo_live == p[0] %}{% do logo_out.append(p[1]) %}{% endif %}{% endfor %}{% endif %}
+      <a class="gfb-nav__logo" href="{{ (logo_out|last)|escape_url }}">
         {% if logo_src %}<img src="{{ logo_src|escape_url }}" alt="{{ logo_alt|escape_attr }}">{% else %}{{ module.brand_text|escape }}{% endif %}
       </a>
       {% if module.nav_links %}
         <nav class="gfb-nav__links" aria-label="Main">
-          {% for l in module.nav_links %}{% if l.link_text %}{{ gfb_link(l, 'gfb-nav__link') }}{% endif %}{% endfor %}
+          {% for l in module.nav_links %}{% if l.link_text %}{{ gfb_link(l, 'gfb-nav__link', gfb_pages, gfb_staging, gfb_here) }}{% endif %}{% endfor %}
         </nav>
       {% endif %}
     </div>
@@ -37,7 +55,7 @@
         <div class="gfb-nav__drawer">
           {% if module.nav_links %}
             <nav class="gfb-nav__drawer-links" aria-label="Main">
-              {% for l in module.nav_links %}{% if l.link_text %}{{ gfb_link(l, 'gfb-nav__drawer-link') }}{% endif %}{% endfor %}
+              {% for l in module.nav_links %}{% if l.link_text %}{{ gfb_link(l, 'gfb-nav__drawer-link', gfb_pages, gfb_staging, gfb_here) }}{% endif %}{% endfor %}
             </nav>
           {% endif %}
           {% if module.login_text %}
