@@ -46,7 +46,7 @@ Two columns inside a 1200 container (x 120):
   1. **Search bar** (620 × 64): TRADE segment ("Journeyman Electrician"), divider, NEAR segment ("46204 · Indianapolis"), round search button (52 × 52).
   2. **Connector** (297 × 84): vertical line, **match pill** with a live dot ("4 workers match your trade near…"), line, arrow.
   3. **Worker preview card** (460 × 349): private avatar, "Private Profile" with lock, "Journeyman", **96% profile score**, heart; "Looking for / Experience" with two rows (Electrical: Journeyman, Low voltage: Skilled) each with a four-bar level indicator and a level pill; Location row; "Seeking Full-time"; two actions, **Send job** (260 × 42) and **View profile** (138 × 45).
-- This is an **illustration, not a working search.** Build it as one custom module with static content.
+- This is an **illustration, not a working search.** Build it as **three components** (decision 14 Oct): the Search → match wrapper, and the Company page card (worker preview card) inside it. The Job Seeker page uses the same wrapper with its own job post card. See `../03_COMPONENT-COMPARISON_Company-vs-JobSeeker.md`.
 - It fixes the earlier card problems: the trade is consistent (search, chips and card all say electrical), the ZIP is Indianapolis, and the card is the **Private** variant, so no named worker with a headshot.
 
 ### Features, FAQ, Final CTA
@@ -71,11 +71,12 @@ Identical to the homepage: logo and copyright left; legal links and two social b
 ## Build notes for HubSpot
 
 1. **Reuse the GFB Hero module**, adding a company variant (second card replaced by a checks list). Same photo, same cut-out shape, same orange + navy-label button.
-2. **Two new custom modules** (static): **Job Match Card** (shared with the Job Seeker page) and **Search → worker match** (search bar + match pill + worker preview card). The earlier "search bar" and "Job Seeker card" modules are not needed as separate, working components on this page.
-3. Everything else is an Elevate preset with content typed in. Whole sections only, no one-off edits.
-4. Active nav state: underline on **Companies**.
-5. Mobile is CSS on the child theme; the kit has no mobile sections.
-6. Footer legal links can point to the Terms and Privacy pages already in the portal.
+2. **Custom modules** (static): **Job Match Card** (shared with the Job Seeker page, worker mode here), the **Search → match wrapper** (shared), and the **Company page card** (worker preview card). The earlier "search bar" and "Job Seeker card" modules are not needed as separate, working components on this page.
+3. **Spacing is not corrected.** Differences from the Job Seeker page (band 02 gaps 64 vs 32, hero checks offset) are a Figma issue; build to this frame as drawn. See the comparison doc.
+4. Everything else is an Elevate preset with content typed in. Whole sections only, no one-off edits.
+5. Active nav state: underline on **Companies**.
+6. Mobile is CSS on the child theme; the kit has no mobile sections.
+7. Footer legal links can point to the Terms and Privacy pages already in the portal.
 
 ## Held for the publish pass (copy, not structure)
 
