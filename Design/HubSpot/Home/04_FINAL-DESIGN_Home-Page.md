@@ -51,7 +51,7 @@ Container 1200 at x 120, 96px top padding. Heading "What you get". Two cards of 
 All three are Elevate instances or sample sections. The testimonial band still shows stock photo, "Add a testimonial quote #1", "Customer name one" and a slider. Pricing is the Elevate `pricing` preset. FAQ is `faq-v2`.
 
 ### 11 · Footer
-Logo (Source Serif 4 SemiBold) + copyright on the left. On the right: legal links (three text layers) and two social buttons, **Instagram** and **LinkedIn**, 40 × 40 each. The Facebook link from the old site is gone.
+Logo (Source Serif 4 SemiBold) + copyright on the left. On the right: three links (Terms and conditions · Privacy policy · About Us, read from the About Us screenshot, same layers here) and two social buttons, **Instagram** and **LinkedIn**, 40 × 40 each. The Facebook link from the old site is gone.
 
 ## What changed from the earlier plans
 
@@ -76,7 +76,7 @@ Logo (Source Serif 4 SemiBold) + copyright on the left. On the right: legal link
 ## Held for the publish pass (copy, not structure)
 
 - Testimonial band: replace Elevate sample quote, name, role and photos.
-- Footer: two text layers are both labelled "Privacy"; confirm the three legal links.
+- Footer links (Terms and conditions, Privacy policy, About Us): wording and destinations. The two layers named "Privacy" are only layer names (corrected 14 Oct from the About Us screenshot).
 - Pricing numbers and model (I-12).
 - Problem + stats and Final CTA copy (frames not read here).
 - Nav labels (I-14), claims such as "verified", and the 90-second promise.

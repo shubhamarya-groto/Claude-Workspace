@@ -83,7 +83,7 @@ Identical to the homepage: logo and copyright left; legal links and two social b
 - All headlines, subheads, card text, the match pill count ("4 workers…"), and the "Get instant notifications…" line.
 - Claims: "Posting is free", "No placement fee", "You talk to the worker, not an agency", profile score, 96%.
 - Pricing (not on this page), nav labels (I-14), a phone or booking route for Brian (not in the design).
-- Footer: two layers both labelled "Privacy".
+- Footer links (Terms and conditions, Privacy policy, About Us): the two layers named "Privacy" are only layer names (corrected 14 Oct).
 - The hidden testimonial: decide whether a customer quote returns before launch.
 
 ## Not read, check in Figma before building

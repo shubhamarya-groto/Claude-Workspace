@@ -198,8 +198,9 @@ Audit sections B and C (employer dashboard, other tabs) are **all open** and wer
 | `Design/HubSpot/Home/03_COMPONENT-INVENTORY_Live-Demo.md` | 32 modules, 1 custom, global-header bug |
 | `Design/HubSpot/Home/04_FINAL-DESIGN_Home-Page.md` | **Final homepage design** (Figma node `1259:9027`): bands, node IDs, module mapping, what changed from the plans |
 | `Design/HubSpot/Home/code/` | GFB modules (`gfb-top-nav`, `gfb-hero`, `gfb-trust-bar`, `gfb-what-you-get`, `gfb-testimonials`, `gfb-pricing`, `gfb-problem-stats`, `gfb-faq`, `gfb-final-cta`, `gfb-footer`), `templates/gfb-home.html`, `gfb-home-test.html` |
-| `Design/HubSpot/For companies/` | `00_PLAN` (build plan, week plan), `01_CURRENT-PAGE_Teardown` (live `/companies`), `02_FINAL-DESIGN_Company-Page.md` (**final Company design**, Figma node `1259:8932`); `code/` Company page template, its four new modules and a static preview |
-| `Design/HubSpot/For workers/` | Empty (exists, nothing built) |
+| `Design/HubSpot/For companies/` | `00_PLAN` (build plan, week plan), `01_CURRENT-PAGE_Teardown` (live `/companies`), `02_FINAL-DESIGN_Company-Page.md` (**final Company design**, Figma node `1259:8932`); `code/` Company page template, its modules (shared with Job Seeker) and a static preview |
+| `Design/HubSpot/About Us/00_CONTEXT_About-Us-Page.md` | About Us page context and final design (Figma node `1259:9158`, found by pattern, confirm): bands, no custom modules, issues |
+| `Design/HubSpot/For workers/code/` | Job Seeker page: `page.json`, generated template and preview; reuses the Home and Company modules |
 | `Design/Assets/Testing assets/hero-welder-1400x799.jpg` | The only real photo; `In Use/` is empty |
 | `Project Context/` | Brian's brief, 15 Sep notes, Meetings 1/2/3/5, scope, UX review (docx + md) |
 
