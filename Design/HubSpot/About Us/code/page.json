@@ -55,7 +55,71 @@
       }
     },
     {
-      "module": "gfb_alt_rows"
+      "module": "gfb_alt_rows",
+      "fields": {
+        "rows": [
+          {
+            "image": {
+              "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/a856b3cb973e8f1cb05a7b0aa0aa7932c4062e19/Design/Assets/Testing%20assets/about-row-1-unsplash-1600x890.jpg",
+              "alt": "A construction worker in a hard hat working on top of a timber house frame",
+              "width": 1600,
+              "height": 890,
+              "loading": "lazy"
+            },
+            "title": "Twenty years on site",
+            "text": "Brian watched good crews go unfilled while good workers went unfound. The same week, every week, on both sides of the same fence.",
+            "link_text": "Learn More",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "image": {
+              "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/a856b3cb973e8f1cb05a7b0aa0aa7932c4062e19/Design/Assets/Testing%20assets/about-row-2-unsplash-1600x890.jpg",
+              "alt": "A contractor at a desk marking up construction plans",
+              "width": 1600,
+              "height": 890,
+              "loading": "lazy"
+            },
+            "title": "Hiring never got easier",
+            "text": "Job boards returned resumes with no licence check. Agencies took a cut of every hour worked. Small firms had neither the time nor the budget for either.",
+            "link_text": "Learn More",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "image": {
+              "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/a856b3cb973e8f1cb05a7b0aa0aa7932c4062e19/Design/Assets/Testing%20assets/about-row-3-unsplash-1600x890.jpg",
+              "alt": "Two people shaking hands",
+              "width": 1600,
+              "height": 890,
+              "loading": "lazy"
+            },
+            "title": "So we built the connection",
+            "text": "One profile for workers. One post for companies. Nobody in the middle taking a cut of anyone's hours.",
+            "link_text": "Learn More",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
     },
     {
       "module": "gfb_final_cta",

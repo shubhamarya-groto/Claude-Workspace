@@ -38,6 +38,16 @@ Rebuild from `../../For companies/code/`: `python3 build_page.py "../../About Us
 The Company and Job Seeker templates in this repo also gained `.gfb-alt__row` in the reveal list when rebuilt; the
 HubSpot copies were not re-pushed for that (they have no rows, so nothing changes on those pages).
 
+## Row photos (14 Oct)
+
+The staging page uses three free photos from Unsplash (Unsplash License: free for commercial use, no credit
+required), in place of the Figma placeholders: row 1 a worker on a timber frame (`photo-1587582423116-ec07293f0395`),
+row 2 a contractor marking up plans (`photo-1503387762-592deb58ef4e`), row 3 a handshake
+(`photo-1521791136064-7986c2920216`). Cropped 1600 × 890: `Design/Assets/Testing assets/about-row-*-unsplash-1600x890.jpg`,
+linked from GitHub at commit `a856b3c`. The photographer pages could not be opened from this environment, so credits
+were not recorded. They are still stand-ins for real photos of Brian. The HubSpot **template** still has the Figma
+images; only the page was changed.
+
 ## Not built (as the context doc says)
 
 The hidden search bar and "Popular trades" row left in the header layer: not built.
