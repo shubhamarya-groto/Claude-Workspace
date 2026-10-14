@@ -77,5 +77,4 @@
 @media (max-width: 767px) {
   .gfb-wc .gfb-wc__inner { padding: 0 16px 64px; }
   .gfb-wc .gfb-wc__card { padding: 18px; }
-  .gfb-wc .gfb-wc__actions { grid-template-columns: minmax(0, 1fr); }
 }

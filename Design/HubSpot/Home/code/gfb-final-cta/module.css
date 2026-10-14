@@ -133,8 +133,8 @@
   .gfb-cta .gfb-cta__inner { padding: 64px 16px; }
   .gfb-cta--banner .gfb-cta__card { padding: 0; }
   .gfb-cta .gfb-cta__card { padding: 40px 24px; }
-  .gfb-cta .gfb-cta__buttons { flex-direction: column; align-self: stretch; }
-  .gfb-cta .gfb-cta__btn { justify-content: space-between; }
+  .gfb-cta .gfb-cta__buttons { flex-direction: column; align-items: center; }   /* stacked, each hugs its label */
+  .gfb-cta .gfb-cta__btn { max-width: 100%; }
   .gfb-cta .gfb-cta__subhead { font-size: 16px; }
   .gfb-cta .gfb-cta__gear--l, .gfb-cta .gfb-cta__gear--r { display: none; }
 }

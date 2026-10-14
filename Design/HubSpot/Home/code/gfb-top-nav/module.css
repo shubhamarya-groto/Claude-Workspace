@@ -128,7 +128,7 @@
   text-decoration: none;
 }
 .gfb-nav .gfb-nav__drawer-link[aria-current="page"] { color: #BB5B09; }
-.gfb-nav .gfb-nav__cta--drawer { width: 100%; margin-top: 8px; }
+.gfb-nav .gfb-nav__cta--drawer { align-self: flex-start; margin-top: 8px; }   /* hugs its label */
 
 @media (max-width: 1023px) {
   .gfb-nav .gfb-nav__bar { min-height: 80px; padding: 16px 24px; }

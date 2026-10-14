@@ -153,7 +153,7 @@
   text-decoration: none;
 }
 .gfb-nav .gfb-nav__drawer-link[aria-current="page"] { color: #BB5B09; }
-.gfb-nav .gfb-nav__cta--drawer { width: 100%; margin-top: 8px; }
+.gfb-nav .gfb-nav__cta--drawer { align-self: flex-start; margin-top: 8px; }   /* hugs its label */
 
 @media (max-width: 1023px) {
   .gfb-nav .gfb-nav__bar { min-height: 80px; padding: 16px 24px; }
@@ -356,7 +356,7 @@
   .gfb { --gfb-tab: 32px; }
   .gfb .gfb-fork { grid-template-columns: 1fr; }
   .gfb .gfb-checks { padding: 8px 0 0; gap: 16px; }
-  .gfb .gfb-btn { width: 100%; justify-content: space-between; }
+  .gfb .gfb-btn { max-width: 100%; }   /* hug the label, as on tablet and desktop */
   .gfb .gfb-hero__photo { height: 280px; }
 }
 
@@ -680,7 +680,6 @@
 @media (max-width: 767px) {
   .gfb-wc .gfb-wc__inner { padding: 0 16px 64px; }
   .gfb-wc .gfb-wc__card { padding: 18px; }
-  .gfb-wc .gfb-wc__actions { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* GFB Features · Figma 1259:8978 (Company · Hi-Fi 1259:8932), in place of Elevate features
@@ -958,8 +957,8 @@
   .gfb-cta .gfb-cta__inner { padding: 64px 16px; }
   .gfb-cta--banner .gfb-cta__card { padding: 0; }
   .gfb-cta .gfb-cta__card { padding: 40px 24px; }
-  .gfb-cta .gfb-cta__buttons { flex-direction: column; align-self: stretch; }
-  .gfb-cta .gfb-cta__btn { justify-content: space-between; }
+  .gfb-cta .gfb-cta__buttons { flex-direction: column; align-items: center; }   /* stacked, each hugs its label */
+  .gfb-cta .gfb-cta__btn { max-width: 100%; }
   .gfb-cta .gfb-cta__subhead { font-size: 16px; }
   .gfb-cta .gfb-cta__gear--l, .gfb-cta .gfb-cta__gear--r { display: none; }
 }

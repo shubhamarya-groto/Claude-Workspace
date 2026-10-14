@@ -186,6 +186,6 @@
   .gfb { --gfb-tab: 32px; }
   .gfb .gfb-fork { grid-template-columns: 1fr; }
   .gfb .gfb-checks { padding: 8px 0 0; gap: 16px; }
-  .gfb .gfb-btn { width: 100%; justify-content: space-between; }
+  .gfb .gfb-btn { max-width: 100%; }   /* hug the label, as on tablet and desktop */
   .gfb .gfb-hero__photo { height: 280px; }
 }
