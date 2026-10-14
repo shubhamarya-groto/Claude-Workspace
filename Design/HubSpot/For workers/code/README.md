@@ -30,6 +30,20 @@ The modules live in `../../Home/code/` and `../../For companies/code/`. Change t
 Rebuild from `../../For companies/code/`: `python3 build_page.py "../../For workers/code"`. Don't edit the
 template or the preview by hand.
 
+## In HubSpot (14 Oct 2026)
+
+| What | Where |
+|---|---|
+| Template **GFB Job Seekers** | `custom/content-mcp/pages/gfb-job-seekers.html`, template id `224341904975` |
+| Modules | All pushed: Hero (tone), Match Cards (mode, spacing), Checklist and Features (new icons), Search Match (wrapper only, copy offset), and the new **GFB Worker card** and **GFB Job card** (`custom/content-mcp/modules/gfb_worker_card`, `gfb_job_card`) |
+| Staging page | Not created yet: waiting for a go-ahead on the name **GFB Job Seekers (staging)** and slug `/job-seekers-staging` |
+
+The hero photo URL is written into the template (raw GitHub file pinned to commit `ee16f27`), so a page made
+from it has the photo straight away.
+
+The wrapper module keeps its band above the card band (`.dnd-section:has(.gfb-sm)`), so the copy that runs
+beside the card is not covered while the template's reveal animation moves the bands.
+
 ## Hero photo
 
 Figma `1363:8425` (two smiling workers in overalls holding up hard hats), rendered from Figma and cropped to the

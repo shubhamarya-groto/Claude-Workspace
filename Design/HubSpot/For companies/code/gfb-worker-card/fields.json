@@ -1,50 +1,50 @@
 [
  {
   "name": "profile_title",
-  "label": "title",
+  "label": "Title",
   "type": "text",
   "default": "Private Profile"
  },
  {
   "name": "show_lock",
-  "label": "show lock",
+  "label": "Show lock",
   "type": "boolean",
   "display": "toggle",
   "default": true
  },
  {
   "name": "profile_role",
-  "label": "role",
+  "label": "Role",
   "type": "text",
   "default": "Journeyman"
  },
  {
   "name": "score",
-  "label": "profile score",
+  "label": "Profile score",
   "type": "text",
   "default": "96%"
  },
  {
   "name": "score_label",
-  "label": "score label",
+  "label": "Score label",
   "type": "text",
   "default": "Profile score"
  },
  {
   "name": "skills_label",
-  "label": "skills heading",
+  "label": "Skills heading",
   "type": "text",
   "default": "Looking for"
  },
  {
   "name": "level_label",
-  "label": "level heading",
+  "label": "Level heading",
   "type": "text",
   "default": "Experience"
  },
  {
   "name": "skills",
-  "label": "skills",
+  "label": "Skills",
   "type": "group",
   "occurrence": {
    "min": 0,
@@ -129,32 +129,32 @@
  },
  {
   "name": "location",
-  "label": "location",
+  "label": "Location",
   "type": "text",
   "default": "Indianapolis, IN"
  },
  {
   "name": "distance",
-  "label": "distance",
+  "label": "Distance",
   "type": "text",
   "default": "4.1 mi from 46204",
   "help_text": "Shown in orange after the location."
  },
  {
   "name": "seeking",
-  "label": "seeking",
+  "label": "Seeking",
   "type": "text",
   "default": "Seeking Full-time"
  },
  {
   "name": "primary_text",
-  "label": "dark button",
+  "label": "Dark button",
   "type": "text",
   "default": "Send job"
  },
  {
   "name": "secondary_text",
-  "label": "outline button",
+  "label": "Outline button",
   "type": "text",
   "default": "View profile"
  },
