@@ -49,8 +49,8 @@ Search Match also failed to save with a `textarea` heading, so its heading is tw
 
 **14 Oct:** modules updated for the Job Seeker page (see the table above). Search Match lost its card, so
 **GFB Worker card** was inserted on the staging page right after it (module `main-module-10`). The GFB Companies
-template in HubSpot still has the old order without the worker card; `templates/gfb-companies.html` here has it.
-Push it (UPDATE_CUSTOM_TEMPLATE) before making another page from that template.
+template in HubSpot was updated the same day to match `templates/gfb-companies.html` (worker card, settings,
+and the hero photo URL), so a new page made from it comes out complete.
 
 **Staging page:** **GFB Companies (staging)**, slug `/companies-staging`, page id `223986607632`, **unpublished draft**.
 Editor: https://app.hubspot.com/pages/47303551/editor/223986607632
