@@ -46,10 +46,10 @@ beside the card is not covered while the template's reveal animation moves the b
 
 ## Hero photo
 
-Figma `1363:8425` (two smiling workers in overalls holding up hard hats), rendered from Figma and cropped to the
-photo: `Design/Assets/Testing assets/hero-job-seekers-figma-537x536.jpg`. The empty tab corner is filled flat; the
-module's folder-tab shape covers it. Same caveat as the Company page: 537 px wide, hosted from GitHub until the
-original is uploaded to HubSpot Files.
+Figma `1363:8425` (two smiling workers in overalls holding up hard hats). Since 14 Oct the page uses the
+**original source image from Figma**, 1000 × 667: `Design/Assets/Testing assets/hero-job-seekers-figma-1000x667.jpg`,
+linked from GitHub at commit `acd99e6`. The hero crops it to its frame. Upload it to HubSpot Files and pick it in the
+Photo field before publishing (the connector can't upload files).
 
 ## Still open
 

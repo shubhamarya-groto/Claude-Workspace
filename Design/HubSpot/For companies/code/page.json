@@ -6,9 +6,9 @@
   "title": "GoFindBuild Companies Page",
   "request_path": "/companies",
   "photo": {
-    "file": "hero-companies-figma-537x536.jpg",
-    "width": 537,
-    "height": 536,
+    "file": "hero-companies-figma-1125x750.jpg",
+    "width": 1125,
+    "height": 750,
     "figma": "1363:8546"
   },
   "modules": [
@@ -61,10 +61,10 @@
           }
         ],
         "photo": {
-          "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/8489296169caca290c6e5d9deb736b2ab21ea480/Design/Assets/Testing%20assets/hero-companies-figma-537x536.jpg",
-          "alt": "Two construction workers in hard hats reviewing plans",
-          "width": 537,
-          "height": 536,
+          "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/acd99e60949cc2d552f74a477eb8a1b0513fdb6a/Design/Assets/Testing%20assets/hero-companies-figma-1125x750.jpg",
+          "alt": "Two construction professionals in hard hats reviewing plans on a whiteboard",
+          "width": 1125,
+          "height": 750,
           "loading": "eager"
         },
         "glow": true

@@ -60,7 +60,8 @@ Title "Hire skilled trades workers directly | GoFindBuild" and a meta descriptio
 the Logo image field if set, else the portal's brand logo (Settings > Branding), else the brand-kit file
 `FullLogoColored-01.png` in HubSpot Files. The field is left empty on this page so it follows the brand logo.
 
-**Hero photo (set 9 Oct):** the Figma photo (`1363:8546`, two men in hard hats with plans), rendered from Figma
+**Hero photo (14 Oct): now the original source image from Figma, 1125 × 750,**
+`Design/Assets/Testing assets/hero-companies-figma-1125x750.jpg` at commit `acd99e6`. Earlier note, 9 Oct: the Figma photo (`1363:8546`, two men in hard hats with plans), rendered from Figma
 and cropped to the photo: `Design/Assets/Testing assets/hero-companies-figma-537x536.jpg`. The connector can't
 upload to HubSpot Files, so the Photo field points at the file's raw GitHub URL, pinned to commit `8489296`.
 **Before publishing:** upload the original photo to HubSpot Files and pick it in the Photo field instead. It is

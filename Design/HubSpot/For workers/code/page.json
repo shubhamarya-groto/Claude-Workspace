@@ -6,9 +6,9 @@
   "title": "GoFindBuild Job Seekers Page",
   "request_path": "/job-seekers",
   "photo": {
-    "file": "hero-job-seekers-figma-537x536.jpg",
-    "width": 537,
-    "height": 536,
+    "file": "hero-job-seekers-figma-1000x667.jpg",
+    "width": 1000,
+    "height": 667,
     "figma": "1363:8425"
   },
   "modules": [
@@ -61,10 +61,10 @@
           }
         ],
         "photo": {
-          "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/ee16f27308b964fc9cabc8fe41f140205671e536/Design/Assets/Testing%20assets/hero-job-seekers-figma-537x536.jpg",
+          "src": "https://raw.githubusercontent.com/shubhamarya-groto/Claude-Workspace/acd99e60949cc2d552f74a477eb8a1b0513fdb6a/Design/Assets/Testing%20assets/hero-job-seekers-figma-1000x667.jpg",
           "alt": "Two smiling construction workers in overalls holding up their hard hats",
-          "width": 537,
-          "height": 536,
+          "width": 1000,
+          "height": 667,
           "loading": "eager"
         },
         "glow": true,
