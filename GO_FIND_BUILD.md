@@ -191,6 +191,7 @@ Audit sections B and C (employer dashboard, other tabs) are **all open** and wer
 | `Design/Figma/06_ITERATION-2_Section-swaps.md` | 21 sections swapped for kit components, ratings |
 | `Design/Figma/Source files/` | Brian's mockup HTML (bundled JS page), FigJam user flows (.jam/.pdf), old .fig export (20 Jun), dashboard wireframe plugin |
 | `Design/HubSpot/00_BUILD-PLAN_Staging.md` | **Current plan:** build order, shared pieces, page order, mobile, staging QA, what is held for the publish pass |
+| `Design/HubSpot/03_COMPONENT-COMPARISON_Company-vs-JobSeeker.md` | Company vs Job Seeker components, **decisions:** band 05 = 3 components, spacing differences not corrected |
 | `Design/HubSpot/00_ELEVATE-KIT.md` | What Elevate ships; mapping to the Figma kit; button-default answer |
 | `Design/HubSpot/Home/01_R3_HubSpot-Elevate-Mapping.md` | R3 bands → presets, with [Theme]/[Editor]/[CSS]/[Module]/[Copy] tags |
 | `Design/HubSpot/Home/02_SITE_Changes-Needed-Home-Page.md` | Live-demo fix list H-01…H-24 |
