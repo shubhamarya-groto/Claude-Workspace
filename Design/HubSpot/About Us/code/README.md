@@ -26,6 +26,18 @@ The Home, Company and Job Seeker pages are unchanged: the new choices default to
 
 Rebuild from `../../For companies/code/`: `python3 build_page.py "../../About Us/code"`.
 
+## In HubSpot (14 Oct 2026)
+
+| What | Where |
+|---|---|
+| Template **GFB About Us** | `custom/content-mcp/pages/gfb-about-us.html`, template id `224342599979` |
+| GFB Final CTA, GFB Features | Updated with `layout` and `aside` (other pages unchanged: they default to Card / empty) |
+| **GFB Alternating Rows** | Created at `custom/content-mcp/modules/gfb_alt_rows` |
+| Staging page | Not created yet: waiting for a go-ahead on **GFB About Us (staging)**, slug `/about-us-staging` |
+
+The Company and Job Seeker templates in this repo also gained `.gfb-alt__row` in the reveal list when rebuilt; the
+HubSpot copies were not re-pushed for that (they have no rows, so nothing changes on those pages).
+
 ## Not built (as the context doc says)
 
 The hidden search bar and "Popular trades" row left in the header layer: not built.
