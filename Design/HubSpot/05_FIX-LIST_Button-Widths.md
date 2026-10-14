@@ -24,7 +24,7 @@ already does, instead of stacking both full width.
 
 | Component | Buttons | Why it stays |
 |---|---|---|
-| Pricing (`gfb_pricing`, Home) | Start free trial, Continue with Starter, Go Pro | Full width of each plan card at every size, as in the Figma Home pricing cards. Not a phone-only stretch. Change only if you want hug in cards too |
+| Pricing (`gfb_pricing`, Home) | Start free trial, Continue with Starter, Go Pro | Full width of each plan card at every size (phone, tablet and desktop alike), so not a phone-only stretch. Not checked against Figma: confirm the plan cards are meant to have full-width buttons |
 | Job card (`gfb_job_card`, Job Seekers band 05) | Apply now (fills), View (hugs) | Same on all sizes and matches Figma (Apply now 290 wide, View 88). Phone keeps one row |
 | Match cards (`gfb_match_cards`) | Send job / Apply | Hug at every size |
 | Top nav bar | Get Started | Hug; hidden on phone (shown in the drawer, see #4) |
