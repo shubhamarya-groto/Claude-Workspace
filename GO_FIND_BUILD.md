@@ -199,6 +199,7 @@ Audit sections B and C (employer dashboard, other tabs) are **all open** and wer
 | `Design/HubSpot/Home/04_FINAL-DESIGN_Home-Page.md` | **Final homepage design** (Figma node `1259:9027`): bands, node IDs, module mapping, what changed from the plans |
 | `Design/HubSpot/Home/code/` | `gfb-home-test.html` page template; `gbf-module/` GFB Hero module (`module.html`, `module.css`) |
 | `Design/HubSpot/For companies/` | `00_PLAN` (build plan, week plan), `01_CURRENT-PAGE_Teardown` (live `/companies`), `02_FINAL-DESIGN_Company-Page.md` (**final Company design**, Figma node `1259:8932`) |
+| `Design/HubSpot/About Us/00_CONTEXT_About-Us-Page.md` | About Us page context and final design (Figma node `1259:9158`, found by pattern, confirm): bands, no custom modules, issues |
 | `Design/HubSpot/For workers/` | Empty (exists, nothing built) |
 | `Design/Assets/Testing assets/hero-welder-1400x799.jpg` | The only real photo; `In Use/` is empty |
 | `Project Context/` | Brian's brief, 15 Sep notes, Meetings 1/2/3/5, scope, UX review (docx + md) |
