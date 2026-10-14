@@ -33,7 +33,7 @@ Rebuild from `../../For companies/code/`: `python3 build_page.py "../../About Us
 | Template **GFB About Us** | `custom/content-mcp/pages/gfb-about-us.html`, template id `224342599979` |
 | GFB Final CTA, GFB Features | Updated with `layout` and `aside` (other pages unchanged: they default to Card / empty) |
 | **GFB Alternating Rows** | Created at `custom/content-mcp/modules/gfb_alt_rows` |
-| Staging page | **GFB About Us (staging)**, `/about-us-staging`, page id `224339429033`, **unpublished draft**. Editor: https://app.hubspot.com/pages/47303551/editor/224339429033 |
+| Staging page | **GFB About Us (staging)**, `/about-us-staging`, page id `224339429033`, **published 14 Oct** (https://47303551.hs-sites.com/about-us-staging). Editor: https://app.hubspot.com/pages/47303551/editor/224339429033 |
 
 The Company and Job Seeker templates in this repo also gained `.gfb-alt__row` in the reveal list when rebuilt; the
 HubSpot copies were not re-pushed for that (they have no rows, so nothing changes on those pages).

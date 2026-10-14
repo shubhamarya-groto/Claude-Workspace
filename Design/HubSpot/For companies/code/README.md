@@ -53,7 +53,7 @@ template in HubSpot was updated the same day to match `templates/gfb-companies.h
 and the hero photo URL), so a new page made from it comes out complete. Updated again the same day to the
 Figma original photo (commit `acd99e6`).
 
-**Staging page:** **GFB Companies (staging)**, slug `/companies-staging`, page id `223986607632`, **unpublished draft**.
+**Staging page:** **GFB Companies (staging)**, slug `/companies-staging`, page id `223986607632`, **published 14 Oct** (https://47303551.hs-sites.com/companies-staging).
 Editor: https://app.hubspot.com/pages/47303551/editor/223986607632
 Title "Hire skilled trades workers directly | GoFindBuild" and a meta description are set.
 

@@ -36,7 +36,7 @@ template or the preview by hand.
 |---|---|
 | Template **GFB Job Seekers** | `custom/content-mcp/pages/gfb-job-seekers.html`, template id `224341904975` |
 | Modules | All pushed: Hero (tone), Match Cards (mode, spacing), Checklist and Features (new icons), Search Match (wrapper only, copy offset), and the new **GFB Worker card** and **GFB Job card** (`custom/content-mcp/modules/gfb_worker_card`, `gfb_job_card`) |
-| Staging page | **GFB Job Seekers (staging)**, `/job-seekers-staging`, page id `224337738564`, **unpublished draft**. Editor: https://app.hubspot.com/pages/47303551/editor/224337738564 . Title "Local construction jobs with pay up front \| GoFindBuild" and a meta description are set |
+| Staging page | **GFB Job Seekers (staging)**, `/job-seekers-staging`, page id `224337738564`, **published** (https://47303551.hs-sites.com/job-seekers-staging). Editor: https://app.hubspot.com/pages/47303551/editor/224337738564 . Title "Local construction jobs with pay up front \| GoFindBuild" and a meta description are set |
 
 The hero photo URL is written into the template (the Figma original, raw GitHub file pinned to commit
 `acd99e6`, template updated 14 Oct), so a page made from it has the photo straight away.
