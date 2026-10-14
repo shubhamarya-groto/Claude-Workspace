@@ -38,8 +38,8 @@ template or the preview by hand.
 | Modules | All pushed: Hero (tone), Match Cards (mode, spacing), Checklist and Features (new icons), Search Match (wrapper only, copy offset), and the new **GFB Worker card** and **GFB Job card** (`custom/content-mcp/modules/gfb_worker_card`, `gfb_job_card`) |
 | Staging page | **GFB Job Seekers (staging)**, `/job-seekers-staging`, page id `224337738564`, **unpublished draft**. Editor: https://app.hubspot.com/pages/47303551/editor/224337738564 . Title "Local construction jobs with pay up front \| GoFindBuild" and a meta description are set |
 
-The hero photo URL is written into the template (raw GitHub file pinned to commit `ee16f27`), so a page made
-from it has the photo straight away.
+The hero photo URL is written into the template (the Figma original, raw GitHub file pinned to commit
+`acd99e6`, template updated 14 Oct), so a page made from it has the photo straight away.
 
 The wrapper module keeps its band above the card band (`.dnd-section:has(.gfb-sm)`), so the copy that runs
 beside the card is not covered while the template's reveal animation moves the bands.
