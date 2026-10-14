@@ -1,0 +1,34 @@
+{# GFB Alternating rows. 1–6 rows of image and text, the image switching sides each row, each with a
+   text link. Every word, image and link is a field: see fields.json. #}
+{% set arrow = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>' %}
+{% set first_right = module.first_image == 'right' %}
+
+<section class="gfb-alt gfb-alt--{{ module.background or 'white' }}">
+  <div class="gfb-alt__inner">
+    {% for r in module.rows %}
+      {% set flip = (loop.index0 is odd) != first_right %}
+      <div class="gfb-alt__row{% if flip %} gfb-alt__row--flip{% endif %}">
+        {% if r.image.src %}
+          <div class="gfb-alt__media">
+            <img class="gfb-alt__img" src="{{ r.image.src|escape_url }}" alt="{{ r.image.alt|escape_attr }}"
+                 {% if r.image.width %}width="{{ r.image.width|escape_attr }}"{% endif %}
+                 {% if r.image.height %}height="{{ r.image.height|escape_attr }}"{% endif %}
+                 loading="lazy">
+          </div>
+        {% endif %}
+        <div class="gfb-alt__text">
+          {% if r.title %}<h2 class="gfb-alt__title">{{ r.title|escape }}</h2>{% endif %}
+          {% if r.text %}<p class="gfb-alt__body">{{ r.text|escape }}</p>{% endif %}
+          {% if r.link_text %}
+            {% set rel = [] %}
+            {% if r.link.no_follow %}{% do rel.append("nofollow") %}{% endif %}
+            {% if r.link.open_in_new_tab %}{% do rel.append("noopener") %}{% endif %}
+            <a class="gfb-alt__link" href="{{ (r.link.url.href or '#')|escape_url }}"{% if r.link.open_in_new_tab %} target="_blank"{% endif %}{% if rel %} rel="{{ rel|join(' ') }}"{% endif %}>
+              {{ r.link_text|escape }}{% if r.title %}<span class="gfb-alt__sr">: {{ r.title|escape }}</span>{% endif %}{{ arrow }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

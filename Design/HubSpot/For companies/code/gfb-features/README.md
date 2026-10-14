@@ -25,3 +25,9 @@ One column of features on phones.
 | `intro` | Text | Tell us what you need and the matches come to you. |
 | `items` | Repeater, 1 to 8 (`icon`, `title`, `description`) |  |
 | `background` | Choice: White / Light grey | white |
+
+## Split layout (14 Oct, About Us)
+
+Remove all features and fill `aside` (Text on the right): the band becomes eyebrow and heading on the left, a
+paragraph on the right, two equal columns, 96px above and below (Figma `1259:9189`). `items` now allows 0. The
+Company and Job Seeker pages keep their features and are unchanged.

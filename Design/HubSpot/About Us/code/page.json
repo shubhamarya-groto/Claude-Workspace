@@ -1,0 +1,97 @@
+{
+  "_about": "About Us page (Figma 1259:9158): the modules in Figma order, with the field values that differ from each module's defaults. Built by ../../For companies/code/build_page.py into templates/gfb-about-us.html and preview/gfb-about-us-preview.html. Context: ../00_CONTEXT_About-Us-Page.md.",
+  "label": "GFB About Us",
+  "dnd_label": "About Us page",
+  "slug": "gfb-about-us",
+  "title": "GoFindBuild About Us Page",
+  "request_path": "/about-us",
+  "modules": [
+    {
+      "module": "gfb_top_nav"
+    },
+    {
+      "module": "gfb_final_cta",
+      "fields": {
+        "layout": "banner",
+        "heading": "The connection between them is broken.",
+        "subhead": "The workers are out there. The opportunities are out there. GoFindBuild was built by a 20 year construction veteran to connect them directly, with no recruiter in the middle.",
+        "buttons": [
+          {
+            "button_text": "Post a job",
+            "style": "primary",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": "https://app.gofindbuild.com/signup"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "button_text": "Find work",
+            "style": "dark",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": "https://app.gofindbuild.com/signup"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ],
+        "show_gears": false
+      }
+    },
+    {
+      "module": "gfb_features",
+      "fields": {
+        "eyebrow": "About us",
+        "heading": "Built by someone who has done the work",
+        "intro": "",
+        "items": [],
+        "aside": "Brian spent twenty years in construction before writing a line of this. GoFindBuild is built in Indianapolis and works across central Indiana, for the firms and the trades that never found each other on a job board."
+      }
+    },
+    {
+      "module": "gfb_alt_rows"
+    },
+    {
+      "module": "gfb_final_cta",
+      "fields": {
+        "heading": "Find the people you need. Find the opportunity you deserve.",
+        "subhead": "Post a job, or build a free profile. Both take minutes.",
+        "buttons": [
+          {
+            "button_text": "Post a job",
+            "style": "primary",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": "https://app.gofindbuild.com/signup"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "button_text": "Find work",
+            "style": "dark",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": "https://app.gofindbuild.com/signup"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "module": "gfb_footer"
+    }
+  ]
+}

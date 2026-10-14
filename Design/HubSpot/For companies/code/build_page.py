@@ -9,6 +9,7 @@ template name, hero photo). The script writes, inside that folder:
 
 Run:  python3 build_page.py                          Company page (this folder)
       python3 build_page.py "../../For workers/code" Job Seeker page
+      python3 build_page.py "../../About Us/code"    About Us page
       add --embed to embed the hero photo, so the preview file works on its own
 """
 import base64, html, json, re, sys
@@ -34,6 +35,7 @@ SOURCES = {
     "gfb_search_match": HERE / "gfb-search-match",
     "gfb_worker_card": HERE / "gfb-worker-card",
     "gfb_job_card": HERE / "gfb-job-card",
+    "gfb_alt_rows": HUBSPOT / "About Us" / "code" / "gfb-alt-rows",
     "gfb_features": HERE / "gfb-features",
 }
 
@@ -96,7 +98,7 @@ def build_preview(page, photo_src, photo_size):
         src = SOURCES[m["module"]]
         module = field_defaults(json.loads((src / "fields.json").read_text()))
         module.update(m.get("fields", {}))
-        if m["module"] == "gfb_hero_v2":
+        if m["module"] == "gfb_hero_v2" and photo_src:
             module["photo"] = dict(module.get("photo") or {}, src=photo_src, width=photo_size[0], height=photo_size[1])
         tpl = env.from_string((src / "module.html").read_text())
         body.append(tpl.render(module=module, name=f"module_{i}", request={"path": page["request_path"]}))
@@ -120,17 +122,20 @@ def main():
     folder = (HERE / args[0]).resolve() if args else HERE
     page = json.loads((folder / "page.json").read_text())
     slug = page["slug"]
-    photo = ASSETS / page["photo"]["file"]
+    photo = ASSETS / page["photo"]["file"] if page.get("photo") else None   # About Us has no hero photo
     template = folder / "templates" / f"{slug}.html"
     template.parent.mkdir(exist_ok=True)
     template.write_text(build_template(page))
-    if "--embed" in sys.argv:
+    if not photo:
+        photo_src = None
+    elif "--embed" in sys.argv:
         photo_src = "data:image/jpeg;base64," + base64.b64encode(photo.read_bytes()).decode()
     else:
         photo_src = "../../../../Assets/Testing%20assets/" + photo.name.replace(" ", "%20")
     out = folder / "preview" / f"{slug}-preview.html"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(build_preview(page, photo_src, (page["photo"]["width"], page["photo"]["height"])))
+    size = (page["photo"]["width"], page["photo"]["height"]) if photo else None
+    out.write_text(build_preview(page, photo_src, size))
     print("wrote", template.relative_to(HUBSPOT), "and", out.relative_to(HUBSPOT))
 
 

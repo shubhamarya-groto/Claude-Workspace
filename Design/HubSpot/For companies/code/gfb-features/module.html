@@ -12,14 +12,17 @@
   "id-card": '<path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/>'
 } %}
 
-<section class="gfb-ftrs gfb-ftrs--{{ module.background or 'white' }}">
+{% set split = module.aside and not module.items %}
+<section class="gfb-ftrs gfb-ftrs--{{ module.background or 'white' }}{% if split %} gfb-ftrs--split{% endif %}">
   <div class="gfb-ftrs__inner">
     <div class="gfb-ftrs__intro">
       {% if module.eyebrow %}<p class="gfb-ftrs__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
       {% if module.heading %}<h2 class="gfb-ftrs__heading">{{ module.heading|escape }}</h2>{% endif %}
       {% if module.intro %}<p class="gfb-ftrs__body">{{ module.intro|escape }}</p>{% endif %}
     </div>
-    {% if module.items %}
+    {% if split %}
+      <p class="gfb-ftrs__aside">{{ module.aside|escape }}</p>
+    {% elif module.items %}
       <ul class="gfb-ftrs__grid">
         {% for f in module.items %}
           {% if f.title %}

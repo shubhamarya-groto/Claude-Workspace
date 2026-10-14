@@ -22,7 +22,7 @@
   "label": "Features",
   "type": "group",
   "occurrence": {
-   "min": 1,
+   "min": 0,
    "max": 8,
    "default": 6,
    "sorting_label_field": "items.title"
@@ -118,6 +118,13 @@
     "description": "One line of supporting detail."
    }
   ]
+ },
+ {
+  "name": "aside",
+  "label": "Text on the right",
+  "type": "text",
+  "help_text": "Optional. Shown in place of the features when there are none: eyebrow and heading on the left, this paragraph on the right (About Us page).",
+  "default": ""
  },
  {
   "name": "background",

@@ -40,10 +40,17 @@
 .gfb-ftrs .gfb-ftrs__title { margin: 16px 0 8px; font-family: var(--ftrs-font-body); font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--ftrs-brand); }
 .gfb-ftrs .gfb-ftrs__text { margin: 0; font-size: 13px; line-height: 1.5; color: var(--ftrs-muted); }
 
+/* Split layout (About Us "About us" band, Figma 1259:9189): no feature grid; eyebrow and heading on the
+   left, a paragraph on the right, two equal columns 48 apart, 96 above and below. */
+.gfb-ftrs--split .gfb-ftrs__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 96px 24px; }
+.gfb-ftrs--split .gfb-ftrs__heading { font-size: clamp(32px, 2.2vw + 16px, 48px); line-height: 1.1; }
+.gfb-ftrs .gfb-ftrs__aside { margin: 0; padding-top: 4px; font-size: 18px; line-height: 1.6; color: var(--ftrs-muted); }
+
 @media (max-width: 1023px) {
-  .gfb-ftrs .gfb-ftrs__inner { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 80px 24px; }
+  .gfb-ftrs .gfb-ftrs__inner, .gfb-ftrs--split .gfb-ftrs__inner { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 80px 24px; }
 }
 @media (max-width: 767px) {
-  .gfb-ftrs .gfb-ftrs__inner { padding: 64px 16px; }
+  .gfb-ftrs .gfb-ftrs__inner, .gfb-ftrs--split .gfb-ftrs__inner { padding: 64px 16px; }
+  .gfb-ftrs .gfb-ftrs__aside { font-size: 16px; }
   .gfb-ftrs .gfb-ftrs__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
 }

@@ -1,11 +1,15 @@
 {# GFB Final CTA. Frosted card with heading, subhead and 0–3 buttons on a soft gradient band
-   with four faint gear outlines. Every word and link is a field: see fields.json. #}
+   with four faint gear outlines. Every word and link is a field: see fields.json.
+   Layout "banner" (About Us header): the same heading, subhead and buttons as a page header,
+   no card, no gradient or gears, a soft blue glow behind, and the heading is the page's H1. #}
+{% set banner = module.layout == 'banner' %}
+{% set htag = 'h1' if banner else 'h2' %}
 {% set gear = '<svg viewBox="-55 -55 110 110" aria-hidden="true" focusable="false"><path d="M39.1 -8.3 L49.6 -6.3 L49.6 6.3 L39.1 8.3 L35.3 18.8 L42.0 27.1 L34.0 36.7 L24.6 31.5 L15.0 37.1 L14.8 47.8 L2.4 49.9 L-1.4 40.0 L-12.4 38.0 L-19.4 46.1 L-30.2 39.8 L-26.8 29.7 L-33.9 21.2 L-44.5 22.9 L-48.8 11.1 L-39.6 5.6 L-39.6 -5.6 L-48.8 -11.1 L-44.5 -22.9 L-33.9 -21.2 L-26.8 -29.7 L-30.2 -39.8 L-19.4 -46.1 L-12.4 -38.0 L-1.4 -40.0 L2.4 -49.9 L14.8 -47.8 L15.0 -37.1 L24.6 -31.5 L34.0 -36.7 L42.0 -27.1 L35.3 -18.8 Z M19 0 A19 19 0 1 0 -19 0 A19 19 0 1 0 19 0 Z"/></svg>' %}
 {% set arrow = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>' %}
 
-<section class="gfb-cta{% if module.background_image.src %} gfb-cta--photo{% endif %}"
-  {% if module.background_image.src %}style="--cta-bg: url('{{ module.background_image.src|escape_url }}')"{% endif %}>
-  {% if module.show_gears %}
+<section class="gfb-cta{% if banner %} gfb-cta--banner{% elif module.background_image.src %} gfb-cta--photo{% endif %}"
+  {% if module.background_image.src and not banner %}style="--cta-bg: url('{{ module.background_image.src|escape_url }}')"{% endif %}>
+  {% if module.show_gears and not banner %}
     <span class="gfb-cta__gear gfb-cta__gear--tl">{{ gear }}</span>
     <span class="gfb-cta__gear gfb-cta__gear--l">{{ gear }}</span>
     <span class="gfb-cta__gear gfb-cta__gear--br">{{ gear }}</span>
@@ -14,7 +18,7 @@
 
   <div class="gfb-cta__inner">
     <div class="gfb-cta__card">
-      {% if module.heading %}<h2 class="gfb-cta__heading">{{ module.heading|escape }}</h2>{% endif %}
+      {% if module.heading %}<{{ htag }} class="gfb-cta__heading">{{ module.heading|escape }}</{{ htag }}>{% endif %}
       {% if module.subhead %}<p class="gfb-cta__subhead">{{ module.subhead|escape }}</p>{% endif %}
       {% if module.buttons %}
         <div class="gfb-cta__buttons">

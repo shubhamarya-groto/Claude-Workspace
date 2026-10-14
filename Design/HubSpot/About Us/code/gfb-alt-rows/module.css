@@ -1,0 +1,51 @@
+/* GFB Alternating rows · Figma 1259:9190 (About Us · Hi-Fi 1259:9158)
+   1200 container, rows 320 tall: a 576 × 320 image and 576 of text, 48 apart, 64 between rows,
+   96 above and below. Text sits centred against the image. */
+.gfb-alt {
+  --alt-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --alt-muted: #525C70;
+  --alt-font-display: var(--hsElevate--h2__font, "Instrument Sans"), system-ui, sans-serif;
+  --alt-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  color: var(--alt-brand);
+  font-family: var(--alt-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-alt--white { background: #FFFFFF; }
+.gfb-alt--grey { background: #F8F9FA; }
+.gfb-alt, .gfb-alt *, .gfb-alt *::before, .gfb-alt *::after { box-sizing: border-box; }
+
+.gfb-alt .gfb-alt__inner { display: grid; gap: 64px; max-width: 1248px; margin: 0 auto; padding: 96px 24px; }
+.gfb-alt .gfb-alt__row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.gfb-alt .gfb-alt__row--flip .gfb-alt__media { order: 2; }
+.gfb-alt .gfb-alt__media { aspect-ratio: 576 / 320; overflow: hidden; border-radius: 16px; background: #E8EAED; }
+.gfb-alt .gfb-alt__img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.gfb-alt .gfb-alt__title { margin: 0; font-family: var(--alt-font-display); font-size: 24px; font-weight: 600; line-height: 1.3; letter-spacing: -0.2px; color: var(--alt-brand); }
+.gfb-alt .gfb-alt__body { margin: 16px 0 0; max-width: 60ch; font-size: 16px; line-height: 1.6; color: var(--alt-muted); }
+.gfb-alt .gfb-alt__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--alt-brand);
+  text-decoration: none;
+}
+.gfb-alt .gfb-alt__link svg { transition: transform 0.15s ease; }
+.gfb-alt .gfb-alt__link:hover svg, .gfb-alt .gfb-alt__link:focus-visible svg { transform: translateX(3px); }
+.gfb-alt .gfb-alt__link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.gfb-alt .gfb-alt__link:focus-visible { outline: 3px solid var(--alt-brand); outline-offset: 4px; border-radius: 4px; }
+.gfb-alt .gfb-alt__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Tablet and phone: one column, image above the text on every row */
+@media (max-width: 1023px) {
+  .gfb-alt .gfb-alt__inner { gap: 56px; padding: 80px 24px; }
+  .gfb-alt .gfb-alt__row { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .gfb-alt .gfb-alt__row--flip .gfb-alt__media { order: 0; }
+}
+@media (max-width: 767px) {
+  .gfb-alt .gfb-alt__inner { gap: 48px; padding: 64px 16px; }
+  .gfb-alt .gfb-alt__title { font-size: 22px; }
+  .gfb-alt .gfb-alt__link { margin-top: 20px; }
+}
