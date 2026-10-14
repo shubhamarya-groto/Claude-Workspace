@@ -50,3 +50,7 @@ Figma has no phone frames, so this follows the build plan's mobile notes ("drawe
 ## Note
 
 To use it on every page, put it in the page template's header (global) rather than on each page.
+
+## Logo (14 Oct 2026)
+
+The logo comes from code, so every page gets it without setting a field: the Logo image field if set, else the portal's brand logo (`brand_settings.primaryLogo`, Settings > Branding), else the brand-kit file `FullLogoColored-01.png` in HubSpot Files. Change the brand logo in Settings and every page follows. The text logo is the last fallback.

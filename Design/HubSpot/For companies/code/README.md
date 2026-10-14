@@ -46,9 +46,9 @@ Search Match also failed to save with a `textarea` heading, so its heading is tw
 Editor: https://app.hubspot.com/pages/47303551/editor/223986607632
 Title "Hire skilled trades workers directly | GoFindBuild" and a meta description are set.
 
-**Logo (set 9 Oct):** Top Nav and Footer use the portal brand kit's primary logo,
-`https://47303551.fs1.hubspotusercontent-na1.net/hubfs/47303551/FullLogoColored-01.png` (in HubSpot Files), alt "GoFindBuild".
-Set on this page only; the module defaults still show the text logo, so GFB Home (staging) is unchanged.
+**Logo (14 Oct):** comes from the GFB Top Nav and GFB Footer code, so every page using them gets it:
+the Logo image field if set, else the portal's brand logo (Settings > Branding), else the brand-kit file
+`FullLogoColored-01.png` in HubSpot Files. The field is left empty on this page so it follows the brand logo.
 
 **Hero photo (set 9 Oct):** the Figma photo (`1363:8546`, two men in hard hats with plans), rendered from Figma
 and cropped to the photo: `Design/Assets/Testing assets/hero-companies-figma-537x536.jpg`. The connector can't

@@ -50,3 +50,7 @@ the bottom line. Logo `#16243D`, 16 above the copyright (Inter 14 / 1.5 `#525C70
 - Tablet and phone: brand, links and socials stack, left aligned.
 - In Figma the About Us layer is named "Privacy" (the "two Privacy layers" note in `04`); its text is About Us.
 - To use it on every page, place it in the site footer (global partial) rather than on each page.
+
+## Logo (14 Oct 2026)
+
+The logo comes from code, so every page gets it without setting a field: the Logo image field if set, else the portal's brand logo (`brand_settings.primaryLogo`, Settings > Branding), else the brand-kit file `FullLogoColored-01.png` in HubSpot Files. Change the brand logo in Settings and every page follows. The text logo is the last fallback.

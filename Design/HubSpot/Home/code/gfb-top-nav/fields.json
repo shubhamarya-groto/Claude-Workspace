@@ -3,14 +3,14 @@
   "name": "brand_text",
   "label": "Logo text",
   "type": "text",
-  "help_text": "Shown when no logo image is set.",
+  "help_text": "Shown only when no logo image is available.",
   "default": "GoFindBuild"
  },
  {
   "name": "logo_image",
   "label": "Logo image",
   "type": "image",
-  "help_text": "Optional. Replaces the logo text.",
+  "help_text": "Optional. Empty uses the portal's brand logo (Settings > Branding), then the GoFindBuild logo file.",
   "resizable": true,
   "default": {
    "src": "",
