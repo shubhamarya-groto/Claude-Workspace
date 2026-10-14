@@ -65,6 +65,10 @@
      [
       "map-pin",
       "Map pin"
+     ],
+     [
+      "id-card",
+      "ID card"
      ]
     ],
     "default": "circle-check"

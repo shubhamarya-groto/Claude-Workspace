@@ -1,0 +1,43 @@
+{# GFB Worker card (band 05, Company page). A Private worker profile as a company sees it. Place it right after
+   GFB Search → match: it sits under the connector, in the wrapper's right-hand column. A static picture: the
+   wrapper's visual_label describes it, so it is hidden from screen readers and its buttons are not links. #}
+<section class="gfb-wc gfb-wc--{{ module.background or 'grey' }}">
+  <div class="gfb-wc__inner">
+    <div class="gfb-wc__card" aria-hidden="true">
+      <div class="gfb-wc__head">
+        <span class="gfb-wc__avatar"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+        <div class="gfb-wc__who">
+          <p class="gfb-wc__title">{{ module.profile_title|escape }}{% if module.show_lock %} <svg class="gfb-wc__lock" viewBox="0 0 24 24" width="12" height="12" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="4" y="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{% endif %}</p>
+          {% if module.profile_role %}<p class="gfb-wc__role">{{ module.profile_role|escape }}</p>{% endif %}
+        </div>
+        {% if module.score %}<p class="gfb-wc__score"><span class="gfb-wc__score-value">{{ module.score|escape }}</span><span class="gfb-wc__score-label">{{ module.score_label|escape }}</span></p>{% endif %}
+        <svg class="gfb-wc__heart" viewBox="0 0 24 24" width="18" height="18" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      </div>
+
+      {% if module.skills %}
+        <div class="gfb-wc__skills">
+          <div class="gfb-wc__skills-head"><span>{{ module.skills_label|escape }}</span><span>{{ module.level_label|escape }}</span></div>
+          {% for s in module.skills %}
+            {% if s.skill %}
+              <div class="gfb-wc__skill">
+                <span class="gfb-wc__chip gfb-wc__chip--{{ s.tone or 'orange' }}">{{ s.skill|escape }}</span>
+                <span class="gfb-wc__level">{% for n in [1, 2, 3, 4] %}<span{% if n <= s.bars|int %} class="is-on"{% endif %}></span>{% endfor %}</span>
+                {% if s.level_text %}<span class="gfb-wc__chip">{{ s.level_text|escape }}</span>{% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <ul class="gfb-wc__facts">
+        {% if module.location %}<li><svg viewBox="0 0 24 24" width="14" height="14" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>{{ module.location|escape }}{% if module.distance %} · <strong>{{ module.distance|escape }}</strong>{% endif %}</li>{% endif %}
+        {% if module.seeking %}<li><svg viewBox="0 0 24 24" width="14" height="14" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>{{ module.seeking|escape }}</li>{% endif %}
+      </ul>
+
+      <div class="gfb-wc__actions">
+        {% if module.primary_text %}<span class="gfb-wc__btn gfb-wc__btn--dark">{{ module.primary_text|escape }}</span>{% endif %}
+        {% if module.secondary_text %}<span class="gfb-wc__btn gfb-wc__btn--outline">{{ module.secondary_text|escape }}</span>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>

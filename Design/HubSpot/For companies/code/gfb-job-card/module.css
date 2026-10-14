@@ -1,0 +1,66 @@
+/* GFB Job card · band 05 card, Job Seeker page (Figma 1354:9913, 440 × 294).
+   Goes right after GFB Search → match and uses its grid (1200 container, 508 | 620, gap 72), so the card
+   sits under the connector in the right-hand column. A static picture: the buttons are not links. */
+.gfb-jc {
+  --jc-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --jc-muted: #525C70;
+  --jc-line: #E8EAED;
+  --jc-orange: #F16C0E;
+  --jc-orange-text: #B54C00;             /* orange as text on white, 5.3:1 */
+  --jc-shadow: 0 12px 32px rgba(22, 36, 61, 0.08);
+  --jc-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  color: var(--jc-brand);
+  font-family: var(--jc-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-jc--grey { background: #F8F9FA; }
+.gfb-jc--white { background: #FFFFFF; }
+.gfb-jc, .gfb-jc *, .gfb-jc *::before, .gfb-jc *::after { box-sizing: border-box; }
+
+.gfb-jc .gfb-jc__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 508fr) minmax(0, 620fr);
+  column-gap: 72px;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+.gfb-jc .gfb-jc__card {
+  grid-column: 2;
+  justify-self: center;
+  width: min(440px, 100%);
+  padding: 24px;
+  background: #FFFFFF;
+  border: 1px solid var(--jc-line);
+  border-radius: 16px;
+  box-shadow: var(--jc-shadow);
+  font-size: 13px;
+}
+.gfb-jc .gfb-jc__head { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; border-bottom: 1px solid var(--jc-line); }
+.gfb-jc .gfb-jc__logo { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; background: #E6F4FB; color: #0B5A80; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; }
+.gfb-jc .gfb-jc__who { flex: 1; min-width: 0; }
+.gfb-jc .gfb-jc__title { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.3; }
+.gfb-jc .gfb-jc__company { margin: 2px 0 0; color: var(--jc-muted); }
+.gfb-jc .gfb-jc__heart { flex: none; align-self: flex-start; margin-top: 6px; color: var(--jc-muted); }
+.gfb-jc .gfb-jc__heart.is-saved { color: var(--jc-orange); }
+
+.gfb-jc .gfb-jc__pay { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--jc-line); }
+.gfb-jc .gfb-jc__pay-value { font-size: 24px; font-weight: 700; line-height: 1.2; letter-spacing: -0.3px; }
+.gfb-jc .gfb-jc__badge { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px; background: var(--jc-orange); color: #FFFFFF; font-size: 12px; font-weight: 600; white-space: nowrap; }
+
+.gfb-jc .gfb-jc__facts { display: grid; gap: 8px; margin: 0; padding: 16px 0; list-style: none; color: var(--jc-muted); }
+.gfb-jc .gfb-jc__facts li { display: flex; align-items: center; gap: 8px; }
+.gfb-jc .gfb-jc__facts strong { font-weight: 600; color: var(--jc-orange-text); }
+.gfb-jc .gfb-jc__actions { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+.gfb-jc .gfb-jc__btn { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 24px; border-radius: 8px; font-size: 14px; font-weight: 500; }
+.gfb-jc .gfb-jc__btn--dark { background: var(--jc-brand); color: #FFFFFF; }
+.gfb-jc .gfb-jc__btn--outline { background: #FFFFFF; color: var(--jc-brand); border: 1px solid #D9D9D9; }
+
+@media (max-width: 1023px) {
+  .gfb-jc .gfb-jc__inner { grid-template-columns: minmax(0, 1fr); padding-bottom: 80px; }
+  .gfb-jc .gfb-jc__card { grid-column: 1; }
+}
+@media (max-width: 767px) {
+  .gfb-jc .gfb-jc__inner { padding: 0 16px 64px; }
+  .gfb-jc .gfb-jc__card { padding: 18px; }
+}

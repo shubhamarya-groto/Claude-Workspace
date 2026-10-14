@@ -1,0 +1,91 @@
+[
+ {
+  "name": "logo_text",
+  "label": "Logo letters",
+  "type": "text",
+  "default": "AC",
+  "help_text": "Two letters in the company tile."
+ },
+ {
+  "name": "job_title",
+  "label": "Job title",
+  "type": "text",
+  "default": "Journeyman Electrician"
+ },
+ {
+  "name": "company",
+  "label": "Company",
+  "type": "text",
+  "default": "Apex Construction"
+ },
+ {
+  "name": "saved",
+  "label": "Heart filled",
+  "type": "boolean",
+  "display": "toggle",
+  "help_text": "Orange filled heart, as if the worker saved the job.",
+  "default": true
+ },
+ {
+  "name": "pay",
+  "label": "Pay",
+  "type": "text",
+  "default": "$38/HR"
+ },
+ {
+  "name": "job_type",
+  "label": "Job type badge",
+  "type": "text",
+  "default": "Full-time",
+  "help_text": "Orange pill beside the pay. Leave empty to hide."
+ },
+ {
+  "name": "location",
+  "label": "Location",
+  "type": "text",
+  "default": "Indianapolis, IN"
+ },
+ {
+  "name": "distance",
+  "label": "Distance",
+  "type": "text",
+  "default": "3.2 mi from 46204",
+  "help_text": "Shown in orange after the location."
+ },
+ {
+  "name": "posted",
+  "label": "Posted",
+  "type": "text",
+  "default": "Posted today"
+ },
+ {
+  "name": "primary_text",
+  "label": "Dark button",
+  "type": "text",
+  "default": "Apply now"
+ },
+ {
+  "name": "secondary_text",
+  "label": "Outline button",
+  "type": "text",
+  "default": "View"
+ },
+ {
+  "name": "background",
+  "label": "Background",
+  "type": "choice",
+  "display": "select",
+  "help_text": "Use the same background as the GFB Search → match module above it.",
+  "choices": [
+   [
+    "grey",
+    "Light grey"
+   ],
+   [
+    "white",
+    "White"
+   ]
+  ],
+  "default": "grey"
+ }
+]

@@ -28,7 +28,7 @@
   "label": "Description of the illustration",
   "type": "text",
   "default": "Example: a search for Journeyman Electrician near 46204 Indianapolis finds 4 matching workers, including a private profile with a 96% profile score.",
-  "help_text": "Read out by screen readers in place of the illustration. Update it when you change the example."
+  "help_text": "Read out by screen readers in place of the illustration, including the card module below it. Update it when you change the example."
  },
  {
   "name": "trade_label",
@@ -61,163 +61,16 @@
   "default": "4 workers match your trade near 46204"
  },
  {
-  "name": "profile_title",
-  "label": "Card: title",
-  "type": "text",
-  "default": "Private Profile"
- },
- {
-  "name": "show_lock",
-  "label": "Card: show lock",
-  "type": "boolean",
-  "display": "toggle",
-  "default": true
- },
- {
-  "name": "profile_role",
-  "label": "Card: role",
-  "type": "text",
-  "default": "Journeyman"
- },
- {
-  "name": "score",
-  "label": "Card: profile score",
-  "type": "text",
-  "default": "96%"
- },
- {
-  "name": "score_label",
-  "label": "Card: score label",
-  "type": "text",
-  "default": "Profile score"
- },
- {
-  "name": "skills_label",
-  "label": "Card: skills heading",
-  "type": "text",
-  "default": "Looking for"
- },
- {
-  "name": "level_label",
-  "label": "Card: level heading",
-  "type": "text",
-  "default": "Experience"
- },
- {
-  "name": "skills",
-  "label": "Card: skills",
-  "type": "group",
-  "occurrence": {
-   "min": 0,
-   "max": 4,
-   "default": 2,
-   "sorting_label_field": "skills.skill"
-  },
-  "children": [
-   {
-    "name": "skill",
-    "label": "Skill",
-    "type": "text",
-    "default": "Electrical"
-   },
-   {
-    "name": "tone",
-    "label": "Chip colour",
-    "type": "choice",
-    "display": "select",
-    "choices": [
-     [
-      "orange",
-      "Orange"
-     ],
-     [
-      "blue",
-      "Blue"
-     ],
-     [
-      "grey",
-      "Grey"
-     ]
-    ],
-    "default": "orange"
-   },
-   {
-    "name": "bars",
-    "label": "Level bars",
-    "type": "choice",
-    "display": "select",
-    "choices": [
-     [
-      "1",
-      "1 of 4"
-     ],
-     [
-      "2",
-      "2 of 4"
-     ],
-     [
-      "3",
-      "3 of 4"
-     ],
-     [
-      "4",
-      "4 of 4"
-     ]
-    ],
-    "default": "3"
-   },
-   {
-    "name": "level_text",
-    "label": "Level",
-    "type": "text",
-    "default": "Journeyman"
-   }
-  ],
-  "default": [
-   {
-    "skill": "Electrical",
-    "tone": "orange",
-    "level_text": "Journeyman",
-    "bars": "3"
-   },
-   {
-    "skill": "Low voltage",
-    "tone": "blue",
-    "level_text": "Skilled",
-    "bars": "2"
-   }
-  ]
- },
- {
-  "name": "location",
-  "label": "Card: location",
-  "type": "text",
-  "default": "Indianapolis, IN"
- },
- {
-  "name": "distance",
-  "label": "Card: distance",
-  "type": "text",
-  "default": "4.1 mi from 46204",
-  "help_text": "Shown in orange after the location."
- },
- {
-  "name": "seeking",
-  "label": "Card: seeking",
-  "type": "text",
-  "default": "Seeking Full-time"
- },
- {
-  "name": "primary_text",
-  "label": "Card: dark button",
-  "type": "text",
-  "default": "Send job"
- },
- {
-  "name": "secondary_text",
-  "label": "Card: outline button",
-  "type": "text",
-  "default": "View profile"
+  "name": "copy_offset",
+  "label": "Copy offset (px)",
+  "type": "number",
+  "display": "text",
+  "min": 0,
+  "max": 400,
+  "step": 1,
+  "suffix": "px",
+  "help_text": "Desktop only. How far the copy block sits below the top of the search bar, as drawn in Figma: Company 140, Job Seeker 112. The copy may run down beside the card below.",
+  "default": 140
  },
  {
   "name": "background",

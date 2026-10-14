@@ -1,6 +1,6 @@
-# GFB Search Match
+# GFB Search Match (Search → match wrapper)
 
-Company band 05, Figma `1362:2627` (replaces the hidden testimonial). Built 9 Oct 2026 for the Company page. Figma copy as defaults.
+Band 05 on both pages, Figma `1362:2627` (replaces the hidden testimonial). Built 9 Oct 2026 for the Company page; **split 14 Oct** into this wrapper plus two card modules, per `../../../03_COMPONENT-COMPARISON_Company-vs-JobSeeker.md`. Company copy as defaults.
 
 | File | What |
 |---|---|
@@ -8,13 +8,15 @@ Company band 05, Figma `1362:2627` (replaces the hidden testimonial). Built 9 Oc
 | `module.html` | HubL (Lucide icons inlined) |
 | `module.css` | Styles; reads Elevate theme variables with Figma fallbacks, like the Home modules |
 
-**Not in HubSpot yet.** Create it through the connector at `custom/content-mcp/modules/gfb_search_match`, CSS inlined in the HTML.
+In HubSpot at `custom/content-mcp/modules/gfb_search_match`, CSS inlined in the HTML.
 
 ## Look
 
-Copy (508) beside a static illustration (620): search bar with trade and location, a connector with the match pill, and a Private worker card (profile score, skills with 4-step level bars, location, seeking, two buttons).
+Copy (508) beside a static illustration (620): search bar with trade and location and a connector with the match pill. **The card is the next module on the page**: GFB Worker card (`../gfb-worker-card/`, Company) or GFB Job card (`../gfb-job-card/`, Job Seeker). HubSpot modules can't hold other modules, so the card module uses the same grid and lines up under the connector; the band reads as one. Give both the same background.
 
-It is a picture, not a working search: the illustration has one description for screen readers (`visual_label`) and its buttons are not links. On phones the search bar wraps to two rows.
+`copy_offset` places the copy on desktop (Company 140, Job Seeker 112, measured from the top of the search bar as in Figma). The copy box has no height, so it runs down beside the card without pushing it down. On tablets and phones the copy sits above the search bar.
+
+It is a picture, not a working search: the illustration has one description for screen readers (`visual_label`, which should describe the card too) and the card's buttons are not links. On phones the search bar wraps to two rows.
 
 ## Fields
 
@@ -30,17 +32,5 @@ It is a picture, not a working search: the illustration has one description for 
 | `near_label` | Text | Near |
 | `near` | Text | 46204 · Indianapolis |
 | `match_text` | Text | 4 workers match your trade near 46204 |
-| `profile_title` | Text | Private Profile |
-| `show_lock` | Boolean | True |
-| `profile_role` | Text | Journeyman |
-| `score` | Text | 96% |
-| `score_label` | Text | Profile score |
-| `skills_label` | Text | Looking for |
-| `level_label` | Text | Experience |
-| `skills` | Repeater, 0 to 4 (`skill`, `tone`, `bars`, `level_text`) |  |
-| `location` | Text | Indianapolis, IN |
-| `distance` | Text | 4.1 mi from 46204 |
-| `seeking` | Text | Seeking Full-time |
-| `primary_text` | Text | Send job |
-| `secondary_text` | Text | View profile |
+| `copy_offset` | Number (px) | 140 |
 | `background` | Choice: Light grey / White | grey |

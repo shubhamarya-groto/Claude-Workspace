@@ -7,7 +7,7 @@
   {% set headline = headline|replace(highlight, '<span class="gfb-accent">' ~ highlight ~ '</span>') %}
 {% endif %}
 
-<section class="gfb gfb-hero{% if module.glow %} gfb-hero--glow{% endif %}">
+<section class="gfb gfb-hero{% if module.glow %} gfb-hero--glow{% endif %}{% if module.tone == 'blue' %} gfb-hero--blue{% endif %}">
   <div class="gfb-hero__copy">
     <h1 class="gfb-hero__title">{{ headline }}</h1>
     {% if module.subhead %}

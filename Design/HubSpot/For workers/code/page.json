@@ -1,0 +1,248 @@
+{
+  "_about": "Job Seeker page (Figma 1259:8837): the modules in Figma order, with the field values that differ from each module's defaults. Built by ../../For companies/code/build_page.py into templates/gfb-job-seekers.html and preview/gfb-job-seekers-preview.html. Component decisions: ../../03_COMPONENT-COMPARISON_Company-vs-JobSeeker.md.",
+  "label": "GFB Job Seekers",
+  "dnd_label": "Job Seeker page",
+  "slug": "gfb-job-seekers",
+  "title": "GoFindBuild Job Seekers Page",
+  "request_path": "/job-seekers",
+  "photo": {
+    "file": "hero-job-seekers-figma-537x536.jpg",
+    "width": 537,
+    "height": 536,
+    "figma": "1363:8425"
+  },
+  "modules": [
+    {
+      "module": "gfb_top_nav"
+    },
+    {
+      "module": "gfb_hero_v2",
+      "fields": {
+        "headline": "Local trade jobs. Better pay. Less searching.",
+        "highlight": "Better pay. Less searching.",
+        "subhead": "Create one private profile right from your phone and let local construction companies find you, even while you’re working.",
+        "card_one": {
+          "title": "I’m looking for work",
+          "text": "Free forever - find the best paying jobs!",
+          "button_label": "Find jobs",
+          "button_link": {
+            "url": {
+              "type": "EXTERNAL",
+              "href": "https://app.gofindbuild.com/signup"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "button_style": "dark"
+        },
+        "card_two": {
+          "title": "",
+          "text": "",
+          "button_label": "",
+          "button_link": {
+            "url": {
+              "type": "EXTERNAL",
+              "href": ""
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "button_style": "dark"
+        },
+        "checks": [
+          {
+            "check_text": "No resume needed"
+          },
+          {
+            "check_text": "Build a profile in minutes"
+          },
+          {
+            "check_text": "You choose who sees you"
+          }
+        ],
+        "photo": {
+          "src": "",
+          "alt": "Two smiling construction workers in overalls holding up their hard hats",
+          "loading": "eager"
+        },
+        "glow": true,
+        "tone": "blue"
+      }
+    },
+    {
+      "module": "gfb_match_cards",
+      "fields": {
+        "heading": "Every job shows the pay up front",
+        "subhead": "Every post shows a pay range and a distance.",
+        "cards": [
+          {
+            "worker": "Central Construction Group · General Laborer",
+            "meta": "Full-time · 5.8 mi",
+            "score": "$23/HR",
+            "trade": "General Labor",
+            "button_text": "Apply",
+            "button_link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "worker": "Summit Electrical Co. · Electrician",
+            "meta": "Full-time · 3.1 mi",
+            "score": "$32/HR",
+            "trade": "Electrical",
+            "button_text": "Apply",
+            "button_link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ],
+        "score_label": "Compensation",
+        "note": "Get instant notifications of jobs in your area",
+        "mode": "job",
+        "spacing": "small"
+      }
+    },
+    {
+      "module": "gfb_checklist",
+      "fields": {
+        "heading": "You choose who sees you",
+        "intro": "Your name and contact details stay private until you apply.",
+        "items": [
+          {
+            "icon": "eye-off",
+            "item_text": "Your name and photo are hidden until you apply"
+          },
+          {
+            "icon": "briefcase",
+            "item_text": "Companies see your trades, experience and area"
+          },
+          {
+            "icon": "user",
+            "item_text": "Profiles, not resumes — you decide what’s shown"
+          },
+          {
+            "icon": "search",
+            "item_text": "Your current employer cannot find you by name"
+          },
+          {
+            "icon": "power",
+            "item_text": "Turn your profile off at any time"
+          }
+        ]
+      }
+    },
+    {
+      "module": "gfb_search_match",
+      "fields": {
+        "eyebrow": "How matching works",
+        "heading": "Search once.",
+        "heading_two": "The right jobs find you.",
+        "intro": "Tell us your trade and ZIP code. Every matching job shows the pay and distance up front, and new ones come straight to you, even while you’re on the job.",
+        "visual_label": "Example: a search for Journeyman Electrician near 46204 Indianapolis finds 3 matching jobs, including Journeyman Electrician at Apex Construction, $38 an hour, full-time, 3.2 miles away, posted today.",
+        "match_text": "3 jobs match your trade near 46204",
+        "copy_offset": 112
+      }
+    },
+    {
+      "module": "gfb_job_card"
+    },
+    {
+      "module": "gfb_features",
+      "fields": {
+        "eyebrow": "For workers",
+        "heading": "Your job search just got a whole lot easier",
+        "intro": "Get connected to better opportunities, even when you’re not looking.",
+        "items": [
+          {
+            "icon": "megaphone",
+            "title": "Build your free profile",
+            "description": "One line of supporting detail."
+          },
+          {
+            "icon": "timer",
+            "title": "Get connected",
+            "description": "One line of supporting detail."
+          },
+          {
+            "icon": "id-card",
+            "title": "Get hired",
+            "description": "One line of supporting detail."
+          },
+          {
+            "icon": "chart",
+            "title": "723,000 hires needed a year",
+            "description": "One line of supporting detail."
+          },
+          {
+            "icon": "send",
+            "title": "No resume required",
+            "description": "One line of supporting detail."
+          },
+          {
+            "icon": "circle-check",
+            "title": "Free, always",
+            "description": "One line of supporting detail."
+          }
+        ]
+      }
+    },
+    {
+      "module": "gfb_faq",
+      "fields": {
+        "items": [
+          {
+            "question": "Is GoFindBuild free for workers?",
+            "answer": "<p>The answer sits under the question and stays short.</p>",
+            "open": true
+          },
+          {
+            "question": "Do I need a resume to get started?",
+            "answer": "<p>Write the answer here. Keep it short.</p>",
+            "open": false
+          },
+          {
+            "question": "Who can see my profile and contact details?",
+            "answer": "<p>Write the answer here. Keep it short.</p>",
+            "open": false
+          }
+        ],
+        "faq_schema": false,
+        "background": "grey"
+      }
+    },
+    {
+      "module": "gfb_final_cta",
+      "fields": {
+        "heading": "Your next opportunity could find you",
+        "subhead": "One free profile. Local jobs. Better matches. You’re always in control.",
+        "buttons": [
+          {
+            "button_text": "Create my free profile",
+            "style": "primary",
+            "link": {
+              "url": {
+                "type": "EXTERNAL",
+                "href": "https://app.gofindbuild.com/signup"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "module": "gfb_footer"
+    }
+  ]
+}

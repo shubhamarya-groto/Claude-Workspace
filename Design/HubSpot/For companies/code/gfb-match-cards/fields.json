@@ -15,7 +15,7 @@
   "name": "cards",
   "label": "Cards",
   "type": "group",
-  "help_text": "Example workers, shown as a company sees them. Static: they don't update from the app.",
+  "help_text": "Example cards: workers (Company page) or jobs (Job Seeker page). Static: they don't update from the app.",
   "occurrence": {
    "min": 0,
    "max": 4,
@@ -25,9 +25,10 @@
   "children": [
    {
     "name": "worker",
-    "label": "Name and trade",
+    "label": "Title",
     "type": "text",
-    "default": "Marcus Bell · Journeyman Electrician"
+    "default": "Marcus Bell · Journeyman Electrician",
+    "help_text": "Worker mode: name · trade. Job mode: company · job title."
    },
    {
     "name": "meta",
@@ -37,9 +38,9 @@
    },
    {
     "name": "score",
-    "label": "Profile score",
+    "label": "Value, top right",
     "type": "text",
-    "help_text": "Shown in green, top right. Leave empty to hide.",
+    "help_text": "Worker mode: profile score (92%). Job mode: pay ($23/HR). Shown in green. Leave empty to hide.",
     "default": "92%"
    },
    {
@@ -107,15 +108,52 @@
  },
  {
   "name": "score_label",
-  "label": "Score label",
+  "label": "Value label",
   "type": "text",
-  "default": "Profile score"
+  "default": "Profile score",
+  "help_text": "Under the green value: \"Profile score\" or \"Compensation\"."
  },
  {
   "name": "note",
   "label": "Note under the cards",
   "type": "text",
   "default": "Get instant notifications of new matches and applicants"
+ },
+ {
+  "name": "mode",
+  "label": "Card type",
+  "type": "choice",
+  "display": "select",
+  "help_text": "Worker: a company's view of a worker (button sends a job). Job: a worker's view of a job post (button applies). Changes the screen-reader wording of the button.",
+  "choices": [
+   [
+    "worker",
+    "Worker"
+   ],
+   [
+    "job",
+    "Job"
+   ]
+  ],
+  "default": "worker"
+ },
+ {
+  "name": "spacing",
+  "label": "Spacing",
+  "type": "choice",
+  "display": "select",
+  "help_text": "Gap between heading, subhead, cards and note. Large 64 px (Company frame), Small 32 px (Job Seeker frame).",
+  "choices": [
+   [
+    "large",
+    "Large (64 px)"
+   ],
+   [
+    "small",
+    "Small (32 px)"
+   ]
+  ],
+  "default": "large"
  },
  {
   "name": "background",

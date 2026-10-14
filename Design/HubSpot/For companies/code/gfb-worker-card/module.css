@@ -1,0 +1,81 @@
+/* GFB Worker card · band 05 card, Company page (Figma 1362:9980, 460 × 349).
+   Goes right after GFB Search → match and uses its grid (1200 container, 508 | 620, gap 72), so the card
+   sits under the connector in the right-hand column. A static picture: the buttons are not links. */
+.gfb-wc {
+  --wc-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --wc-muted: #525C70;
+  --wc-line: #E8EAED;
+  --wc-orange: #F16C0E;
+  --wc-orange-text: #B54C00;             /* orange as text on white/tint, 5.3:1 */
+  --wc-score: #1E8A4C;
+  --wc-shadow: 0 12px 32px rgba(22, 36, 61, 0.08);
+  --wc-font-body: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  color: var(--wc-brand);
+  font-family: var(--wc-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.gfb-wc--grey { background: #F8F9FA; }
+.gfb-wc--white { background: #FFFFFF; }
+.gfb-wc, .gfb-wc *, .gfb-wc *::before, .gfb-wc *::after { box-sizing: border-box; }
+
+.gfb-wc .gfb-wc__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 508fr) minmax(0, 620fr);
+  column-gap: 72px;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+.gfb-wc .gfb-wc__card {
+  grid-column: 2;
+  justify-self: center;
+  width: min(460px, 100%);
+  padding: 24px;
+  background: #FFFFFF;
+  border: 1px solid var(--wc-line);
+  border-radius: 16px;
+  box-shadow: var(--wc-shadow);
+  font-size: 13px;
+}
+.gfb-wc .gfb-wc__head { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; border-bottom: 1px solid var(--wc-line); }
+.gfb-wc .gfb-wc__avatar { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #E8EAED; }
+.gfb-wc .gfb-wc__who { flex: 1; min-width: 0; }
+.gfb-wc .gfb-wc__title { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 15px; font-weight: 600; }
+.gfb-wc .gfb-wc__lock { color: var(--wc-orange); }
+.gfb-wc .gfb-wc__role { margin: 2px 0 0; color: var(--wc-muted); }
+.gfb-wc .gfb-wc__score { margin: 0; text-align: right; }
+.gfb-wc .gfb-wc__score-value { display: block; font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--wc-score); }
+.gfb-wc .gfb-wc__score-label { display: block; font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--wc-muted); }
+.gfb-wc .gfb-wc__heart { flex: none; color: var(--wc-muted); }
+
+.gfb-wc .gfb-wc__chip { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px; background: #E8EAED; font-size: 12px; font-weight: 500; color: var(--wc-brand); white-space: nowrap; }
+.gfb-wc .gfb-wc__chip--orange { background: #FFF1E6; color: var(--wc-orange-text); }
+.gfb-wc .gfb-wc__chip--blue { background: #E6F4FB; color: #0B5A80; }
+.gfb-wc .gfb-wc__chip--grey { background: #E8EAED; color: var(--wc-brand); }
+
+.gfb-wc .gfb-wc__skills { padding: 16px 0; border-bottom: 1px solid var(--wc-line); }
+.gfb-wc .gfb-wc__skills-head { display: flex; justify-content: space-between; margin-bottom: 10px; color: var(--wc-muted); }
+.gfb-wc .gfb-wc__skill { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.gfb-wc .gfb-wc__skill > .gfb-wc__chip:first-child { margin-right: auto; }
+.gfb-wc .gfb-wc__skill > .gfb-wc__chip:last-child { min-width: 84px; justify-content: center; }
+.gfb-wc .gfb-wc__level { display: flex; gap: 3px; }
+.gfb-wc .gfb-wc__level span { width: 12px; height: 3px; border-radius: 2px; background: var(--wc-line); }
+.gfb-wc .gfb-wc__level span.is-on { background: var(--wc-orange); }
+
+.gfb-wc .gfb-wc__facts { display: grid; gap: 8px; margin: 0; padding: 16px 0; list-style: none; color: var(--wc-muted); }
+.gfb-wc .gfb-wc__facts li { display: flex; align-items: center; gap: 8px; }
+.gfb-wc .gfb-wc__facts strong { font-weight: 600; color: var(--wc-orange-text); }
+.gfb-wc .gfb-wc__actions { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+.gfb-wc .gfb-wc__btn { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 22px; border-radius: 8px; font-size: 14px; font-weight: 500; }
+.gfb-wc .gfb-wc__btn--dark { background: var(--wc-brand); color: #FFFFFF; }
+.gfb-wc .gfb-wc__btn--outline { background: #FFFFFF; color: var(--wc-brand); border: 1px solid #D9D9D9; }
+
+@media (max-width: 1023px) {
+  .gfb-wc .gfb-wc__inner { grid-template-columns: minmax(0, 1fr); padding-bottom: 80px; }
+  .gfb-wc .gfb-wc__card { grid-column: 1; }
+}
+@media (max-width: 767px) {
+  .gfb-wc .gfb-wc__inner { padding: 0 16px 64px; }
+  .gfb-wc .gfb-wc__card { padding: 18px; }
+  .gfb-wc .gfb-wc__actions { grid-template-columns: minmax(0, 1fr); }
+}

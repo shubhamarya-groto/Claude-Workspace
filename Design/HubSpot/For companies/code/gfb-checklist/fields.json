@@ -59,6 +59,18 @@
      [
       "map-pin",
       "Map pin"
+     ],
+     [
+      "briefcase",
+      "Briefcase"
+     ],
+     [
+      "user",
+      "Person"
+     ],
+     [
+      "power",
+      "Power (off)"
      ]
     ],
     "default": "check"

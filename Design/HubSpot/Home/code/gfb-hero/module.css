@@ -86,6 +86,16 @@
 .gfb.gfb-hero--glow .gfb-hero__visual { position: relative; }
 .gfb.gfb-hero--glow .gfb-hero__visual { filter: drop-shadow(0 0 40px rgba(241, 108, 14, 0.35)); }
 
+/* Blue tone (Job Seeker page): blue glow, grey check badges with a navy tick */
+.gfb.gfb-hero--blue.gfb-hero--glow::before {
+  background:
+    radial-gradient(38% 50% at 50% 100%, rgba(41, 128, 214, 0.26), transparent 70%),
+    radial-gradient(28% 42% at 42% 62%, rgba(140, 196, 245, 0.24), transparent 70%);
+}
+.gfb.gfb-hero--blue.gfb-hero--glow .gfb-hero__visual { filter: drop-shadow(0 0 40px rgba(41, 128, 214, 0.30)); }
+.gfb.gfb-hero--blue .gfb-checks__badge { background: #EEF0F3; }
+.gfb.gfb-hero--blue .gfb-checks__badge svg { fill: var(--gfb-brand); }
+
 /* Buttons: pill, label + arrow disc. "primary" follows Elevate's primary button settings */
 .gfb .gfb-btn {
   display: inline-flex;
