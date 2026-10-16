@@ -20,7 +20,8 @@ section background stays the fallback.
 | `heading` | Text | "The right connection could change everything." |
 | `subhead` | Text | "Find the people you need. Find the opportunity you deserve." |
 | `buttons` | Repeater, 0 to 3 | `button_text`, `link`, `style` (Orange primary / Dark). Defaults: **Post a job** (orange), **Find work** (dark). Links are empty: set them in the editor |
-| `note` | Text | Optional small grey line under the buttons (added 16 Oct, e.g. "Free company profile. Applicant contact access is priced separately."). Empty by default, so it is hidden unless filled |
+| `show_note` | Toggle | Off by default. Turns the note line on |
+| `note` | Text | Small grey line under the buttons (added 16 Oct). Default "Free company profile. Applicant contact access is priced separately."; shown only when `show_note` is on |
 | `background_image` | Image | Optional; replaces the built-in gradient |
 | `show_gears` | Toggle | The four faint gear outlines |
 | `layout` | Choice: Card / Banner | Card. **Banner** (added 14 Oct for the About Us header, Figma `1259:9163`): no card, gradient or gears; navy heading as the page's **H1**; soft blue glow behind; 112px above and below. Home and the other pages stay on Card |
