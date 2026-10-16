@@ -1,0 +1,135 @@
+<!--
+  GFB Problem + stats · replacement for the hand-coded "Why we built GoFindBuild" rich text
+  on the Plumbing staging page (dnd_area-module-2).
+  Approved source: Home band "03 · Problem + stats" (Figma 1355:8192), HubSpot module gfb_problem_stats
+  as used on GFB Home (staging). Background is the same image Home uses; a navy fallback shows if it can't load.
+  New here: an optional source line under each stat (gfb_problem_stats has no source field yet).
+  Stats, captions and sources are the Plumbing page's own. line_one / line_two are Home's approved lines.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GFB Problem Stats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600&family=Inter:wght@400;500;600&display=swap">
+    <style>
+      .gfb {
+        --gfb-brand: #16243D;          /* Navy 780 */
+        --gfb-primary-hover: #F4811F;  /* Orange 450, 6.6:1 on navy */
+        --gfb-white: #FFFFFF;
+        --gfb-on-dark-muted: #C5CBD6;  /* 9.6:1 on navy */
+        --gfb-on-dark-subtle: #9AA3B2; /* 6.0:1 on navy */
+        --gfb-rule-dark: rgba(255, 255, 255, 0.16);
+        --gfb-font-display: "Instrument Sans", system-ui, sans-serif;
+        --gfb-font-body: "Inter", system-ui, sans-serif;
+        font-family: var(--gfb-font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      .gfb, .gfb *, .gfb *::before, .gfb *::after { box-sizing: border-box; }
+
+      .gfb.gfb-stats {
+        position: relative;
+        padding: 112px 24px;
+        color: var(--gfb-white);
+        background-color: var(--gfb-brand);
+        background-image:
+          linear-gradient(90deg, rgba(22, 36, 61, 0.92) 0%, rgba(22, 36, 61, 0.72) 100%),
+          url("https://47303551.fs1.hubspotusercontent-na1.net/hubfs/47303551/03%20%C2%B7%20Problem%20%2B%20stats-1.png");
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+      .gfb .gfb-stats__inner { max-width: 1200px; margin: 0 auto; }
+
+      .gfb .gfb-stats__overline {
+        margin: 0 0 20px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--gfb-primary-hover);
+      }
+      .gfb .gfb-stats__title {
+        max-width: 880px;
+        margin: 0 0 72px;
+        font-family: var(--gfb-font-display);
+        font-size: clamp(32px, 2.4vw + 18px, 52px);
+        font-weight: 600;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        color: var(--gfb-white);
+      }
+      .gfb .gfb-stats__line { display: block; }
+      .gfb .gfb-stats__line--accent { color: var(--gfb-primary-hover); }
+
+      .gfb .gfb-stats__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 32px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .gfb .gfb-stat { display: flex; flex-direction: column; padding-top: 24px; border-top: 1px solid var(--gfb-rule-dark); }
+      .gfb .gfb-stat__number {
+        margin: 0 0 12px;
+        font-family: var(--gfb-font-display);
+        font-size: clamp(40px, 2vw + 24px, 56px);
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--gfb-white);
+      }
+      .gfb .gfb-stat__caption { flex: 1; margin: 0 0 16px; font-size: 16px; line-height: 1.55; color: var(--gfb-on-dark-muted); }
+      .gfb .gfb-stat__source { margin: 0; font-size: 12px; line-height: 1.5; color: var(--gfb-on-dark-subtle); }
+
+      @media (max-width: 1024px) {
+        .gfb .gfb-stats__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+      }
+      @media (max-width: 600px) {
+        .gfb.gfb-stats { padding: 72px 24px; }
+        .gfb .gfb-stats__title { margin-bottom: 48px; }
+        .gfb .gfb-stats__list { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      }
+
+      body { margin: 0; background: #FFFFFF; }
+    </style>
+  </head>
+  <body>
+    <section class="gfb gfb-stats" aria-labelledby="gfb-stats-title">
+      <div class="gfb-stats__inner">
+        <p class="gfb-stats__overline">Why we built GoFindBuild</p>
+        <h2 class="gfb-stats__title" id="gfb-stats-title">
+          <span class="gfb-stats__line">The workers are out there. The jobs are out there.</span>
+          <span class="gfb-stats__line gfb-stats__line--accent">The connection between them is broken.</span>
+        </h2>
+        <ul class="gfb-stats__list">
+          <li class="gfb-stat">
+            <p class="gfb-stat__number">94%</p>
+            <p class="gfb-stat__caption">Percentage of construction businesses that struggle to fill roles. Lack of online presence and workforce shortages are holding them back.</p>
+            <p class="gfb-stat__source">Source: 2019 ServiceTitan &amp; AGC Workforce Survey</p>
+          </li>
+          <li class="gfb-stat">
+            <p class="gfb-stat__number">723,000</p>
+            <p class="gfb-stat__caption">Number of workers needed annually to meet market demands. The construction industry is booming, and it’s calling for skilled talent.</p>
+            <p class="gfb-stat__source">Source: 2023 HBI Labor Market Report</p>
+          </li>
+          <li class="gfb-stat">
+            <p class="gfb-stat__number">$55k+</p>
+            <p class="gfb-stat__caption">Skilled trade professionals earn $55,000 on average, with top roles reaching $100,000+. Skilled talent means serious value.</p>
+            <p class="gfb-stat__source">Source: U.S. Bureau of Labor Statistics (BLS)</p>
+          </li>
+          <li class="gfb-stat">
+            <p class="gfb-stat__number">90%</p>
+            <p class="gfb-stat__caption">Percentage of skilled tradespeople who are satisfied with their work. It’s a career path that pays off in pride and purpose.</p>
+            <p class="gfb-stat__source">Source: angi.com, May 23, 2024</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
