@@ -1,6 +1,8 @@
 # GFB team landing pages · context for bringing them into the approved design
 
-16 Oct 2026. The GFB team built new landing pages in the GoFindBuild HubSpot portal and asked us to check them and bring them into the last approved design. This file is the context for that work: what the new pages are, what the approved build is, and where the two differ. Read from the portal through the HubSpot connector (module structure and field values). Not read: rendered screenshots, the live CSS of the one-off modules.
+16 Oct 2026. The GFB team built new landing pages in the GoFindBuild HubSpot portal and asked us to check them and bring them into the last approved design. This file is the context for that work: what the new pages are, what the approved build is, and where the two differ.
+
+**Scope (16 Oct): only pages created in and for staging.** The live Google Ads page, the legal pages and anything else in the portal are out of scope and are not to be touched. Read from the portal through the HubSpot connector (module structure and field values). Not read: rendered screenshots, the live CSS of the one-off modules.
 
 ## The portal
 
@@ -31,11 +33,9 @@ All are **landing pages** on the Elevate `lp-header` / `footer` partials, built 
 | LP-20261007-INDY-EmployerSignup-**Plumbing**-STAGING | `223867638545` | `/indy-plumbing-company-signup-staging` | Plumbing companies, Indianapolis |
 | LP-20261007-INDY-EmployerSignup-**HVAC**-STAGING | `224521894575` | `/indy-hvac-company-signup-staging` | HVAC companies, Indianapolis |
 | LP-20261006-**PS-JobSeekerSignup**-STAGING | `223769972131` | `/in-ps-jobseeker-signup-staging` | Paid-search job seekers |
-| LP-20260930-PaidSearch-GoogleAds-JobSeeker-IN | `223273632560` | `/en/gofindbuild-find-local-construction-and-trade-job` | Google Ads job seekers (older, 30 Sep) |
-| Signup Preview: Development / Staging / Employer-Staging | `223266017870` / `223632122124` / `223844483457` | `/signup-preview…` | Form previews; **not read** |
-| Terms and Conditions / Privacy Policy | `223273637948` / `223273639762` | `/gofindbuild-terms-…`, `/gofindbuild-privacy-policy` | Legal; the footer links to these |
+**Out of scope** (not staging pages): LP-20260930-PaidSearch-GoogleAds-JobSeeker-IN (`223273632560`, live), Signup Preview - Development (`223266017870`), Terms and Conditions (`223273637948`), Privacy Policy (`223273639762`). **To confirm:** Signup Preview - Staging (`223632122124`) and Signup Preview - Employer - Staging (`223844483457`) carry "Staging" in the name but are form previews; not read.
 
-The list comes from content analytics since 1 Sep, so a page with no views would not appear. Ask the GFB team if any are missing.
+The list comes from content analytics since 1 Sep, so a staging page with no views would not appear. Ask the GFB team if any are missing.
 
 ### Band order per page
 
@@ -58,9 +58,6 @@ Same rows 0–2, then `indy_…_faq` (row 3), hand-coded stats (row 4), `gofindb
 **PS Job Seeker signup**
 Row 0: `indy_…_hero` + image, beside the eyebrow and form · 1 `gofindbuild_paid_search_matching_example` · 2 `gofindbuild_privacy_centered_three_up` · 3 `indy_…_faq` · 4 `gofindbuild_gear_cta_editable_link` · footer `gfb_footer`.
 
-**Google Ads Job Seeker (30 Sep)**
-`indy_…_hero`, `gofindbuild_rounded_hero_image`, `gofindbuild_gear_cta_editable_link`, `gofindbuild_signup_form_anchor`, `gofindbuild_paid_search_matching_example`, `gofindbuild_privacy_centered_three_up`, `gofindbuild_compact_about_trust`, form, `indy_…_faq`. Footer is **Elevate `social_follow` + rich text + dividers**, not `gfb_footer`.
-
 ## Gaps against the approved design
 
 ### Structure and components
@@ -71,11 +68,9 @@ Row 0: `indy_…_hero` + image, beside the eyebrow and form · 1 `gofindbuild_pa
 | `gofindbuild_plumbing_company_benefits` (3 cards) | `gfb_features` or `gfb_checklist` | One-off module |
 | `gofindbuild_paid_search_matching_example` | `gfb_search_match` + `gfb_job_card` | One-off; the approved band 05 is the 3-component search → match |
 | `gofindbuild_privacy_centered_three_up` | `gfb_checklist` / `gfb_features` | One-off |
-| `gofindbuild_compact_about_trust` | `gfb_trust_bar` or `gfb_alt_rows` | One-off |
 | Hand-coded stats rich text | `gfb_problem_stats` | Inline styles, Inter for the 48px numbers (approved display font is Instrument Sans), not editable as fields |
 | `indy_…_faq` (4 fixed Q/A fields) | `gfb_faq` | One-off; Plumbing carries both |
 | `gofindbuild_gear_cta_editable_link` | `gfb_final_cta` | One-off |
-| Elevate social_follow footer (Google Ads page) | `gfb_footer` | Old footer |
 | `gfb_pricing`, `gfb_faq`, `gfb_final_cta`, `gfb_footer` | same | Already approved modules |
 
 ### Tokens and accessibility
@@ -91,7 +86,7 @@ Row 0: `indy_…_hero` + image, beside the eyebrow and form · 1 `gofindbuild_pa
 - **HVAC page says "Plumbing"**: hero stat 1 value, benefits card 1 and 2 bodies ("plumbing role", "your plumbing business"), FAQ Q3 ("plumbing candidates").
 - Plumbing `gfb_faq` has template placeholder answers and duplicates the real FAQ below it.
 - `gfb_pricing` buttons have **empty links**, and the pricing model is still open (I-12). Prices here ($49/$149/$349, Pro $249) differ from both earlier sets ($99/$199/$399; $49/$149/Custom).
-- Forms redirect to **`http://www.google.com`** after submit (all employer and job seeker forms).
+- Forms redirect to **`http://www.google.com`** after submit (all three pages).
 - Footer "About Us" points to `/about-us`; the approved page is at `/about-us-staging`, so this works only after launch slugs are set.
 
 ### Not design, but flag before anything ships
@@ -104,7 +99,7 @@ Row 0: `indy_…_hero` + image, beside the eyebrow and form · 1 `gofindbuild_pa
 3. **Pricing on employer LPs:** keep `gfb_pricing` with these numbers, or remove until I-12 is settled?
 4. **Gears on the final CTA:** keep (approved About Us has them) or drop (Iteration 1)?
 5. **Stats band:** move to `gfb_problem_stats`, with sources kept?
-6. Scope: these four pages only, or also the Signup Preview pages?
+6. Are the two "Signup Preview … Staging" pages in scope?
 
 ## Suggested approach
 

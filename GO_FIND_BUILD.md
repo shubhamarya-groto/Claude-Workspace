@@ -201,7 +201,7 @@ Audit sections B and C (employer dashboard, other tabs) are **all open** and wer
 | `Design/HubSpot/For companies/` | `00_PLAN` (build plan, week plan), `01_CURRENT-PAGE_Teardown` (live `/companies`), `02_FINAL-DESIGN_Company-Page.md` (**final Company design**, Figma node `1259:8932`) |
 | `Design/HubSpot/About Us/00_CONTEXT_About-Us-Page.md` | About Us page context and final design (Figma node `1259:9158`, found by pattern, confirm): bands, no custom modules, issues |
 | `Design/HubSpot/For workers/` | Empty (exists, nothing built) |
-| `Design/HubSpot/Landing pages/00_CONTEXT_GFB-team-pages.md` | **GFB team's new landing pages** (Plumbing, HVAC, PS Job Seeker, Google Ads) in portal `47303551`, the approved `gfb_*` module kit, gaps and decisions for bringing them into the approved design (16 Oct) |
+| `Design/HubSpot/Landing pages/00_CONTEXT_GFB-team-pages.md` | **GFB team's new staging landing pages** (Plumbing, HVAC, PS Job Seeker; staging only, rest out of scope) in portal `47303551`, the approved `gfb_*` module kit, gaps and decisions for bringing them into the approved design (16 Oct) |
 | `Design/Assets/Testing assets/hero-welder-1400x799.jpg` | The only real photo; `In Use/` is empty |
 | `Project Context/` | Brian's brief, 15 Sep notes, Meetings 1/2/3/5, scope, UX review (docx + md) |
 
