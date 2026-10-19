@@ -123,3 +123,22 @@ Frame **Plumbing · Hi-Fi** `1523:2623` (1440 × ~5077) in section **Marketing W
 New local components (frame **Plumbing page · local components** `1525:2794`, x 9894, y 519 in the section, right of the page; section widened to 11001): `GFB / Benefit card` `1525:2816`, `GFB / Input field` `1525:2812` (stand-in for the missing DS input, I-13), `GFB / Icon / file-plus` `1525:2800`, `users` `1525:2806`, `user-check` `1525:2811`. New layers use the Built Bold colour variables and text styles.
 
 Differences from HubSpot to know: the stats overline sits above the stats (Figma band layout), not above the headline; the hero image is a grey placeholder; the form's real fields and submit label are not readable from HubSpot, so fields follow the FAQ ("company name, business email, first name, last name, job title") and the button says "Submit".
+
+### Update 19 Oct: every band is now a component instance
+
+The first build copied or detached bands. Rebuilt so every band in `Plumbing · Hi-Fi` is an **instance**:
+
+| Band | Instance of |
+|---|---|
+| 00 Header | `Top Nav` (DS, `790:11423`), nav buttons hidden as instance overrides |
+| 01 Hero + sign-up form | `GFB / Section / Hero + sign-up form` (new, `1528:10672`) |
+| 02 Benefits | `GFB / Section / Benefits` (new, `1528:10724`) |
+| 03 Pricing | `Elevate / Section / Pricing / pricing` |
+| 04 FAQ | `Elevate / Section / FAQ / faq-v2`, variant **Rows=4** |
+| 05 Why we built GoFindBuild | `GFB / Section / Stats dark` (new, `1528:10759`) |
+| 06 Final CTA | `GFB / Section / Final CTA` (new, `1528:10845`) |
+| 07 Footer | `GFB / Section / Footer` (new, `1528:10892`) |
+
+The new section components sit in the components frame `1525:2794` beside the page, with `GFB / Benefit card`, `GFB / Input field` and the three icons. The approved Home/Company frames for Problem + stats, Final CTA and Footer were plain frames, so there was no existing component to reuse for those.
+
+**Change to a shared component:** `Elevate / Section / FAQ / faq-v2` (page HubSpot Elevate sections) is now a component set `1528:11031` with `Rows=3` (the original, `1231:126`; every existing FAQ instance stays on it, e.g. Company's) and `Rows=4` (`1528:11006`, new).
