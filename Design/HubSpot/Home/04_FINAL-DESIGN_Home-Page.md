@@ -86,3 +86,10 @@ Logo (Source Serif 4 SemiBold) + copyright on the left. On the right: three link
 - Contents of bands 03 (Problem + stats) and 10 (Final CTA).
 - Phone frames, if any exist for this homepage.
 - Whether the sticky CTA bar and header states apply (those are on the Job Seeker and Company pages).
+
+## Update 19 Oct 2026 · Brian's Figma comments applied
+
+Two module types were rewritten in the portal (live wherever used; today only GFB Home (staging) `223806550529` uses them). Preview: `code/gfb-what-you-get-and-testimonials.html`.
+
+- **`gfb_what_you_get`** (Brian: "similar centered symmetry across the containers and add the sub-header"): heading and new `subheading` field centred; card titles centred over the accent rule; both cards share row tracks (CSS subgrid) so headers and each feature line up across the columns; images sit at the card bottom. All existing fields and icon values kept. Home's sub-header: "Finding the right worker or the right job shouldn't be hard - we make it simple."
+- **`gfb_testimonials`** (Brian: "implement these for this section, can probably get rid of the photo of person with groceries"): slider and large photo removed; stacked full-width quote cards on light grey, initials badge (new `initials` field), name and location line. `photo` field dropped from the schema. Home now carries Brian's two quotes (Matthew B. - Carpenter, Noblesville, IN; Brothers Insulation & Construction, Indianapolis, IN) in place of the five Elevate placeholders.
