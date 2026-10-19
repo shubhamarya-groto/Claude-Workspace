@@ -120,6 +120,6 @@ Frame **Plumbing · Hi-Fi** `1523:2623` (1440 × ~5077) in section **Marketing W
 | 06 | Final CTA (`gfb_final_cta`) | Copy of `09 · Final CTA` with Plumbing copy and the note line |
 | 07 | Footer | Copy of `11 · Footer` |
 
-New local components (frame **Plumbing page · local components** `1525:2794`, x 8334, y 5740 in the section): `GFB / Benefit card` `1525:2816`, `GFB / Input field` `1525:2812` (stand-in for the missing DS input, I-13), `GFB / Icon / file-plus` `1525:2800`, `users` `1525:2806`, `user-check` `1525:2811`. New layers use the Built Bold colour variables and text styles.
+New local components (frame **Plumbing page · local components** `1525:2794`, x 9894, y 519 in the section, right of the page; section widened to 11001): `GFB / Benefit card` `1525:2816`, `GFB / Input field` `1525:2812` (stand-in for the missing DS input, I-13), `GFB / Icon / file-plus` `1525:2800`, `users` `1525:2806`, `user-check` `1525:2811`. New layers use the Built Bold colour variables and text styles.
 
 Differences from HubSpot to know: the stats overline sits above the stats (Figma band layout), not above the headline; the hero image is a grey placeholder; the form's real fields and submit label are not readable from HubSpot, so fields follow the FAQ ("company name, business email, first name, last name, job title") and the button says "Submit".
