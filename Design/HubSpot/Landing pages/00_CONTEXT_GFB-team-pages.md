@@ -104,3 +104,22 @@ Row 0: `indy_…_hero` + image, beside the eyebrow and form · 1 `gofindbuild_pa
 ## Suggested approach
 
 Clone each page and rebuild it on `gfb_*` modules band for band (the Plumbing page shows the GFB team already started this), keeping their copy as placeholder. Fix the theme's primary button label once, which fixes every page. Rebuild HVAC from the finished Plumbing page so the plumbing copy leaks don't come back. Run the staging QA checklist in `../00_BUILD-PLAN_Staging.md` on each.
+
+## Figma version of the Plumbing staging page (19 Oct 2026)
+
+Frame **Plumbing · Hi-Fi** `1523:2623` (1440 × ~5077) in section **Marketing Website** `1259:8836`, Presentation page, file `aC59gtTG9nh2hwUraPnCXj`, at x 8334, y 519 (right of About Us; section widened to 10327). Mirrors HubSpot page `223867638545` band for band.
+
+| # | Band | Built from |
+|---|---|---|
+| 00 | Header, logo only (LP header) | Copy of Top Nav band, nav buttons hidden |
+| 01 | Hero + company sign-up form | **New**: copy column, 3 stats, image placeholder (the HubSpot image is AI-generated and not in Figma), sign-up card with 5 `GFB / Input field` instances + DS Button "Submit" |
+| 02 | Benefits (`gfb_benefits`) | **New**: 3 instances of `GFB / Benefit card` (icon swap: file-plus, users, user-check) |
+| 03 | Pricing (`gfb_pricing`) | Copy of Elevate `pricing` instance from Home (content already matches) |
+| 04 | FAQ (`gfb_faq`) | Copy of Elevate `faq-v2`, **detached** to hold 4 questions |
+| 05 | Why we built GoFindBuild (`gfb_stats_dark`) | Copy of Home `03 · Problem + stats`, recoloured navy, gears and image hidden, Plumbing stats + a source line per stat |
+| 06 | Final CTA (`gfb_final_cta`) | Copy of `09 · Final CTA` with Plumbing copy and the note line |
+| 07 | Footer | Copy of `11 · Footer` |
+
+New local components (frame **Plumbing page · local components** `1525:2794`, x 8334, y 5740 in the section): `GFB / Benefit card` `1525:2816`, `GFB / Input field` `1525:2812` (stand-in for the missing DS input, I-13), `GFB / Icon / file-plus` `1525:2800`, `users` `1525:2806`, `user-check` `1525:2811`. New layers use the Built Bold colour variables and text styles.
+
+Differences from HubSpot to know: the stats overline sits above the stats (Figma band layout), not above the headline; the hero image is a grey placeholder; the form's real fields and submit label are not readable from HubSpot, so fields follow the FAQ ("company name, business email, first name, last name, job title") and the button says "Submit".
