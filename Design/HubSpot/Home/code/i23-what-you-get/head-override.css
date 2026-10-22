@@ -1,0 +1,23 @@
+/* I-23: match Figma 1363:8560 (What you get). Cards are 568 x 440 with the image as the full card background. */
+.gfb.gfb-wyg { background: #F8F9FB; padding: 96px 24px; }
+.gfb.gfb-wyg .gfb-wyg__head { text-align: left; margin: 0 auto 32px; }
+.gfb.gfb-wyg .gfb-wyg__title { max-width: 660px; }
+.gfb.gfb-wyg .gfb-wyg__sub { margin: 16px 0 0; max-width: 720px; }
+.gfb.gfb-wyg .gfb-wyg__grid { grid-template-rows: none; column-gap: 64px; }
+.gfb.gfb-wyg .gfb-wyg__card { grid-row: auto; display: flex; flex-direction: column; min-height: 440px; padding: 24px; background: #FFFFFF; border: 1px solid #F0F1F4; border-radius: 12px; }
+.gfb.gfb-wyg .gfb-wyg__card-head { text-align: left; margin: 0 0 25px; padding-bottom: 4px; border-bottom: 1px solid #D9D9D9; }
+.gfb.gfb-wyg .gfb-wyg__card-title { font-family: var(--gfb-font-display); font-size: 22px; font-weight: 600; line-height: 1.4; color: #3D4656; }
+.gfb.gfb-wyg .gfb-wyg__feature { display: block; padding-bottom: 0; margin: 0; }
+.gfb.gfb-wyg .gfb-wyg__feature + .gfb-wyg__feature { margin-top: 26px; }
+.gfb.gfb-wyg .gfb-wyg__icon { width: 28px; height: 28px; border-radius: 6px; margin-bottom: 8px; }
+.gfb.gfb-wyg .gfb-wyg__icon svg { width: 16px; height: 16px; }
+.gfb.gfb-wyg .gfb-wyg__f-title { margin: 0 0 10px; font-size: 18px; font-weight: 600; line-height: 1.4; }
+.gfb.gfb-wyg .gfb-wyg__f-text { font-size: 14px; line-height: 1.5; }
+.gfb.gfb-wyg .gfb-wyg__media { position: absolute; inset: 0; margin: 0; min-height: 0; z-index: 0; pointer-events: none; }
+.gfb.gfb-wyg .gfb-wyg__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
+@media (max-width: 900px) {
+  .gfb.gfb-wyg { padding: 64px 24px; }
+  .gfb.gfb-wyg .gfb-wyg__grid { grid-template-columns: minmax(0, 1fr); row-gap: 24px; }
+  .gfb.gfb-wyg .gfb-wyg__card { min-height: 0; }
+  .gfb.gfb-wyg .gfb-wyg__media { margin: 0; }
+}

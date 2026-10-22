@@ -185,5 +185,23 @@ ends just after the last feature. Draft only.
 Source used: `Design/HubSpot/Home/code/gfb-what-you-get-and-testimonials.html`
 on that branch (a preview of the module's CSS). The Figma connector hit its
 seat limit, so the frame was matched from Brian's screenshot.
+**Update 2, 22 Oct (Shubham: still doesn't match Figma):** measured the Figma
+frame from Brian's screenshot (scale 1.10 to 1440). Each card is **568 × 440, the
+same size as the image**, so the image is the full card background. Figma also
+has left-aligned card titles (semibold, about 22px) over a thin grey rule,
+28px icon badges stacked *above* each title (18px semibold) and description
+(14px), 24px card padding, a 64px gap, a grey band background (#F8F9FB) and a
+left-aligned heading. HubSpot had centred titles, accent rules, icons beside
+the text and 40px padding. The head CSS was rewritten to all of these values;
+source: `Design/HubSpot/Home/code/i23-what-you-get/head-override.css`.
+**Verified** by rebuilding the band locally from the module CSS and the live
+field values, then screenshotting it with Playwright at 1440 and 390 and
+comparing it with the Figma crop (`figma-vs-replica.png`, `replica-mobile-390.png`
+in the same folder). The live page can't be reached from the container, so
+the real HubSpot render still needs one look in preview. The card images were
+stand-ins, since hubfs is blocked too. **Remaining differences are copy only:** the
+sub-header (Brian's request, 19 Oct) and the longer first feature line in the
+hiring card (+20px card height). The headline and titles also differ in
+wording. Copy was left alone.
 **Follow-up:** move this rule into the `gfb_what_you_get` module CSS when
 the module source is next edited, so it doesn't depend on page head HTML.
