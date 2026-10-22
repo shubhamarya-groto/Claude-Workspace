@@ -1,0 +1,17 @@
+.gfb.gfb-vision {
+  --gfb-brand: #16243D; --gfb-muted: #525C70; --gfb-orange: #F16C0E; --gfb-surface: #F8F9FB;
+  --gfb-font-display: "Instrument Sans", system-ui, sans-serif; --gfb-font-body: "Inter", system-ui, sans-serif;
+  padding: 80px 24px; background: var(--gfb-surface); color: var(--gfb-brand);
+  font-family: var(--gfb-font-body); -webkit-font-smoothing: antialiased; text-align: center;
+}
+.gfb.gfb-vision, .gfb.gfb-vision * { box-sizing: border-box; }
+.gfb .gfb-vision__inner { max-width: 760px; margin: 0 auto; }
+.gfb .gfb-vision__rule { display: block; width: 40px; height: 3px; margin: 0 auto 20px; border-radius: 2px; background: var(--gfb-orange); }
+.gfb .gfb-vision__title { margin: 0 0 20px; font-family: var(--gfb-font-display); font-size: clamp(26px, 1vw + 18px, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; color: var(--gfb-brand); }
+.gfb .gfb-vision__body, .gfb .gfb-vision__body p { margin: 0; font-size: 18px; line-height: 1.7; color: var(--gfb-muted); }
+.gfb .gfb-vision__body p + p { margin-top: 16px; }
+.gfb .gfb-vision__closing { margin: 24px 0 0; font-size: 18px; font-weight: 600; line-height: 1.6; color: var(--gfb-brand); }
+@media (max-width: 600px) {
+  .gfb.gfb-vision { padding: 56px 24px; }
+  .gfb .gfb-vision__body, .gfb .gfb-vision__body p, .gfb .gfb-vision__closing { font-size: 16px; }
+}

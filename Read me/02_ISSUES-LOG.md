@@ -111,8 +111,8 @@ rounds of review.
 | Pri | ID | Item | Where | Effort | Estimate | Waiting on | Status |
 |---|---|---|---|---|---|---|---|
 | **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | – | **Done, published 22 Oct** |
-| **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | Your check in the editor preview, then go-ahead to publish | **Draft edited 22 Oct**, not published |
-| **P2** | I-24 | Add a small "Our Vision" section above the footer, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Nothing, copy supplied | Open |
+| **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | – | **Done, published 22 Oct** |
+| **P2** | I-24 | Add a small "Our Vision" section above the footer, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Your check in preview, go-ahead to publish; Figma frame still to update | **HubSpot draft built 22 Oct** (Home only), not published |
 | **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Photo shortlist and Brian's pick | Open |
 | **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | Photo shortlist and Brian's pick | Open, do together with I-20 |
 | **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | Brian confirming Jeff's answer | Answered by Jeff, needs Brian's confirmation |
@@ -205,3 +205,15 @@ hiring card (+20px card height). The headline and titles also differ in
 wording. Copy was left alone.
 **Follow-up:** move this rule into the `gfb_what_you_get` module CSS when
 the module source is next edited, so it doesn't depend on page head HTML.
+**Update 3, 22 Oct:** checked in preview, matches. Published.
+
+**I-24, 22 Oct.** New custom module `gfb_vision` (code and previews in
+`Design/HubSpot/Home/code/gfb-vision/`), inserted on GFB Home (staging) as
+`main-module-11`, between the final CTA and the footer. Brian's copy is word
+for word: the main paragraph in the body, and his last sentence ("Because
+when the right people connect…") as a bold closing line. It's a light grey
+band, centred, with no buttons. Draft only. **Home page only:** Brian didn't
+say whether every page gets it; confirm with him before adding it to
+Companies and Job Seekers. **Not in Figma yet:** the connector is at its seat
+limit, so the band was built straight in HubSpot. Add it to the Figma frame
+when access is back.
