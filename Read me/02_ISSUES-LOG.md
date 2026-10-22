@@ -169,3 +169,21 @@ looking for work" (Figma: "For Companies" / "For Job Seekers"), an extra
 sub-header, and longer feature lines. These look like edits made in HubSpot.
 Brian asked for the layout to match, so the copy was not touched. Confirm
 with him if he wants the copy to match Figma too.
+**Correction, 22 Oct:** the copy is Brian's own. On 19 Oct he asked for the
+centred heading, the sub-header and the "If you're hiring" titles
+(commit `bd845fd`, branch `claude/ecstatic-albattani-5e2sv8`), so there's
+nothing to ask him.
+**Update, 22 Oct, after preview:** still stretched. The image size wasn't
+the cause. The real cause is in the module: `.gfb-wyg__media` (the card image) is
+its own grid row under the features (`align-self: end`, `min-height: 120px`),
+so its full height (about 440px) is added to every card. In Figma the
+image is a faint background behind the features. Fix: page head CSS on
+GFB Home (staging) only, which pins `.gfb-wyg__media` with absolute
+positioning to the card bottom, behind the features (features already sit
+at `z-index: 1`), and sets the card's bottom padding to 12px so the card
+ends just after the last feature. Draft only.
+Source used: `Design/HubSpot/Home/code/gfb-what-you-get-and-testimonials.html`
+on that branch (a preview of the module's CSS). The Figma connector hit its
+seat limit, so the frame was matched from Brian's screenshot.
+**Follow-up:** move this rule into the `gfb_what_you_get` module CSS when
+the module source is next edited, so it doesn't depend on page head HTML.
