@@ -110,7 +110,7 @@ rounds of review.
 
 | Pri | ID | Item | Where | Effort | Estimate | Waiting on | Status |
 |---|---|---|---|---|---|---|---|
-| **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | HubSpot edit access, go-ahead to edit the live page | Open |
+| **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | Your check in the editor preview, then go-ahead to publish | **Draft edited 22 Oct**, not published |
 | **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | HubSpot edit access | Open |
 | **P2** | I-24 | Add a small "Our Vision" section above the footer, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Nothing, copy supplied | Open |
 | **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Photo shortlist and Brian's pick | Open |
@@ -133,3 +133,20 @@ cause is a setting.
 | **I-22** | P0 | **B** | Job Seeker · Hi-Fi, hero headline (**live HubSpot site**) | **Brian Oltmanns, 21 Oct:** "@Team Groto On the Hubspot site, could you make "Less searching" on its own third line? I cannot figure out how to do it" | This change is on the **live HubSpot page**, not in Figma. The headline should break as: "Local trade jobs." / "Better pay." / "Less searching." At the moment "Less" wraps with "Better pay." and "searching." drops to a line on its own. Fix it with a forced line break (a `<br>`, or a block span for each line in the module) so the three lines hold at every width. The Figma frame should break the same way. Brian asked for help because he can't do it in HubSpot himself |
 | **I-23** | P1 | **B** | Homepage · Hi-Fi, "Better opportunities. Better workers. One construction network." band (For Companies / For Job Seekers cards) (**live HubSpot site**) | **Brian Oltmanns, 21 Oct:** "@Team Groto this section in Hubspot is stretched for some reason, could you make it look like this in Figma?" | The live HubSpot band doesn't match the Figma layout. Figma has two equal cards, each a titled list of three icon + heading + line steps, inside the page's content width. Check the module's max-width, the column or flex settings, and whether the section is set to full width. Then match the Figma spacing and card widths. Frame name isn't visible in the screenshot; it sits above the "What our m[embers say]" testimonials band |
 | **I-24** | P2 | **B** | Homepage · Hi-Fi, between the final CTA band ("Find the people you need…", Post a job / Find work) and the footer | **Brian Oltmanns, 21 Oct:** "@Team Groto could you add another small "Our Vision"section above the footer with the text: "We believe every skilled worker deserves access to better opportunities, and every construction company deserves a simpler way to find the people they need. Our vision is to build a connected industry where workers, contractors, and trade partners can discover new possibilities, develop lasting relationships, and grow together. Because when the right people connect, everyone has more opportunity to build something better."" | New small band directly above the footer, below the final CTA. Overline or heading "Our Vision", then Brian's paragraph exactly as written (copy is final). Keep it light: one centred column of text, no buttons, so it doesn't compete with the CTA above. Design in Figma first, then build on HubSpot. He didn't say whether it goes only on the homepage or on every page; confirm when replying |
+
+### Work notes
+
+**I-22, 22 Oct.** The page is "GFB Job Seekers (staging)", HubSpot content ID
+`224337738564`, at `/job-seekers-staging`. The hero is the custom module
+`gfb_hero_v2` (`main-module-2`). It has two plain-text fields: `headline`, and
+`highlight` (the orange words, which must match the headline exactly). The
+module's source isn't available through the connector. A `<br>` in a text
+field might render as literal text, so the fix uses non-breaking spaces
+instead: "Better pay." and "Less searching." each have a U+00A0 between the
+words, in both fields. Each pair now wraps as one unit, which forces
+"Less searching." onto line 3.
+Saved to the draft only, not published. Not yet checked visually: the
+container can't load hs-sites.com. If the line doesn't break in the preview,
+the lasting fix is to change the `gfb_hero_v2` source to allow a line break
+in the highlight. That change hits every page using the module (Home,
+Companies, Job Seekers), so it needs its own check.
