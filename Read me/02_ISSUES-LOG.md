@@ -110,8 +110,8 @@ rounds of review.
 
 | Pri | ID | Item | Where | Effort | Estimate | Waiting on | Status |
 |---|---|---|---|---|---|---|---|
-| **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | Your check in the editor preview, then go-ahead to publish | **Draft edited 22 Oct**, not published |
-| **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | HubSpot edit access | Open |
+| **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | – | **Done, published 22 Oct** |
+| **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | Your check in the editor preview, then go-ahead to publish | **Draft edited 22 Oct**, not published |
 | **P2** | I-24 | Add a small "Our Vision" section above the footer, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Nothing, copy supplied | Open |
 | **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Photo shortlist and Brian's pick | Open |
 | **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | Photo shortlist and Brian's pick | Open, do together with I-20 |
@@ -150,3 +150,22 @@ container can't load hs-sites.com. If the line doesn't break in the preview,
 the lasting fix is to change the `gfb_hero_v2` source to allow a line break
 in the highlight. That change hits every page using the module (Home,
 Companies, Job Seekers), so it needs its own check.
+**Update, 22 Oct:** checked in preview, it breaks correctly. Published.
+
+**I-23, 22 Oct.** The band is on "GFB Home (staging)", content ID
+`223806550529`, module `gfb_what_you_get` (`main-module-2`). The spec
+(`Design/HubSpot/Home/04_FINAL-DESIGN_Home-Page.md`) is a 1200 container
+with two cards of 568 and a 64 gap. Found: the "If you're hiring" card image
+was set to **1136 × 880**, which is the 2x export at its full pixel size. The
+"If you're looking for work" card image is set to 568 × 440. Most likely
+cause of the stretch: the first card renders an image twice the intended
+width. Fix: set the first image's display size to 568 × 440, keeping the
+same 2x file so it stays sharp. Section and module styles are empty, so
+nothing forces full width there. Saved to the draft, not published, and not
+checked visually (the container can't load hs-sites.com).
+**Copy differs from Figma, left alone:** heading "Better jobs…" (Figma:
+"Better opportunities…"), card titles "If you're hiring" / "If you're
+looking for work" (Figma: "For Companies" / "For Job Seekers"), an extra
+sub-header, and longer feature lines. These look like edits made in HubSpot.
+Brian asked for the layout to match, so the copy was not touched. Confirm
+with him if he wants the copy to match Figma too.
