@@ -91,17 +91,45 @@ band down and the section is 110px too short for its content.
 settle before any button is styled), I-03, I-06, I-07, I-09 (premise wrong, see
 the verification notes), I-11, and the two waiting on Brian, I-12 and I-14.
 
-## Client feedback, Figma comments (logged 22 Oct 2026)
+## Client feedback tracker (Figma comments, from 22 Oct 2026)
 
-Comment threads on the hi-fi frames. The client's words are quoted exactly as written. Dates are worked out from
-the relative times Figma showed on 22 Oct ("3 days ago" is about 19 Oct,
-"15 to 18 hours ago" is 21 Oct). Each comment gets an issue ID in the same
-series as above.
+A running list of client comments from the hi-fi frames. When a new comment
+comes in, add a row to the work queue and a row to the verbatim table, then
+re-rank. Dates are worked out from the relative times Figma showed on 22 Oct
+("3 days ago" is about 19 Oct, "13 to 18 hours ago" is 21 Oct).
 
-| ID | Sev | Frame | Thread (verbatim) | What it means / action | Status |
+**Priority:** P0 is first. Each item has its own rank, so the queue is the
+working order. Live-site defects come first because people can see them now.
+After that, small asks with copy or direction already settled, then work that
+needs sourcing or design time.
+**Effort:** **Fast** is under about an hour, once access or a decision is in
+place. **Takes time** is half a day or more, or it waits on sourcing or on
+rounds of review.
+
+### Work queue
+
+| Pri | ID | Item | Where | Effort | Estimate | Waiting on | Status |
+|---|---|---|---|---|---|---|---|
+| **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | HubSpot edit access, go-ahead to edit the live page | Open |
+| **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | HubSpot edit access | Open |
+| **P2** | I-24 | Add a small "Our Vision" section above the footer, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Nothing, copy supplied | Open |
+| **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Photo shortlist and Brian's pick | Open |
+| **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | Photo shortlist and Brian's pick | Open, do together with I-20 |
+| **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | Brian confirming Jeff's answer | Answered by Jeff, needs Brian's confirmation |
+| **P6** | I-19 | Redesign the Plumbing hero (approved, no direction given) | Figma | **Takes time** | 1 day incl. explorations | Nothing to start. Settle I-18 first so the header is fixed | Approved, to do |
+
+**Fast fixes, can go out together:** I-22, I-24, I-18, and I-23 if the
+cause is a setting.
+**Takes time:** I-19, plus I-20 and I-21 because of photo sourcing.
+
+### Verbatim threads
+
+| ID | Pri | Sev | Frame | Thread (verbatim) | What it means / action |
 |---|---|---|---|---|---|
-| **I-18** | **B** | Plumbing · Hi-Fi, top of page (logo bar) | **Team Groto, ~19 Oct:** "@Brian Oltmanns I am not sure where Plumbing page sits in Sitemap, is it interal page for companies or how does someone reaches it. Knowing it will help me set the top nav for this page." **Jeff Keller, ~19 Oct:** "I'm pretty sure that's a landing page for ads and promotional emails" | Treat Plumbing as a **campaign landing page** (traffic from ads and email), not a page in the main nav. That supports keeping the header to the logo only, with no main nav, so visitors stay on the page and its form. Brian hasn't confirmed this; Jeff's answer is a "pretty sure". Linked to I-14 (nav / URL structure) | Answered by Jeff, needs Brian's confirmation |
-| **I-19** | **B** | Plumbing · Hi-Fi, hero (photo, headline, claim-profile form) | **Team Groto, ~19 Oct:** "I am considering redesigning the hero section. let me know if I can proceed with it, or should we keep it same as it is now. Also if you have any ideas in mind for Hero section of Plumbing do share." **Brian Oltmanns, 21 Oct:** "Yes, please proceed with the redesign" | Brian approved the hero redesign. He shared no direction, so the design is ours. Keep what the page already has: the `{{ company name }}` claim-profile form, the Indianapolis plumbing positioning, and the jobsite photo (Brian holds it up as the standard in I-20) | **Approved, to do** |
-| **I-20** | **B** | Company · Hi-Fi, hero photo | **Brian Oltmanns, 21 Oct:** "@Team Groto we do still want to change this photo to something similar to the plumbing marketing page, something more jobsite related where the workers look less clean and polished" | Replace the hero photo (two men in suits and hard hats). New brief: a real jobsite, with workers who look like they're working, not posed or polished. The Plumbing page photo (three plumbers with a clipboard, among exposed pipework) is the reference. Linked to I-15 (photography) | Open, to do |
-| **I-21** | **B** | Job Seeker · Hi-Fi, hero photo | **Brian Oltmanns, 21 Oct:** "@Team Groto would like to change this photo as well, same standards as prior comment" | Same brief as I-20: replace the posed, smiling worker with a jobsite shot that looks less polished. Choose I-20 and I-21 together so the two heroes match. Linked to I-15 | Open, to do |
-| **I-22** | **B** | Job Seeker · Hi-Fi, hero headline (**live HubSpot site**) | **Brian Oltmanns, 21 Oct:** "@Team Groto On the Hubspot site, could you make "Less searching" on its own third line? I cannot figure out how to do it" | This change is on the **live HubSpot page**, not in Figma. The headline should break as: "Local trade jobs." / "Better pay." / "Less searching." At the moment "Less" wraps with "Better pay." and "searching." drops to a line on its own. Fix it with a forced line break (a `<br>`, or a block span for each line in the module) so the three lines hold at every width. The Figma frame should break the same way. Brian asked for help because he can't do it in HubSpot himself | Open, needs HubSpot access |
+| **I-18** | P5 | **B** | Plumbing · Hi-Fi, top of page (logo bar) | **Team Groto, ~19 Oct:** "@Brian Oltmanns I am not sure where Plumbing page sits in Sitemap, is it interal page for companies or how does someone reaches it. Knowing it will help me set the top nav for this page." **Jeff Keller, ~19 Oct:** "I'm pretty sure that's a landing page for ads and promotional emails" | Treat Plumbing as a **campaign landing page** (traffic from ads and email), not a page in the main nav. That supports keeping the header to the logo only, with no main nav, so visitors stay on the page and its form. Brian hasn't confirmed this; Jeff's answer is a "pretty sure". Linked to I-14 (nav / URL structure) |
+| **I-19** | P6 | **B** | Plumbing · Hi-Fi, hero (photo, headline, claim-profile form) | **Team Groto, ~19 Oct:** "I am considering redesigning the hero section. let me know if I can proceed with it, or should we keep it same as it is now. Also if you have any ideas in mind for Hero section of Plumbing do share." **Brian Oltmanns, 21 Oct:** "Yes, please proceed with the redesign" | Brian approved the hero redesign. He shared no direction, so the design is ours. Keep what the page already has: the `{{ company name }}` claim-profile form, the Indianapolis plumbing positioning, and the jobsite photo (Brian holds it up as the standard in I-20) |
+| **I-20** | P3 | **B** | Company · Hi-Fi, hero photo | **Brian Oltmanns, 21 Oct:** "@Team Groto we do still want to change this photo to something similar to the plumbing marketing page, something more jobsite related where the workers look less clean and polished" | Replace the hero photo (two men in suits and hard hats). New brief: a real jobsite, with workers who look like they're working, not posed or polished. The Plumbing page photo (three plumbers with a clipboard, among exposed pipework) is the reference. Linked to I-15 (photography) |
+| **I-21** | P4 | **B** | Job Seeker · Hi-Fi, hero photo | **Brian Oltmanns, 21 Oct:** "@Team Groto would like to change this photo as well, same standards as prior comment" | Same brief as I-20: replace the posed, smiling worker with a jobsite shot that looks less polished. Choose I-20 and I-21 together so the two heroes match. Linked to I-15 |
+| **I-22** | P0 | **B** | Job Seeker · Hi-Fi, hero headline (**live HubSpot site**) | **Brian Oltmanns, 21 Oct:** "@Team Groto On the Hubspot site, could you make "Less searching" on its own third line? I cannot figure out how to do it" | This change is on the **live HubSpot page**, not in Figma. The headline should break as: "Local trade jobs." / "Better pay." / "Less searching." At the moment "Less" wraps with "Better pay." and "searching." drops to a line on its own. Fix it with a forced line break (a `<br>`, or a block span for each line in the module) so the three lines hold at every width. The Figma frame should break the same way. Brian asked for help because he can't do it in HubSpot himself |
+| **I-23** | P1 | **B** | Homepage · Hi-Fi, "Better opportunities. Better workers. One construction network." band (For Companies / For Job Seekers cards) (**live HubSpot site**) | **Brian Oltmanns, 21 Oct:** "@Team Groto this section in Hubspot is stretched for some reason, could you make it look like this in Figma?" | The live HubSpot band doesn't match the Figma layout. Figma has two equal cards, each a titled list of three icon + heading + line steps, inside the page's content width. Check the module's max-width, the column or flex settings, and whether the section is set to full width. Then match the Figma spacing and card widths. Frame name isn't visible in the screenshot; it sits above the "What our m[embers say]" testimonials band |
+| **I-24** | P2 | **B** | Homepage · Hi-Fi, between the final CTA band ("Find the people you need…", Post a job / Find work) and the footer | **Brian Oltmanns, 21 Oct:** "@Team Groto could you add another small "Our Vision"section above the footer with the text: "We believe every skilled worker deserves access to better opportunities, and every construction company deserves a simpler way to find the people they need. Our vision is to build a connected industry where workers, contractors, and trade partners can discover new possibilities, develop lasting relationships, and grow together. Because when the right people connect, everyone has more opportunity to build something better."" | New small band directly above the footer, below the final CTA. Overline or heading "Our Vision", then Brian's paragraph exactly as written (copy is final). Keep it light: one centred column of text, no buttons, so it doesn't compete with the CTA above. Design in Figma first, then build on HubSpot. He didn't say whether it goes only on the homepage or on every page; confirm when replying |
