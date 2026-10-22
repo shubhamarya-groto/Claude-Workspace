@@ -112,7 +112,7 @@ rounds of review.
 |---|---|---|---|---|---|---|---|
 | **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | – | **Done, published 22 Oct** |
 | **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | – | **Done, published 22 Oct** |
-| **P2** | I-24 | Add a small "Our Vision" section above the footer, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Your check in preview, go-ahead to publish | **HubSpot draft built and Figma updated 22 Oct** (Home only), not published |
+| **P2** | I-24 | Add a small "Our Vision" section to the **About Us page**, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Your check in preview, go-ahead to publish | **About Us: HubSpot draft and Figma done 22 Oct**, not published |
 | **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Photo shortlist and Brian's pick | Open |
 | **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | Photo shortlist and Brian's pick | Open, do together with I-20 |
 | **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | Brian confirming Jeff's answer | Answered by Jeff, needs Brian's confirmation |
@@ -219,3 +219,16 @@ Companies and Job Seekers.
 `1259:9027`, between `10 · Final CTA` and the footer. It matches the HubSpot
 module and uses the file's colour and spacing variables and text styles.
 Home Page grew from 5543 to 5974 tall. Checked by screenshot.
+
+**I-24 correction, 22 Oct (Shubham):** Our Vision belongs on the **About Us
+page, not Home**. Done:
+- HubSpot Home (staging): `main-module-11` removed from the draft. It was
+  never published, so the live Home page never had it.
+- HubSpot About Us (staging) `224339429033`: `gfb_vision` inserted as
+  `main-module-7`, row 4, after the three alternating rows and before the
+  final CTA and footer. Draft only.
+- Figma: the band `1569:3096` is already inside About Us · Hi-Fi
+  `1259:9158`, between the alternating rows and `09 · Final CTA` (moved in
+  the file). Home Page has no Our Vision layer and is back to 5543 tall.
+  HubSpot follows this Figma placement (above the CTA rather than directly
+  above the footer).
