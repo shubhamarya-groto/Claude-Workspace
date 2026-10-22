@@ -4,6 +4,30 @@ Freepik stock via the Magnific account, 22 Oct 2026. Brief from Brian: real jobs
 
 **Picked by title only.** This container can't load the previews (img.magnific.com and downloadscdn*.magnific.com are blocked), so open the links to judge them. Free photos cost 40 credits to download, premium 150.
 
+## What the GFB team likes (evidence, 22 Oct)
+
+| Source | What it shows |
+|---|---|
+| **Welder photo**, supplied by Brian (`Testing assets/hero-welder-1400x799.jpg`). Brief, 11 Sep: "I like the photo of the worker shooting off sparks" | A real trade in action. Faces hidden by masks, nobody posing. Warm orange industrial light that suits the brand orange. Gritty |
+| **Plumbing landing page photo**, Brian's named reference on 21 Oct ("something similar to the plumbing marketing page"). Chosen by the GFB team and **AI-generated** (their HubSpot "AI-Generated Media" folder) | Three plumbers in navy work shirts, safety glasses and tool belts, looking at a clipboard, not at the camera. Exposed copper pipework in an unfinished interior. Natural window light |
+| **Rejected Company hero** | Two men in suits and hard hats, one an older executive with blueprints. Corporate and staged |
+| **Rejected Job Seeker hero** | A young man grinning at the camera, holding his hard hat up, clean plaid shirt and overalls. Stock-photo cheerfulness |
+| Brian, 21 Oct | "more jobsite related where the workers look less clean and polished" |
+| Audit A-11 (agreed rule) | Leave 20% breathing room, never crop at joints, keep the text side clear. The hero shows the photo in a folder-tab shape on the right |
+| Their market | Indianapolis skilled trades: plumbing, HVAC, electrical, carpentry. Their own landing pages are Plumbing, HVAC and job seekers. Not engineers, architects, tablets or high-rises |
+
+**Their taste, in one line:** tradespeople mid-task with real tools and materials on an unfinished site, not looking at the camera, in workwear rather than suits or clean costumes. Natural or warm light. Two or three people for the employer side, one person for the worker side.
+
+**Rule out:** handshakes, blueprints or tablets as the subject, engineers or architects, anyone smiling at the camera, thumbs-up or OK signs, workshop or studio shots, high-rise steel.
+
+## Recommendation
+
+**Best fit: a matching AI-generated pair in the style of the Plumbing photo.** Brian's reference is itself AI-generated and came from the GFB team, so this matches their taste exactly. It also gives a consistent look across Company, Job Seeker and Plumbing, and the pair can be framed to the hero's folder-tab crop (subject right, clear space left). Magnific can generate both; this needs your OK because it spends credits.
+
+**Best stock options, if they prefer real photos** (from the list below, judged by title, so check them by eye):
+- Company: **A4** crew screwing a timber house frame together (premium), then **A15** coworkers servicing an HVAC system (an HVAC trade, which GFB targets), then **A2** two carpenters working together in a building.
+- Job Seeker: **B4** electrician running cable on a construction site, then **B6** man fitting heating pipes with a wrench, then **B1** worker hammering on a job site.
+
 ## Company hero (crew / employer view)
 
 - **A1** [Building and construction workers on the site](https://img.magnific.com/free-photo/building-construction-workers-site_23-2149124305.jpg) · Freepik id 19123126
