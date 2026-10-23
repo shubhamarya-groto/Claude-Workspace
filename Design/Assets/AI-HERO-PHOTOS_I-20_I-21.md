@@ -4,6 +4,22 @@ Generated 23 Oct 2026 in Magnific (Seedream 5 Pro, 2K, 3:2, 100 credits each, 60
 Plumbing page photo Brian named as his reference. They're saved in the Magnific account's Personal project.
 **Not reviewed yet:** this container can't load the image host (`pikaso.cdnpk.net`), so check each one by eye before showing the team.
 
+## Round 2 (23 Oct): distinct people
+
+Shubham's feedback on round 1: the people all look the same. Round 2 prompts describe every worker separately by age,
+ethnicity, build and features, so each photo has different, ordinary-looking faces (600 credits). **Round 2 replaces round 1.**
+
+| Code | Page | People | Open in Magnific |
+|---|---|---|---|
+| C1 | Company · framing crew | White man, late 50s, grey goatee, heavyset; Latino man, early 20s, backwards cap; Black man, mid 30s, short beard | https://www.magnific.com/app/creation/UPdAW1Iwny |
+| C2 | Company · HVAC crew | Bald white man, mid 40s, ginger beard, on the ladder; Black woman, late 20s, braids, holding the duct | https://www.magnific.com/app/creation/N2vVdwk6D9 |
+| C3 | Company · electrical crew | Latino man, late 50s, grey moustache, reading glasses, at the spool; lanky white man, early 20s, stubble, on the ladder | https://www.magnific.com/app/creation/gOpZnrYSXO |
+| J1 | Job Seeker · carpenter | Black man, mid 40s, salt-and-pepper beard, broad build | https://www.magnific.com/app/creation/0e1vunRTfW |
+| J2 | Job Seeker · plumber | Latino man, early 30s, moustache, tattooed forearms, stocky | https://www.magnific.com/app/creation/O68YVJiynm |
+| J3 | Job Seeker · electrician | White woman, mid 30s, freckles, ponytail under a work cap | https://www.magnific.com/app/creation/N2vVdNg6D9 |
+
+## Round 1 (superseded)
+
 | Code | Page | Trade | Brief | Open in Magnific |
 |---|---|---|---|---|
 | C1 | Company | Framing crew | Three carpenters framing a house: nail gun, carrying a stud, checking a level. Overcast daylight | https://www.magnific.com/app/creation/SyeZx8jUb8 |
