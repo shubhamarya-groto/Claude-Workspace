@@ -12,3 +12,9 @@ company-name rich text, `@hubspot/form`), which was removed.
 - **Copy:** stat lines follow Figma ("Connect with talent in Indianapolis", "You choose who you want to interview"), and the H1 is "Connect your plumbing business with / **Indianapolis Talent**".
 - **Checked locally:** a Playwright render of the module CSS with standard HubSpot form markup came out 955 px tall at 1440 (Figma is 954) and stacks cleanly at 390. The live render wasn't seen; hs-sites.com is blocked from the container.
 - Files: `module.css`, `module.html` (HubL), `fields.json`, `module.live.html` (as pushed).
+
+## 23 Oct fixes (after first live check)
+- **Section width:** the row is set to full width with zero section padding, so the grey band runs edge to edge (it was boxed in with white margins).
+- **Form:** the page's form uses HubSpot's **new form renderer** (`hsfc-*` markup), not the legacy `hs-form`. Its own card, beige pill inputs (from Elevate's theme form styles), side-by-side name row and big gaps are now overridden inside this card only, using the `--hsf-*` CSS variables plus `hsfc-*` class rules. Fields are white, 48px tall, 8px radius, one per row on every screen size. The button is full width with a 58px radius in orange. Consent text is 13px muted with orange links. The legacy markup is covered too.
+- **Ribbon:** replaced the generic 45° CSS ribbon with Figma's own artwork: the band plus two folds, inner and drop shadows, and the label at -34° (`ribbon.svg`). It overhangs the card by 15px at the top and 22px at the right (smaller on phones). The field `ribbon_text` is replaced by the toggle `show_ribbon`, because the label is part of the artwork.
+- Checked locally against new-renderer-style markup with the theme's pill and beige styles applied; the overrides win. The live page wasn't viewed.

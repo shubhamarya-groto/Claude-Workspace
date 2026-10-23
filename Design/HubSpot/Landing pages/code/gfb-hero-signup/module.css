@@ -28,32 +28,77 @@
 /* Sign-up card */
 .gfb-hs__card { position: relative; display: flex; flex-direction: column; gap: 32px; padding: 32px; background: var(--hs-white); border: 1px solid var(--hs-border); border-radius: 24px; scroll-margin-top: 24px; }
 .gfb-hs__card-title { margin: 0; padding-right: 48px; font-size: 30px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--hs-brand); }
-/* Corner ribbon "Claim your profile" */
-.gfb-hs__ribbon { position: absolute; top: -12px; right: -12px; width: 150px; height: 150px; overflow: hidden; pointer-events: none; }
-.gfb-hs__ribbon::before, .gfb-hs__ribbon::after { content: ""; position: absolute; z-index: 0; border: 6px solid #C2410C; border-top-color: transparent; border-right-color: transparent; }
-.gfb-hs__ribbon::before { top: 0; left: 34px; }
-.gfb-hs__ribbon::after { bottom: 34px; right: 0; }
-.gfb-hs__ribbon span { position: absolute; z-index: 1; top: 40px; right: -46px; width: 220px; padding: 6px 0; background: var(--hs-ribbon); color: var(--hs-white); text-align: center; font-size: 11px; font-weight: 600; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase; transform: rotate(45deg); box-shadow: 0 2px 6px rgba(22, 36, 61, 0.18); }
+/* Corner ribbon "Claim your profile": Figma's own vectors (SVG), overhanging the card's top-right corner */
+.gfb-hs__ribbon { position: absolute; top: -15px; right: -22px; width: 175px; height: 122px; pointer-events: none; z-index: 2; }
+.gfb-hs__ribbon svg { display: block; width: 100%; height: 100%; overflow: visible; }
 
-/* HubSpot form inside the card */
-.gfb-hs__form form { margin: 0; }
-.gfb-hs__form fieldset { max-width: none !important; margin: 0; padding: 0; border: 0; }
-.gfb-hs__form .hs-form-field { margin: 0 0 8px; }
-.gfb-hs__form .hs-form-field > label { display: block; margin: 0 0 6px; font-family: var(--hs-font); font-size: 14px; font-weight: 500; line-height: 1.3; color: var(--hs-brand); }
-.gfb-hs__form .hs-form-required { margin-left: 2px; color: var(--hs-accent); }
-.gfb-hs__form .input { margin: 0 !important; }
-.gfb-hs__form .hs-input:not([type="checkbox"]):not([type="radio"]) { display: block; width: 100% !important; height: 48px; padding: 0 16px; border: 1px solid var(--hs-border); border-radius: 8px; background: var(--hs-white); font-family: var(--hs-font); font-size: 16px; line-height: 1.6; color: var(--hs-brand); box-shadow: none; }
-.gfb-hs__form textarea.hs-input { height: auto !important; min-height: 96px; padding: 12px 16px !important; }
-.gfb-hs__form .hs-input::placeholder { color: var(--hs-muted); opacity: 1; }
-.gfb-hs__form .hs-input:focus { outline: 2px solid var(--hs-accent); outline-offset: 1px; border-color: var(--hs-accent); }
-.gfb-hs__form .hs-error-msgs { margin: 6px 0 0; padding: 0; list-style: none; }
-.gfb-hs__form .hs-error-msg, .gfb-hs__form .hs-main-font-element { font-size: 12px; color: #B42318; }
-.gfb-hs__form .legal-consent-container, .gfb-hs__form .legal-consent-container p { font-size: 12px; line-height: 1.5; color: var(--hs-muted); }
-.gfb-hs__form .hs_submit { margin-top: 24px; }
-.gfb-hs__form .hs-button { display: block; width: 100%; height: 48px; margin: 0; padding: 0 24px; border: 0; border-radius: 58px; background: var(--hs-accent); color: var(--hs-white); font-family: var(--hs-font); font-size: 16px; font-weight: 500; line-height: 1; cursor: pointer; transition: background-color 0.15s ease; }
-.gfb-hs__form .hs-button:hover, .gfb-hs__form .hs-button:focus-visible { background: #EA580C; }
-.gfb-hs__form .hs-button:focus-visible { outline: 3px solid var(--hs-brand); outline-offset: 3px; }
-.gfb-hs__form .submitted-message { font-size: 16px; line-height: 1.6; color: var(--hs-brand); }
+/* HubSpot form inside the card. Covers both renderers: the new forms (hsfc-*, CSS variables) and the legacy hs-form markup.
+   Elevate's theme form styles (pill inputs, beige fill) are overridden here, inside this card only. */
+.gfb-hs__form { width: 100%; }
+.gfb-hs__form [data-hsfc-id="Renderer"], .gfb-hs__form .hsfc-Renderer {
+  --hsf-global__font-family: var(--hs-font); --hsf-global__font-size: 16px; --hsf-global__color: var(--hs-brand);
+  --hsf-background__background-color: transparent; --hsf-background__border-style: none; --hsf-background__border-width: 0;
+  --hsf-background__border-radius: 0; --hsf-background__padding: 0;
+  --hsf-row__vertical-spacing: 12px; --hsf-row__horizontal-spacing: 12px; --hsf-module__vertical-spacing: 12px;
+  --hsf-field-label__font-family: var(--hs-font); --hsf-field-label__font-size: 14px; --hsf-field-label__color: var(--hs-brand);
+  --hsf-field-label-requiredindicator__color: var(--hs-accent);
+  --hsf-field-input__font-family: var(--hs-font); --hsf-field-input__font-size: 16px; --hsf-field-input__color: var(--hs-brand);
+  --hsf-field-input__background-color: var(--hs-white); --hsf-field-input__placeholder-color: var(--hs-muted);
+  --hsf-field-input__border-color: var(--hs-border); --hsf-field-input__border-style: solid; --hsf-field-input__border-width: 1px;
+  --hsf-field-input__border-radius: 8px; --hsf-field-input__padding: 12px 16px;
+  --hsf-button__font-family: var(--hs-font); --hsf-button__font-size: 16px; --hsf-button__color: var(--hs-white);
+  --hsf-button__background-color: var(--hs-accent); --hsf-button__border-radius: 58px; --hsf-button__padding: 14px 24px;
+  --hsf-richtext__font-family: var(--hs-font); --hsf-richtext__font-size: 13px; --hsf-richtext__color: var(--hs-muted);
+  display: block; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
+  background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+}
+.gfb-hs__form form, .gfb-hs__form fieldset,
+.gfb-hs__form .hsfc-Form, .gfb-hs__form .hsfc-FormWrapper, .gfb-hs__form .hsfc-Step, .gfb-hs__form .hsfc-Step__Content {
+  width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
+  background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+}
+.gfb-hs__form .hsfc-Step__Content { display: flex !important; flex-direction: column; gap: 12px; }
+/* Every field full width, one per row (also on desktop, as in Figma) */
+.gfb-hs__form .hsfc-Row { display: flex !important; flex-direction: column !important; gap: 12px !important; margin: 0 !important; padding: 0 !important; }
+.gfb-hs__form .hsfc-Row > *, .gfb-hs__form .hs-form-field, .gfb-hs__form .input { width: 100% !important; max-width: none !important; flex: 1 1 auto !important; margin: 0 !important; padding: 0 !important; float: none !important; }
+.gfb-hs__form fieldset.form-columns-2 .hs-form-field + .hs-form-field { margin-top: 12px !important; }
+.gfb-hs__form .hs-form-field { margin-bottom: 12px !important; }
+.gfb-hs__form label, .gfb-hs__form .hsfc-FieldLabel { display: block; margin: 0 0 6px !important; font-family: var(--hs-font) !important; font-size: 14px !important; font-weight: 500 !important; line-height: 1.3 !important; color: var(--hs-brand) !important; }
+.gfb-hs__form .hs-form-required, .gfb-hs__form .hsfc-FieldLabel__RequiredIndicator { margin-left: 2px; color: var(--hs-accent) !important; }
+.gfb-hs__form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]):not([type="button"]),
+.gfb-hs__form select, .gfb-hs__form textarea {
+  display: block !important; width: 100% !important; max-width: none !important; height: 48px !important; min-height: 48px !important;
+  margin: 0 !important; padding: 0 16px !important; background: var(--hs-white) !important; border: 1px solid var(--hs-border) !important;
+  border-radius: 8px !important; box-shadow: none !important; font-family: var(--hs-font) !important; font-size: 16px !important;
+  font-weight: 400 !important; line-height: 1.5 !important; color: var(--hs-brand) !important; text-overflow: ellipsis;
+}
+.gfb-hs__form textarea { height: auto !important; min-height: 96px !important; padding: 12px 16px !important; }
+.gfb-hs__form input::placeholder, .gfb-hs__form textarea::placeholder { color: var(--hs-muted) !important; opacity: 1; }
+.gfb-hs__form input:focus, .gfb-hs__form select:focus, .gfb-hs__form textarea:focus { outline: 2px solid var(--hs-accent) !important; outline-offset: 1px; border-color: var(--hs-accent) !important; }
+/* Consent text and reCAPTCHA */
+.gfb-hs__form .hsfc-RichText, .gfb-hs__form .legal-consent-container, .gfb-hs__form .hsfc-RichText p, .gfb-hs__form .legal-consent-container p {
+  margin: 0 !important; font-family: var(--hs-font) !important; font-size: 13px !important; line-height: 1.5 !important; color: var(--hs-muted) !important;
+}
+.gfb-hs__form .hsfc-RichText a, .gfb-hs__form .legal-consent-container a { color: var(--hs-accent) !important; text-decoration: underline; text-underline-offset: 2px; }
+.gfb-hs__form .hsfc-ReCaptchaV2, .gfb-hs__form .hs_recaptcha, .gfb-hs__form .grecaptcha-badge { margin: 0 !important; }
+/* Errors */
+.gfb-hs__form .hs-error-msgs { margin: 6px 0 0 !important; padding: 0; list-style: none; }
+.gfb-hs__form .hs-error-msg, .gfb-hs__form .hsfc-ErrorAlert, .gfb-hs__form .hs-main-font-element { font-size: 12px !important; color: #B42318 !important; }
+/* Submit: full-width orange pill */
+.gfb-hs__form .hsfc-NavigationRow, .gfb-hs__form .hsfc-NavigationRow__Buttons, .gfb-hs__form .hs_submit, .gfb-hs__form .actions {
+  display: block !important; width: 100% !important; margin: 8px 0 0 !important; padding: 0 !important;
+}
+.gfb-hs__form .hsfc-NavigationRow__Buttons { margin: 0 !important; }
+.gfb-hs__form .hsfc-Button, .gfb-hs__form button[type="submit"], .gfb-hs__form input[type="submit"], .gfb-hs__form .hs-button {
+  display: block !important; width: 100% !important; height: 48px !important; margin: 0 !important; padding: 0 24px !important;
+  border: 0 !important; border-radius: 58px !important; background: var(--hs-accent) !important; color: var(--hs-white) !important;
+  font-family: var(--hs-font) !important; font-size: 16px !important; font-weight: 500 !important; line-height: 1 !important;
+  box-shadow: none !important; cursor: pointer; transition: background-color 0.15s ease;
+}
+.gfb-hs__form .hsfc-Button:hover, .gfb-hs__form button[type="submit"]:hover, .gfb-hs__form .hs-button:hover,
+.gfb-hs__form .hsfc-Button:focus-visible, .gfb-hs__form .hs-button:focus-visible { background: #EA580C !important; }
+.gfb-hs__form .hsfc-Button:focus-visible, .gfb-hs__form .hs-button:focus-visible { outline: 3px solid var(--hs-brand) !important; outline-offset: 3px; }
+.gfb-hs__form .submitted-message, .gfb-hs__form .hsfc-PostSubmit { font-size: 16px; line-height: 1.6; color: var(--hs-brand); }
 
 @media (max-width: 1023px) {
   .gfb-hs { padding: 56px 24px 64px; }
@@ -63,4 +108,5 @@
   .gfb-hs__stats { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .gfb-hs__title, .gfb-hs__card-title { font-size: 26px; }
   .gfb-hs__card { padding: 24px; }
+  .gfb-hs__ribbon { top: -12px; right: -10px; width: 140px; height: 98px; }
 }

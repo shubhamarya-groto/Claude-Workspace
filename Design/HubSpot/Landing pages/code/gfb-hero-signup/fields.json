@@ -139,10 +139,12 @@
   "default": true
  },
  {
-  "name": "ribbon_text",
-  "label": "Corner ribbon",
-  "type": "text",
-  "default": "Claim your profile"
+  "name": "show_ribbon",
+  "label": "Show “Claim your profile” ribbon",
+  "type": "boolean",
+  "display": "toggle",
+  "help_text": "The ribbon is the Figma artwork (text included), so its wording is fixed.",
+  "default": true
  },
  {
   "name": "anchor_id",
