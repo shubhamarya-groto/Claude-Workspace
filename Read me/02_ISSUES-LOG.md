@@ -113,8 +113,8 @@ rounds of review.
 | **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | – | **Done, published 22 Oct** |
 | **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | – | **Done, published 22 Oct** |
 | **P2** | I-24 | Add a small "Our Vision" section to the **About Us page**, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Your check in preview, go-ahead to publish | **About Us: HubSpot draft and Figma done 22 Oct**, not published |
-| **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Team picks from 6 AI options; getting them into Figma | **6 AI options generated 23 Oct**, not yet in Figma |
-| **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | Same as I-20 | **Shortlist ready 22 Oct**, do together with I-20 |
+| **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | – | **Done, published 23 Oct** (C1) |
+| **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | – | **Done, published 23 Oct** (J1) |
 | **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | Brian confirming Jeff's answer | Answered by Jeff, needs Brian's confirmation |
 | **P6** | I-19 | Redesign the Plumbing hero (approved, no direction given) | Figma | **Takes time** | 1 day incl. explorations | Nothing to start. Settle I-18 first so the header is fixed | Approved, to do |
 
@@ -269,3 +269,15 @@ place. The background is the light grey surface, and colours and spacing use
 the file variables. The Elevate sample content (stock photo, placeholder
 quote, slider arrows and dashes) was removed. The band is now 726 tall, was 826.
 Renamed "08 · Testimonials (HubSpot gfb_testimonials)".
+
+**23 Oct (Shubham): Plumbing header, hero photos, publish.**
+- Plumbing LP header rebuilt from Figma `1528:10672` as the new module
+  `gfb_hero_signup`. The old row-0 modules were removed. See
+  `Design/HubSpot/Landing pages/code/gfb-hero-signup/README.md`. The form
+  now shows an inline thank-you message instead of redirecting to google.com.
+- Hero photos taken from Figma: Company uses **C1 framing crew**
+  (`hero-companies-ai-c1-1200x800.jpg`) and Job Seeker uses **J1 carpenter**
+  (`hero-job-seekers-ai-j1-1200x800.jpg`). Both are hosted from this repo, like the earlier hero
+  photos. Closes I-20 and I-21.
+- **Published:** Plumbing LP, Home, Companies, Job Seekers. This also put the
+  rich-text hero headlines live.

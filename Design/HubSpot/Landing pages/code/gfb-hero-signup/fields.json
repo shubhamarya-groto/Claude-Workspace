@@ -1,0 +1,164 @@
+[
+ {
+  "name": "photo",
+  "label": "Photo",
+  "type": "image",
+  "help_text": "Shown above the headline, cropped to 674 × 405 with rounded corners.",
+  "resizable": false,
+  "default": {
+   "src": "https://47303551.fs1.hubspotusercontent-na1.net/hubfs/47303551/AI-Generated%20Media/Images/Plumbing%20Team%20Reviewing%20Work%20Plan%20At%20Renovation%20Site.png",
+   "alt": "Plumbing team reviewing a work plan at a renovation site",
+   "width": 1536,
+   "height": 1024,
+   "loading": "eager"
+  }
+ },
+ {
+  "name": "eyebrow",
+  "label": "Eyebrow",
+  "type": "text",
+  "default": "Indianapolis plumbing businesses"
+ },
+ {
+  "name": "headline_rich",
+  "label": "Headline",
+  "type": "richtext",
+  "help_text": "Press Enter to start a new line. Make words bold to turn them orange.",
+  "enabled_features": [
+   "bold",
+   "italic",
+   "link",
+   "colors"
+  ],
+  "default": "<p>Connect your plumbing business with</p><p><strong>Indianapolis Talent</strong></p>"
+ },
+ {
+  "name": "body_copy",
+  "label": "Body",
+  "type": "richtext",
+  "default": "<p>You’re invited to join GoFindBuild’s construction network. Claim your free company profile &amp; connect with local candidates with plumbing, pipefitting, fire suppression, pool construction, septic, sewer &amp; drain, well, and pump experience.</p>"
+ },
+ {
+  "name": "stats",
+  "label": "Stat cards",
+  "type": "group",
+  "occurrence": {
+   "min": 0,
+   "max": 4,
+   "default": 3,
+   "sorting_label_field": "stats.value"
+  },
+  "children": [
+   {
+    "name": "icon",
+    "label": "Icon",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "droplets",
+      "Droplets (plumbing)"
+     ],
+     [
+      "map_pin",
+      "Map pin"
+     ],
+     [
+      "user_check",
+      "User check"
+     ],
+     [
+      "wrench",
+      "Wrench"
+     ],
+     [
+      "thermometer",
+      "Thermometer (HVAC)"
+     ],
+     [
+      "zap",
+      "Zap (electrical)"
+     ],
+     [
+      "shield_check",
+      "Shield check"
+     ]
+    ],
+    "default": "user_check"
+   },
+   {
+    "name": "value",
+    "label": "Title",
+    "type": "text",
+    "default": "Your choice"
+   },
+   {
+    "name": "line",
+    "label": "Line",
+    "type": "text",
+    "default": "You choose who you want to interview"
+   }
+  ],
+  "default": [
+   {
+    "icon": "droplets",
+    "value": "Plumbing",
+    "line": "Matching based on the skills you need"
+   },
+   {
+    "icon": "map_pin",
+    "value": "Local",
+    "line": "Connect with talent in Indianapolis"
+   },
+   {
+    "icon": "user_check",
+    "value": "Your choice",
+    "line": "You choose who you want to interview"
+   }
+  ]
+ },
+ {
+  "name": "note",
+  "label": "Supporting note",
+  "type": "text",
+  "default": "*Your company profile is free. Applicant contact access is priced separately."
+ },
+ {
+  "name": "card_title",
+  "label": "Card title",
+  "type": "text",
+  "help_text": "Shown when the visitor's company name is not known.",
+  "default": "Indianapolis Plumbing Businesses"
+ },
+ {
+  "name": "use_company_token",
+  "label": "Use the visitor's company name",
+  "type": "boolean",
+  "display": "toggle",
+  "help_text": "Replaces the card title with the company property fcklmarketing_company_name when HubSpot knows it.",
+  "default": true
+ },
+ {
+  "name": "ribbon_text",
+  "label": "Corner ribbon",
+  "type": "text",
+  "default": "Claim your profile"
+ },
+ {
+  "name": "anchor_id",
+  "label": "Card anchor ID",
+  "type": "text",
+  "help_text": "Links to #this-id scroll to the sign-up card.",
+  "default": "employer-signup-form"
+ },
+ {
+  "name": "form_field",
+  "label": "Form",
+  "type": "form",
+  "default": {
+   "form_id": "8750fff0-3492-4d53-8187-2a7682bc2320",
+   "response_type": "inline",
+   "message": "Thanks! We’ll confirm your company profile shortly."
+  }
+ }
+]

@@ -1,0 +1,68 @@
+{# GFB Hero + sign-up form (Plumbing LP). Figma 1528:10672. CSS is inlined above this in the live module. #}
+{% set icons = {
+  "droplets": '<path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>',
+  "map_pin": '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+  "user_check": '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>',
+  "wrench": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  "thermometer": '<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>',
+  "zap": '<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>',
+  "shield_check": '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>'
+} %}
+{% if module.headline_rich and module.headline_rich|striptags|trim %}
+  {% set headline = module.headline_rich|regex_replace("</p>[^<]*<p[^>]*>", "<br>")|regex_replace("</?p[^>]*>", "")|trim %}
+{% else %}
+  {% set headline = "" %}
+{% endif %}
+{% set card_title = module.card_title %}
+{% if module.use_company_token and company and company.fcklmarketing_company_name %}
+  {% set card_title = company.fcklmarketing_company_name %}
+{% endif %}
+
+<section class="gfb-hs">
+  <div class="gfb-hs__inner">
+    <div class="gfb-hs__copy">
+      {% if module.photo.src %}
+        <img class="gfb-hs__photo" src="{{ module.photo.src|escape_url }}" alt="{{ module.photo.alt|escape_attr }}"
+             {% if module.photo.width %}width="{{ module.photo.width|escape_attr }}"{% endif %}
+             {% if module.photo.height %}height="{{ module.photo.height|escape_attr }}"{% endif %}
+             loading="eager" fetchpriority="high">
+      {% endif %}
+      <div class="gfb-hs__text">
+        {% if module.eyebrow %}<p class="gfb-hs__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
+        {% if headline %}<h1 class="gfb-hs__title">{{ headline }}</h1>{% endif %}
+        {% if module.body_copy %}<div class="gfb-hs__body">{{ module.body_copy }}</div>{% endif %}
+      </div>
+      {% if module.stats %}
+        <ul class="gfb-hs__stats">
+          {% for s in module.stats %}
+            <li class="gfb-hs__stat">
+              <span class="gfb-hs__stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ icons[s.icon] or icons["user_check"] }}</svg></span>
+              <span class="gfb-hs__stat-text">
+                {% if s.value %}<span class="gfb-hs__stat-value">{{ s.value|escape }}</span>{% endif %}
+                {% if s.line %}<span class="gfb-hs__stat-label">{{ s.line|escape }}</span>{% endif %}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if module.note %}<p class="gfb-hs__note">{{ module.note|escape }}</p>{% endif %}
+    </div>
+
+    <div class="gfb-hs__card"{% if module.anchor_id %} id="{{ module.anchor_id|escape_attr }}"{% endif %}>
+      {% if module.ribbon_text %}<div class="gfb-hs__ribbon" aria-hidden="true"><span>{{ module.ribbon_text|escape }}</span></div>{% endif %}
+      {% if card_title %}<h2 class="gfb-hs__card-title">{{ card_title|escape }}</h2>{% endif %}
+      {% if module.form_field.form_id %}
+        <div class="gfb-hs__form">
+          {% form
+            form_to_use="{{ module.form_field.form_id }}"
+            response_response_type="{{ module.form_field.response_type }}"
+            response_message="{{ module.form_field.message }}"
+            response_redirect_id="{{ module.form_field.redirect_id }}"
+            response_redirect_url="{{ module.form_field.redirect_url }}"
+            gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+          %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
