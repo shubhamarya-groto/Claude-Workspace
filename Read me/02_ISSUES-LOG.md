@@ -259,3 +259,13 @@ lines, and bold words are orange. The old headline and highlight fields remain
 as a fallback. This replaces the non-breaking-space workaround. Content is set
 in the drafts of Home, Companies and Job Seekers, not yet published. Source:
 `Design/HubSpot/Home/code/gfb-hero/`.
+
+**Figma sync, 23 Oct (Shubham):** Home Page testimonials band `1259:9068`
+rebuilt to match the HubSpot `gfb_testimonials` module on GFB Home (staging).
+It has a centred "What our members say" heading (Display 3xl), then two stacked
+quote cards: Matthew B. - Carpenter, Noblesville, IN, and Brothers Insulation &
+Construction, Indianapolis, IN. Each card has an initials badge, a name and a
+place. The background is the light grey surface, and colours and spacing use
+the file variables. The Elevate sample content (stock photo, placeholder
+quote, slider arrows and dashes) was removed. The band is now 726 tall, was 826.
+Renamed "08 · Testimonials (HubSpot gfb_testimonials)".
