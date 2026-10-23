@@ -113,7 +113,7 @@ rounds of review.
 | **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | – | **Done, published 22 Oct** |
 | **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | – | **Done, published 22 Oct** |
 | **P2** | I-24 | Add a small "Our Vision" section to the **About Us page**, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Your check in preview, go-ahead to publish | **About Us: HubSpot draft and Figma done 22 Oct**, not published |
-| **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Pick from the shortlist; network access to fetch files | **Shortlist ready 22 Oct**, blocked on access |
+| **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | Team picks from 6 AI options; getting them into Figma | **6 AI options generated 23 Oct**, not yet in Figma |
 | **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | Same as I-20 | **Shortlist ready 22 Oct**, do together with I-20 |
 | **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | Brian confirming Jeff's answer | Answered by Jeff, needs Brian's confirmation |
 | **P6** | I-19 | Redesign the Plumbing hero (approved, no direction given) | Figma | **Takes time** | 1 day incl. explorations | Nothing to start. Settle I-18 first so the header is fixed | Approved, to do |
@@ -243,3 +243,12 @@ Unsplash search or the HubSpot hosts, so no photo has been seen or fetched.
 One test download (40 credits) confirmed that the file host is blocked too.
 Waiting on: a pick per page, plus either network access to those hosts or
 the two files added to `Design/Assets/Testing assets/`.
+
+**I-20 / I-21, 23 Oct.** Six AI options generated in Magnific (3 crew shots
+for Company, 3 single-tradesperson shots for Job Seeker), in the style of the
+Plumbing reference: `Design/Assets/AI-HERO-PHOTOS_I-20_I-21.md` has the links
+and briefs. They haven't been reviewed here because the image host is blocked.
+Putting them on the Figma Presentation page was blocked three ways: the
+connector account has view-only access to this file for uploads, the image
+host is blocked by network policy, and the Figma call limit was hit. The board
+script `Design/Figma/scripts/hero-photo-options-board.js` is ready to run.
