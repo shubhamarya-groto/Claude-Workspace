@@ -112,11 +112,11 @@ rounds of review.
 |---|---|---|---|---|---|---|---|
 | **P0** | I-22 | "Less searching." on its own third line in the Job Seeker hero headline | Live HubSpot | **Fast** | 15 min | – | **Done, published 22 Oct** |
 | **P1** | I-23 | "For Companies / For Job Seekers" section is stretched on HubSpot; make it match Figma | Live HubSpot | **Fast** (if it's a width or column setting) / **Takes time** (if the module needs rebuilding) | 30 min to 2 h | – | **Done, published 22 Oct** |
-| **P2** | I-24 | Add a small "Our Vision" section to the **About Us page**, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | Your check in preview, go-ahead to publish | **About Us: HubSpot draft and Figma done 22 Oct**, not published |
+| **P2** | I-24 | Add a small "Our Vision" section to the **About Us page**, using Brian's copy word for word | Figma, then HubSpot | **Fast** | 1 h (Figma) + 1 h (HubSpot) | – | **Done, published 22 Oct** (About Us only) |
 | **P3** | I-20 | Swap the Company hero photo for a real jobsite shot with less polished workers | Figma, then HubSpot | **Takes time** (the swap itself is fast; finding a photo that passes is the slow part) | 2 to 4 h incl. sourcing | – | **Done, published 23 Oct** (C1) |
 | **P4** | I-21 | Swap the Job Seeker hero photo, same brief as I-20 | Figma, then HubSpot | **Takes time** (same as I-20) | Shared with I-20 | – | **Done, published 23 Oct** (J1) |
-| **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | Brian confirming Jeff's answer | Answered by Jeff, needs Brian's confirmation |
-| **P6** | I-19 | Redesign the Plumbing hero (approved, no direction given) | Figma | **Takes time** | 1 day incl. explorations | Nothing to start. Settle I-18 first so the header is fixed | Approved, to do |
+| **P5** | I-18 | Plumbing page is a campaign landing page, so the header is logo only with no main nav | Figma | **Fast** | 15 min + a reply to Brian | – | **Done 23 Oct**: treated as a campaign landing page. Shubham's Figma redesign (`1528:10672`) is built on HubSpot; the header is the logo only, no main nav |
+| **P6** | I-19 | Redesign the Plumbing hero (approved, no direction given) | Figma | **Takes time** | 1 day incl. explorations | – | **Done, published 23 Oct**: Shubham redesigned it in Figma (`1528:10672`), built as `gfb_hero_signup` |
 
 **Fast fixes, can go out together:** I-22, I-24, I-18, and I-23 if the
 cause is a setting.
