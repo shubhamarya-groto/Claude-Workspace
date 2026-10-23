@@ -252,3 +252,10 @@ Putting them on the Figma Presentation page was blocked three ways: the
 connector account has view-only access to this file for uploads, the image
 host is blocked by network policy, and the Figma call limit was hit. The board
 script `Design/Figma/scripts/hero-photo-options-board.js` is ready to run.
+
+**I-22 follow-up, 23 Oct (Shubham):** the hero headline is now one rich-text
+field in the shared `gfb_hero_v2` module (`headline_rich`). Paragraphs are
+lines, and bold words are orange. The old headline and highlight fields remain
+as a fallback. This replaces the non-breaking-space workaround. Content is set
+in the drafts of Home, Companies and Job Seekers, not yet published. Source:
+`Design/HubSpot/Home/code/gfb-hero/`.

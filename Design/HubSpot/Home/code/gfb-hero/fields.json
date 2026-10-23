@@ -1,0 +1,244 @@
+[
+ {
+  "id": "headline_rich",
+  "name": "headline_rich",
+  "label": "Headline",
+  "required": false,
+  "locked": false,
+  "help_text": "Press Enter to start a new line. Make words bold to turn them orange.",
+  "type": "richtext",
+  "enabled_features": [
+   "bold",
+   "italic",
+   "link",
+   "colors"
+  ],
+  "default": ""
+ },
+ {
+  "name": "headline",
+  "label": "Headline (plain, legacy)",
+  "type": "text",
+  "default": "Where construction businesses and workers meet",
+  "help_text": "Used only when the rich text headline above is empty."
+ },
+ {
+  "name": "highlight",
+  "label": "Highlighted words (legacy)",
+  "type": "text",
+  "help_text": "Used only with the plain headline. Must match words in it exactly. They turn orange.",
+  "default": "and workers meet"
+ },
+ {
+  "name": "subhead",
+  "label": "Subhead",
+  "type": "text",
+  "default": "We automatically match talented job seekers directly to the construction businesses that need them."
+ },
+ {
+  "name": "card_one",
+  "label": "Card one",
+  "type": "group",
+  "children": [
+   {
+    "name": "title",
+    "label": "Title",
+    "type": "text",
+    "default": "I'm hiring"
+   },
+   {
+    "name": "text",
+    "label": "Line",
+    "type": "text",
+    "default": "Post jobs - see matches today free!"
+   },
+   {
+    "name": "button_label",
+    "label": "Button label",
+    "type": "text",
+    "default": "Hire workers"
+   },
+   {
+    "name": "button_link",
+    "label": "Button link",
+    "type": "link",
+    "default": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "name": "button_style",
+    "label": "Button style",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "primary",
+      "Orange"
+     ],
+     [
+      "dark",
+      "Dark"
+     ]
+    ],
+    "default": "primary"
+   }
+  ],
+  "default": {
+   "title": "I'm hiring",
+   "text": "Post jobs - see matches today free!",
+   "button_label": "Hire workers",
+   "button_style": "primary"
+  }
+ },
+ {
+  "name": "card_two",
+  "label": "Card two",
+  "type": "group",
+  "children": [
+   {
+    "name": "title",
+    "label": "Title",
+    "type": "text",
+    "default": "I'm looking for work"
+   },
+   {
+    "name": "text",
+    "label": "Line",
+    "type": "text",
+    "default": "Free forever - find the best paying jobs!"
+   },
+   {
+    "name": "button_label",
+    "label": "Button label",
+    "type": "text",
+    "default": "Find jobs"
+   },
+   {
+    "name": "button_link",
+    "label": "Button link",
+    "type": "link",
+    "default": {
+     "url": {
+      "href": "",
+      "type": "EXTERNAL"
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    }
+   },
+   {
+    "name": "button_style",
+    "label": "Button style",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+     [
+      "primary",
+      "Orange"
+     ],
+     [
+      "dark",
+      "Dark"
+     ]
+    ],
+    "default": "dark"
+   }
+  ],
+  "default": {
+   "title": "I'm looking for work",
+   "text": "Free forever - find the best paying jobs!",
+   "button_label": "Find jobs",
+   "button_style": "dark"
+  }
+ },
+ {
+  "name": "checks",
+  "label": "Checks beside the cards",
+  "type": "group",
+  "help_text": "Optional short reasons with a check badge, shown next to the cards. The Company page uses one card plus three checks.",
+  "occurrence": {
+   "min": 0,
+   "max": 4,
+   "default": 0,
+   "sorting_label_field": "checks.check_text"
+  },
+  "children": [
+   {
+    "name": "check_text",
+    "label": "Text",
+    "type": "text",
+    "default": "Posting is free"
+   }
+  ],
+  "default": []
+ },
+ {
+  "name": "photo",
+  "label": "Photo",
+  "type": "image",
+  "help_text": "Wide photo, at least 1200 px. The folder-tab shape is applied automatically.",
+  "resizable": false,
+  "default": {
+   "src": "",
+   "alt": "Two welders at work, sparks flying",
+   "loading": "eager"
+  }
+ },
+ {
+  "name": "photo_position",
+  "label": "Photo focus",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "center",
+    "Center"
+   ],
+   [
+    "left",
+    "Left"
+   ],
+   [
+    "right",
+    "Right"
+   ],
+   [
+    "top",
+    "Top"
+   ]
+  ],
+  "default": "center"
+ },
+ {
+  "name": "glow",
+  "label": "Glow",
+  "type": "boolean",
+  "display": "toggle",
+  "help_text": "Soft light behind the copy and the photo, as on the Company and Job Seeker pages. Colour is set by Tone.",
+  "default": false
+ },
+ {
+  "name": "tone",
+  "label": "Tone",
+  "type": "choice",
+  "display": "select",
+  "help_text": "Orange: orange glow and orange check badges (Company). Blue: blue glow and grey check badges with a navy tick (Job Seeker).",
+  "choices": [
+   [
+    "orange",
+    "Orange"
+   ],
+   [
+    "blue",
+    "Blue"
+   ]
+  ],
+  "default": "orange"
+ }
+]
