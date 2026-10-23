@@ -281,3 +281,16 @@ Renamed "08 · Testimonials (HubSpot gfb_testimonials)".
   photos. Closes I-20 and I-21.
 - **Published:** Plumbing LP, Home, Companies, Job Seekers. This also put the
   rich-text hero headlines live.
+
+**23 Oct (Shubham): Plumbing LP stats, CTA, footer. Published.**
+- **Stats band looked faded:** `gfb_stats_dark` lays a navy gradient (92% to 72%
+  opacity) over its background image. On this page the image was Home's light
+  peach-and-blue band, which showed through the 72% end and washed the navy out.
+  The image is removed on the LP (`dnd_area-module-4`), so the band is solid navy `#16243D`.
+- **CTA was boxed:** the `gfb_final_cta` section (`widget_1792135074421`) is now full width
+  with no section padding, matching the other pages.
+- **Footer was boxed, padded and had a short rule, and About Us went to the live
+  `/about-us` (404):** the footer sits in the Elevate LP footer partial, which can't be styled
+  from the page. Fixed in the shared `gfb_footer` module: it runs full bleed in any container
+  and treats any address containing `-staging` as staging. Source:
+  `Design/HubSpot/Home/code/gfb-footer/`. Module updates are live at once, on every page.
