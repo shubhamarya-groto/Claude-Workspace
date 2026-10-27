@@ -294,3 +294,13 @@ Renamed "08 · Testimonials (HubSpot gfb_testimonials)".
   from the page. Fixed in the shared `gfb_footer` module: it runs full bleed in any container
   and treats any address containing `-staging` as staging. Source:
   `Design/HubSpot/Home/code/gfb-footer/`. Module updates are live at once, on every page.
+
+**27 Oct (Shubham): Plumbing LP complete. All client items I-18 to I-24 closed.**
+- Footer checked. Link fields on the LP: About Us `/about-us` and the logo `/` resolve to
+  `/about-us-staging` and `/home-staging` on any `-staging` address. Terms and Privacy keep their own pages.
+- Layout checked in a local render of the module CSS inside a boxed, padded footer wrapper (1440, 1000,
+  390 wide): the footer runs edge to edge, the wrapper's padding and rule are gone, and there is no sideways scroll.
+  The live staging page couldn't be opened from the build environment (hs-sites.com is blocked there), so this
+  is the local check, not a screenshot of the live page.
+- Header (logo only, I-18), hero (I-19), stats, CTA and footer all published. Marked done on Shubham's call;
+  Brian's confirmation of the logo-only header is still welcome but not blocking.
