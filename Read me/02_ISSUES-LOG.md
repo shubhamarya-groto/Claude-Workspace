@@ -313,3 +313,8 @@ google.com redirect) · benefits → `gfb_benefits` · pricing kept (`gfb_pricin
 "Why we built GoFindBuild" stats → `gfb_stats_dark` (overline only, solid navy) · gear CTA → `gfb_final_cta`.
 Hero, stats and CTA bands full width as on Plumbing. Copy carried over that still says "plumbing": benefits
 card 2 and FAQ question 3; left as is pending a call.
+- 27 Oct follow-up: stats headline lines added (Home's approved lines, same as Plumbing; both are fields in
+  `gfb_stats_dark`). "plumbing" → "HVAC" in benefits card 2 and FAQ question 3. Side padding removed: the hero +
+  benefits section had 20px padding on all sides; it is now full width with 0 padding, and the benefits, pricing and
+  FAQ sections are set to full width too. Hero and CTA are the same components as on Plumbing (`gfb_hero_signup`, `gfb_final_cta`).
+  Still a draft: the published HVAC URL shows the old page until it is published.
