@@ -304,3 +304,12 @@ Renamed "08 · Testimonials (HubSpot gfb_testimonials)".
   is the local check, not a screenshot of the live page.
 - Header (logo only, I-18), hero (I-19), stats, CTA and footer all published. Marked done on Shubham's call;
   Brian's confirmation of the logo-only header is still welcome but not blocking.
+
+**27 Oct (Shubham): HVAC LP rebuilt with GFB components (draft, not published).**
+Page `224521894575` (HVAC employer sign-up). Each old section swapped for the component the Plumbing LP uses,
+content copied word for word:
+hero + claim form → `gfb_hero_signup` (`dnd_area-module-8`, thermometer icon, inline thank-you instead of the
+google.com redirect) · benefits → `gfb_benefits` · pricing kept (`gfb_pricing`) · FAQ → `gfb_faq` ·
+"Why we built GoFindBuild" stats → `gfb_stats_dark` (overline only, solid navy) · gear CTA → `gfb_final_cta`.
+Hero, stats and CTA bands full width as on Plumbing. Copy carried over that still says "plumbing": benefits
+card 2 and FAQ question 3; left as is pending a call.
