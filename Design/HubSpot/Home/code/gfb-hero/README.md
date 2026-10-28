@@ -10,3 +10,9 @@ The source of truth is the module in HubSpot, edited through the connector. This
 - `headline` and `highlight` are kept as a **legacy fallback**: the module uses them only when the rich text field is empty. The new field's default is empty on purpose, so existing pages didn't change when the module updated.
 - Content set in the drafts: Job Seeker "Local trade jobs. / **Better pay.** / **Less searching.**", Company "Build your workforce. / **Not your recruiting bill.**", Home "A better way to build your **workforce**".
 - Pages using the module: GFB Home (staging) `223806550529`, GFB Companies (staging) `223986607632`, GFB Job Seekers (staging) `224337738564`.
+
+## Spacing field (28 Oct)
+
+New `spacing` choice: **Standard** (96 top and bottom, min height 717; Companies, Job Seekers) or **Compact**
+(80 top, 20 bottom, height from content; desktop only). Home uses Compact, matching Figma `1259:9031`
+(`01 · Hero + fork`, padding 80 / 20). Tablet and phone layouts are unchanged.

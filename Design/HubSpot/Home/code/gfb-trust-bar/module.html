@@ -1,0 +1,13 @@
+{# GFB Trust bar. One row of short reasons, each with a check badge. Every line is a field: see fields.json. #}
+<section class="gfb-trust gfb-trust--{{ module.alignment or 'left' }}" aria-label="Why GoFindBuild">
+  <ul class="gfb-trust__list">
+    {% for i in module.items %}
+      {% if i.item_text %}
+        <li class="gfb-trust__item">
+          <span class="gfb-trust__badge" aria-hidden="true"><svg viewBox="0 0 10 7.73" width="10" height="8" focusable="false"><path d="M3.33 7.73 0 4.4l1.06-1.07 2.27 2.27L8.94 0 10 1.06z"/></svg></span>
+          <span class="gfb-trust__text">{{ i.item_text|escape }}</span>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

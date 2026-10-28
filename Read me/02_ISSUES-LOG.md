@@ -318,3 +318,7 @@ card 2 and FAQ question 3; left as is pending a call.
   benefits section had 20px padding on all sides; it is now full width with 0 padding, and the benefits, pricing and
   FAQ sections are set to full width too. Hero and CTA are the same components as on Plumbing (`gfb_hero_signup`, `gfb_final_cta`).
   Still a draft: the published HVAC URL shows the old page until it is published.
+
+**28 Oct (Shubham): Home header spacing from Figma `1259:9031`.** Hero bottom padding 80 → 20 (new `spacing`
+field on `gfb_hero_v2`, Home set to Compact: 80 top / 20 bottom; Companies and Job Seekers keep Standard). Trust bar
+(`gfb_trust_bar`, Figma `1259:9048`) item gap 32 → 12, live on every page using it. Home hero change is in draft.

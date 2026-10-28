@@ -1,0 +1,49 @@
+[
+ {
+  "name": "items",
+  "label": "Items",
+  "type": "group",
+  "occurrence": {
+   "min": 1,
+   "max": 6,
+   "default": 3,
+   "sorting_label_field": "items.item_text"
+  },
+  "children": [
+   {
+    "name": "item_text",
+    "label": "Text",
+    "type": "text",
+    "default": "Reason to trust us"
+   }
+  ],
+  "default": [
+   {
+    "item_text": "Direct employer connections"
+   },
+   {
+    "item_text": "No recruiter middlemen"
+   },
+   {
+    "item_text": "150+ trade categories"
+   }
+  ]
+ },
+ {
+  "name": "alignment",
+  "label": "Alignment",
+  "type": "choice",
+  "display": "select",
+  "choices": [
+   [
+    "left",
+    "Left (as in Figma)"
+   ],
+   [
+    "center",
+    "Centre"
+   ]
+  ],
+  "default": "left"
+ }
+]

@@ -193,6 +193,11 @@
 /* Rich text headline: bold words take the accent colour, line breaks come from paragraphs */
 .gfb .gfb-hero__title strong, .gfb .gfb-hero__title b { color: var(--gfb-accent); font-weight: inherit; }
 .gfb .gfb-hero__title a { color: inherit; }
+/* Compact spacing (Home, Figma 1259:9031): 80 top, 20 bottom, height from content */
+@media (min-width: 1024px) {
+  .gfb.gfb-hero--compact { min-height: 0; padding: 80px 0 20px; }
+  .gfb.gfb-hero--compact .gfb-hero__copy { padding: 0; }
+}
 </style>
 {# GFB Hero. Every word, link and image comes from a field: see README.md for the field list #}
 
@@ -207,7 +212,7 @@
   {% endif %}
 {% endif %}
 
-<section class="gfb gfb-hero{% if module.glow %} gfb-hero--glow{% endif %}{% if module.tone == 'blue' %} gfb-hero--blue{% endif %}">
+<section class="gfb gfb-hero{% if module.glow %} gfb-hero--glow{% endif %}{% if module.tone == 'blue' %} gfb-hero--blue{% endif %}{% if module.spacing == 'compact' %} gfb-hero--compact{% endif %}">
   <div class="gfb-hero__copy">
     <h1 class="gfb-hero__title">{{ headline }}</h1>
     {% if module.subhead %}
