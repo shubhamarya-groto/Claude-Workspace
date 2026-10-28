@@ -21,3 +21,6 @@
   .gfb.gfb-wyg .gfb-wyg__card { min-height: 0; }
   .gfb.gfb-wyg .gfb-wyg__media { margin: 0; }
 }
+/* 28 Oct: next section sits 64px below the header (hero + trust bar) at every width */
+.gfb-trust.gfb-trust .gfb-trust__list { padding-bottom: 0; }
+.gfb.gfb-wyg.gfb-wyg { padding-top: 64px; }

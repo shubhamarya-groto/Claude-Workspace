@@ -322,3 +322,6 @@ card 2 and FAQ question 3; left as is pending a call.
 **28 Oct (Shubham): Home header spacing from Figma `1259:9031`.** Hero bottom padding 80 → 20 (new `spacing`
 field on `gfb_hero_v2`, Home set to Compact: 80 top / 20 bottom; Companies and Job Seekers keep Standard). Trust bar
 (`gfb_trust_bar`, Figma `1259:9048`) item gap 32 → 12, live on every page using it. Home hero change is in draft.
+- 28 Oct follow-up: Home hero cards now end level with the bottom of the folder photo (Compact only). Next section
+  ("Better jobs…") sits 64px below the trust bar: Home head CSS sets the trust bar's bottom padding to 0 and the
+  What-you-get band's top padding to 64 (was 64 + 96 = 160). Draft, not published.
