@@ -197,6 +197,9 @@
 @media (min-width: 1024px) {
   .gfb.gfb-hero--compact { min-height: 0; padding: 80px 0 20px; }
   .gfb.gfb-hero--compact .gfb-hero__copy { padding: 0; }
+  /* Cards end on the photo's bottom edge (Figma: copy and folder photo share the bottom line) */
+  .gfb.gfb-hero--compact .gfb-hero__copy,
+  .gfb.gfb-hero--compact .gfb-hero__visual { align-self: end; }
 }
 </style>
 {# GFB Hero. Every word, link and image comes from a field: see README.md for the field list #}

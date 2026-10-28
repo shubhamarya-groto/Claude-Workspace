@@ -15,4 +15,4 @@ The source of truth is the module in HubSpot, edited through the connector. This
 
 New `spacing` choice: **Standard** (96 top and bottom, min height 717; Companies, Job Seekers) or **Compact**
 (80 top, 20 bottom, height from content; desktop only). Home uses Compact, matching Figma `1259:9031`
-(`01 · Hero + fork`, padding 80 / 20). Tablet and phone layouts are unchanged.
+(`01 · Hero + fork`, padding 80 / 20). Tablet and phone layouts are unchanged. In Compact the copy and the photo both sit on the bottom line, so the fork cards end level with the bottom of the folder photo.
