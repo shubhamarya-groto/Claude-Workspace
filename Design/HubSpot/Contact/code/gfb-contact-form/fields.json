@@ -1,0 +1,12 @@
+[
+  {"name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "", "help_text": "Optional small orange line above the heading."},
+  {"name": "heading", "label": "Heading", "type": "text", "default": "Contact Us"},
+  {"name": "heading_level", "label": "Heading level", "type": "choice", "display": "select", "choices": [["h1", "H1 (page title)"], ["h2", "H2"]], "default": "h1"},
+  {"name": "intro", "label": "Intro", "type": "richtext", "enabled_features": ["bold", "italic", "link"], "default": ""},
+  {"name": "form_field", "label": "Form", "type": "form", "default": {"form_id": "a4872182-9d68-47d5-871e-9379ca222876", "response_type": "inline", "message": "Thanks for reaching out! We’ll get back to you shortly."}},
+  {"name": "notify_override", "label": "Send submission emails to the addresses below", "type": "boolean", "display": "toggle", "default": true},
+  {"name": "notify_emails", "label": "Notification emails", "type": "text", "default": "brian@gofindbuild.com", "help_text": "Comma-separated."},
+  {"name": "alignment", "label": "Alignment", "type": "choice", "display": "select", "choices": [["left", "Left"], ["center", "Centre"]], "default": "left"},
+  {"name": "background", "label": "Background", "type": "choice", "display": "select", "choices": [["white", "White"], ["grey", "Light grey"]], "default": "white"},
+  {"name": "anchor_id", "label": "Anchor ID", "type": "text", "default": "contact-form"}
+]

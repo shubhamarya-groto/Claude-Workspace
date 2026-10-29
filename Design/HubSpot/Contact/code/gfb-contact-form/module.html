@@ -1,0 +1,26 @@
+{# GFB Contact form. Heading, intro and form are fields: see fields.json. Inputs follow Figma "GFB / Input field" (1525:2812). #}
+<section class="gfb-cf gfb-cf--{{ module.alignment or 'left' }}{% if module.background == 'grey' %} gfb-cf--grey{% endif %}"{% if module.anchor_id %} id="{{ module.anchor_id|escape_attr }}"{% endif %}>
+  <div class="gfb-cf__inner">
+    {% if module.eyebrow or module.heading or module.intro %}
+      <div class="gfb-cf__head">
+        {% if module.eyebrow %}<p class="gfb-cf__eyebrow">{{ module.eyebrow|escape }}</p>{% endif %}
+        {% if module.heading %}<{{ module.heading_level or 'h1' }} class="gfb-cf__title">{{ module.heading|escape }}</{{ module.heading_level or 'h1' }}>{% endif %}
+        {% if module.intro %}<div class="gfb-cf__intro">{{ module.intro }}</div>{% endif %}
+      </div>
+    {% endif %}
+    {% if module.form_field.form_id %}
+      <div class="gfb-cf__form">
+        {% form
+          form_to_use="{{ module.form_field.form_id }}"
+          response_response_type="{{ module.form_field.response_type }}"
+          response_message="{{ module.form_field.message }}"
+          response_redirect_id="{{ module.form_field.redirect_id }}"
+          response_redirect_url="{{ module.form_field.redirect_url }}"
+          gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+          notifications_are_overridden={{ module.notify_override }}
+          notifications_override_email_addresses={{ (module.notify_emails or "")|replace(" ", "")|split(",") }}
+        %}
+      </div>
+    {% endif %}
+  </div>
+</section>

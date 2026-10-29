@@ -1,0 +1,98 @@
+/* GFB Contact form. Inputs follow Figma "GFB / Input field" (1525:2812): label Inter Medium 14/18 navy, 6 gap,
+   48px white box, 1px #D9D9D9, radius 8, 16 side padding, Inter 16. Button: the GFB orange pill. Max width 800. */
+.gfb-cf {
+  --cf-brand: var(--hsElevate--section--lightSection--1__textColor, #16243D);
+  --cf-muted: #525C70; --cf-accent: #F16C0E; --cf-accent-hover: #EA580C;
+  --cf-border: #D9D9D9; --cf-white: #FFFFFF; --cf-surface: #F6F7F8;
+  --cf-font: var(--hsElevate--body__font, "Inter"), system-ui, sans-serif;
+  --cf-font-display: var(--hsElevate--h1__font, "Instrument Sans"), system-ui, sans-serif;
+  padding: 96px 24px; background: var(--cf-white); color: var(--cf-brand);
+  font-family: var(--cf-font); -webkit-font-smoothing: antialiased;
+}
+.gfb-cf--grey { background: var(--cf-surface); }
+.gfb-cf, .gfb-cf * { box-sizing: border-box; }
+.gfb-cf__inner { width: 100%; max-width: 800px; margin: 0 auto; }
+.gfb-cf__head { display: flex; flex-direction: column; gap: 12px; margin: 0 0 40px; }
+.gfb-cf--center .gfb-cf__head { text-align: center; align-items: center; }
+.gfb-cf__eyebrow { margin: 0; font-size: 13px; font-weight: 500; line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase; color: var(--cf-accent); }
+.gfb-cf__title { margin: 0; font-family: var(--cf-font-display); font-size: clamp(36px, 2.5vw + 20px, 56px); font-weight: 500; line-height: 1.14; letter-spacing: -0.02em; color: var(--cf-brand); }
+.gfb-cf__intro, .gfb-cf__intro p { margin: 0; font-size: 18px; line-height: 1.6; color: var(--cf-muted); }
+.gfb-cf__intro p + p { margin-top: 12px; }
+.gfb-cf__intro a { color: var(--cf-accent); }
+
+/* HubSpot form: new renderer (hsfc-*, CSS variables) and legacy hs-form markup. Elevate's pill inputs are overridden here only. */
+.gfb-cf__form { width: 100%; }
+.gfb-cf__form [data-hsfc-id="Renderer"], .gfb-cf__form .hsfc-Renderer {
+  --hsf-global__font-family: var(--cf-font); --hsf-global__font-size: 16px; --hsf-global__color: var(--cf-brand);
+  --hsf-background__background-color: transparent; --hsf-background__border-style: none; --hsf-background__border-width: 0;
+  --hsf-background__border-radius: 0; --hsf-background__padding: 0;
+  --hsf-row__vertical-spacing: 20px; --hsf-row__horizontal-spacing: 16px; --hsf-module__vertical-spacing: 20px;
+  --hsf-field-label__font-family: var(--cf-font); --hsf-field-label__font-size: 14px; --hsf-field-label__color: var(--cf-brand);
+  --hsf-field-label-requiredindicator__color: var(--cf-accent);
+  --hsf-field-input__font-family: var(--cf-font); --hsf-field-input__font-size: 16px; --hsf-field-input__color: var(--cf-brand);
+  --hsf-field-input__background-color: var(--cf-white); --hsf-field-input__placeholder-color: var(--cf-muted);
+  --hsf-field-input__border-color: var(--cf-border); --hsf-field-input__border-style: solid; --hsf-field-input__border-width: 1px;
+  --hsf-field-input__border-radius: 8px; --hsf-field-input__padding: 12px 16px;
+  --hsf-button__font-family: var(--cf-font); --hsf-button__font-size: 16px; --hsf-button__color: var(--cf-white);
+  --hsf-button__background-color: var(--cf-accent); --hsf-button__border-radius: 999px; --hsf-button__padding: 0 24px;
+  --hsf-richtext__font-family: var(--cf-font); --hsf-richtext__font-size: 13px; --hsf-richtext__color: var(--cf-muted);
+  display: block; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
+  background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+}
+.gfb-cf__form form, .gfb-cf__form fieldset,
+.gfb-cf__form .hsfc-Form, .gfb-cf__form .hsfc-FormWrapper, .gfb-cf__form .hsfc-Step, .gfb-cf__form .hsfc-Step__Content {
+  width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important;
+  background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+}
+.gfb-cf__form .hsfc-Step__Content { display: flex !important; flex-direction: column; gap: 20px; }
+/* Rows: fields the form puts side by side stay side by side (16 apart); one per row on phones */
+.gfb-cf__form .hsfc-Row { display: flex !important; flex-direction: row !important; gap: 16px !important; margin: 0 !important; padding: 0 !important; }
+.gfb-cf__form .hsfc-Row > * { flex: 1 1 0 !important; min-width: 0; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+.gfb-cf__form fieldset { display: flex !important; gap: 16px; }
+.gfb-cf__form fieldset > .hs-form-field, .gfb-cf__form fieldset > div { flex: 1 1 0; min-width: 0; width: auto !important; float: none !important; }
+.gfb-cf__form .hs-form-field { margin: 0 0 20px !important; padding: 0 !important; }
+.gfb-cf__form .input { margin: 0 !important; }
+.gfb-cf__form label, .gfb-cf__form .hsfc-FieldLabel { display: block; margin: 0 0 6px !important; font-family: var(--cf-font) !important; font-size: 14px !important; font-weight: 500 !important; line-height: 18px !important; color: var(--cf-brand) !important; }
+.gfb-cf__form .hs-form-required, .gfb-cf__form .hsfc-FieldLabel__RequiredIndicator { margin-left: 2px; color: var(--cf-accent) !important; }
+.gfb-cf__form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"]):not([type="button"]):not([type="file"]),
+.gfb-cf__form select, .gfb-cf__form textarea:not(.g-recaptcha-response):not([aria-hidden="true"]) {
+  display: block !important; width: 100% !important; max-width: none !important; height: 48px !important; min-height: 48px !important;
+  margin: 0 !important; padding: 0 16px !important; background: var(--cf-white) !important; border: 1px solid var(--cf-border) !important;
+  border-radius: 8px !important; box-shadow: none !important; font-family: var(--cf-font) !important; font-size: 16px !important;
+  font-weight: 400 !important; line-height: 1.6 !important; color: var(--cf-brand) !important; text-overflow: ellipsis;
+}
+.gfb-cf__form textarea:not(.g-recaptcha-response):not([aria-hidden="true"]) { height: auto !important; min-height: 144px !important; padding: 12px 16px !important; resize: vertical; }
+.gfb-cf__form .g-recaptcha-response, .gfb-cf__form textarea[aria-hidden="true"] { display: none !important; }
+.gfb-cf__form input::placeholder, .gfb-cf__form textarea::placeholder { color: var(--cf-muted) !important; opacity: 1; }
+.gfb-cf__form input:focus, .gfb-cf__form select:focus, .gfb-cf__form textarea:focus { outline: 2px solid var(--cf-accent) !important; outline-offset: 1px; border-color: var(--cf-accent) !important; }
+.gfb-cf__form input[type="checkbox"], .gfb-cf__form input[type="radio"] { width: 18px; height: 18px; margin: 0 8px 0 0; accent-color: var(--cf-accent); }
+.gfb-cf__form .hsfc-RichText, .gfb-cf__form .legal-consent-container, .gfb-cf__form .hsfc-RichText p, .gfb-cf__form .legal-consent-container p {
+  margin: 0 !important; max-width: 100% !important; overflow-wrap: anywhere; white-space: normal !important; font-family: var(--cf-font) !important; font-size: 13px !important; line-height: 1.5 !important; color: var(--cf-muted) !important;
+}
+.gfb-cf__form .hsfc-RichText a, .gfb-cf__form .legal-consent-container a { color: var(--cf-accent) !important; text-decoration: underline; text-underline-offset: 2px; }
+.gfb-cf__form .hs-error-msgs { margin: 6px 0 0 !important; padding: 0; list-style: none; }
+.gfb-cf__form .hs-error-msg, .gfb-cf__form .hsfc-ErrorAlert, .gfb-cf__form .hs-main-font-element { font-size: 12px !important; color: #B42318 !important; }
+/* Submit: GFB orange pill, 48 high, hugs its label */
+.gfb-cf__form .hsfc-NavigationRow, .gfb-cf__form .hsfc-NavigationRow__Buttons, .gfb-cf__form .hs_submit, .gfb-cf__form .actions {
+  display: flex !important; justify-content: flex-start; width: 100% !important; margin: 8px 0 0 !important; padding: 0 !important;
+}
+.gfb-cf--center .gfb-cf__form .hsfc-NavigationRow__Buttons, .gfb-cf--center .gfb-cf__form .actions { justify-content: center; }
+.gfb-cf__form .hsfc-NavigationRow__Buttons { margin: 0 !important; }
+.gfb-cf__form .hsfc-Button, .gfb-cf__form button[type="submit"], .gfb-cf__form input[type="submit"], .gfb-cf__form .hs-button {
+  display: inline-flex !important; align-items: center; justify-content: center; width: auto !important; min-width: 160px; height: 48px !important;
+  margin: 0 !important; padding: 0 28px !important; border: 0 !important; border-radius: 999px !important;
+  background: var(--cf-accent) !important; color: var(--cf-white) !important; font-family: var(--cf-font) !important;
+  font-size: 16px !important; font-weight: 500 !important; line-height: 1 !important; box-shadow: none !important; cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.gfb-cf__form .hsfc-Button:hover, .gfb-cf__form button[type="submit"]:hover, .gfb-cf__form .hs-button:hover,
+.gfb-cf__form .hsfc-Button:focus-visible, .gfb-cf__form .hs-button:focus-visible { background: var(--cf-accent-hover) !important; }
+.gfb-cf__form .hsfc-Button:focus-visible, .gfb-cf__form .hs-button:focus-visible { outline: 3px solid var(--cf-brand) !important; outline-offset: 3px; }
+.gfb-cf__form .submitted-message, .gfb-cf__form .hsfc-PostSubmit { font-size: 18px; line-height: 1.6; color: var(--cf-brand); }
+
+@media (max-width: 767px) {
+  .gfb-cf { padding: 64px 16px; }
+  .gfb-cf__head { margin-bottom: 32px; }
+  .gfb-cf__form .hsfc-Row, .gfb-cf__form fieldset { flex-direction: column !important; gap: 20px !important; }
+  .gfb-cf__form .hsfc-Button, .gfb-cf__form button[type="submit"], .gfb-cf__form input[type="submit"], .gfb-cf__form .hs-button { width: 100% !important; }
+}

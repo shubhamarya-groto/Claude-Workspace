@@ -325,3 +325,8 @@ field on `gfb_hero_v2`, Home set to Compact: 80 top / 20 bottom; Companies and J
 - 28 Oct follow-up: Home hero cards now end level with the bottom of the folder photo (Compact only). Next section
   ("Better jobs…") sits 128px below the trust bar on desktop (64 on tablet and phone): Home head CSS sets the trust bar's bottom padding to 0 and the
   What-you-get band's top padding to 128 (was 64 + 96 = 160). Draft, not published.
+
+**29 Oct (Shubham): Contact Us page (`225830133851`).** New module `gfb_contact_form` with inputs from the
+design-system `GFB / Input field` (Figma `1525:2812`) and the GFB orange pill button, max width 800px. Replaces the
+theme header + form modules on the page; same form, inline thank-you instead of the google.com redirect,
+notifications still to brian@gofindbuild.com. Draft, not published. Source: `Design/HubSpot/Contact/code/gfb-contact-form/`.
