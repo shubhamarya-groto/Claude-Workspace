@@ -283,3 +283,33 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 | T-17 | J-12 | Wrong data | Location 97206, but the last submitted zip was 97602 |
 | T-18 | J-08 | Search logic | Zip 12345 (NY) search returns an LA job; search runs with no trade |
 | T-19 | J-33 | Wrong identity | Company message shows a personal name and worker avatar, not the company |
+
+---
+
+## UI-inconsistency audit (U-01…U-30)
+On the canvas: an **amber rectangle with a light yellow highlight**, a `U-xx` badge, and a **yellow sticky** with **Issue Type** and **Issue**.
+**Reference states:**
+- **Input:** C-08 (`1720:3115`) has the correct orange focus state.
+- **Primary button:** the orange "Done" (rectangular is acceptable) is the brand primary, as on the website.
+
+### 1. "TRADES" label inside the input (the field already has a label above it)
+U-02 C-08 · U-10 J-04 · U-13 C-33 · U-18 C-48 · U-22 J-08 · U-26 J-21
+
+### 2. Two helper texts on one field
+U-03 C-04 ("Pick all that apply…" + "Pick at least one trade to keep going.") · U-10 J-04 · U-19 C-48 · U-22 J-08 (shown on a search filter that doesn't need it)
+
+### 3. Primary button is blue instead of orange (breaks the component)
+U-04 C-02 Log in · U-06 C-16 Sign Up · U-07 C-18 Enter confirmation code · U-08 C-19 Continue · U-09 J-05 Continue to dashboard · U-12 C-27 Post a job · U-16 C-38 Publish (Cancel also blue filled) · U-17 C-41 Edit · U-20 C-48 Next · U-23 J-08 Search / View / Save · U-24 J-09 Apply · U-28 J-21 Next · U-29 C-76 Unlock · U-30 C-81 Send
+
+### 4. Other component inconsistencies
+| # | Screen | Issue Type | Issue |
+|---|---|---|---|
+| U-05 | C-17 | Input focus & label | Blue focus border, and a floating label vs labels above the field on step 1 |
+| U-11 | C-26 | Chip component | Selected trades are blue chips on the dashboard but orange chips in the pickers |
+| U-13 | C-33 | 3 label styles | Floating label, label above, and label inside, all on one form |
+| U-14 | C-33 | Copy | "150 trades total" vs "151" at signup |
+| U-15 | C-33 | Layering | Trade panel overlaps the next field ("Add benefits" shows through) |
+| U-21 | C-67 | Different picker | Search Projects uses a native dropdown instead of the chip multi-select |
+| U-25 | J-21 | Double label | "Last Completed Education *" plus a floating "Select Education Level *" |
+| U-27 | J-21 | Duplicate field | "Are you at least 18?" asked a second time (already answered in J-20) |
+| U-30 | C-81 | 4th input style | Plain label above with a blue focus border in the New Message modal |
