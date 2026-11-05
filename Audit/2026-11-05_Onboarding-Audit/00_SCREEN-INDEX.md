@@ -248,7 +248,7 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 
 ---
 
-## Tech-glitch audit (T-01…T-34)
+## Tech-glitch audit (T-01…T-36)
 These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
 On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
 
@@ -302,6 +302,8 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 | T-32 | J-09 | Interaction bug · star (save) does nothing | Star next to the job title doesn't respond. Saving only worked via "Save Job" on the card (J-11); the star then shows filled (J-16) but can't save or unsave |
 | T-33 | J-22 | Interaction bug · checkbox silently disabled | The SMS consent checkbox can't be clicked but looks enabled; the only clue is tiny grey "Add a phone number to subscribe" text |
 | T-34 | J-22 | Validation · no error state | Required "Phone Number *" is empty with no red border or message, so nothing explains what blocks the checkbox or saving |
+| T-35 | C-44 | Validation · city/state/zip not cross-checked | "Indianapolis" + "Nevada" + "4620" (4 digits) accepted at 12:29 PM |
+| T-36 | C-53 | Validation · city/state/zip not cross-checked | "Indianapoli" + "Missouri" + "46204" (an Indiana zip) accepted at 12:44 PM. The seeker's Portland/OR/97206 is valid but goes through the same unchecked fields. Autofill city and state from the zip |
 | T-31 | C-50 | Interaction bug · dropdown won't close | The affiliation dropdown doesn't close on blur or outside click; the user typed in the Description box under the open panel |
 
 ---
