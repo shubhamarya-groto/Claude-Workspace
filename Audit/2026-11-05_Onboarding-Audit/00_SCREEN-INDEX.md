@@ -248,7 +248,7 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 
 ---
 
-## Tech-glitch audit (T-01…T-28)
+## Tech-glitch audit (T-01…T-31)
 These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
 On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
 
@@ -294,6 +294,13 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 | T-27 | C-72 | Privacy leak **(HIGH)** | Employer, dates and reason for leaving visible without unlock or application, although the seeker form promises past employers stay private until they apply (J-19). Profile last active 2 years ago |
 | T-28 | C-73 | Analysis note: how are there 2 matches? | "2 Total Matches" exists from account creation (Nov 4, 7:37 PM), before any job. The only job (12:13 PM) has 0 matches at 12:16 and 3:04 PM. So the count comes from the company's profile trades (GC / Acoustical / Electrical), likely including Jobseeker 6785 (Acoustical). It isn't recalculated after the seeker added Acoustical at 2:46 PM, and the seeker's own dashboard shows 0 matches. Relabel as "Profile matches" or count job matches only |
 
+### Experience logic and dropdowns (T-29…T-31)
+| # | Screen | Issue Type | Issue |
+|---|---|---|---|
+| T-29 | J-26 | Validation · conflicting fields **(HIGH)** | "Years" and "Experience level" are independent: "< 1YR" + "Master" is accepted, although the app defines Master as at least 6 years. Any garbage combination passes |
+| T-30 | J-30 | Data integrity **(HIGH)** | The saved profile shows Journeyman / Master with < 1YR, and companies see it (C-77); it likely feeds matching. See also T-26 (Entry Level with 5-10YR) |
+| T-31 | C-50 | Interaction bug · dropdown won't close | The affiliation dropdown doesn't close on blur or outside click; the user typed in the Description box under the open panel |
+
 ---
 
 ## UI-inconsistency audit (U-01…U-30)
@@ -336,3 +343,16 @@ On the canvas: a dashed amber outline around the form, with a width measurement 
 | U-36 | C-19 Confirm account | 400 / 1710px (23%) | Code, passwords and rules stacked to nearly full height |
 | U-37 | J-01 Job seeker landing | 619 / 1904px (33%) | 4 chips already wrap to 2 lines |
 | U-38 | J-04 Trade & location | 619 / 1909px (32%) | Zip and CTA squeezed onto one row; no context |
+
+### 6. Rich text, form spacing, stepper scroll, off-DS button (U-39…U-47)
+| # | Screen | Issue Type | Issue |
+|---|---|---|---|
+| U-39 | C-28 | Rich-text editor · too many options | Headings, font family, B / I / U / S, colour, highlight on a job description. Limit it to bold, list and link |
+| U-40 | J-23 | Rich-text editor · too many options | The same full toolbar on the seeker's certifications field. Use a plain textarea |
+| U-41 | J-09 | Formatting leaks into the published view | H1, strikethrough and red highlight shown to seekers unfiltered |
+| U-42 | C-28 | Form layout · fields far apart | Full-width rows with ~70–90px gaps; posting a job takes about 4 screens of scrolling. Group into sections and put short fields side by side |
+| U-43 | J-20 | Stepper form still scrolls | Step 1 spans 4 captures (J-19→J-22); the stepper and Next are out of view |
+| U-44 | J-24 | Stepper form still scrolls | Step 2 spans 5 captures (J-23→J-27); a dropdown sits inside the scrolling modal |
+| U-45 | C-49 | Stepper form still scrolls | Credentials overflows; chips are cut off and the stepper is hidden |
+| U-46 | C-44 | Stepper form still scrolls | Contact info scrolls inside the modal; combined with T-22, a stray click wipes the form |
+| U-47 | C-49 | Button not from DS / illegible | "Clear All" is blue text on a blue fill, a one-off style, and shows even when 0 are selected |
