@@ -248,7 +248,7 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 
 ---
 
-## Tech-glitch audit (T-01…T-31)
+## Tech-glitch audit (T-01…T-32)
 These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
 On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
 
@@ -299,6 +299,7 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 |---|---|---|---|
 | T-29 | J-26 | Validation · conflicting fields **(HIGH)** | "Years" and "Experience level" are independent: "< 1YR" + "Master" is accepted, although the app defines Master as at least 6 years. Any garbage combination passes |
 | T-30 | J-30 | Data integrity **(HIGH)** | The saved profile shows Journeyman / Master with < 1YR, and companies see it (C-77); it likely feeds matching. See also T-26 (Entry Level with 5-10YR) |
+| T-32 | J-09 | Interaction bug · star (save) does nothing | Star next to the job title doesn't respond. Saving only worked via "Save Job" on the card (J-11); the star then shows filled (J-16) but can't save or unsave |
 | T-31 | C-50 | Interaction bug · dropdown won't close | The affiliation dropdown doesn't close on blur or outside click; the user typed in the Description box under the open panel |
 
 ---
@@ -356,3 +357,5 @@ On the canvas: a dashed amber outline around the form, with a width measurement 
 | U-45 | C-49 | Stepper form still scrolls | Credentials overflows; chips are cut off and the stepper is hidden |
 | U-46 | C-44 | Stepper form still scrolls | Contact info scrolls inside the modal; combined with T-22, a stray click wipes the form |
 | U-47 | C-49 | Button not from DS / illegible | "Clear All" is blue text on a blue fill, a one-off style, and shows even when 0 are selected |
+| U-48 | C-63 | Layout · Connect button out of place | The main "Connect" CTA floats at the far top-left, outside the header and aligned to nothing. Move it to the header action area as the orange primary; show a persistent "Connected ✓" afterwards |
+| U-49 | C-63 | Layout · misaligned columns | Header at ~380px, body at ~616px, buttons on a ~920px column with no shared grid; "Go Back" is styled as a primary |
