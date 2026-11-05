@@ -248,7 +248,7 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 
 ---
 
-## Tech-glitch audit (T-01…T-22)
+## Tech-glitch audit (T-01…T-23)
 These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
 On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
 
@@ -282,6 +282,7 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 | T-16 | J-06 | Data inconsistency | Personal & Contact 83% complete after a failed save, with no phone |
 | T-17 | J-12 | Wrong data | Location 97206, but the last submitted zip was 97602 |
 | T-18 | J-08 | Search logic | Zip 12345 (NY) search returns an LA job; search runs with no trade |
+| T-23 | J-21 | Interaction bug **(HIGH)** | The duplicate "Are you at least 18? *" Yes/No can't be clicked, leaving a required field that can't be answered |
 | T-19 | J-33 | Wrong identity | Company message shows a personal name and worker avatar, not the company |
 
 ---
@@ -311,5 +312,5 @@ U-04 C-02 Log in · U-06 C-16 Sign Up · U-07 C-18 Enter confirmation code · U-
 | U-15 | C-33 | Layering | Trade panel overlaps the next field ("Add benefits" shows through) |
 | U-21 | C-67 | Different picker | Search Projects uses a native dropdown instead of the chip multi-select |
 | U-25 | J-21 | Double label | "Last Completed Education *" plus a floating "Select Education Level *" |
-| U-27 | J-21 | Duplicate field | "Are you at least 18?" asked a second time (already answered in J-20) |
+| U-27 | J-21 | Duplicate field | "Are you at least 18?" asked a second time (already answered in J-20), and this copy can't be clicked (T-23) |
 | U-30 | C-81 | 4th input style | Plain label above with a blue focus border in the New Message modal |
