@@ -14,13 +14,33 @@ Live audit of the staging app (`staging-app.gofindbuild.com`). We created two te
 | Reference (old "Section 1") | `1720:3227` | **missing from page, see note** | R-01, R-02 |
 
 Each screenshot layer is renamed `<code> · <original screenshot name>` (example: `C-05 · Screenshot 2026-11-04 at 7.34.56 PM 1`). A code label sits above each screenshot, so you can search the code in Figma to find it.
-Phases run as rows inside each section, in chronological order. Error states are marked **⚠**.
+Error states are marked **⚠**.
+
+## Canvas layout (updated 5 Nov)
+- The Job Seeker Flow section now sits directly **below** the Company Flow section.
+- Each **phase** (A–E) is one row. Its screens run **left to right** in the order you go through the flow.
+- Each **unique screen** is a column with a name label on top. Other states of the same screen (typing, dropdown open, error, modal) are **stacked under it**.
+
+| Phase | Columns, left → right (stacked states in brackets) |
+|---|---|
+| C-A Auth & Signup | Role select [C-01, C-03] · Login [C-02] · Company onboarding Step 1 [C-04…C-15] · Create profile [C-16, C-17] · Registration successful [C-18] · Confirm account [C-19…C-23] · Dashboard first load [C-24, C-25] |
+| C-B Dashboard & Post a Job | Dashboard [C-26] · Job Postings empty [C-27] · Post a job form [C-28…C-40] · Job detail [C-41, C-42] · Job Postings active [C-43] |
+| C-C Profile Edit Wizard | Company Profile page [C-45] · Step 1 Contact [C-44, C-46, C-52, C-53] · Step 2 Business [C-47] · Step 3 Services [C-48, C-54, C-59] · Step 4 Credentials [C-49, C-50, C-55] · Step 5 Additional [C-51, C-56, C-57, C-58, C-60, C-61, C-62] |
+| C-D Search Projects | Search Projects [C-67] · Project detail [C-63, C-66, C-68] · Other company profile [C-64, C-65] |
+| C-E Applicants & Messaging | Dashboard [C-73, C-75] · Job Postings [C-74] · Job detail Applicants [C-69] · Candidate profile, match [C-70…C-72] · Candidate profile, applicant (unlock, message) [C-76…C-81] · Messages [C-82] |
+| J-A Signup | Landing [J-01] · Create profile [J-02] · Registration successful [J-03] · Trade & location [J-04, J-05] |
+| J-B Dashboard & Find Jobs | Dashboard [J-06] · Find Jobs [J-07, J-08, J-11] · Job detail [J-09, J-10] · Profile [J-12, J-13] · My Jobs [J-14, J-15] |
+| J-C Apply | Job detail [J-16, J-17] · Find Jobs [J-18] |
+| J-D Profile Wizard | Step 1 Basic info [J-19…J-22] · Step 2 Experience & Certs [J-23…J-27] · Completed profile [J-28…J-30] |
+| J-E Messaging | Find Jobs [J-31] · Messages [J-32…J-35] |
+
+The per-screen tables below keep the times when the screenshots were taken, so you can trace each one. The Figma titles no longer show times.
 
 ---
 
 ## Company Flow (`1722:3`)
 
-### A · Auth and company signup (Nov 4, 7:33–7:38 PM)
+### A · Auth and company signup
 | Code | Node | Screen and context |
 |---|---|---|
 | C-01 | 1720:3108 | Role select: "Create your free profile", Job Seeker / Company cards |
@@ -49,7 +69,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 | C-24 | 1720:3131 | ⚠ First dashboard load: browser save-password prompt + 2× "Invalid or expired code" toasts |
 | C-25 | 1720:3132 | ⚠ Dashboard: Success Center, stats, Employee Matching; toast still shown |
 
-### B · Dashboard and post a job (Nov 5, 12:08–12:16 PM)
+### B · Dashboard and post a job
 | Code | Node | Screen and context |
 |---|---|---|
 | C-26 | 1720:3189 | Dashboard: 0 applications, "No Jobs Posted" |
@@ -71,7 +91,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 | C-42 | 1720:3205 | Job detail scrolled: rich-text styling carried into the published view |
 | C-43 | 1720:3206 | Job Postings: active job card, Actions menu (View candidates, Edit, Copy, Inactivate, Delete) |
 
-### C · Company Profile edit wizard (Nov 5, 12:29–12:47 PM)
+### C · Company Profile edit wizard
 5 steps: Contact info → Business info → Services → Credentials → Additional info
 | Code | Node | Screen and context |
 |---|---|---|
@@ -95,7 +115,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 | C-61 | 1720:3225 | Step 5 with files attached: Submit |
 | C-62 | 1720:3226 | ⚠ Submit fails with files: profile never saves |
 
-### D · Search projects and trade partners (Nov 5, 1:02–1:06 PM)
+### D · Search projects and trade partners
 | Code | Node | Screen and context |
 |---|---|---|
 | C-63 | 1720:3134 | Project detail: "Huge Plumbing Project" (Keller Software), Connect |
@@ -105,7 +125,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 | C-67 | 1720:3138 | Search Projects list (zip 46204), "Connected" tag |
 | C-68 | 1720:3139 | Project "asdfasf": connection successful |
 
-### E · Applicants, unlock and messaging (Nov 5, 2:47–3:13 PM)
+### E · Applicants, unlock and messaging
 | Code | Node | Screen and context |
 |---|---|---|
 | C-69 | 1720:3170 | Job detail, Applicants tab: Jobseeker 5aec, View / Decline |
@@ -127,7 +147,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 
 ## Job Seeker Flow (`1722:92`)
 
-### A · Job seeker signup (Nov 5, 1:06–1:09 PM)
+### A · Job seeker signup
 | Code | Node | Screen and context |
 |---|---|---|
 | J-01 | 1720:3140 | Landing "Real trade work, right where you live": trades + zip, "See jobs near me" |
@@ -136,7 +156,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 | J-04 | 1720:3143 | "Your trade & location": empty, Continue to dashboard |
 | J-05 | 1720:3144 | ⚠ "We couldn't save your profile. Please try again." |
 
-### B · Dashboard, find jobs, save and My Jobs (Nov 5, 1:10–1:32 PM)
+### B · Dashboard, find jobs, save and My Jobs
 | Code | Node | Screen and context |
 |---|---|---|
 | J-06 | 1720:3145 | Dashboard: Complete Your Profile checklist (7 sections), Job Matching toggle |
@@ -150,14 +170,14 @@ Phases run as rows inside each section, in chronological order. Error states are
 | J-14 | 1720:3153 | My Jobs, Activity: empty |
 | J-15 | 1720:3154 | My Jobs, Saved Jobs (1): View / Remove |
 
-### C · Apply to job (Nov 5, 2:42 PM)
+### C · Apply to job
 | Code | Node | Screen and context |
 |---|---|---|
 | J-16 | 1720:3155 | Job detail (saved star): Apply |
 | J-17 | 1720:3156 | Apply success modal: "Back to Search" |
 | J-18 | 1720:3157 | Find Jobs: no matches with 3 trades selected |
 
-### D · Profile edit wizard and completed profile (Nov 5, 2:42–2:47 PM)
+### D · Profile edit wizard and completed profile
 3 steps: Basic info → Experience & Certifications → Work history
 | Code | Node | Screen and context |
 |---|---|---|
@@ -174,7 +194,7 @@ Phases run as rows inside each section, in chronological order. Error states are
 | J-29 | 1720:3168 | Completed profile: Professional Summary, certs |
 | J-30 | 1720:3169 | Completed profile: trade skills, background |
 
-### E · Messaging with the company (Nov 5, 3:04–3:14 PM)
+### E · Messaging with the company
 | Code | Node | Screen and context |
 |---|---|---|
 | J-31 | 1720:3183 | Find Jobs: Messages "1 unread" badge |
