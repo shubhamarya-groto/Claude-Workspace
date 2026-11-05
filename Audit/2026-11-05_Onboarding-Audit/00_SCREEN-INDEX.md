@@ -34,7 +34,7 @@ Error states are marked **⚠**.
 | J-D Profile Wizard | Step 1 Basic info [J-19…J-22] · Step 2 Experience & Certs [J-23…J-27] · Completed profile [J-28…J-30] |
 | J-E Messaging | Find Jobs [J-31] · Messages [J-32…J-35] |
 
-The per-screen tables below keep the times when the screenshots were taken, so you can trace each one. The Figma titles no longer show times.
+To see when a screen was captured, check the original screenshot name in its layer (for example `Screenshot 2026-11-05 at 12.08.44 PM`).
 
 ---
 
