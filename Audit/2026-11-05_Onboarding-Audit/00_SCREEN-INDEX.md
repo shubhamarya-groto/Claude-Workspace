@@ -245,3 +245,41 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 | 11 | C-19 | Med | Password rules are a static list; duplicate labels; code and password on one screen |
 | 12 | C-24 | High | False "Invalid or expired code" toasts (×2) after successful verification |
 | 13 | C-24 | Med | Onboarding to-dos styled as red errors |
+
+---
+
+## Tech-glitch audit (T-01…T-22)
+These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
+On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
+
+### 🚫 HIGH: the company can't edit its profile (blocker)
+The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the same generic error and no field-level reason, so the user can't correct their mistake. Clicking outside the long modal closes it with no warning and throws away everything typed.
+
+| # | Screen | Issue Type | Issue |
+|---|---|---|---|
+| T-07 | C-52 | Data loss **(HIGH)** | On reopening at 12:43 PM, address, phone and website are empty, though entered at 12:29 and 12:31 PM |
+| T-08 | C-58 | Save failure **(HIGH)** | 12:45 PM Submit: "We couldn't update your profile." All steps show ✓, profile still "Not specified" |
+| T-20 | C-60 | Save failure **(HIGH)** | 12:45:46 PM retry fails, with no reason given, so nothing can be fixed |
+| T-21 | C-62 | Save failure **(HIGH)** | 12:47 PM with logo and photos attached, still fails. "Profile missing" nag can't be cleared |
+| T-22 | C-52 | Interaction / data loss **(HIGH)** | Clicking outside the modal closes the 5-step form with no "Discard changes?" warning, and all input is lost |
+
+### Other glitches
+| # | Screen | Issue Type | Issue |
+|---|---|---|---|
+| T-01 | C-26 | Data inconsistency | "2 Total Matches" with no job posted (also at C-24 and C-73) |
+| T-02 | C-40 | Validation | Zip error stays after a valid 12345 is entered |
+| T-03 | C-41 | Wrong data | Job location "Los Angeles, CA", but zip was 12345 (NY) and company is in Indianapolis |
+| T-04 | C-41 | Validation | Compensation "1234567890-98765" accepted (min > max, no currency) |
+| T-05 | C-43 | Wrong data | "/hours" appended in the list; the form has no unit field |
+| T-06 | C-45 | Missing data | Profile header contact icon has no name or phone after Contact info was filled |
+| T-09 | C-68 | Validation / format | Project start date "Thu Dec 22 3222", in raw JS date format |
+| T-10 | C-73 | Data inconsistency | Dashboard shows 4 applications and 2 matches; the job has 1 applicant and 0 matches |
+| T-11 | C-79 | Needs verification | Phone (213) 456-7890 shown, but the seeker never entered a phone |
+| T-12 | C-82 | State not updated | "1 unread" stays while the conversation is open |
+| T-13 | J-04 | Data loss | The 4 landing-page trades are dropped on the trade & location step |
+| T-14 | J-05 | Save failure | "We couldn't save your profile", then the user lands on the dashboard anyway |
+| T-15 | J-06 | Wrong data | Matching trades (Appliance, Asphalt, Basement Waterproofing) were never selected |
+| T-16 | J-06 | Data inconsistency | Personal & Contact 83% complete after a failed save, with no phone |
+| T-17 | J-12 | Wrong data | Location 97206, but the last submitted zip was 97602 |
+| T-18 | J-08 | Search logic | Zip 12345 (NY) search returns an LA job; search runs with no trade |
+| T-19 | J-33 | Wrong identity | Company message shows a personal name and worker avatar, not the company |
