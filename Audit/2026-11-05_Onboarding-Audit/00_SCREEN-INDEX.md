@@ -248,7 +248,7 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 
 ---
 
-## Tech-glitch audit (T-01…T-36)
+## Tech-glitch audit (T-01…T-37)
 These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
 On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
 
@@ -304,6 +304,7 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 | T-34 | J-22 | Validation · no error state | Required "Phone Number *" is empty with no red border or message, so nothing explains what blocks the checkbox or saving |
 | T-35 | C-44 | Validation · city/state/zip not cross-checked | "Indianapolis" + "Nevada" + "4620" (4 digits) accepted at 12:29 PM |
 | T-36 | C-53 | Validation · city/state/zip not cross-checked | "Indianapoli" + "Missouri" + "46204" (an Indiana zip) accepted at 12:44 PM. The seeker's Portland/OR/97206 is valid but goes through the same unchecked fields. Autofill city and state from the zip |
+| T-37 | J-31 | State not persisted · search filters reset | Zip, trades and position type revert to profile defaults after opening a job and coming back. A 12345 search at 1:30 PM (J-08) came back as 97206 + default trades with "No matching jobs" at 2:42 PM (J-18) |
 | T-31 | C-50 | Interaction bug · dropdown won't close | The affiliation dropdown doesn't close on blur or outside click; the user typed in the Description box under the open panel |
 
 ---
