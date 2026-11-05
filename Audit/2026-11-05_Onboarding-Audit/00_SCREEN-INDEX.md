@@ -248,7 +248,7 @@ Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. I
 
 ---
 
-## Tech-glitch audit (T-01…T-23)
+## Tech-glitch audit (T-01…T-28)
 These were found by cross-checking each screenshot's timestamp: what was entered at time X, and how it shows up later.
 On the canvas each glitch is a **red-stroke rectangle** with a `T-xx` badge, plus a **pink sticky** with **Issue Type** and **Issue**, linked by a dashed red line. Blockers carry a dark **SEVERITY: HIGH · BLOCKER** pill.
 
@@ -284,6 +284,15 @@ The whole 5-step Edit Profile wizard is unusable. Every Submit fails with the sa
 | T-18 | J-08 | Search logic | Zip 12345 (NY) search returns an LA job; search runs with no trade |
 | T-23 | J-21 | Interaction bug **(HIGH)** | The duplicate "Are you at least 18? *" Yes/No can't be clicked, leaving a required field that can't be answered |
 | T-19 | J-33 | Wrong identity | Company message shows a personal name and worker avatar, not the company |
+
+### Match profile access and match count (T-24…T-28)
+| # | Screen | Issue Type | Issue |
+|---|---|---|---|
+| T-24 | C-70 (2:56 PM) | Access control · paywall bypass **(HIGH)** | Match profile opens in full with only "Send Job": no lock, no "Unlock free (3 left)". The applicant profile at 3:12 PM (C-76) is gated |
+| T-25 | C-70 | Wrong data | "Seattle, IN 46220": the city, state and zip don't agree |
+| T-26 | C-71 | Data inconsistency | "Entry Level" shown alongside "5-10YR" experience and a maxed-out slider |
+| T-27 | C-72 | Privacy leak **(HIGH)** | Employer, dates and reason for leaving visible without unlock or application, although the seeker form promises past employers stay private until they apply (J-19). Profile last active 2 years ago |
+| T-28 | C-73 | Analysis note: how are there 2 matches? | "2 Total Matches" exists from account creation (Nov 4, 7:37 PM), before any job. The only job (12:13 PM) has 0 matches at 12:16 and 3:04 PM. So the count comes from the company's profile trades (GC / Acoustical / Electrical), likely including Jobseeker 6785 (Acoustical). It isn't recalculated after the seeker added Acoustical at 2:46 PM, and the seeker's own dashboard shows 0 matches. Relabel as "Profile matches" or count job matches only |
 
 ---
 
