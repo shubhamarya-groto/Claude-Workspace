@@ -314,3 +314,16 @@ U-04 C-02 Log in · U-06 C-16 Sign Up · U-07 C-18 Enter confirmation code · U-
 | U-25 | J-21 | Double label | "Last Completed Education *" plus a floating "Select Education Level *" |
 | U-27 | J-21 | Duplicate field | "Are you at least 18?" asked a second time (already answered in J-20), and this copy can't be clicked (T-23) |
 | U-30 | C-81 | 4th input style | Plain label above with a blue focus border in the New Message modal |
+
+### 5. Onboarding forms are too narrow (U-31…U-38)
+On the canvas: a dashed amber outline around the form, with a width measurement (px and % of the viewport) underneath.
+| # | Screen | Form width | Issue |
+|---|---|---|---|
+| U-31 | C-04 Company step 1 | 620 / 1710px (36%) | Chips and helpers wrap; zip and Continue are cramped on one row |
+| U-32 | C-01 Role select | 400 / 1710px (23%) | Role descriptions wrap to 4 lines; ~75% of the screen is empty |
+| U-33 | C-02 Login | 400 / 1710px (23%) | Card floats in empty canvas |
+| U-34 | C-16 Create profile | 400 / 1710px (23%) | Narrower than step 1 (620px), so the width jumps between steps |
+| U-35 | C-18 Registration successful | 400 / 1710px (23%) | A 2-sentence message wraps to 5 lines |
+| U-36 | C-19 Confirm account | 400 / 1710px (23%) | Code, passwords and rules stacked to nearly full height |
+| U-37 | J-01 Job seeker landing | 619 / 1904px (33%) | 4 chips already wrap to 2 lines |
+| U-38 | J-04 Trade & location | 619 / 1909px (32%) | Zip and CTA squeezed onto one row; no context |
