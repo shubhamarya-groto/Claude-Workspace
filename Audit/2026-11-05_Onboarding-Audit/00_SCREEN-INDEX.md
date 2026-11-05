@@ -220,3 +220,28 @@ To see when a screen was captured, check the original screenshot name in its lay
 - Job post: rich-text formatting (H1, highlight, strikethrough) carries into the public job view without limits (C-32, C-42, J-09).
 - Zip field accepts 10 digits and only fails on submit (C-39).
 - Find Jobs empty state depends on the zip; a seeker in 97206 sees nothing while the job is in LA (J-07, J-18).
+
+---
+
+## Figma annotations (in progress)
+Each annotated screen is wrapped in a frame that keeps its `C-xx · …` name. Inside the frame:
+- **Red rectangle with a numbered badge** around the problem area
+- **Yellow sticky** to the right with #, severity (High / Medium / Low), category, title, what's wrong, and **Fix →**
+- **Dashed red connector** from the rectangle to the sticky
+
+### Company A · Auth & Signup (pilot, 13 issues)
+| # | Screen | Sev | Issue |
+|---|---|---|---|
+| 1 | C-01 | Med | Role cards don't read as choices (no hover/selected state, 12px copy) |
+| 2 | C-02 | Low | Google sign-in button doesn't match the design system |
+| 3 | C-04 | Med | No logo, step or progress on step 1 |
+| 4 | C-04 | High | Placeholders ("Acme Electric LLC", "46204") look like real values |
+| 5 | C-07 | Low | "Search 100+ trades" vs "151 trades total" |
+| 6 | C-07 | Med | Close and Done do the same job, and the panel covers zip and Continue |
+| 7 | C-13 | High | Continue stays disabled with no reason given |
+| 8 | C-16 | Med | Account step loses company/role context and switches style |
+| 9 | C-16 | Low | Google button doesn't match the Sign Up button |
+| 10 | C-18 | Med | "Registration successful" while signup isn't finished; no email shown, no resend |
+| 11 | C-19 | Med | Password rules are a static list; duplicate labels; code and password on one screen |
+| 12 | C-24 | High | False "Invalid or expired code" toasts (×2) after successful verification |
+| 13 | C-24 | Med | Onboarding to-dos styled as red errors |
